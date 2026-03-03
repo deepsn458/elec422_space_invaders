@@ -29,7 +29,7 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-Current time:       Tue Mar  3 17:04:10 2026
+Current time:       Tue Mar  3 17:22:58 2026
 Hostname:           cobalt.clear8.rice.edu
 CPU Model:          Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
 CPU Details:        Cores = 40 : Sockets = 2 : Cache Size = 25600 KB : Freq = 3.40 GHz
@@ -38,10 +38,10 @@ RAM:                125 GB (Free  50 GB)
 Swap:                15 GB (Free  15 GB)
 Work Filesystem:    /storage-home/d/dn55 mounted to clearstor.clear.rice.edu:/clear-home/dn55
 Tmp Filesystem:     /tmp mounted to /dev/mapper/vg0-tmp
-Work Disk:          5038 GB (Free 927 GB)
+Work Disk:          5038 GB (Free 926 GB)
 Tmp Disk:             5 GB (Free   5 GB)
 
-CPU Load: 0%, Ram Free: 50 GB, Swap Free: 15 GB, Work Disk Free: 927 GB, Tmp Disk Free: 5 GB
+CPU Load: 1%, Ram Free: 50 GB, Swap Free: 15 GB, Work Disk Free: 926 GB, Tmp Disk Free: 5 GB
 #/**************************************************/
 #/* Compile Script for Synopsys                    */
 #/*                                                */
@@ -202,7 +202,7 @@ set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all
 set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
 1
 compile -ungroup_all -map_effort medium
-CPU Load: 0%, Ram Free: 50 GB, Swap Free: 15 GB, Work Disk Free: 927 GB, Tmp Disk Free: 5 GB
+CPU Load: 1%, Ram Free: 50 GB, Swap Free: 15 GB, Work Disk Free: 926 GB, Tmp Disk Free: 5 GB
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -259,19 +259,19 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00   32481.0      0.00       0.0      24.7                          
-    0:00:00   32481.0      0.00       0.0      24.7                          
-    0:00:00   32481.0      0.00       0.0      24.7                          
-    0:00:00   32481.0      0.00       0.0      24.7                          
-    0:00:00   32481.0      0.00       0.0      24.7                          
-    0:00:00   32409.0      0.00       0.0      24.7                          
-    0:00:00   32409.0      0.00       0.0      24.7                          
-    0:00:00   32409.0      0.00       0.0      24.7                          
-    0:00:00   32409.0      0.00       0.0      24.7                          
-    0:00:00   32409.0      0.00       0.0      24.7                          
-    0:00:00   32409.0      0.00       0.0      24.7                          
-    0:00:00   32409.0      0.00       0.0      24.7                          
-    0:00:00   32409.0      0.00       0.0      24.7                          
+    0:00:01   32481.0      0.00       0.0      24.7                          
+    0:00:01   32481.0      0.00       0.0      24.7                          
+    0:00:01   32481.0      0.00       0.0      24.7                          
+    0:00:01   32481.0      0.00       0.0      24.7                          
+    0:00:01   32481.0      0.00       0.0      24.7                          
+    0:00:01   32409.0      0.00       0.0      24.7                          
+    0:00:01   32409.0      0.00       0.0      24.7                          
+    0:00:01   32409.0      0.00       0.0      24.7                          
+    0:00:01   32409.0      0.00       0.0      24.7                          
+    0:00:01   32409.0      0.00       0.0      24.7                          
+    0:00:01   32409.0      0.00       0.0      24.7                          
+    0:00:01   32409.0      0.00       0.0      24.7                          
+    0:00:01   32409.0      0.00       0.0      24.7                          
 
 
 
@@ -282,9 +282,9 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00   32409.0      0.00       0.0      24.7                          
-    0:00:00   32409.0      0.00       0.0      24.7                          
-    0:00:00   32409.0      0.00       0.0      24.7                          
+    0:00:01   32409.0      0.00       0.0      24.7                          
+    0:00:01   32409.0      0.00       0.0      24.7                          
+    0:00:01   32409.0      0.00       0.0      24.7                          
 
 
   Beginning Design Rule Fixing  (max_capacitance)
@@ -294,8 +294,8 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00   32409.0      0.00       0.0      24.7                          
-    0:00:00   32697.0      0.00       0.0       0.0                          
+    0:00:01   32409.0      0.00       0.0      24.7                          
+    0:00:01   32697.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -305,19 +305,19 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00   32697.0      0.00       0.0       0.0                          
-    0:00:00   32697.0      0.00       0.0       0.0                          
-    0:00:00   32553.0      0.00       0.0       0.0                          
-    0:00:00   32553.0      0.00       0.0       0.0                          
-    0:00:00   32553.0      0.00       0.0       0.0                          
-    0:00:00   32553.0      0.00       0.0       0.0                          
-    0:00:00   32553.0      0.00       0.0       0.0                          
-    0:00:00   32553.0      0.00       0.0       0.0                          
-    0:00:00   32553.0      0.00       0.0       0.0                          
-    0:00:00   32553.0      0.00       0.0       0.0                          
-    0:00:00   32553.0      0.00       0.0       0.0                          
-    0:00:00   32553.0      0.00       0.0       0.0                          
-    0:00:00   32553.0      0.00       0.0       0.0                          
+    0:00:01   32697.0      0.00       0.0       0.0                          
+    0:00:01   32697.0      0.00       0.0       0.0                          
+    0:00:01   32553.0      0.00       0.0       0.0                          
+    0:00:01   32553.0      0.00       0.0       0.0                          
+    0:00:01   32553.0      0.00       0.0       0.0                          
+    0:00:01   32553.0      0.00       0.0       0.0                          
+    0:00:01   32553.0      0.00       0.0       0.0                          
+    0:00:01   32553.0      0.00       0.0       0.0                          
+    0:00:01   32553.0      0.00       0.0       0.0                          
+    0:00:01   32553.0      0.00       0.0       0.0                          
+    0:00:01   32553.0      0.00       0.0       0.0                          
+    0:00:01   32553.0      0.00       0.0       0.0                          
+    0:00:01   32553.0      0.00       0.0       0.0                          
 Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
 
 
@@ -326,7 +326,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 0%, Ram Free: 51 GB, Swap Free: 15 GB, Work Disk Free: 927 GB, Tmp Disk Free: 5 GB
+CPU Load: 1%, Ram Free: 50 GB, Swap Free: 15 GB, Work Disk Free: 926 GB, Tmp Disk Free: 5 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -348,7 +348,7 @@ Unmapped MV Cells
 ----------------------------------------------------------------------------------------------------
 1
 compile -incremental_mapping -map_effort medium
-CPU Load: 0%, Ram Free: 51 GB, Swap Free: 15 GB, Work Disk Free: 927 GB, Tmp Disk Free: 5 GB
+CPU Load: 1%, Ram Free: 50 GB, Swap Free: 15 GB, Work Disk Free: 926 GB, Tmp Disk Free: 5 GB
 ====================================================================================================
 | Flow Information                                                                                 |
 ----------------------------------------------------------------------------------------------------
@@ -403,7 +403,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 0%, Ram Free: 51 GB, Swap Free: 15 GB, Work Disk Free: 927 GB, Tmp Disk Free: 5 GB
+CPU Load: 1%, Ram Free: 50 GB, Swap Free: 15 GB, Work Disk Free: 926 GB, Tmp Disk Free: 5 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -434,7 +434,7 @@ Report : constraint
         -all_violators
 Design : invader_bullet_fsm
 Version: U-2022.12-SP7
-Date   : Tue Mar  3 17:04:12 2026
+Date   : Tue Mar  3 17:23:00 2026
 ****************************************
 
 This design has no violated constraints.
@@ -456,7 +456,7 @@ report_cell
 Report : cell
 Design : invader_bullet_fsm
 Version: U-2022.12-SP7
-Date   : Tue Mar  3 17:04:12 2026
+Date   : Tue Mar  3 17:23:00 2026
 ****************************************
 
 Attributes:
@@ -596,7 +596,7 @@ report_area
 Report : area
 Design : invader_bullet_fsm
 Version: U-2022.12-SP7
-Date   : Tue Mar  3 17:04:12 2026
+Date   : Tue Mar  3 17:23:00 2026
 ****************************************
 
 Information: Updating design information... (UID-85)
@@ -631,7 +631,7 @@ Report : timing
         -max_paths 3
 Design : invader_bullet_fsm
 Version: U-2022.12-SP7
-Date   : Tue Mar  3 17:04:12 2026
+Date   : Tue Mar  3 17:23:00 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
@@ -714,7 +714,7 @@ Report : power
         -analysis_effort low
 Design : invader_bullet_fsm
 Version: U-2022.12-SP7
-Date   : Tue Mar  3 17:04:12 2026
+Date   : Tue Mar  3 17:23:00 2026
 ****************************************
 
 
@@ -769,7 +769,7 @@ quit
 
 Memory usage for this session 106 Mbytes.
 Memory usage for this session including child processes 106 Mbytes.
-CPU usage for this session 5 seconds ( 0.00 hours ).
+CPU usage for this session 4 seconds ( 0.00 hours ).
 Elapsed time for this session 6 seconds ( 0.00 hours ).
 
 Thank you...

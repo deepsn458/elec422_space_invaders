@@ -35,6 +35,8 @@ invader_bullet_fsm invader_bullet(
     .player_collision_signal(in_player_collision_signal),
     .shield_collision_signal(in_shield_collision_signal),
     .invader_fire(in_invader_fire),
+    .closest_invader_coord_x(in_closest_invader_coord_x),
+    .closest_invader_coord_y(in_closest_invader_coord_y),
     .invader_bullet_display(out_invader_bullet_display),
     .invader_bullet_coord_x(out_invader_bullet_coord_x),
     .invader_bullet_coord_y(out_invader_bullet_coord_y),
@@ -48,37 +50,43 @@ begin
             in_reset = 1;
             in_player_collision_signal = 0;
             in_shield_collision_signal = 0;
+            in_closest_invader_coord_x = 0;
+            in_closest_invader_coord_y = 0;
             in_invader_fire = 0;
-            in_closest_invader_coord_y = 0;
-            in_closest_invader_coord_y = 0;
         end else if (i == (idle_1 || idle_2 || idle_3 || 0)) begin
             in_reset = 0;
             in_player_collision_signal = 0;
             in_shield_collision_signal = 0;
+            in_closest_invader_coord_x = 8;
+            in_closest_invader_coord_y = 8;
             in_invader_fire = 0;
-            in_closest_invader_coord_y = 8;
-            in_closest_invader_coord_y = 8;
         end else if ((idle_2>i) && (i>=FIRE)) begin
             in_reset = 0;
             in_player_collision_signal = 0;
             in_shield_collision_signal = 0;
+            in_closest_invader_coord_x = 8;
+            in_closest_invader_coord_y = 8;
             in_invader_fire = 1;
         end else if ((RESET_2 > i) && (i>= COLLIDE))begin
             in_reset = 0;
             in_player_collision_signal = 1;
             in_shield_collision_signal = 1;
+            in_closest_invader_coord_x = 8;
+            in_closest_invader_coord_y = 8;
             in_invader_fire = 0;
         end else if (i == RESET_2) begin
             in_reset = 1;
             in_player_collision_signal = 0;
             in_shield_collision_signal = 0;
+            in_closest_invader_coord_x = 0;
+            in_closest_invader_coord_y = 0;
             in_invader_fire = 0;
-            in_closest_invader_coord_y = 0;
-            in_closest_invader_coord_y = 0;
         end else if ((i== FIRE_2)) begin
             in_reset = 0;
             in_player_collision_signal = 0;
             in_shield_collision_signal = 0;
+            in_closest_invader_coord_x = 9;
+            in_closest_invader_coord_y = 9;
             in_invader_fire = 1;
         end
         in_clka = 0; in_clkb = 0; #10;
