@@ -63,60 +63,34 @@ module player_bullet_fsm
     // Sequential logic to set next_state <= temp_state or respond to restart signal
     always @ (negedge clka) begin : FSM_SEQA
         if (reset) begin
-            next_state <= INIT;
+            next_state <= RESET;
         end else begin
-        next_state <= temp_state;
-        case(temp_state)        // assign clka signals based on tempstate
-            INIT: begin
-                    display <= 0;
-                end
-
-            ADD_ADD: begin
-                    // On clka, set Load_X and Load_Y to 1
-                    Load_X <= 1;
-                    Load_Y <= 1;
-                end
-
-            ADD_ACC: begin
-                    // On clka, set Load_X and Load_Y to 1
-                    Load_X <= 1;
-                    Load_Y <= 1;
-                end
-        endcase
+            next_state <= temp_state;
         end
     end
 
     // Sequential logic to set outputs
     always @ (negedge clkb) begin : FSM_SEQB            // clkb active signals are: Load_Temp, Accumulate
-        if (Restart) begin
-        Load_Temp <= 0;
-        Accumulate <= 0;
+        if (reset) begin
+            state <= INIT;
+            player_bullet_coord_x <= 0;
+            player_bullet_coord_y <= 0;
+            display <= 0;
         end else begin
 
         case(next_state)
-            IDLE: begin
-                    state <= next_state;
-
-                    // On clkb, set Load_Temp and Accumulate to 0
-                    Load_Temp <= 0;
-                    Accumulate <= 0;
-                end
-
-            ADD_ADD: begin
-                    state <= next_state;
-                    
-                    // On clkb, set Load_Temp to 1 and Accumulate to 0
-                    Load_Temp <= 1;
-                    Accumulate <= 0;
-                end
-
-            ADD_ACC: begin
-                    state <= next_state;
-                    
-                    // On clkb, set Load_Temp and Accumulate to 1
-                    Load_Temp <= 1;
-                    Accumulate <= 1;
-                end
+            INIT: begin
+                state <= next_state;
+                player_bullet_coord_x <= player_coord_x;
+                player_bullet_coord_y <= player_coord_y;
+                display <= 0;
+            end
+            FIRING: begin
+                state <= next_state;
+                player_bullet_coord_x <= player_bullet_coord_x;
+                player_bullet_coord_y <= player_bullet_coord_y + Y_OFFSET;
+                display <= 1;
+            end
         endcase
         end
     end
