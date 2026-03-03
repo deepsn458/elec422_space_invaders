@@ -1,0 +1,56 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : invader_fsm
+Version: U-2022.12-SP7
+Date   : Mon Mar  2 23:19:48 2026
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: player_bullet_coord_x[3]
+              (input port clocked by clka)
+  Endpoint: next_state_reg[1]
+            (falling edge-triggered flip-flop clocked by clka)
+  Path Group: clka
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clka (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 f
+  player_bullet_coord_x[3] (in)            0.19       1.19 f
+  U103/Y (INVX2)                           0.13       1.33 r
+  U177/Y (NAND2X1)                         0.14       1.46 f
+  U178/Y (NAND3X1)                         0.17       1.64 r
+  U179/Y (OAI21X1)                         0.16       1.79 f
+  U101/Y (INVX2)                           0.09       1.88 r
+  U183/Y (OAI21X1)                         0.08       1.96 f
+  U184/Y (OAI21X1)                         0.13       2.09 r
+  U185/Y (OAI22X1)                         0.11       2.20 f
+  U3/Y (AND2X2)                            0.20       2.41 f
+  U72/Y (NAND3X1)                          0.18       2.59 r
+  U97/Y (INVX2)                            0.09       2.68 f
+  U69/Y (AOI22X1)                          0.14       2.82 r
+  U68/Y (NOR2X1)                           0.12       2.94 f
+  next_state_reg[1]/D (DFFNEGX1)           0.00       2.94 f
+  data arrival time                                   2.94
+
+  clock clka (fall edge)                  10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  next_state_reg[1]/CLK (DFFNEGX1)         0.00      10.00 f
+  library setup time                      -0.37       9.63
+  data required time                                  9.63
+  -----------------------------------------------------------
+  data required time                                  9.63
+  data arrival time                                  -2.94
+  -----------------------------------------------------------
+  slack (MET)                                         6.69
+
+
+1
