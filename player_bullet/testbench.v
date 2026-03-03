@@ -8,6 +8,8 @@ wire out_display;
 wire [5:0] out_player_bullet_coord_x, out_player_bullet_coord_y;
 wire [1:0] out_state;
 
+// add comment
+
 player_bullet_fsm #(
     .Y_OFFSET(3),
     .Y_MAX(31)
