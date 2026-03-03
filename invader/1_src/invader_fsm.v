@@ -86,13 +86,9 @@ module invader_fsm
             RESET: begin
                     state <= next_state;
 
-                    if (reset) begin
-                        invader_coord_x <= START_X;
-                        invader_coord_y <= START_Y;
-                        alive <= 1;
-                    end else begin
-                        // Do nothing if not going to MOVE state
-                    end
+                    invader_coord_x <= START_X;
+                    invader_coord_y <= START_Y;
+                    alive <= 1;
                 end
 
             MOVE: begin

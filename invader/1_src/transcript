@@ -27,3 +27,5 @@ run -all
 # ** Note: $stop    : invader_fsm_tb.v(145)
 #    Time: 480 ns  Iteration: 0  Instance: /invader_fsm_tb
 # Break in Module invader_fsm_tb at invader_fsm_tb.v line 145
+# End time: 22:38:33 on Mar 02,2026, Elapsed time: 0:09:44
+# Errors: 0, Warnings: 1

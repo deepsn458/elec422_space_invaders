@@ -1,0 +1,83 @@
+$date
+	Mon Mar  2 22:29:14 2026
+$end
+$version
+	QuestaSim Version 2023.2
+$end
+$timescale
+	100ps
+$end
+
+$scope module invader_fsm_tb $end
+$var reg 1 ! in_clka $end
+$var reg 1 " in_clkb $end
+$var reg 1 # in_reset $end
+$var reg 1 $ in_play $end
+$var reg 1 % in_move_down $end
+$var reg 6 & in_x_offset [5:0] $end
+$var reg 6 ' in_player_bullet_coord_x [5:0] $end
+$var reg 6 ( in_player_bullet_coord_y [5:0] $end
+$var wire 1 ) out_alive $end
+$var wire 1 * out_player_bullet_collision_signal $end
+$var wire 1 + out_invader_coord_x [5] $end
+$var wire 1 , out_invader_coord_x [4] $end
+$var wire 1 - out_invader_coord_x [3] $end
+$var wire 1 . out_invader_coord_x [2] $end
+$var wire 1 / out_invader_coord_x [1] $end
+$var wire 1 0 out_invader_coord_x [0] $end
+$var wire 1 1 out_invader_coord_y [5] $end
+$var wire 1 2 out_invader_coord_y [4] $end
+$var wire 1 3 out_invader_coord_y [3] $end
+$var wire 1 4 out_invader_coord_y [2] $end
+$var wire 1 5 out_invader_coord_y [1] $end
+$var wire 1 6 out_invader_coord_y [0] $end
+$var wire 1 7 out_state [1] $end
+$var wire 1 8 out_state [0] $end
+
+$scope module DUT $end
+$var parameter 32 9 START_X $end
+$var parameter 32 : START_Y $end
+$var parameter 32 ; Y_OFFSET $end
+$var parameter 32 < DEAD_X $end
+$var parameter 32 = DEAD_Y $end
+$var parameter 2 > RESET $end
+$var parameter 2 ? MOVE $end
+$var parameter 2 @ DEAD $end
+$var parameter 2 A INVALID $end
+$var wire 1 B clka $end
+$var wire 1 C clkb $end
+$var wire 1 D reset $end
+$var wire 1 E play $end
+$var wire 1 F move_down $end
+$var wire 1 G x_offset [5] $end
+$var wire 1 H x_offset [4] $end
+$var wire 1 I x_offset [3] $end
+$var wire 1 J x_offset [2] $end
+$var wire 1 K x_offset [1] $end
+$var wire 1 L x_offset [0] $end
+$var wire 1 M player_bullet_coord_x [5] $end
+$var wire 1 N player_bullet_coord_x [4] $end
+$var wire 1 O player_bullet_coord_x [3] $end
+$var wire 1 P player_bullet_coord_x [2] $end
+$var wire 1 Q player_bullet_coord_x [1] $end
+$var wire 1 R player_bullet_coord_x [0] $end
+$var wire 1 S player_bullet_coord_y [5] $end
+$var wire 1 T player_bullet_coord_y [4] $end
+$var wire 1 U player_bullet_coord_y [3] $end
+$var wire 1 V player_bullet_coord_y [2] $end
+$var wire 1 W player_bullet_coord_y [1] $end
+$var wire 1 X player_bullet_coord_y [0] $end
+$var reg 1 Y alive $end
+$var reg 1 Z player_bullet_collision_signal $end
+$var reg 6 [ invader_coord_x [5:0] $end
+$var reg 6 \ invader_coord_y [5:0] $end
+$var reg 2 ] state [1:0] $end
+$var reg 2 ^ temp_state [1:0] $end
+$var reg 2 _ next_state [1:0] $end
+$var wire 1 ` collision_detect_x $end
+$var wire 1 a collision_detect_y $end
+
+$scope begin FSM_SEQ $end
+$upscope $end
+
+$scope begin OUTPUT_LOGIC $end
