@@ -6,7 +6,7 @@
 //
 // Purpose: Control FSM for an invader entity
 // 
-//////////////////////////////////////////////////////////////////////////////////////////////// test
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 module invader_fsm
     #(
@@ -19,6 +19,7 @@ module invader_fsm
 
     input  wire             clka, clkb,                         // Input clocks
     input  wire             reset, play, move_down,             // Global control and reset signals
+    input  wire [5:0]       x_offset,                           // signed offset to move the invader
     input  wire [5:0]       player_bullet_coord_x,              // Player bullet X coordinate
     input  wire [5:0]       player_bullet_coord_y,              // Player bullet Y coordinate
     output reg              alive,                              // Bit indicating if invader is still alive. Can be used as display bit
@@ -26,7 +27,7 @@ module invader_fsm
     output reg  [5:0]       invader_coord_x,                    // Player bullet X coordinate
     output reg  [5:0]       invader_coord_y,                    // Player bullet Y coordinate
 
-    output reg  [3:0]       state                               // Current state of this invader
+    output reg  [1:0]       state                               // Current state of this invader
     );
 
     reg [1:0] temp_state;           // To be combinationally calculated
@@ -86,37 +87,41 @@ module invader_fsm
                     state <= next_state;
 
                     if (RESTART) begin
-                        reg_clear_internal <= 1;  // On restart, clear the register
-                        reg_invert_internal <= 0;
-                        reg_read_en_internal <= 0;
+                        invader_coord_x <= START_X;
+                        invader_coord_y <= START_Y;
+                        alive <= 1;
                     end else begin
-                        // Do nothing if not loading or restarting
+                        // Do nothing if not going to MOVE state
                     end
-                    end
+                end
 
             MOVE: begin
                     state <= next_state;
                     
-                    if (state == IDLE) begin
-                        reg_clear_internal <= 0;
-                        reg_read_en_internal <= 1;
-                    end else if (state == LOADING) begin
-                        reg_read_en_internal <= 0;
-                    end else if (state == LOADED) begin
-                        reg_read_en_internal <= 1;
+                    if (move_down) begin
+                        invader_coord_y <= invader_coord_y - Y_OFFSET;
                     end else begin
-                        reg_read_en_internal <= 1;
-                        reg_invert_internal <= 0;
+                        invader_coord_x <= invader_coord_x + x_offset;
                     end
                 end
 
             DEAD: begin
                     state <= next_state;
                     
-                    reg_read_en_internal <= 0;
+                    invader_coord_x <= DEAD_X;
+                    invader_coord_y <= DEAD_Y;
+
+                    alive <= 0;
+                    
+                    // This logic ensures the player_bullet_collision_signal is toggled on once upon invader death, then set to zero afterwards.
+                    // NOTE: This signal is this specific invader's collision signal.
+                    //       It should be ORed with the other invaders' signals to create the global player_bullet_collision_signal
+                    if (state == MOVE) begin
+                        player_bullet_collision_signal <= 1;
+                    end else begin
+                        player_bullet_collision_signal <= 0;
+                    end
                 end
         endcase
     end
-
-
 endmodule
