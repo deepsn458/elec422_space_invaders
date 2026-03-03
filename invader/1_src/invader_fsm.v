@@ -39,8 +39,8 @@ module invader_fsm
     // Detection for checking if collision happened in invader bounding box
     wire collision_detect_x;
     wire collision_detect_y;
-    assign collision_detect_x = (player_bullet_coord_x < (invader_coord_x + 1)) & (player_bullet_coord_x > (invader_coord_x - 1));
-    assign collision_detect_y = (player_bullet_coord_y < (invader_coord_y + 1)) & (player_bullet_coord_y > (invader_coord_y - 1));
+    assign collision_detect_x = (player_bullet_coord_x <= (invader_coord_x + 1)) & (player_bullet_coord_x >= (invader_coord_x - 1));
+    assign collision_detect_y = (player_bullet_coord_y <= (invader_coord_y + 1)) & (player_bullet_coord_y >= (invader_coord_y - 1));
 
     // Combinational logic to calculate upcoming tempt state
     always @(*) begin
@@ -88,6 +88,8 @@ module invader_fsm
 
                     invader_coord_x <= START_X;
                     invader_coord_y <= START_Y;
+                    player_bullet_collision_signal <= 0;
+                    
                     alive <= 1;
                 end
 
