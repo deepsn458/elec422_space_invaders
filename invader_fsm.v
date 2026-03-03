@@ -71,10 +71,10 @@ module invader_fsm
 
     // Sequential logic to set next_state <= temp_state or respond to restart signal
     always @ (negedge clka) begin : FSM_SEQ
-        if (RESTART) begin
-        next_state <= IDLE;
+        if (reset) begin
+            next_state <= RESET;
         end else begin
-        next_state <= temp_state;
+            next_state <= temp_state;
         end
     end
 
@@ -82,45 +82,39 @@ module invader_fsm
     always @ (negedge clkb) begin : OUTPUT_LOGIC
 
         case(next_state)
-        IDLE: begin
-                state <= next_state;
+            RESET: begin
+                    state <= next_state;
 
-                if (RESTART) begin
-                    reg_clear_internal <= 1;  // On restart, clear the register
-                    reg_invert_internal <= 0;
+                    if (RESTART) begin
+                        reg_clear_internal <= 1;  // On restart, clear the register
+                        reg_invert_internal <= 0;
+                        reg_read_en_internal <= 0;
+                    end else begin
+                        // Do nothing if not loading or restarting
+                    end
+                    end
+
+            MOVE: begin
+                    state <= next_state;
+                    
+                    if (state == IDLE) begin
+                        reg_clear_internal <= 0;
+                        reg_read_en_internal <= 1;
+                    end else if (state == LOADING) begin
+                        reg_read_en_internal <= 0;
+                    end else if (state == LOADED) begin
+                        reg_read_en_internal <= 1;
+                    end else begin
+                        reg_read_en_internal <= 1;
+                        reg_invert_internal <= 0;
+                    end
+                end
+
+            DEAD: begin
+                    state <= next_state;
+                    
                     reg_read_en_internal <= 0;
-                end else begin
-                    // Do nothing if not loading or restarting
                 end
-                end
-
-        LOADING: begin
-                state <= next_state;
-                
-                if (state == IDLE) begin
-                    reg_clear_internal <= 0;
-                    reg_read_en_internal <= 1;
-                end else if (state == LOADING) begin
-                    reg_read_en_internal <= 0;
-                end else if (state == LOADED) begin
-                    reg_read_en_internal <= 1;
-                end else begin
-                    reg_read_en_internal <= 1;
-                    reg_invert_internal <= 0;
-                end
-            end
-
-        LOADED: begin
-                state <= next_state;
-                
-                reg_read_en_internal <= 0;
-            end
-
-        INVERT: begin
-                state <= next_state;
-                
-                reg_invert_internal <= 1;
-            end
         endcase
     end
 
