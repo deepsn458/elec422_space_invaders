@@ -94,29 +94,18 @@ module player_bullet_fsm
         end else begin
 
         case(next_state)
-            IDLE: begin
-                    state <= next_state;
-
-                    // On clkb, set Load_Temp and Accumulate to 0
-                    Load_Temp <= 0;
-                    Accumulate <= 0;
-                end
-
-            ADD_ADD: begin
-                    state <= next_state;
-                    
-                    // On clkb, set Load_Temp to 1 and Accumulate to 0
-                    Load_Temp <= 1;
-                    Accumulate <= 0;
-                end
-
-            ADD_ACC: begin
-                    state <= next_state;
-                    
-                    // On clkb, set Load_Temp and Accumulate to 1
-                    Load_Temp <= 1;
-                    Accumulate <= 1;
-                end
+            INIT: begin
+                state <= next_state;
+                player_bullet_coord_x <= player_coord_x;
+                player_bullet_coord_y <= player_coord_y;
+                display <= 0;
+            end
+            FIRING: begin
+                state <= next_state;
+                player_bullet_coord_x <= player_bullet_coord_x;
+                player_bullet_coord_y <= player_bullet_coord_y + Y_OFFSET;
+                display <= 1;
+            end
         endcase
         end
     end
