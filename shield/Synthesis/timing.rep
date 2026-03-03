@@ -1,0 +1,59 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : shield_fsm
+Version: U-2022.12-SP7
+Date   : Tue Mar  3 15:18:13 2026
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: invader_bullet_coord_x[1]
+              (input port clocked by clka)
+  Endpoint: next_state_reg[1]
+            (falling edge-triggered flip-flop clocked by clka)
+  Path Group: clka
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clka (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 r
+  invader_bullet_coord_x[1] (in)           0.22       1.22 r
+  U104/Y (INVX2)                           0.19       1.41 f
+  sub_43_2/U2_1/YC (FAX1)                  0.44       1.84 f
+  U79/Y (AND2X2)                           0.29       2.13 f
+  sub_43_2/U2_3/YC (FAX1)                  0.41       2.54 f
+  U78/Y (AND2X2)                           0.28       2.82 f
+  U92/Y (XOR2X1)                           0.17       2.99 r
+  U130/Y (OR2X1)                           0.24       3.23 r
+  U131/Y (NOR2X1)                          0.13       3.36 f
+  U132/Y (NAND3X1)                         0.15       3.51 r
+  U97/Y (INVX2)                            0.08       3.59 f
+  U77/Y (OR2X1)                            0.24       3.82 f
+  U67/Y (NAND3X1)                          0.24       4.06 r
+  U66/Y (OR2X1)                            0.28       4.34 r
+  U62/Y (NOR2X1)                           0.16       4.50 f
+  U61/Y (AOI22X1)                          0.15       4.65 r
+  U60/Y (NOR2X1)                           0.11       4.76 f
+  next_state_reg[1]/D (DFFNEGX1)           0.00       4.76 f
+  data arrival time                                   4.76
+
+  clock clka (fall edge)                  10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  next_state_reg[1]/CLK (DFFNEGX1)         0.00      10.00 f
+  library setup time                      -0.37       9.63
+  data required time                                  9.63
+  -----------------------------------------------------------
+  data required time                                  9.63
+  data arrival time                                  -4.76
+  -----------------------------------------------------------
+  slack (MET)                                         4.87
+
+
+1

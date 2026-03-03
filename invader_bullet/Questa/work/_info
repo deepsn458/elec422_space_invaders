@@ -1,0 +1,75 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+!s11f vlog 2023.2 2023.04, Apr 11 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/storage-home/d/dn55/elec422/elec422_space_invaders/invader_bullet/Questa
+T_opt
+!s110 1772516083
+VVRk=j^MGbm3m0[Eh0c4?G3
+04 21 4 work invader_bullet_fsm_tb fast 0
+=1-d09466182648-69a672f3-42ee3-2ed853
+R1
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.2;77
+vinvader_bullet_fsm
+Z4 2invader_bullet_fsm.v|testbench_invader_bullet.v
+Z5 !s110 1772516074
+!i10b 1
+!s100 k60^QoK@C5`75hYfoLI4K0
+IR4oa4ILA[eS3KcUedZ94Z3
+R2
+w1772514636
+8invader_bullet_fsm.v
+Finvader_bullet_fsm.v
+!i122 6
+L0 11 91
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2023.2;77
+r1
+!s85 0
+31
+Z8 !s108 1772516073.000000
+Z9 !s107 testbench_invader_bullet.v|invader_bullet_fsm.v|
+Z10 !s90 invader_bullet_fsm.v|testbench_invader_bullet.v|
+!i113 0
+Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vinvader_bullet_fsm_tb
+R4
+R5
+!i10b 1
+!s100 ZQVPC9iBznNNU8iKX2mnR3
+I3YlAJTh9n5MLEjoDJA]UT0
+R2
+w1772516063
+8testbench_invader_bullet.v
+Ftestbench_invader_bullet.v
+!i122 6
+L0 8 70
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R3
