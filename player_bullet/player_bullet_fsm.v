@@ -8,10 +8,9 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////////////////// test
 
-module player_bullet_fsm
-    #(
-    parameter Y_OFFSET = 3,                                     // Number of pixels to travel upwards upon vertical movement
-    parameter Y_MAX = 31                                        // Maximum Y coordinate for the player bullet (top of the screen)
+module player_bullet_fsm #(
+    parameter Y_OFFSET = 3,
+    parameter Y_MAX = 31
     )(
     input  wire             clka, clkb,                         // Input clocks
     input  wire             reset, fire,                        // Global control and reset signals
