@@ -74,8 +74,8 @@ in_clka = 0; in_clkb = 1; #10;
 // cycle 4                      -- Collision cycle (bullet hits invader coordinates)
 in_move_down = 0;
 // Note: Assuming START_X and START_Y are 5 and 25 respectively, placing bullet nearby to trigger collision
-in_player_bullet_coord_x = 6'd5;
-in_player_bullet_coord_y = 6'd25;
+in_player_bullet_coord_x = 6'd8;
+in_player_bullet_coord_y = 6'd21;
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 1; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 0; #10;
@@ -124,10 +124,10 @@ in_clka = 1; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 1; #10;
 
-// cycle 10                     -- Collision cycle (bullet hits invader at 7, 22)
+// cycle 10                     -- Collision cycle (bullet hits invader at 10, 23)
 in_move_down = 0;
-in_player_bullet_coord_x = 6'd7;
-in_player_bullet_coord_y = 6'd22;
+in_player_bullet_coord_x = 6'd10;
+in_player_bullet_coord_y = 6'd23;
 in_clka = 0; in_clkb = 0; #10;
 in_clka = 1; in_clkb = 0; #10;
 in_clka = 0; in_clkb = 0; #10;
