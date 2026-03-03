@@ -1,5 +1,5 @@
 $date
-	Mon Mar  2 23:38:22 2026
+	Tue Mar  3 16:44:33 2026
 $end
 $version
 	QuestaSim Version 2023.2
@@ -14,62 +14,65 @@ $var parameter 32 " idle_1 $end
 $var parameter 32 # FIRE $end
 $var parameter 32 $ idle_2 $end
 $var parameter 32 % COLLIDE $end
-$var reg 1 & in_clka $end
-$var reg 1 ' in_clkb $end
-$var reg 1 ( in_reset $end
-$var reg 1 ) in_player_collision_signal $end
-$var reg 1 * in_shield_collision_signal $end
-$var reg 1 + in_invader_fire $end
-$var reg 6 , in_closest_invader_coord_x [5:0] $end
-$var reg 6 - in_closest_invader_coord_y [5:0] $end
-$var wire 1 . out_invader_bullet_display $end
-$var wire 1 / out_invader_bullet_coord_x [5] $end
-$var wire 1 0 out_invader_bullet_coord_x [4] $end
-$var wire 1 1 out_invader_bullet_coord_x [3] $end
-$var wire 1 2 out_invader_bullet_coord_x [2] $end
-$var wire 1 3 out_invader_bullet_coord_x [1] $end
-$var wire 1 4 out_invader_bullet_coord_x [0] $end
-$var wire 1 5 out_invader_bullet_coord_y [5] $end
-$var wire 1 6 out_invader_bullet_coord_y [4] $end
-$var wire 1 7 out_invader_bullet_coord_y [3] $end
-$var wire 1 8 out_invader_bullet_coord_y [2] $end
-$var wire 1 9 out_invader_bullet_coord_y [1] $end
-$var wire 1 : out_invader_bullet_coord_y [0] $end
-$var wire 1 ; out_state [1] $end
-$var wire 1 < out_state [0] $end
-$var integer 32 = i $end
+$var parameter 32 & RESET_2 $end
+$var parameter 32 ' idle_3 $end
+$var parameter 32 ( FIRE_2 $end
+$var reg 1 ) in_clka $end
+$var reg 1 * in_clkb $end
+$var reg 1 + in_reset $end
+$var reg 1 , in_player_collision_signal $end
+$var reg 1 - in_shield_collision_signal $end
+$var reg 1 . in_invader_fire $end
+$var reg 6 / in_closest_invader_coord_x [5:0] $end
+$var reg 6 0 in_closest_invader_coord_y [5:0] $end
+$var wire 1 1 out_invader_bullet_display $end
+$var wire 1 2 out_invader_bullet_coord_x [5] $end
+$var wire 1 3 out_invader_bullet_coord_x [4] $end
+$var wire 1 4 out_invader_bullet_coord_x [3] $end
+$var wire 1 5 out_invader_bullet_coord_x [2] $end
+$var wire 1 6 out_invader_bullet_coord_x [1] $end
+$var wire 1 7 out_invader_bullet_coord_x [0] $end
+$var wire 1 8 out_invader_bullet_coord_y [5] $end
+$var wire 1 9 out_invader_bullet_coord_y [4] $end
+$var wire 1 : out_invader_bullet_coord_y [3] $end
+$var wire 1 ; out_invader_bullet_coord_y [2] $end
+$var wire 1 < out_invader_bullet_coord_y [1] $end
+$var wire 1 = out_invader_bullet_coord_y [0] $end
+$var wire 1 > out_state [1] $end
+$var wire 1 ? out_state [0] $end
+$var integer 32 @ i $end
 
 $scope module invader_bullet $end
-$var parameter 32 > BULLET_Y_OFFSET $end
-$var parameter 32 ? BOUNDARY_Y $end
-$var parameter 32 @ START_X $end
-$var parameter 32 A START_Y $end
-$var parameter 2 B INITIAL $end
-$var parameter 2 C FIRING $end
-$var parameter 2 D COLLISION $end
-$var wire 1 E clka $end
-$var wire 1 F clkb $end
-$var wire 1 G reset $end
-$var wire 1 H player_collision_signal $end
-$var wire 1 I shield_collision_signal $end
-$var wire 1 J invader_fire $end
-$var wire 1 K closest_invader_coord_x [5] $end
-$var wire 1 L closest_invader_coord_x [4] $end
-$var wire 1 M closest_invader_coord_x [3] $end
-$var wire 1 N closest_invader_coord_x [2] $end
-$var wire 1 O closest_invader_coord_x [1] $end
-$var wire 1 P closest_invader_coord_x [0] $end
-$var wire 1 Q closest_invader_coord_y [5] $end
-$var wire 1 R closest_invader_coord_y [4] $end
-$var wire 1 S closest_invader_coord_y [3] $end
-$var wire 1 T closest_invader_coord_y [2] $end
-$var wire 1 U closest_invader_coord_y [1] $end
-$var wire 1 V closest_invader_coord_y [0] $end
-$var reg 1 W invader_bullet_display $end
-$var reg 6 X invader_bullet_coord_x [5:0] $end
-$var reg 6 Y invader_bullet_coord_y [5:0] $end
-$var reg 2 Z state [1:0] $end
-$var reg 2 [ temp_state [1:0] $end
-$var reg 2 \ next_state [1:0] $end
+$var parameter 32 A BULLET_Y_OFFSET $end
+$var parameter 32 B BOUNDARY_Y $end
+$var parameter 32 C START_X $end
+$var parameter 32 D START_Y $end
+$var parameter 2 E INITIAL $end
+$var parameter 2 F FIRING $end
+$var parameter 2 G COLLISION $end
+$var wire 1 H clka $end
+$var wire 1 I clkb $end
+$var wire 1 J reset $end
+$var wire 1 K player_collision_signal $end
+$var wire 1 L shield_collision_signal $end
+$var wire 1 M invader_fire $end
+$var wire 1 N closest_invader_coord_x [5] $end
+$var wire 1 O closest_invader_coord_x [4] $end
+$var wire 1 P closest_invader_coord_x [3] $end
+$var wire 1 Q closest_invader_coord_x [2] $end
+$var wire 1 R closest_invader_coord_x [1] $end
+$var wire 1 S closest_invader_coord_x [0] $end
+$var wire 1 T closest_invader_coord_y [5] $end
+$var wire 1 U closest_invader_coord_y [4] $end
+$var wire 1 V closest_invader_coord_y [3] $end
+$var wire 1 W closest_invader_coord_y [2] $end
+$var wire 1 X closest_invader_coord_y [1] $end
+$var wire 1 Y closest_invader_coord_y [0] $end
+$var reg 1 Z invader_bullet_display $end
+$var reg 6 [ invader_bullet_coord_x [5:0] $end
+$var reg 6 \ invader_bullet_coord_y [5:0] $end
+$var reg 2 ] state [1:0] $end
+$var reg 2 ^ temp_state [1:0] $end
+$var reg 2 _ next_state [1:0] $end
 
 $scope begin OUTPUT_LOGIC $end

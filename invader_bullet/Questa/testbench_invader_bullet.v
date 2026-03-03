@@ -12,6 +12,10 @@ localparam idle_1 = 2;
 localparam FIRE = 3;
 localparam idle_2 = 5;
 localparam COLLIDE = 6;
+//second test: out of bounds
+localparam RESET_2 = 7;
+localparam idle_3 = 8;
+localparam FIRE_2 = 9;
 
 reg in_clka, in_clkb, in_reset;
 reg in_player_collision_signal, in_shield_collision_signal, in_invader_fire;
@@ -39,27 +43,43 @@ invader_bullet_fsm invader_bullet(
 
 initial
 begin
-    for (i = 0; i < 10; i = i+1) begin
+    for (i = 0; i < 15; i = i+1) begin
         if (i == RESET_1) begin
             in_reset = 1;
             in_player_collision_signal = 0;
             in_shield_collision_signal = 0;
             in_invader_fire = 0;
-        end else if (i == (idle_1 || idle_2 || 0)) begin
-            in_reset = 1;
+            in_closest_invader_coord_y = 0;
+            in_closest_invader_coord_y = 0;
+        end else if (i == (idle_1 || idle_2 || idle_3 || 0)) begin
+            in_reset = 0;
             in_player_collision_signal = 0;
             in_shield_collision_signal = 0;
             in_invader_fire = 0;
+            in_closest_invader_coord_y = 8;
+            in_closest_invader_coord_y = 8;
         end else if ((idle_2>i) && (i>=FIRE)) begin
             in_reset = 0;
             in_player_collision_signal = 0;
             in_shield_collision_signal = 0;
             in_invader_fire = 1;
-        end else begin
+        end else if ((RESET_2 > i) && (i>= COLLIDE))begin
             in_reset = 0;
             in_player_collision_signal = 1;
             in_shield_collision_signal = 1;
             in_invader_fire = 0;
+        end else if (i == RESET_2) begin
+            in_reset = 1;
+            in_player_collision_signal = 0;
+            in_shield_collision_signal = 0;
+            in_invader_fire = 0;
+            in_closest_invader_coord_y = 0;
+            in_closest_invader_coord_y = 0;
+        end else if ((i== FIRE_2)) begin
+            in_reset = 0;
+            in_player_collision_signal = 0;
+            in_shield_collision_signal = 0;
+            in_invader_fire = 1;
         end
         in_clka = 0; in_clkb = 0; #10;
         in_clka = 1; in_clkb = 0; #10;
