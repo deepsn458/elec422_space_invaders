@@ -70,71 +70,58 @@ module invader_fsm
     end
 
     // Sequential logic to set next_state <= temp_state or respond to restart signal
-    always @ (negedge clka) begin : FSM_SEQA
-        if (reset) begin
+    always @ (negedge clka) begin : FSM_SEQ
+        if (RESTART) begin
         next_state <= IDLE;
-        reg_clear <= 1;         // clear registers only if restart is asserted
-        Load_X <= 0;
-        Load_Y <= 0;
         end else begin
         next_state <= temp_state;
-        reg_clear <= 0;         // Stop clearing registers when not restarting
-
-        case(temp_state)        // assign clka signals based on tempstate
-            IDLE: begin
-                    // On clka, set Load_X and Load_Y to 0
-                    Load_X <= 0;
-                    Load_Y <= 0;
-                end
-
-            ADD_ADD: begin
-                    // On clka, set Load_X and Load_Y to 1
-                    Load_X <= 1;
-                    Load_Y <= 1;
-                end
-
-            ADD_ACC: begin
-                    // On clka, set Load_X and Load_Y to 1
-                    Load_X <= 1;
-                    Load_Y <= 1;
-                end
-        endcase
         end
     end
 
     // Sequential logic to set outputs
-    always @ (negedge clkb) begin : FSM_SEQB            // clkb active signals are: Load_Temp, Accumulate
-        if (Restart) begin
-        Load_Temp <= 0;
-        Accumulate <= 0;
-        end else begin
+    always @ (negedge clkb) begin : OUTPUT_LOGIC
 
         case(next_state)
-            IDLE: begin
-                    state <= next_state;
+        IDLE: begin
+                state <= next_state;
 
-                    // On clkb, set Load_Temp and Accumulate to 0
-                    Load_Temp <= 0;
-                    Accumulate <= 0;
+                if (RESTART) begin
+                    reg_clear_internal <= 1;  // On restart, clear the register
+                    reg_invert_internal <= 0;
+                    reg_read_en_internal <= 0;
+                end else begin
+                    // Do nothing if not loading or restarting
+                end
                 end
 
-            ADD_ADD: begin
-                    state <= next_state;
-                    
-                    // On clkb, set Load_Temp to 1 and Accumulate to 0
-                    Load_Temp <= 1;
-                    Accumulate <= 0;
+        LOADING: begin
+                state <= next_state;
+                
+                if (state == IDLE) begin
+                    reg_clear_internal <= 0;
+                    reg_read_en_internal <= 1;
+                end else if (state == LOADING) begin
+                    reg_read_en_internal <= 0;
+                end else if (state == LOADED) begin
+                    reg_read_en_internal <= 1;
+                end else begin
+                    reg_read_en_internal <= 1;
+                    reg_invert_internal <= 0;
                 end
+            end
 
-            ADD_ACC: begin
-                    state <= next_state;
-                    
-                    // On clkb, set Load_Temp and Accumulate to 1
-                    Load_Temp <= 1;
-                    Accumulate <= 1;
-                end
+        LOADED: begin
+                state <= next_state;
+                
+                reg_read_en_internal <= 0;
+            end
+
+        INVERT: begin
+                state <= next_state;
+                
+                reg_invert_internal <= 1;
+            end
         endcase
-        end
     end
 
 
