@@ -1,0 +1,71 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/storage-home/j/jc165/ELEC_422/Project/elec422_space_invaders/invader/1_src
+T_opt
+!s110 1772512130
+VW;oKij=aEf>i:2l?P^o[Z2
+04 14 4 work invader_fsm_tb fast 0
+=1-d094661828ee-69a66382-55506-d482c
+R0
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.2;77
+vinvader_fsm
+Z3 2invader_fsm.v|invader_fsm_tb.v
+Z4 !s110 1772512046
+!i10b 1
+!s100 2OkM=?Dl:bU:baobL@9S02
+IE@?;8_>5jzh^nXe:XnkZU1
+R1
+w1772512044
+8invader_fsm.v
+Finvader_fsm.v
+!i122 1
+L0 11 117
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2023.2;77
+r1
+!s85 0
+31
+Z7 !s108 1772512046.000000
+Z8 !s107 invader_fsm_tb.v|invader_fsm.v|
+Z9 !s90 invader_fsm.v|invader_fsm_tb.v|
+!i113 0
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vinvader_fsm_tb
+R3
+R4
+!i10b 1
+!s100 1KFL?nNk2PSSl]REBK`1O1
+I35eGh8fN3PHahXjE7RkR80
+R1
+w1772511848
+8invader_fsm_tb.v
+Finvader_fsm_tb.v
+!i122 1
+L0 12 137
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R2

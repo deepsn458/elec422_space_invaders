@@ -66,7 +66,7 @@ module invader_fsm
             temp_state = DEAD;
         end
 
-        default: temp_state = IDLE;
+        default: temp_state = RESET;
         endcase
     end
 
@@ -86,7 +86,7 @@ module invader_fsm
             RESET: begin
                     state <= next_state;
 
-                    if (RESTART) begin
+                    if (reset) begin
                         invader_coord_x <= START_X;
                         invader_coord_y <= START_Y;
                         alive <= 1;
