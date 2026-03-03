@@ -34,7 +34,7 @@ module player_bullet_fsm
     // Detection for checking if collision happened in invader bounding box
     wire collide, boundary;
     assign collide = player_bullet_collision | shield_bullet_collision;
-    assign boundary = (player_coord_y >= Y_MAX);     // Check if bullet has reached the top of the screen
+    assign boundary = (player_bullet_coord_y >= Y_MAX);     // Check if bullet has reached the top of the screen
 
     // Combinational logic to calculate upcoming tempt state
     always @(*) begin
@@ -63,7 +63,7 @@ module player_bullet_fsm
     // Sequential logic to set next_state <= temp_state or respond to restart signal
     always @ (negedge clka) begin : FSM_SEQA
         if (reset) begin
-            next_state <= RESET;
+            next_state <= INIT;
         end else begin
             next_state <= temp_state;
         end
