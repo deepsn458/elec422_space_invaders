@@ -23,8 +23,10 @@ module main_game_fsm(
     output reg          player_left_out, player_right_out,      // Forwarded player movement outputs
     output reg [5:0]    invader_bullet_start_position_x,        // Starting position_x of the invader bullet
     output reg [5:0]    invader_bullet_start_position_y,        // Starting position_y of the invader bullet
-    output reg          invader_right_position,                 // Coordinates of rightmost invader
-    output reg          invader_left_position,                  // Coordinates of leftmost invader
+    output reg [5:0]    invader_right_position_x,                 // x coordinates of rightmost invader
+    output reg [5:0]    invader_right_position_y,                 // y coordinates of rightmost invader
+    output reg [5:0]    invader_left_position_x,                  // x coordinates of leftmost invader
+    output reg [5:0]    invader_left_position_y,                  // y coordinates of leftmost invader
     output reg          invader_direction,                      // Direction of invader movement
     output reg      reset_player, reset_invader, reset_shield,  // Reset signals for player, invader, and shield
     output reg          play,                                   // Game is in play
