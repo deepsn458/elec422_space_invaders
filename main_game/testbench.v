@@ -12,6 +12,7 @@ wire [5:0] out_inv_right_x, out_inv_right_y;
 wire [5:0] out_inv_left_x, out_inv_left_y;
 wire out_invader_direction, out_reset_player, out_reset_invader, out_reset_shield;
 wire out_play, out_invader_offset;
+wire [1:0] out_state;
 
 // UUT Instance
 main_game_fsm U1 (
@@ -36,7 +37,8 @@ main_game_fsm U1 (
     .reset_invader (out_reset_invader),
     .reset_shield (out_reset_shield),
     .play (out_play),
-    .invader_offset (out_invader_offset)
+    .invader_offset (out_invader_offset),
+    .state(out_state)
 );
 
 integer i;
