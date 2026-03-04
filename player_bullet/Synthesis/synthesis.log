@@ -1,0 +1,736 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version U-2022.12-SP7 for linux64 - Oct 10, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Current time:       Mon Mar  2 23:24:13 2026
+Hostname:           cobalt.clear8.rice.edu
+CPU Model:          Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+CPU Details:        Cores = 40 : Sockets = 2 : Cache Size = 25600 KB : Freq = 3.40 GHz
+OS:                 Linux 4.18.0-553.89.1.el8_10.x86_64
+RAM:                125 GB (Free  49 GB)
+Swap:                15 GB (Free  15 GB)
+Work Filesystem:    /storage-home/e/ely2 mounted to clearstor.clear.rice.edu:/clear-home/ely2
+Tmp Filesystem:     /tmp mounted to /dev/mapper/vg0-tmp
+Work Disk:          5038 GB (Free 922 GB)
+Tmp Disk:             5 GB (Free   5 GB)
+
+CPU Load: 2%, Ram Free: 49 GB, Swap Free: 15 GB, Work Disk Free: 922 GB, Tmp Disk Free: 5 GB
+#/**************************************************/
+#/* Compile Script for Synopsys                    */
+#/*                                                */
+#/* dc_shell-t -f compile_dc.tcl                   */
+#/*                                                */
+#/* OSU FreePDK 45nm                               */
+#/* Modified for OSU ami05 - Rice U. 2018          */
+#/*                                                */
+#/**************************************************/
+#/* User Input Data Section: List files, module, clock, frequency below. */
+#/* Edit this part only of the file.                                     */
+#/* Add all verilog files, separated by spaces after keyword "list"      */
+set my_verilog_files [list player_bullet_fsm.v]
+player_bullet_fsm.v
+#/* Top-level Module Name update                             */
+set my_toplevel player_bullet_fsm
+player_bullet_fsm
+#/* The name of the clock pin. If no clock-pin     */
+#/* exists, pick anything                          */
+#/* For two phase clock, just list clka here       */
+set my_clock_pin clka
+clka
+#/* Target frequency in MHz for optimization       */
+set my_clk_freq_MHz 50
+50
+#/* Delay of input signals (Clock-to-Q, Package etc.)  */
+set my_input_delay_ns 1
+1
+#/* Reserved time for output signals (Holdtime etc.)   */
+set my_output_delay_ns 1
+1
+#/********************************************************************/
+#/********************************************************************/
+#/* No modifications needed below. Do not edit or remove.            */
+#/*                                                                  */
+#/* Paths updated for Rice U. on CLEAR cluster 2018.                 */
+#/********************************************************************/
+#/********************************************************************/
+#/* Start of Synopsys library cells location data.               */
+set OSUcells "/clear/apps/osu/soc/synopsys/lib/ami05"
+/clear/apps/osu/soc/synopsys/lib/ami05
+set search_path [concat  $search_path $OSUcells]
+. /clear/apps/synopsys-2023/syn/latest/libraries/syn /clear/apps/synopsys-2023/syn/latest/dw/syn_ver /clear/apps/synopsys-2023/syn/latest/dw/sim_ver /clear/apps/osu/soc/synopsys/lib/ami05
+set alib_library_analysis_path $OSUcells
+/clear/apps/osu/soc/synopsys/lib/ami05
+set link_library [set target_library [concat  [list osu05_stdcells.db] [list dw_foundation.sldb]]]
+osu05_stdcells.db dw_foundation.sldb
+set target_library "osu05_stdcells.db"
+osu05_stdcells.db
+#/* End of Synopsys library cells location data.                  */
+define_design_lib WORK -path ./WORK
+1
+set verilogout_show_unconnected_pins "true"
+true
+analyze -f verilog $my_verilog_files
+Running PRESTO HDLC
+Compiling source file ./player_bullet_fsm.v
+Presto compilation completed successfully.
+Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
+Loading db file '/clear/apps/synopsys-2023/syn/latest/libraries/syn/dw_foundation.sldb'
+1
+elaborate $my_toplevel
+Loading db file '/clear/apps/synopsys-2023/syn/latest/libraries/syn/gtech.db'
+Loading db file '/clear/apps/synopsys-2023/syn/latest/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 37 in file
+	'./player_bullet_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            38            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 70 in file
+	'./player_bullet_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            78            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine player_bullet_fsm line 61 in file
+		'./player_bullet_fsm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   next_state_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine player_bullet_fsm line 70 in file
+		'./player_bullet_fsm.v'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+|         state_reg         | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+| player_bullet_coord_y_reg | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| player_bullet_coord_x_reg | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|        display_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=====================================================================================
+Presto compilation completed successfully. (player_bullet_fsm)
+Elaborated 1 design.
+Current design is now 'player_bullet_fsm'.
+1
+current_design $my_toplevel
+Current design is 'player_bullet_fsm'.
+{player_bullet_fsm}
+link
+
+  Linking design 'player_bullet_fsm'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  osu05_stdcells (library)    /clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db
+  dw_foundation.sldb (library) /clear/apps/synopsys-2023/syn/latest/libraries/syn/dw_foundation.sldb
+
+1
+uniquify
+1
+set my_period [expr 1000 / $my_clk_freq_MHz]
+20
+set find_clock [ find port [list $my_clock_pin] ]
+{clka}
+if {  $find_clock != [list] } {
+   set clk_name $my_clock_pin
+   create_clock -period $my_period $clk_name
+} else {
+   set clk_name vclk
+   create_clock -period $my_period -name $clk_name
+}
+1
+set_driving_cell  -lib_cell INVX1  [all_inputs]
+Warning: Design rule attributes from the driving cell will be set on the port 'clka'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'clkb'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'reset'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'fire'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_coord_x[5]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_coord_x[4]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_coord_x[3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_coord_x[2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_coord_x[1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_coord_x[0]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_coord_y[5]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_coord_y[4]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_coord_y[3]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_coord_y[2]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_coord_y[1]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_coord_y[0]'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_bullet_collision'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'shield_bullet_collision'. (UID-401)
+1
+set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all_inputs] $my_clock_pin]
+1
+set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
+1
+compile -ungroup_all -map_effort medium
+CPU Load: 2%, Ram Free: 49 GB, Swap Free: 15 GB, Work Disk Free: 922 GB, Tmp Disk Free: 5 GB
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.5 |     *     |
+| Licensed DW Building Blocks        | U-2022.12-DWBB_202212.5 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 53                                     |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 17                                     |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 18                                     |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'player_bullet_fsm'
+Information: The register 'next_state_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[1]' is a constant and will be removed. (OPT-1206)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'DW01_add_width6_DW01_add_0'
+  Mapping 'DW_cmp'
+Information: Added key list 'DesignWare' to design 'player_bullet_fsm'. (DDB-72)
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01   26766.0      0.00       0.0      21.3                          
+    0:00:01   26766.0      0.00       0.0      21.3                          
+    0:00:01   26766.0      0.00       0.0      21.3                          
+    0:00:01   26766.0      0.00       0.0      21.3                          
+    0:00:01   26766.0      0.00       0.0      21.3                          
+    0:00:01   26766.0      0.00       0.0      21.3                          
+    0:00:01   26766.0      0.00       0.0      21.3                          
+    0:00:01   26766.0      0.00       0.0      21.3                          
+    0:00:01   26766.0      0.00       0.0      21.3                          
+    0:00:01   26766.0      0.00       0.0      21.3                          
+    0:00:01   26766.0      0.00       0.0      21.3                          
+    0:00:01   26766.0      0.00       0.0      21.3                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01   26766.0      0.00       0.0      21.3                          
+    0:00:01   26766.0      0.00       0.0      21.3                          
+    0:00:01   26766.0      0.00       0.0      21.3                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01   26766.0      0.00       0.0      21.3                          
+    0:00:01   27054.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01   27054.0      0.00       0.0       0.0                          
+    0:00:01   27054.0      0.00       0.0       0.0                          
+    0:00:01   26766.0      0.00       0.0       0.0                          
+    0:00:01   26694.0      0.00       0.0       0.0                          
+    0:00:01   26694.0      0.00       0.0       0.0                          
+    0:00:01   26694.0      0.00       0.0       0.0                          
+    0:00:01   26694.0      0.00       0.0       0.0                          
+    0:00:01   26694.0      0.00       0.0       0.0                          
+    0:00:01   26694.0      0.00       0.0       0.0                          
+    0:00:01   26694.0      0.00       0.0       0.0                          
+    0:00:01   26694.0      0.00       0.0       0.0                          
+    0:00:01   26694.0      0.00       0.0       0.0                          
+    0:00:01   26694.0      0.00       0.0       0.0                          
+Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+CPU Load: 2%, Ram Free: 49 GB, Swap Free: 15 GB, Work Disk Free: 922 GB, Tmp Disk Free: 5 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+compile -incremental_mapping -map_effort medium
+CPU Load: 2%, Ram Free: 49 GB, Swap Free: 15 GB, Work Disk Free: 922 GB, Tmp Disk Free: 5 GB
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 68                                     |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 15                                     |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 0                                      |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00   26694.0      0.00       0.0       0.0                          
+    0:00:00   26694.0      0.00       0.0       0.0                          
+    0:00:00   26694.0      0.00       0.0       0.0                          
+Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+CPU Load: 2%, Ram Free: 49 GB, Swap Free: 15 GB, Work Disk Free: 922 GB, Tmp Disk Free: 5 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     U-2022.12-SP7
+Date:        Mon Mar  2 23:24:14 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      1
+    Constant outputs (LINT-52)                                      1
+--------------------------------------------------------------------------------
+
+Warning: In design 'player_bullet_fsm', output port 'state[1]' is connected directly to 'logic 0'. (LINT-52)
+1
+report_constraint -all_violators
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : player_bullet_fsm
+Version: U-2022.12-SP7
+Date   : Mon Mar  2 23:24:14 2026
+****************************************
+
+This design has no violated constraints.
+
+1
+set filename [format "%s%s"  $my_toplevel ".vh"]
+player_bullet_fsm.vh
+write -f verilog -output $filename
+Writing verilog file '/storage-home/e/ely2/ELEC422/project/fsm/player_bullet/Synthesis/player_bullet_fsm.vh'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+set filename [format "%s%s"  $my_toplevel ".sdc"]
+player_bullet_fsm.sdc
+write_sdc $filename
+1
+report_cell 
+ 
+****************************************
+Report : cell
+Design : player_bullet_fsm
+Version: U-2022.12-SP7
+Date   : Mon Mar  2 23:24:14 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U28                       AOI22X1         osu05_stdcells  360.000000
+U29                       AOI22X1         osu05_stdcells  360.000000
+U30                       AOI22X1         osu05_stdcells  360.000000
+U31                       AOI22X1         osu05_stdcells  360.000000
+U32                       AOI22X1         osu05_stdcells  360.000000
+U33                       AOI22X1         osu05_stdcells  360.000000
+U34                       NOR2X1          osu05_stdcells  216.000000
+U38                       AOI22X1         osu05_stdcells  360.000000
+U40                       AOI22X1         osu05_stdcells  360.000000
+U42                       AOI22X1         osu05_stdcells  360.000000
+U44                       AOI22X1         osu05_stdcells  360.000000
+U46                       AOI22X1         osu05_stdcells  360.000000
+U48                       AOI22X1         osu05_stdcells  360.000000
+U51                       NOR2X1          osu05_stdcells  216.000000
+U53                       AOI22X1         osu05_stdcells  360.000000
+U54                       NOR2X1          osu05_stdcells  216.000000
+U55                       NOR2X1          osu05_stdcells  216.000000
+U56                       AND2X2          osu05_stdcells  288.000000
+U57                       AND2X2          osu05_stdcells  288.000000
+U58                       AND2X2          osu05_stdcells  288.000000
+U59                       AND2X2          osu05_stdcells  288.000000
+U60                       AND2X2          osu05_stdcells  288.000000
+U61                       INVX1           osu05_stdcells  144.000000
+U62                       INVX2           osu05_stdcells  144.000000
+U63                       OR2X1           osu05_stdcells  288.000000
+U64                       XNOR2X1         osu05_stdcells  504.000000
+U65                       XOR2X1          osu05_stdcells  504.000000
+U66                       XOR2X1          osu05_stdcells  504.000000
+U67                       XOR2X1          osu05_stdcells  504.000000
+U68                       XOR2X1          osu05_stdcells  504.000000
+U69                       INVX2           osu05_stdcells  144.000000
+U70                       INVX2           osu05_stdcells  144.000000
+U71                       INVX2           osu05_stdcells  144.000000
+U72                       INVX2           osu05_stdcells  144.000000
+U73                       INVX2           osu05_stdcells  144.000000
+U74                       INVX2           osu05_stdcells  144.000000
+U75                       INVX2           osu05_stdcells  144.000000
+U76                       INVX2           osu05_stdcells  144.000000
+U77                       INVX2           osu05_stdcells  144.000000
+U78                       INVX2           osu05_stdcells  144.000000
+U79                       INVX2           osu05_stdcells  144.000000
+U80                       INVX2           osu05_stdcells  144.000000
+U81                       INVX2           osu05_stdcells  144.000000
+U82                       INVX2           osu05_stdcells  144.000000
+U83                       INVX2           osu05_stdcells  144.000000
+U84                       INVX2           osu05_stdcells  144.000000
+U85                       INVX2           osu05_stdcells  144.000000
+U86                       INVX2           osu05_stdcells  144.000000
+U87                       NAND2X1         osu05_stdcells  216.000000
+U88                       NAND2X1         osu05_stdcells  216.000000
+U89                       OAI21X1         osu05_stdcells  207.000000
+U90                       OAI21X1         osu05_stdcells  207.000000
+U91                       NOR2X1          osu05_stdcells  216.000000
+display_reg               DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+next_state_reg[0]         DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_x_reg[0]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_x_reg[1]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_x_reg[2]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_x_reg[3]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_x_reg[4]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_x_reg[5]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_y_reg[0]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_y_reg[1]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_y_reg[2]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_y_reg[3]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_y_reg[4]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_y_reg[5]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+state_reg[0]              DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+--------------------------------------------------------------------------------
+Total 68 cells                                            26694.000000
+1
+report_area 
+ 
+****************************************
+Report : area
+Design : player_bullet_fsm
+Version: U-2022.12-SP7
+Date   : Mon Mar  2 23:24:14 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    osu05_stdcells (File: /clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:                           33
+Number of nets:                            87
+Number of cells:                           69
+Number of combinational cells:             53
+Number of sequential cells:                15
+Number of macros/black boxes:               0
+Number of buf/inv:                         20
+Number of references:                      11
+
+Combinational area:              13734.000000
+Buf/Inv area:                     2880.000000
+Noncombinational area:           12960.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 26694.000000
+Total area:                 undefined
+1
+report_timing -path full -delay max -max_paths 3 -nworst 1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+Design : player_bullet_fsm
+Version: U-2022.12-SP7
+Date   : Mon Mar  2 23:24:14 2026
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: shield_bullet_collision
+              (input port clocked by clka)
+  Endpoint: next_state_reg[0]
+            (falling edge-triggered flip-flop clocked by clka)
+  Path Group: clka
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clka (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 r
+  shield_bullet_collision (in)             0.05       1.05 r
+  U54/Y (NOR2X1)                           0.17       1.22 f
+  U53/Y (AOI22X1)                          0.14       1.35 r
+  U51/Y (NOR2X1)                           0.15       1.50 f
+  next_state_reg[0]/D (DFFNEGX1)           0.00       1.50 f
+  data arrival time                                   1.50
+
+  clock clka (fall edge)                  10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  next_state_reg[0]/CLK (DFFNEGX1)         0.00      10.00 f
+  library setup time                      -0.37       9.63
+  data required time                                  9.63
+  -----------------------------------------------------------
+  data required time                                  9.63
+  data arrival time                                  -1.50
+  -----------------------------------------------------------
+  slack (MET)                                         8.13
+
+
+1
+report_power
+Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : player_bullet_fsm
+Version: U-2022.12-SP7
+Date   : Mon Mar  2 23:24:15 2026
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  = 525.0643 uW   (75%)
+  Net Switching Power  = 175.4078 uW   (25%)
+                         ---------
+Total Dynamic Power    = 700.4721 uW  (100%)
+
+Cell Leakage Power     =   7.6193 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  7.4304e-02            0.0000            0.0000        7.4304e-02  (  10.61%)  i
+register       1.3395e-02        2.9770e-03            0.2472        1.6373e-02  (   2.34%)
+sequential         0.2964        9.1189e-03            3.4603            0.3055  (  43.62%)
+combinational      0.1409            0.1633            3.9118            0.3043  (  43.44%)
+--------------------------------------------------------------------------------------------------
+Total              0.5251 mW         0.1754 mW         7.6193 nW         0.7005 mW
+1
+redirect timing.rep { report_timing }
+redirect cell.rep { report_cell }
+redirect power.rep { report_power }
+quit
+
+Memory usage for this session 105 Mbytes.
+Memory usage for this session including child processes 105 Mbytes.
+CPU usage for this session 4 seconds ( 0.00 hours ).
+Elapsed time for this session 6 seconds ( 0.00 hours ).
+
+Thank you...

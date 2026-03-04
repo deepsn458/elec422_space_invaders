@@ -1,0 +1,148 @@
+m255
+K4
+z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+Z2 !s12c _opt
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+!s11f vlog 2023.2 2023.04, Apr 11 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z3 d/storage-home/e/ely2/ELEC422/hw2/p2/Questa
+T_opt
+!s110 1770939549
+VU2;`RCe[Ho2`P=LB?ZSIh1
+04 13 4 work controller_tb fast 0
+=1-d09466182648-698e649d-3c877-64e92
+R1
+Z4 !s12b OEM100
+Z5 !s124 OEM100
+Z6 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z7 tCvgOpt 0
+n@_opt
+Z8 OL;O;2023.2;77
+R3
+T_opt1
+!s110 1772515259
+VkhiD65V@bW3Ze6oOW?@`h1
+04 20 4 work player_bullet_fsm_tb fast 0
+=1-d094661828ee-69a66fba-c94de-d7cf2
+R1
+R4
+R5
+R6
+R7
+n@_opt1
+R8
+vcontroller
+Z9 2controller.v|testbench.v
+Z10 !s110 1771380772
+!i10b 1
+!s100 z<1@<9_>lAnG<RM1RGjDA3
+IKEGATR[[:[J]_>f3EcoF]2
+R3
+w1771344596
+8controller.v
+Fcontroller.v
+!i122 7
+L0 5 197
+Z11 VDg1SIo80bB@j0V0VzS_@n1
+Z12 OL;L;2023.2;77
+r1
+!s85 0
+31
+Z13 !s108 1771380772.000000
+Z14 !s107 testbench.v|controller.v|
+Z15 !s90 controller.v|testbench.v|
+!i113 0
+Z16 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+vcontroller_tb
+R9
+R10
+!i10b 1
+!s100 UJQ_kl4_ZDYYE4UV=hgM<1
+IKi=JoL3FNhoEBYA1Glc>D0
+R3
+w1770936608
+Z17 8testbench.v
+Z18 Ftestbench.v
+!i122 7
+L0 1 164
+R11
+R12
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R16
+R7
+vplayer_bullet_fsm
+Z19 2player_bullet_fsm.v|testbench.v
+Z20 !s110 1772515228
+!i10b 1
+!s100 zMPofYooz:OO__4ij3Gk80
+IIc;N;o?5JDmgQKO?CzUJF0
+Z21 d/storage-home/e/ely2/ELEC422/project/fsm/player_bullet/Questa
+w1772515199
+8player_bullet_fsm.v
+Fplayer_bullet_fsm.v
+!i122 15
+L0 11 86
+R11
+R12
+r1
+!s85 0
+31
+Z22 !s108 1772515228.000000
+Z23 !s107 testbench.v|player_bullet_fsm.v|
+Z24 !s90 player_bullet_fsm.v|testbench.v|
+!i113 0
+R16
+R7
+vplayer_bullet_fsm_tb
+R19
+R20
+!i10b 1
+!s100 5;3?^5dU:_mR4RP4JPU>G1
+I=j?SQaWJJDR;Pmmk=WR:n3
+R21
+w1772513164
+R17
+R18
+!i122 15
+L0 1 147
+R11
+R12
+r1
+!s85 0
+31
+R22
+R23
+R24
+!i113 0
+R16
+R7

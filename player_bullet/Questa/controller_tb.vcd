@@ -1,0 +1,69 @@
+$date
+	Tue Feb 17 20:15:17 2026
+$end
+$version
+	QuestaSim Version 2023.2
+$end
+$timescale
+	1ns
+$end
+
+$scope module controller_tb $end
+$var reg 1 ! in_clka $end
+$var reg 1 " in_clkb $end
+$var reg 1 # in_restart $end
+$var reg 1 $ in_brake $end
+$var reg 1 % in_left $end
+$var reg 1 & in_right $end
+$var wire 1 ' out_state [2] $end
+$var wire 1 ( out_state [1] $end
+$var wire 1 ) out_state [0] $end
+$var wire 1 * out_l0 $end
+$var wire 1 + out_l1 $end
+$var wire 1 , out_l2 $end
+$var wire 1 - out_r0 $end
+$var wire 1 . out_r1 $end
+$var wire 1 / out_r2 $end
+$var wire 1 0 out_error $end
+$var integer 32 1 i $end
+
+$scope module U1 $end
+$var parameter 32 2 SIZE $end
+$var parameter 3 3 IDLE $end
+$var parameter 3 4 RS1 $end
+$var parameter 3 5 RS2 $end
+$var parameter 3 6 RS3 $end
+$var parameter 3 7 LS1 $end
+$var parameter 3 8 LS2 $end
+$var parameter 3 9 LS3 $end
+$var wire 1 : clka $end
+$var wire 1 ; clkb $end
+$var wire 1 < brake $end
+$var wire 1 = restart $end
+$var wire 1 > left $end
+$var wire 1 ? right $end
+$var reg 3 @ state [2:0] $end
+$var reg 1 A l0 $end
+$var reg 1 B l1 $end
+$var reg 1 C l2 $end
+$var reg 1 D r0 $end
+$var reg 1 E r1 $end
+$var reg 1 F r2 $end
+$var wire 1 0 error $end
+$var wire 1 G temp_state [2] $end
+$var wire 1 H temp_state [1] $end
+$var wire 1 I temp_state [0] $end
+$var reg 3 J next_state [2:0] $end
+
+$scope function fsm_function $end
+$var reg 3 K fsm_function [2:0] $end
+$var reg 3 L state [2:0] $end
+$var reg 1 M left $end
+$var reg 1 N right $end
+$var reg 1 O restart $end
+$upscope $end
+
+$scope begin FSM_SEQ $end
+$upscope $end
+
+$scope begin OUTPUT_LOGIC $end
