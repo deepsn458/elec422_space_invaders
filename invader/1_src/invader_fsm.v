@@ -14,12 +14,13 @@ module invader_fsm
     parameter START_Y = 5,                                      // Start Y coordinate of this invader
     parameter Y_OFFSET = 3,                                     // Number of pixels to travel downwards upon vertical movement
     parameter DEAD_X = 5,                                       // X coordinate to place invader once dead
-    parameter DEAD_Y = 5                                        // Y coordinate to place invader once dead
+    parameter DEAD_Y = 5,                                       // Y coordinate to place invader once dead
+    parameter X_OFFSET = 1                                      // Number of pixels to travel sideways upon horizontal movement
     )(
 
     input  wire             clka, clkb,                         // Input clocks
     input  wire             reset, play, move_down,             // Global control and reset signals
-    input  wire [5:0]       x_offset,                           // signed offset to move the invader
+    input  wire             invader_direction,                  // direction bit for horizontal movement (left is 0)
     input  wire [5:0]       player_bullet_coord_x,              // Player bullet X coordinate
     input  wire [5:0]       player_bullet_coord_y,              // Player bullet Y coordinate
     output reg              alive,                              // Bit indicating if invader is still alive. Can be used as display bit
@@ -107,7 +108,11 @@ module invader_fsm
                     if (move_down) begin
                         invader_coord_y <= invader_coord_y - Y_OFFSET;
                     end else if (move_interval_toggle) begin
-                        invader_coord_x <= invader_coord_x + x_offset;
+                        if (invader_direction) begin
+                            invader_coord_x <= invader_coord_x + X_OFFSET;
+                        end else begin
+                            invader_coord_x <= invader_coord_x - X_OFFSET;
+                        end
                     end
                 end
 
