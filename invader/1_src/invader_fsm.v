@@ -24,7 +24,7 @@ module invader_fsm
     input  wire [5:0]       player_bullet_coord_x,              // Player bullet X coordinate
     input  wire [5:0]       player_bullet_coord_y,              // Player bullet Y coordinate
     output reg              alive,                              // Bit indicating if invader is still alive. Can be used as display bit
-    output reg              player_bullet_collision_signal,     // Signal indicating if an invader has been hit by a player bullet
+    output reg              playerbullet_invader_collision_signal,     // Signal indicating if an invader has been hit by a player bullet
     output reg  [5:0]       invader_coord_x,                    // Player bullet X coordinate
     output reg  [5:0]       invader_coord_y,                    // Player bullet Y coordinate
 
@@ -93,7 +93,7 @@ module invader_fsm
 
                     invader_coord_x <= START_X;
                     invader_coord_y <= START_Y;
-                    player_bullet_collision_signal <= 0;
+                    playerbullet_invader_collision_signal <= 0;
                     move_interval_toggle <= 0;
                     
                     alive <= 1;
@@ -124,13 +124,13 @@ module invader_fsm
 
                     alive <= 0;
                     
-                    // This logic ensures the player_bullet_collision_signal is toggled on once upon invader death, then set to zero afterwards.
+                    // This logic ensures the playerbullet_invader_collision_signal is toggled on once upon invader death, then set to zero afterwards.
                     // NOTE: This signal is this specific invader's collision signal.
-                    //       It should be ORed with the other invaders' signals to create the global player_bullet_collision_signal
+                    //       It should be ORed with the other invaders' signals to create the global playerbullet_invader_collision_signal
                     if (state == MOVE) begin
-                        player_bullet_collision_signal <= 1;
+                        playerbullet_invader_collision_signal <= 1;
                     end else begin
-                        player_bullet_collision_signal <= 0;
+                        playerbullet_invader_collision_signal <= 0;
                     end
                 end
         endcase
