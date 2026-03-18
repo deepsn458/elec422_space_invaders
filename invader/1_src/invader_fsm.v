@@ -38,6 +38,7 @@ module invader_fsm
     parameter RESET  = 2'b00, MOVE = 2'b01, DEAD = 2'b10,  INVALID = 2'b11;
 
     // Detection for checking if collision happened in invader bounding box
+    //invader is 3x3
     wire collision_detect_x;
     wire collision_detect_y;
     assign collision_detect_x = (player_bullet_coord_x <= (invader_coord_x + 1)) & (player_bullet_coord_x >= (invader_coord_x - 1));

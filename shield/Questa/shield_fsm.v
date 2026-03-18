@@ -22,12 +22,15 @@ module shield_fsm
     input wire reset,
     input wire [5:0] invader_bullet_coord_x, 
     input wire [5:0] invader_bullet_coord_y,
+    input wire [5:0] player_bullet_coord_x,
+    input wire [5:0] player_bullet_coord_y,
     input wire shield_play,
 
     output reg [3:0] color, //one hot encoding to denote health/color
     output reg [1:0] hp,
     output reg shield_display,
-    output reg bullet_shield_collision,
+    output reg invaderbullet_shield_collision,
+    output reg playerbullet_shield_collision,
     output reg [1:0] state
 );
 
@@ -39,10 +42,12 @@ module shield_fsm
 
     //internal wire to track shield coordinates
     reg [5:0] shield_coord_x, shield_coord_y;
-    wire collision_x, collision_y;
-    assign collision_x = ((invader_bullet_coord_x - shield_coord_x) < SHIELD_RADIUS) || ((shield_coord_x-invader_bullet_coord_x) < SHIELD_RADIUS);
-    assign collision_y = invader_bullet_coord_y == shield_coord_y;
-
+    wire invaderbullet_collision_x, invaderbullet_collision_y, 
+         playerbullet_collision_x, playerbullet_collision_y;
+    assign invaderbullet_collision_x = ((invader_bullet_coord_x - shield_coord_x) < SHIELD_RADIUS) || ((shield_coord_x-invader_bullet_coord_x) < SHIELD_RADIUS);
+    assign invaderbullet_collision_y = invader_bullet_coord_y == shield_coord_y;
+    assign playerbullet_collision_x = ((player_bullet_coord_x - shield_coord_x) < SHIELD_RADIUS) || ((shield_coord_x-player_bullet_coord_x) < SHIELD_RADIUS);
+    assign playerbullet_collision_y = player_bullet_coord_y == shield_coord_y;
     always @ (*) begin
         case (state)
         INITIAL: begin
@@ -54,7 +59,7 @@ module shield_fsm
         end
 
         ALIVE: begin
-            if ((collision_x & collision_y) && hp < 1) begin
+            if ((invaderbullet_collision_x & invaderbullet_collision_y) && hp < 1) begin
                 temp_state = NO_HEALTH;
             end else begin
                 temp_state = ALIVE;
@@ -88,28 +93,36 @@ module shield_fsm
                     color <= 4'b1000;
                     shield_coord_x <= START_X;
                     shield_coord_y <= START_Y;
-                    bullet_shield_collision <= 1'b0;
+                    invaderbullet_shield_collision <= 1'b0;
+                    playerbullet_shield_collision <= 1'b0;
                 end
         end
 
         ALIVE: begin
             state <= next_state;
-            if ((collision_x & collision_y) && hp > 1) begin
+            if ((playerbullet_collision_x & playerbullet_collision_y) && hp > 1) begin
+                playerbullet_shield_collision <= 1'b1;
+            end else begin
+                playerbullet_shield_collision <= 1'b0;
+            end
+
+            if ((invaderbullet_collision_x & invaderbullet_collision_y) && hp > 1) begin
                 hp <= hp - 1;
                 color <= color >> 1;
-                bullet_shield_collision <= 1'b1;
-            end else if ((collision_x & collision_y) && hp <= 1) begin
+                invaderbullet_shield_collision <= 1'b1;
+            end else if ((invaderbullet_collision_x & invaderbullet_collision_y) && hp <= 1) begin
                 hp <= hp - 1;
                 color <= color >> 1;
                 shield_display <= 1'b0;
-                bullet_shield_collision <= 1'b1;
-            end else begin
-                bullet_shield_collision <= 1'b0;
+                invaderbullet_shield_collision <= 1'b1;
+            end else  begin
+                invaderbullet_shield_collision <= 1'b0;
             end
         end
         NO_HEALTH: begin
             state <= next_state;
-            bullet_shield_collision <= 1'b0;
+            invaderbullet_shield_collision <= 1'b0;
+            playerbullet_shield_collision <= 1'b0;
         end
         default: state <= INITIAL;
         endcase

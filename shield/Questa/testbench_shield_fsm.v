@@ -23,7 +23,7 @@ reg in_clka, in_clkb, in_reset;
 reg [5:0] in_invader_bullet_coord_x, in_invader_bullet_coord_y;
 reg in_shield_play;
 
-wire out_shield_display, out_bullet_shield_collision;
+wire out_shield_display, out_playerbullet_shield_collision, out_invaderbullet_shield_collision;
 wire [1:0] out_hp;
 wire [3:0] out_color;
 wire [1:0] out_state; 
@@ -39,7 +39,8 @@ shield_fsm shield_fsm(
     .shield_play(in_shield_play),
     .color(out_color),
     .shield_display(out_shield_display),
-    .bullet_shield_collision(out_bullet_shield_collision),
+    .invaderbullet_shield_collision(out_invaderbullet_shield_collision),
+    .playerbullet_shield_collision(out_playerbullet_shield_collision),
     .hp(out_hp),
     .state(out_state)
 );
