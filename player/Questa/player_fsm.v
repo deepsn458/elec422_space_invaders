@@ -18,8 +18,8 @@ module player_fsm #(
     input  wire             reset, play,                        // Global reset and control signals
     input wire  [5:0]       invader_bullet_coord_x,              // Invader bullet X coordinate
     input wire  [5:0]       invader_bullet_coord_y,              // Invader bullet Y coordinate
-    input left_motion, right_motion,                            // Signals to indicate if the player is moving left or right
-    output reg               player_bullet_collision,            // Signal to indicate if the  has collided with an invader
+    input direction                         // Signals to indicate if the player is moving left or right; 1 = right, 0 = left
+    output reg               invaderbullet_player_collision,            // Signal to indicate if the player has collided with an invader bullet
     output  reg [5:0]       player_coord_x,                     // Player X coordinate
     output  reg [5:0]       player_coord_y,                     // Player Y coordinate
     output reg              display,                            // Signal to indicate if the player should be displayed on the screen
@@ -79,7 +79,7 @@ module player_fsm #(
             state <= INIT;
             player_coord_x <= X_START;
             player_coord_y <= Y_START;
-            player_bullet_collision <= 0;
+            invaderbullet_player_collision <= 0;
             display <= 1;
         end else begin
 
@@ -94,29 +94,29 @@ module player_fsm #(
             PLAY: begin
                 state <= next_state;
                 display <= 1;
-                if (left_motion && player_coord_x > LEFT_BOUND) begin
+                if (direction == 0 && player_coord_x > LEFT_BOUND) begin
                     player_coord_x <= player_coord_x - 1;
-                end else if (right_motion && player_coord_x < RIGHT_BOUND) begin
+                end else if (direction == 1 && player_coord_x < RIGHT_BOUND) begin
                     player_coord_x <= player_coord_x + 1;
                 end
                 else begin
                     player_coord_x <= player_coord_x;
                 end
-                player_bullet_collision <= 0;
+                invaderbullet_player_collision <= 0;
             end
             DEAD: begin
                 state <= next_state;
                 display <= 0;
                 player_coord_x <= player_coord_x;
                 player_coord_y <= player_coord_y;
-                player_bullet_collision <= 1;
+                invaderbullet_player_collision <= 1;
             end
 
             default: begin
                 state <= INIT;
                 player_coord_x <= X_START;
                 player_coord_y <= Y_START;
-                player_bullet_collision <= 0;
+                invaderbullet_player_collision <= 0;
                 display <= 1;
             end
         endcase
