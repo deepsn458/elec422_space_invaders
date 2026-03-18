@@ -8,41 +8,21 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////////////////// test
 
-module main_game_fsm(
+module main_game_fsm
+#(
+)
+(
     input wire          clka, clkb,                             // Input clocks
     input wire          global_reset,                           // Global reset signal
 
-    input wire          player_fire,                            // Player fire signal
-    input wire          player_left, player_right,              // Player movement signals
-    // input wire          player_coordinates,                     // Player coordinates
-    input wire          player_alive,                           // Player alive signal
+    input wire          player_left_input,
+    input wire          player_right_input,
+    input wire          player_shoot_input,
+
     
-    // input wire          invader_coordinates,                    // Invader coordinates
-    input wire          invader_alive,                          // Invader alive signal
+);
 
-    output reg          player_left_out, player_right_out,      // Forwarded player movement outputs
-    output reg [5:0]    invader_bullet_start_position_x,        // Starting position_x of the invader bullet
-    output reg [5:0]    invader_bullet_start_position_y,        // Starting position_y of the invader bullet
-    output reg [5:0]    invader_right_position_x,                 // x coordinates of rightmost invader
-    output reg [5:0]    invader_right_position_y,                 // y coordinates of rightmost invader
-    output reg [5:0]    invader_left_position_x,                  // x coordinates of leftmost invader
-    output reg [5:0]    invader_left_position_y,                  // y coordinates of leftmost invader
-    output reg          invader_direction,                      // Direction of invader movement
-    output reg      reset_player, reset_invader, reset_shield,  // Reset signals for player, invader, and shield
-    output reg          play,                                   // Game is in play
-    output reg          invader_offset
-    );
-
-    reg [1:0] temp_state;           // To be combinationally calculated
-    reg [1:0] next_state;           // To be sequentially assigned
-
-    // parameter SIZE = 2;
-    parameter INIT  = 2'b00, FIRING = 2'b01;
-
-    // Detection for checking if collision happened in invader bounding box
-    wire collide, boundary;
-    assign collide = player_bullet_collision | shield_bullet_collision;
-    assign boundary = (player_bullet_coord_y >= Y_MAX);     // Check if bullet has reached the top of the screen
+   
 
     // Combinational logic to calculate upcoming tempt state
     always @(*) begin
