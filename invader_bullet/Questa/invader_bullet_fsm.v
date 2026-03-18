@@ -18,8 +18,8 @@ module invader_bullet_fsm
     input wire clka,
     input wire clkb,
     input wire reset,
-    input wire player_collision_signal,
-    input wire shield_collision_signal,
+    input wire invaderbullet_player_collision_signal,
+    input wire invaderbullet_shield_collision_signal,
     input wire invader_fire,
     input wire [5:0] closest_invader_coord_x,
     input wire [5:0] closest_invader_coord_y,
@@ -47,7 +47,7 @@ module invader_bullet_fsm
         end
 
         FIRING: begin
-            if (player_collision_signal | shield_collision_signal) begin
+            if (invaderbullet_player_collision_signal | invaderbullet_shield_collision_signal) begin
                 temp_state = COLLISION;
             end else if (invader_bullet_coord_y == BOUNDARY_Y) begin
                 temp_state = INITIAL;
@@ -89,7 +89,7 @@ module invader_bullet_fsm
             FIRING: begin
                 state <= next_state;
 
-                if (player_collision_signal | shield_collision_signal) begin
+                if (invaderbullet_player_collision_signal | invaderbullet_shield_collision_signal) begin
                     invader_bullet_display <= 1'b0;
                 end else if (invader_bullet_coord_y[5] & 1) begin
                     invader_bullet_display <= 1'b0;

@@ -37,6 +37,7 @@ o-quiet -auto_acc_if_foreign -work work -debugdb +acc
 Z3 tCvgOpt 0
 n@_opt
 OL;O;2023.2;77
+R2
 vAND2X1
 Z4 2invader_bullet_fsm.v|osu05_stdcells.v|testbench_invader_bullet.v
 Z5 !s110 1772580418
@@ -375,23 +376,23 @@ R3
 n@h@a@x1
 vinvader_bullet_fsm
 Z15 2invader_bullet_fsm.v|testbench_invader_bullet.v
-Z16 !s110 1772580455
+Z16 !s110 1773799451
 !i10b 1
-!s100 SH`CONAIM=V6Y]C?WzDY@3
-I__`Ae3^MzD00_2@gA;Rcf0
-R2
-w1772579000
+!s100 mG^f7P^lQV2[7HK>GDdXQ3
+IGgjco;z2oD>RTNAmgjk:a0
+Z17 d/storage-home/d/dn55/elec422_space_invaders/invader_bullet/Questa
+w1773799316
 8invader_bullet_fsm.v
 Finvader_bullet_fsm.v
-!i122 14
+!i122 15
 L0 11 96
 R9
 R10
 r1
 !s85 0
 31
-Z17 !s108 1772580455.000000
-Z18 !s107 testbench_invader_bullet.v|invader_bullet_fsm.v|
+Z18 !s108 1773799451.000000
+!s107 testbench_invader_bullet.v|invader_bullet_fsm.v|
 Z19 !s90 invader_bullet_fsm.v|testbench_invader_bullet.v|
 !i113 0
 R14
@@ -400,21 +401,21 @@ vinvader_bullet_fsm_tb
 R15
 R16
 !i10b 1
-!s100 @;=FN[@eJz9fRYk];DE6c0
-IZB=9A[1]JoPVCN:BK;?2n3
-R2
-R6
+!s100 jX_BGa?b]68^jdYSFbj:z0
+I^cK1Mg?ZGVF36QkUlmzHY0
+R17
+w1773799426
 8testbench_invader_bullet.v
 Ftestbench_invader_bullet.v
-!i122 14
+!i122 15
 L0 7 98
 R9
 R10
 r1
 !s85 0
 31
-R17
 R18
+Z20 !s107 testbench_invader_bullet.v|invader_bullet_fsm.v|
 R19
 !i113 0
 R14
