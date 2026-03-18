@@ -78,6 +78,10 @@ module invader_fsm
             next_state <= temp_state;
         end
     end
+    
+    // This wire toggles each clkb and gates the movement of invaders so that they move left/right
+    // once every other clock
+    wire move_interval_toggle;
 
     // Sequential logic to set outputs
     always @ (negedge clkb) begin : OUTPUT_LOGIC
@@ -89,16 +93,20 @@ module invader_fsm
                     invader_coord_x <= START_X;
                     invader_coord_y <= START_Y;
                     player_bullet_collision_signal <= 0;
+                    move_interval_toggle <= 0;
                     
                     alive <= 1;
                 end
 
             MOVE: begin
                     state <= next_state;
+
+                    // Toggle the clock div system
+                    wire move_interval_toggle <= ~ move_interval_toggle;
                     
                     if (move_down) begin
                         invader_coord_y <= invader_coord_y - Y_OFFSET;
-                    end else begin
+                    end else if (move_interval_toggle) begin
                         invader_coord_x <= invader_coord_x + x_offset;
                     end
                 end
