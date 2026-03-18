@@ -23,7 +23,7 @@ module invader_fsm
     input  wire             invader_direction,                  // direction bit for horizontal movement (left is 0)
     input  wire [5:0]       player_bullet_coord_x,              // Player bullet X coordinate
     input  wire [5:0]       player_bullet_coord_y,              // Player bullet Y coordinate
-    output reg              alive,                              // Bit indicating if invader is still alive. Can be used as display bit
+    output reg              display,                              // Bit indicating if invader is still alive. Can be used as display bit
     output reg              playerbullet_invader_collision_signal,     // Signal indicating if an invader has been hit by a player bullet
     output reg  [5:0]       invader_coord_x,                    // Player bullet X coordinate
     output reg  [5:0]       invader_coord_y,                    // Player bullet Y coordinate
@@ -96,7 +96,7 @@ module invader_fsm
                     playerbullet_invader_collision_signal <= 0;
                     move_interval_toggle <= 0;
                     
-                    alive <= 1;
+                    display <= 1;
                 end
 
             MOVE: begin
@@ -122,7 +122,7 @@ module invader_fsm
                     invader_coord_x <= DEAD_X;
                     invader_coord_y <= DEAD_Y;
 
-                    alive <= 0;
+                    display <= 0;
                     
                     // This logic ensures the playerbullet_invader_collision_signal is toggled on once upon invader death, then set to zero afterwards.
                     // NOTE: This signal is this specific invader's collision signal.
