@@ -10,7 +10,7 @@
 
 module datapath
     #(
-    parameter DISPLAY_SIZE = 32                                 // Start X coordinate of this invader
+    parameter DISPLAY_SIZE = 31                                 // Display Size (minus 1 due to zero-indexing)
     )(
 
     input  wire             clka, clkb,                         // Input clocks
@@ -49,14 +49,18 @@ module datapath
     input  wire [5:0]       invader_bullet_coord_y,             // Invader bullet Y coordinate
     input  wire             invader_bullet_display,             // Display bit
 
-    output reg [DISPLAY_SIZE:0] display [DISPLAY_SIZE:0]        // This is the DISPLAY_SIZE X DISPLAY_SIZE display data to be output
+    // Output flattened to 1D vector to comply with standard Verilog port rules
+    // 32 rows * 32 cols = 1024 bits total (1023 down to 0)
+    output wire [1023:0]    display_flat                        
     );
 
+    // Internal 2D arrays to manage matrix logically
+    reg [DISPLAY_SIZE:0] internal_display [DISPLAY_SIZE:0];
     reg [DISPLAY_SIZE:0] temp_display [DISPLAY_SIZE:0];
     reg [DISPLAY_SIZE:0] next_display [DISPLAY_SIZE:0];
 
     // Logic to set temp_display based on locations of entities
-    integer row, col;
+    integer row, col, i;
 
     always @(*) begin
         for (row = 0; row <= DISPLAY_SIZE; row = row + 1) begin
@@ -137,8 +141,7 @@ module datapath
                         if (col == shield_coord_x)     temp_display[row][col] = 1'b1; // X
                         
                         // X + 1 is 0 when HP is 1
-                        if (col == shield_coord_x + 1 && shield_hp != 2'd1) temp_display[row][col] = 1'b1; 
-                        
+                        if (col == shield_coord_x + 1 && shield_hp != 2'd1) temp_display[row][col] = 1'b1;
                         if (col == shield_coord_x + 2) temp_display[row][col] = 1'b1; // X + 2
                     end
                     
@@ -150,8 +153,7 @@ module datapath
                         if (col + 1 == shield_coord_x && shield_hp == 2'd3) temp_display[row][col] = 1'b1; 
                         
                         // X is 0 when HP is 1
-                        if (col == shield_coord_x     && shield_hp != 2'd1) temp_display[row][col] = 1'b1; 
-                        
+                        if (col == shield_coord_x     && shield_hp != 2'd1) temp_display[row][col] = 1'b1;
                         if (col == shield_coord_x + 1) temp_display[row][col] = 1'b1; // X + 1
                         if (col == shield_coord_x + 2) temp_display[row][col] = 1'b1; // X + 2
                     end
@@ -177,19 +179,28 @@ module datapath
     // Sequential logic to set next_display <= temp_display or respond to restart signal
     always @ (negedge clka) begin : CLOCKING_POSITIONS
         if (reset) begin
-            for (i = 0; i < (DISPLAY_SIZE + 1); i = i + 1) next_display[i] <= DISPLAY_SIZE'b0;
+            for (i = 0; i < (DISPLAY_SIZE + 1); i = i + 1) next_display[i] <= 0;
         end else begin
-            next_display <= temp_display;
+            for (i = 0; i < (DISPLAY_SIZE + 1); i = i + 1) next_display[i] <= temp_display[i];
         end
     end
 
     // Sequential logic to set outputs
     always @ (negedge clkb) begin : OUTPUT_LOGIC
         if (reset) begin
-            for (i = 0; i < (DISPLAY_SIZE + 1); i = i + 1) display[i] <= DISPLAY_SIZE'b0;
+            for (i = 0; i < (DISPLAY_SIZE + 1); i = i + 1) internal_display[i] <= 0;
         end else begin
-            display <= next_display;
+            for (i = 0; i < (DISPLAY_SIZE + 1); i = i + 1) internal_display[i] <= next_display[i];
         end
     end
+
+
+    // Output assignment: Flatten the 2D array onto the 1D wire
+    genvar g;
+    generate
+        for (g = 0; g <= DISPLAY_SIZE; g = g + 1) begin : FLATTEN_MATRIX
+            assign display_flat[(g * 32) +: 32] = internal_display[g];
+        end
+    endgenerate
 
 endmodule
