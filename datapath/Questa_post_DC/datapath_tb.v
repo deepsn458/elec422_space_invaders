@@ -49,9 +49,7 @@ module datapath_tb();
     reg [31:0] row_display [31:0];
     
     // DUT Instantiation
-    datapath #(
-        .DISPLAY_SIZE(31)
-    ) DUT (
+    datapath  DUT (
         .clka(in_clka), .clkb(in_clkb), .reset(in_reset),
         
         .player_coord_x(in_player_coord_x), .player_coord_y(in_player_coord_y), .player_display(in_player_display),
