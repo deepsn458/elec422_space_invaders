@@ -28,3 +28,5 @@ run -all
 # ** Note: $stop    : datapath_tb.v(216)
 #    Time: 280 ns  Iteration: 0  Instance: /datapath_tb
 # Break in Module datapath_tb at datapath_tb.v line 216
+# End time: 00:51:19 on Mar 20,2026, Elapsed time: 0:10:36
+# Errors: 0, Warnings: 1
