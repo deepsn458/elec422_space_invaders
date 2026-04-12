@@ -1,5 +1,3 @@
-# elec422_space_invaders
-
 Space Invaders Verilog - Project Signal Directory
 =================================================
 
