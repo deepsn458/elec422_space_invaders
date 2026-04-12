@@ -7,6 +7,17 @@ reg in_fire;
 
 wire [1023:0] display_flat;
 
+task log_matrix;
+        input [255:0] test_name; 
+        begin
+            $fdisplay(log_file, "TIME: %0t | TEST: %s", $time, test_name);
+            for (row = 31; row >= 0; row = row - 1) begin
+                $fdisplay(log_file, "%b", out_display[row]);
+            end
+            $fdisplay(log_file, "END_FRAME");
+        end
+    endtask
+
 task cycle;
     begin
         in_clka = 0; in_clkb = 0; #10;
@@ -28,59 +39,61 @@ top U1 (
 
 integer i;
 
-initial
-begin
+initial begin
+    // Setup Files
+    $dumpfile("top_results.vcd");
+    $dumpvars;
+    log_file = $fopen("top_display_log.txt", "w");
 
-in_reset = 0;
-in_player_left_input=0; in_player_right_input=0;
-in_fire=0;
-cycle;
+    // System Reset
+    in_reset = 0;
+    in_player_left_input = 0; in_player_right_input = 0;
+    in_fire = 0;
+    cycle;
 
-in_reset = 1;
-in_player_left_input=0; in_player_right_input=0;
-in_fire=0;
-cycle;
+    in_reset = 1;
+    cycle;
 
-in_reset = 0;
-in_fire = 1;
-cycle;
-cycle;
-cycle;
-cycle;
+    in_reset = 0;
+    log_matrix("After Reset");
 
-in_fire = 0;
-cycle;
-cycle;
+    // Start Firing
+    in_fire = 1;
+    repeat(4) cycle;
+    log_matrix("Post-Fire Sequence");
 
-in_fire = 1;
-cycle;
-cycle;
+    in_fire = 0;
+    repeat(2) cycle;
 
-in_fire = 0;
-in_player_left_input = 1;
-in_player_right_input = 0;
-for (i = 0; i < 10; i=i+1) cycle;
-in_fire = 1;
-in_player_left_input = 1;
-in_player_right_input = 0;
-for (i = 0; i < 8; i=i+1) cycle;
+    in_fire = 1;
+    repeat(2) cycle;
+    log_matrix("Second Fire Burst");
 
-in_fire = 1;
-in_player_left_input = 0;
-in_player_right_input = 1;
-for (i = 0; i < 16; i=i+1) cycle;
+    // Movement: Left
+    in_fire = 0;
+    in_player_left_input = 1;
+    in_player_right_input = 0;
+    repeat(10) cycle;
+    
+    in_fire = 1;
+    repeat(8) cycle;
+    log_matrix("Moving Left and Firing");
 
-in_fire = 0;
-in_player_left_input = 0;
-in_player_right_input = 1;
-for (i = 0; i < 17; i=i+1) cycle;
+    // Movement: Right
+    in_fire = 1;
+    in_player_left_input = 0;
+    in_player_right_input = 1;
+    repeat(16) cycle;
+    log_matrix("Moving Right and Firing");
 
-$dumpfile ("top_results.vcd");
-$dumpvars;
-$display ("in_clka, \t in_clkb, \t in_reset, \t in_player_left_input, \t in_player_right_input, \t in_fire");
+    in_fire = 0;
+    repeat(17) cycle;
+    log_matrix("Final Position");
 
-$stop;
-
+    // Cleanup
+    $fclose(log_file);
+    $display("Simulation Complete. Matrix written to top_display_log.txt");
+    $stop;
 end
 
 endmodule
