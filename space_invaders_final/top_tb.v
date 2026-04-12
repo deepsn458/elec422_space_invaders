@@ -67,35 +67,35 @@ initial begin
 
     // Start Firing
     in_fire = 1;
-    repeat(4) cycle;
+    for (i = 0; i<4; i=i+1) cycle;
     log_matrix("Post-Fire Sequence");
 
     in_fire = 0;
-    repeat(2) cycle;
+    for (i = 0; i<2; i=i+1) cycle;
 
     in_fire = 1;
-    repeat(2) cycle;
+    for (i = 0; i<2; i=i+1) cycle;
     log_matrix("Second Fire Burst");
 
     // Movement: Left
     in_fire = 0;
     in_player_left_input = 1;
     in_player_right_input = 0;
-    repeat(10) cycle;
+    for (i = 0; i<10; i=i+1) cycle;
     
     in_fire = 1;
-    repeat(8) cycle;
+    for (i = 0; i<8; i=i+1) cycle;
     log_matrix("Moving Left and Firing");
 
     // Movement: Right
     in_fire = 1;
     in_player_left_input = 0;
     in_player_right_input = 1;
-    repeat(16) cycle;
+    for (i = 0; i<16; i=i+1) cycle;
     log_matrix("Moving Right and Firing");
 
     in_fire = 0;
-    repeat(17) cycle;
+    for (i = 0; i<17; i=i+1) cycle;
     log_matrix("Final Position");
 
     // Cleanup
