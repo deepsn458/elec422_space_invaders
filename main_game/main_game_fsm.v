@@ -32,9 +32,6 @@ module main_game_fsm
     input wire[5:0]     invader4_coordinate_x, invader4_coordinate_y, // from invader fsm
     input wire[5:0]     invaderbullet_coord_x, invaderbullet_coord_y,   // from invader bullet fsm
     input wire          invaderbullet_player_collision_signal, invaderbullet_shield_collision_signal, // from player and shield fsms (bullet hits player)
-    input wire          playerbullet_invader_collision_signal, // from invader fsm
-    input wire          invaderbullet_display, playerbullet_display, shield_display, // from the respective fsms
-    input wire[1:0]     hp, // from shield fsm
     input wire          invader_outofbounds_signal_1, invader_outofbounds_signal_2, invader_outofbounds_signal_3, invader_outofbounds_signal_4,
 
 
@@ -69,17 +66,14 @@ module main_game_fsm
     diff[2] = (invader3_coordinate_x >= invaderbullet_coord_x) ? (invader3_coordinate_x - invaderbullet_coord_x) : (invaderbullet_coord_x - invader3_coordinate_x);
     diff[3] = (invader4_coordinate_x >= invaderbullet_coord_x) ? (invader4_coordinate_x - invaderbullet_coord_x) : (invaderbullet_coord_x - invader4_coordinate_x);
 
-    // Find minimum and track index
     min_diff = diff[0];
     min_idx  = 0;
     for (i = 1; i < 4; i = i + 1) begin
-        if (diff[i] < min_diff) begin
+        if ((diff[i] < min_diff) && (invaders_display[i] == 1)) begin
             min_diff = diff[i];
             min_idx  = i;
         end
     end
-
-    // Assign closest invader coords directly by index
     case (min_idx)
         2'd0: begin closest_invader_coord_x = invader1_coordinate_x; closest_invader_coord_y = invader1_coordinate_y; end
         2'd1: begin closest_invader_coord_x = invader2_coordinate_x; closest_invader_coord_y = invader2_coordinate_y; end

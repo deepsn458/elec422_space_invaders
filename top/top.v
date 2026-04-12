@@ -24,73 +24,106 @@ module top
 
     // Module Interconnects
     wire play;
+    wire internal_reset; 
 
-    wire [5:0]       player_coord_x,                     // Player X coordinate
-    wire [5:0]       player_coord_y,                     // Player Y coordinate
-    wire             player_display,                     // Display bit
+    wire [5:0]       player_coord_x;                     // Player X coordinate
+    wire [5:0]       player_coord_y;                     // Player Y coordinate
+    wire             player_display;                     // Display bit
 
-    wire [5:0]       invader_1_coord_x,                  // Invader 1 X coordinate
-    wire [5:0]       invader_1_coord_y,                  // Invader 1 Y coordinate
-    wire             invader_1_display,                  // Display bit
+    wire [5:0]       invader_1_coord_x;                  // Invader 1 X coordinate
+    wire [5:0]       invader_1_coord_y;                  // Invader 1 Y coordinate
+    wire             invader_1_display;                  // Display bit
     wire             playerbullet_invader_collision_signal_1; // Signal indicating if an invader has been hit by a player bullet
     wire             invader_outofbounds_signal_1;       // tells main game fsm when invader 1 will hit a boundary next cycle
 
-    wire [5:0]       invader_2_coord_x,                  // Invader 2 X coordinate
-    wire [5:0]       invader_2_coord_y,                  // Invader 2 Y coordinate
-    wire             invader_2_display,                  // Display bit
+    wire [5:0]       invader_2_coord_x;                 // Invader 2 X coordinate
+    wire [5:0]       invader_2_coord_y;                  // Invader 2 Y coordinate
+    wire             invader_2_display;                  // Display bit
     wire             playerbullet_invader_collision_signal_2; // Signal indicating if an invader has been hit by a player bullet
     wire             invader_outofbounds_signal_2;       // tells main game fsm when invader 1 will hit a boundary next cycle
 
-    wire [5:0]       invader_3_coord_x,                  // Invader 3 X coordinate
-    wire [5:0]       invader_3_coord_y,                  // Invader 3 Y coordinate
-    wire             invader_3_display,                  // Display bit
+    wire [5:0]       invader_3_coord_x;                  // Invader 3 X coordinate
+    wire [5:0]       invader_3_coord_y;                  // Invader 3 Y coordinate
+    wire             invader_3_display;                  // Display bit
     wire             playerbullet_invader_collision_signal_3; // Signal indicating if an invader has been hit by a player bullet
     wire             invader_outofbounds_signal_3;       // tells main game fsm when invader 1 will hit a boundary next cycle
 
-    wire [5:0]       invader_4_coord_x,                  // Invader 4 X coordinate
-    wire [5:0]       invader_4_coord_y,                  // Invader 4 Y coordinate
-    wire             invader_4_display,                  // Display bit
+    wire [5:0]       invader_4_coord_x;                  // Invader 4 X coordinate
+    wire [5:0]       invader_4_coord_y;                  // Invader 4 Y coordinate
+    wire             invader_4_display;                  // Display bit
     wire             playerbullet_invader_collision_signal_4; // Signal indicating if an invader has been hit by a player bullet
     wire             invader_outofbounds_signal_4;       // tells main game fsm when invader 1 will hit a boundary next cycle
 
-    wire [5:0]       shield_coord_x,                     // Shield X coordinate
-    wire [5:0]       shield_coord_y,                     // Shield Y coordinate
-    wire [1:0]       shield_hp,                          // Shield HP (3 to 0)
-    wire             shield_display,                     // Display bit
+    wire [5:0]       shield_coord_x;                    // Shield X coordinate
+    wire [5:0]       shield_coord_y;                     // Shield Y coordinate
+    wire [1:0]       shield_hp;                          // Shield HP (3 to 0)
+    wire             shield_display;                     // Display bit
 
-    wire [5:0]       player_bullet_coord_x,              // Player bullet X coordinate
-    wire [5:0]       player_bullet_coord_y,              // Player bullet Y coordinate
-    wire             player_bullet_display,              // Display bit
+    wire [5:0]       player_bullet_coord_x;              // Player bullet X coordinate
+    wire [5:0]       player_bullet_coord_y;              // Player bullet Y coordinate
+    wire             player_bullet_display;              // Display bit
+    wire             player_left_motion;                 // Player left motion 
+    wire             player_right_motion;                // Player right motion  
 
-    wire [5:0]       invader_bullet_coord_x,             // Invader bullet X coordinate
-    wire [5:0]       invader_bullet_coord_y,             // Invader bullet Y coordinate
-    wire             invader_bullet_display,             // Display bit
+    wire [5:0]       invader_bullet_coord_x;             // Invader bullet X coordinate
+    wire [5:0]       invader_bullet_coord_y;             // Invader bullet Y coordinate
+    wire             invader_bullet_display;             // Display bit
     
-    wire             invader_direction,                  // direction bit for horizontal movement (left is 0)
-    wire             move_down,                          // Tells invader to move down
+    wire             invader_direction;                  // direction bit for horizontal movement (left is 0)
+    wire             move_down;                          // Tells invader to move down
 
-    wire invaderbullet_player_collision_signal,          // Signals that the player was hit by an invader bullet
-    wire invaderbullet_shield_collision_signal,          // Signals that the invader bullet hit the shield
-    wire invader_fire,                                   // Signals the invader bullet to be fired 
-    wire [5:0] closest_invader_coord_x,                  // Current X coordinates of closest invader to player
-    wire [5:0] closest_invader_coord_y,                  // Current Y coordinates of closest invader to player
+    wire invaderbullet_player_collision_signal;          // Signals that the player was hit by an invader bullet
+    wire invaderbullet_shield_collision_signal;          // Signals that the invader bullet hit the shield
+    wire invader_fire;                                   // Signals the invader bullet to be fired 
+    wire playerbullet_fire;                              // Signals the player bullet to be fired
+    wire [5:0] closest_invader_coord_x;                  // Current X coordinates of closest invader to player
+    wire [5:0] closest_invader_coord_y;                  // Current Y coordinates of closest invader to player
 
-    wire              player_bullet_collision,            // Signal to indicate if the player bullet has collided with an invader
-    wire              shield_bullet_collision,            // Signal to indicate if the player bullet has collided with a shield
-    wire              display,                            // Signal to indicate if the player bullet should be displayed on the screen
-    wire  [5:0]       player_bullet_coord_x,              // Player bullet X coordinate
-    wire  [5:0]       player_bullet_coord_y,              // Player bullet Y coordinate
-    wire  [1:0]       state                               // Current state of this player bullet
+    wire              player_bullet_collision;            // Signal to indicate if the player bullet has collided with an invader
+    wire              shield_bullet_collision;            // Signal to indicate if the player bullet has collided with a shield
+
+    wire  [3:0]       invaders_display = {invader_4_display,invader_3_display,invader_2_display,invader_1_display};
 
     // Instantiate Main Game FSM:
     main_game_fsm main_game_fsm(
         .clka, .clkb,                             // Input clocks
-        .global_reset,                           // Global reset signal
-
+        .global_reset(reset),                           // Global reset signal
         .player_left_input,
         .player_right_input,
         .player_shoot_input,
-..... TODO:
+        .player_display,
+        .player_coordinate_x(player_coord_x),
+        .player_coordinate_y(player_coord_y),
+        .invaders_display,
+        .invader1_coordinate_x(invader_1_coord_x),
+        .invader1_coordinate_y(invader_1_coord_y),
+        .invader2_coordinate_x(invader_2_coord_x),
+        .invader2_coordinate_y(invader_2_coord_y),
+        .invader3_coordinate_x(invader_3_coord_x),
+        .invader3_coordinate_y(invader_3_coord_y),
+        .invader4_coordinate_x(invader_4_coord_x),
+        .invader4_coordinate_y(invader_4_coord_y),
+        .invaderbullet_coord_x(invader_bullet_coord_x),
+        .invaderbullet_coord_y(invader_bullet_coord_y),
+        .invaderbullet_player_collision_signal,
+        .invaderbullet_shield_collision_signal,
+        .invaderbullet_display(invader_bullet_display),
+        .playerbullet_display(player_bullet_display),
+        .shield_display,
+        .invader_outofbounds_signal_1,
+        .invader_outofbounds_signal_2,
+        .invader_outofbounds_signal_3,
+        .invader_outofbounds_signal_4,
+        
+        .player_left_motion,
+        .player_right_motion,
+        .closest_invader_coord_x,
+        .closest_invader_coord_y,
+        .play,
+        .reset(internal_reset),
+        .invader_direction,
+        .playerbullet_fire,
+        .invaderbullet_fire(invader_fire)
     );
 
     // Instantiate Datapath:
@@ -136,17 +169,17 @@ module top
 
     // Instantiate Player FSM:
     player_fsm player_fsm(
-        .clka, clkb,                            // Input clocks
-        .reset, play,                           // Global reset and control signals
+        .clka, .clkb,                            // Input clocks
+        .reset(internal_reset), .play,           // Internal reset and control signals
 
         .invader_bullet_coord_x,                // Invader bullet X coordinate
         .invader_bullet_coord_y,                // Invader bullet Y coordinate
-        .invaderbullet_player_collision,        // Signal to indicate if the player has collided with an invader bullet
-        .player_left_input,                     // Player's left input
-        .player_right_input,                    // Player's right input
+        .invaderbullet_player_collision(invaderbullet_player_collision_signal),        // Signal to indicate if the player has collided with an invader bullet
+        .player_left_input(player_left_motion),                     // Player's left input
+        .player_right_input(player_right_motion),                    // Player's right input
         .player_coord_x,                        // Player X coordinate
         .player_coord_y,                        // Player Y coordinate
-        .display,                               // Signal to indicate if the player should be displayed on the screen
+        .display(player_display),                               // Signal to indicate if the player should be displayed on the screen
         .state()                                // Current state of this player bullet
     );
 
@@ -176,7 +209,7 @@ module top
         .move_down,                             // Tells invader to move down
         .player_bullet_coord_x,                 // Player bullet X coordinate
         .player_bullet_coord_y,                 // Player bullet Y coordinate
-        .display,                               // Bit indicating if invader is still alive. Can be used as display bit
+        .display(invader_1_display),                               // Bit indicating if invader is still alive. Can be used as display bit
         .playerbullet_invader_collision_signal, // Signal indicating if an invader has been hit by a player bullet
         .invader_coord_x,                       // Player bullet X coordinate
         .invader_coord_y,                       // Player bullet Y coordinate
@@ -191,7 +224,7 @@ module top
         .move_down,                             // Tells invader to move down
         .player_bullet_coord_x,                 // Player bullet X coordinate
         .player_bullet_coord_y,                 // Player bullet Y coordinate
-        .display,                               // Bit indicating if invader is still alive. Can be used as display bit
+        .display(invader_2_display),                               // Bit indicating if invader is still alive. Can be used as display bit
         .playerbullet_invader_collision_signal, // Signal indicating if an invader has been hit by a player bullet
         .invader_coord_x,                       // Player bullet X coordinate
         .invader_coord_y,                       // Player bullet Y coordinate
@@ -206,7 +239,7 @@ module top
         .move_down,                             // Tells invader to move down
         .player_bullet_coord_x,                 // Player bullet X coordinate
         .player_bullet_coord_y,                 // Player bullet Y coordinate
-        .display,                               // Bit indicating if invader is still alive. Can be used as display bit
+        .display(invader_3_display),                               // Bit indicating if invader is still alive. Can be used as display bit
         .playerbullet_invader_collision_signal, // Signal indicating if an invader has been hit by a player bullet
         .invader_coord_x,                       // Player bullet X coordinate
         .invader_coord_y,                       // Player bullet Y coordinate
@@ -221,7 +254,7 @@ module top
         .move_down,                             // Tells invader to move down
         .player_bullet_coord_x,                 // Player bullet X coordinate
         .player_bullet_coord_y,                 // Player bullet Y coordinate
-        .display,                               // Bit indicating if invader is still alive. Can be used as display bit
+        .display(invader_4_display),                               // Bit indicating if invader is still alive. Can be used as display bit
         .playerbullet_invader_collision_signal, // Signal indicating if an invader has been hit by a player bullet
         .invader_coord_x,                       // Player bullet X coordinate
         .invader_coord_y,                       // Player bullet Y coordinate
@@ -237,7 +270,7 @@ module top
         .player_coord_y,                        // Player bullet Y coordinate
         .player_bullet_collision,               // Signal to indicate if the player bullet has collided with an invader
         .shield_bullet_collision,               // Signal to indicate if the player bullet has collided with a shield
-        .display,                               // Signal to indicate if the player bullet should be displayed on the screen
+        .display(player_bullet_display),                               // Signal to indicate if the player bullet should be displayed on the screen
         .player_bullet_coord_x,                 // Player bullet X coordinate
         .player_bullet_coord_y,                 // Player bullet Y coordinate
         .state()                                // Current state of this player bullet

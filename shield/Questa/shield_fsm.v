@@ -25,8 +25,6 @@ module shield_fsm
     input wire [5:0] player_bullet_coord_x,
     input wire [5:0] player_bullet_coord_y,
     input wire shield_play,
-
-    output reg [3:0] color, //one hot encoding to denote health/color
     output reg [1:0] hp,
     output reg shield_display,
     output reg invaderbullet_shield_collision,
@@ -90,7 +88,6 @@ module shield_fsm
                 if (shield_play) begin
                     shield_display <= 1'b1;
                     hp <= 2'd3;
-                    color <= 4'b1000;
                     shield_coord_x <= START_X;
                     shield_coord_y <= START_Y;
                     invaderbullet_shield_collision <= 1'b0;
@@ -108,11 +105,11 @@ module shield_fsm
 
             if ((invaderbullet_collision_x & invaderbullet_collision_y) && hp > 1) begin
                 hp <= hp - 1;
-                color <= color >> 1;
+            
                 invaderbullet_shield_collision <= 1'b1;
             end else if ((invaderbullet_collision_x & invaderbullet_collision_y) && hp <= 1) begin
                 hp <= hp - 1;
-                color <= color >> 1;
+                
                 shield_display <= 1'b0;
                 invaderbullet_shield_collision <= 1'b1;
             end else  begin
