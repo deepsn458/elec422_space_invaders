@@ -7,6 +7,13 @@ reg in_fire;
 
 wire [1023:0] display_flat;
 
+always @(*) begin
+        for (r = 0; r <= 31; r = r + 1) begin
+            out_display[r] = display_flat[(r * 32) +: 32];
+            row_display[r] = out_display[r];
+        end
+    end
+
 task log_matrix;
         input [255:0] test_name; 
         begin
