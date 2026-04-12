@@ -196,7 +196,7 @@ module top
     );
 
     // Instantiate 4 Invaders
-    invader_fsm invader_fsm_1(
+    invader_fsm #( .START_X(6), .START_Y(30)) invader_fsm_1 (
         .clka, .clkb,                           // Input clocks
         .reset, .play,                          // Global control and reset signals
         .invader_direction,                     // direction bit for horizontal movement (left is 0)
@@ -210,7 +210,7 @@ module top
         .invader_outofbounds_signal(invader_outofbounds_signal_1)            // tells main game fsm when invader hits boundary
     );
 
-    invader_fsm invader_fsm_2(
+    invader_fsm #( .START_X(12), .START_Y(30)) invader_fsm_2(
         .clka, .clkb,                           // Input clocks
         .reset, .play,                          // Global control and reset signals
         .invader_direction,                     // direction bit for horizontal movement (left is 0)
@@ -224,7 +224,7 @@ module top
         .invader_outofbounds_signal(invader_outofbounds_signal_2)              // tells main game fsm when invader hits boundary                             // Current state of this invader
     );
 
-    invader_fsm invader_fsm_3(
+    invader_fsm #( .START_X(18), .START_Y(30)) invader_fsm_3(
         .clka, .clkb,                           // Input clocks
         .reset, .play,                          // Global control and reset signals
         .invader_direction,                     // direction bit for horizontal movement (left is 0)
@@ -238,7 +238,7 @@ module top
         .invader_outofbounds_signal(invader_outofbounds_signal_3)              // tells main game fsm when invader hits boundary
     );
 
-    invader_fsm invader_fsm_4(
+    invader_fsm #( .START_X(22), .START_Y(30)) invader_fsm_4(
         .clka, .clkb,                           // Input clocks
         .reset, .play,                          // Global control and reset signals
         .invader_direction,                     // direction bit for horizontal movement (left is 0)

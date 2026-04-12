@@ -241,7 +241,9 @@ module top
         .invader_outofbounds_signal(invader_outofbounds_signal_3)              // tells main game fsm when invader hits boundary
     );
 
-    invader_fsm invader_fsm_4(
+    invader_fsm invader_fsm_4#(
+        .
+    )(
         .clka, .clkb,                           // Input clocks
         .reset, .play,                          // Global control and reset signals
         .invader_direction,                     // direction bit for horizontal movement (left is 0)

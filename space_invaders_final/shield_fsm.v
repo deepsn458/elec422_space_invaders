@@ -13,7 +13,7 @@ module shield_fsm
     parameter HP_2 = 2,
     parameter HP_1 = 1,
     parameter HP_0 = 0,
-    parameter START_X = 10,
+    parameter START_X = 15,
     parameter START_Y = 10,
     parameter SHIELD_RADIUS = 5
 ) (
