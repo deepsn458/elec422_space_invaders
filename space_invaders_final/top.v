@@ -107,9 +107,6 @@ module top
         .invaderbullet_coord_y(invader_bullet_coord_y),
         .invaderbullet_player_collision_signal,
         .invaderbullet_shield_collision_signal,
-        .invaderbullet_display(invader_bullet_display),
-        .playerbullet_display(player_bullet_display),
-        .shield_display,
         .invader_outofbounds_signal_1,
         .invader_outofbounds_signal_2,
         .invader_outofbounds_signal_3,
@@ -128,7 +125,7 @@ module top
 
     // Instantiate Datapath:
     datapath datapath(
-        .clka, clkb,                            // Input clocks
+        .clka, .clkb,                            // Input clocks
         .reset,                                 // Global control and reset signals
 
         .player_coord_x,                        // Player X coordinate
@@ -174,7 +171,7 @@ module top
 
         .invader_bullet_coord_x,                // Invader bullet X coordinate
         .invader_bullet_coord_y,                // Invader bullet Y coordinate
-        .invaderbullet_player_collision(invaderbullet_player_collision_signal),        // Signal to indicate if the player has collided with an invader bullet
+        .invaderbullet_player_collision_signal,        // Signal to indicate if the player has collided with an invader bullet
         .player_left_input(player_left_motion),                     // Player's left input
         .player_right_input(player_right_motion),                    // Player's right input
         .player_coord_x,                        // Player X coordinate
@@ -207,7 +204,7 @@ module top
         .player_bullet_coord_x,                 // Player bullet X coordinate
         .player_bullet_coord_y,                 // Player bullet Y coordinate
         .display(invader_1_display),                               // Bit indicating if invader is still alive. Can be used as display bit
-        .playerbullet_invader_collision_signal, // Signal indicating if an invader has been hit by a player bullet
+        .playerbullet_invader_collision_signal(playerbullet_invader_collision_signal_1), // Signal indicating if an invader has been hit by a player bullet
         .invader_coord_x(invader_1_coord_x),                       // Player bullet X coordinate
         .invader_coord_y(invader_1_coord_y),                       // Player bullet Y coordinate
         .invader_outofbounds_signal(invader_outofbounds_signal_1)            // tells main game fsm when invader hits boundary
@@ -221,7 +218,7 @@ module top
         .player_bullet_coord_x,                 // Player bullet X coordinate
         .player_bullet_coord_y,                 // Player bullet Y coordinate
         .display(invader_2_display),                               // Bit indicating if invader is still alive. Can be used as display bit
-        .playerbullet_invader_collision_signal, // Signal indicating if an invader has been hit by a player bullet
+        .playerbullet_invader_collision_signal(playerbullet_invader_collision_signal_2), // Signal indicating if an invader has been hit by a player bullet
         .invader_coord_x(invader_2_coord_x),                       // Player bullet X coordinate
         .invader_coord_y(invader_2_coord_y),                        // Player bullet Y coordinate
         .invader_outofbounds_signal(invader_outofbounds_signal_2)              // tells main game fsm when invader hits boundary                             // Current state of this invader
@@ -235,7 +232,7 @@ module top
         .player_bullet_coord_x,                 // Player bullet X coordinate
         .player_bullet_coord_y,                 // Player bullet Y coordinate
         .display(invader_3_display),                               // Bit indicating if invader is still alive. Can be used as display bit
-        .playerbullet_invader_collision_signal, // Signal indicating if an invader has been hit by a player bullet
+        .playerbullet_invader_collision_signal(playerbullet_invader_collision_signal_3), // Signal indicating if an invader has been hit by a player bullet
         .invader_coord_x(invader_3_coord_x),                       // Player bullet X coordinate
         .invader_coord_y(invader_3_coord_y),                       // Player bullet Y coordinate
         .invader_outofbounds_signal(invader_outofbounds_signal_3)              // tells main game fsm when invader hits boundary
@@ -249,7 +246,7 @@ module top
         .player_bullet_coord_x(invader_4_coord_x),                 // Player bullet X coordinate
         .player_bullet_coord_y(invader_4_coord_y),                 // Player bullet Y coordinate
         .display(invader_4_display),                               // Bit indicating if invader is still alive. Can be used as display bit
-        .playerbullet_invader_collision_signal, // Signal indicating if an invader has been hit by a player bullet
+        .playerbullet_invader_collision_signal(playerbullet_invader_collision_signal_4), // Signal indicating if an invader has been hit by a player bullet
         .invader_coord_x(invader_4_coord_x),                       // Player bullet X coordinate
         .invader_coord_y(invader_4_coord_y),                       // Player bullet Y coordinate
         .invader_outofbounds_signal(invader_outofbounds_signal_4)            // tells main game fsm when invader hits boundary
@@ -258,7 +255,7 @@ module top
     // Instantiate Player Bullet FSM:
     player_bullet_fsm player_bullet_fsm(
         .clka, .clkb,                           // Input clocks
-        .reset, .fire,                          // Global control and reset signals
+        .reset, .fire(playerbullet_fire),                          // Global control and reset signals
         .player_coord_x,                        // Player bullet X coordinate
         .player_coord_y,                        // Player bullet Y coordinate
         .player_bullet_collision,               // Signal to indicate if the player bullet has collided with an invader
