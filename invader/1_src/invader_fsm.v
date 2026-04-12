@@ -15,9 +15,9 @@ module invader_fsm
     parameter Y_OFFSET = 3,                                     // Number of pixels to travel downwards upon vertical movement
     parameter DEAD_X = 5,                                       // X coordinate to place invader once dead
     parameter DEAD_Y = 5,                                       // Y coordinate to place invader once dead
-    parameter X_OFFSET = 1,                                      // Number of pixels to travel sideways upon horizontal movement
-    parameter HORIZ_LEFT_BOUND = 0,
-    parameter HORIZ_RIGHT_BOUND = 1                             // Left and Right bounds
+    parameter X_OFFSET = 1,                                     // Number of pixels to travel sideways upon horizontal movement
+    parameter HORIZ_LEFT_BOUND = 1,
+    parameter HORIZ_RIGHT_BOUND = 30                            // Left and Right bounds
     )(
 
     input  wire             clka, clkb,                         // Input clocks
@@ -30,7 +30,7 @@ module invader_fsm
     output reg              playerbullet_invader_collision_signal,     // Signal indicating if an invader has been hit by a player bullet
     output reg  [5:0]       invader_coord_x,                    // Player bullet X coordinate
     output reg  [5:0]       invader_coord_y,                    // Player bullet Y coordinate
-    output reg              invader_outofbounds_signal,         // tells main game fsm when invader hits boundary
+    output reg              invader_outofbounds_signal,         // tells main game fsm when invader will hit boundary next cycle
     output reg  [1:0]       state                               // Current state of this invader
     );
 
