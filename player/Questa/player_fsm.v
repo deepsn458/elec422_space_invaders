@@ -18,8 +18,8 @@ module player_fsm #(
     input  wire             reset, play,                        // Global reset and control signals
     input wire  [5:0]       invader_bullet_coord_x,              // Invader bullet X coordinate
     input wire  [5:0]       invader_bullet_coord_y,              // Invader bullet Y coordinate
-    input direction                         // Signals to indicate if the player is moving left or right; 1 = right, 0 = left
-    output reg               invaderbullet_player_collision,            // Signal to indicate if the player has collided with an invader bullet
+    input player_left_input, player_right_input,               // Indicates direction the player moves
+    output reg               invaderbullet_player_collision_signal,            // Signal to indicate if the player has collided with an invader bullet
     output  reg [5:0]       player_coord_x,                     // Player X coordinate
     output  reg [5:0]       player_coord_y,                     // Player Y coordinate
     output reg              display,                            // Signal to indicate if the player should be displayed on the screen
@@ -97,9 +97,9 @@ module player_fsm #(
             PLAY: begin
                 state <= next_state;
                 display <= 1;
-                if (direction == 0 && player_coord_x > LEFT_BOUND) begin
+                if (player_left_input && ~player_right_input && player_coord_x > LEFT_BOUND) begin
                     player_coord_x <= player_coord_x - 1;
-                end else if (direction == 1 && player_coord_x < RIGHT_BOUND) begin
+                end else if (player_right_input && ~player_left_input && player_coord_x < RIGHT_BOUND) begin
                     player_coord_x <= player_coord_x + 1;
                 end
                 else begin
