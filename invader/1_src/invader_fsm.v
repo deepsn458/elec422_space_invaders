@@ -115,7 +115,7 @@ module invader_fsm
                     end else if (move_interval_toggle) begin
                         if (invader_direction) begin
                             invader_coord_x <= invader_coord_x + X_OFFSET;
-                            if (invader_coord_x + X_OFFSET >= HORIZ_RIGHT_BOUND) begin
+                            if (invader_coord_x + X_OFFSET * 2 >= HORIZ_RIGHT_BOUND) begin
                                 invader_outofbounds_signal <= 1;
                             end
                             else begin
@@ -123,7 +123,7 @@ module invader_fsm
                             end
                         end else begin
                             invader_coord_x <= invader_coord_x - X_OFFSET;
-                            if (invader_coord_x - X_OFFSET >= HORIZ_LEFT_BOUND) begin
+                            if (invader_coord_x - X_OFFSET  * 2 >= HORIZ_LEFT_BOUND) begin
                                 invader_outofbounds_signal <= 1;
                             end
                             else begin

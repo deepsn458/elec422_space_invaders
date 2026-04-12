@@ -22,6 +22,53 @@ module top
     output wire [1023:0]    display_flat                        // Display bitstream to python visualiser
     );
 
+    // Module Interconnects
+    wire play;
+
+    wire [5:0]       player_coord_x,                     // Player X coordinate
+    wire [5:0]       player_coord_y,                     // Player Y coordinate
+    wire             player_display,                     // Display bit
+
+    wire [5:0]       invader_1_coord_x,                  // Invader 1 X coordinate
+    wire [5:0]       invader_1_coord_y,                  // Invader 1 Y coordinate
+    wire             invader_1_display,                  // Display bit
+
+    wire [5:0]       invader_2_coord_x,                  // Invader 2 X coordinate
+    wire [5:0]       invader_2_coord_y,                  // Invader 2 Y coordinate
+    wire             invader_2_display,                  // Display bit
+
+    wire [5:0]       invader_3_coord_x,                  // Invader 3 X coordinate
+    wire [5:0]       invader_3_coord_y,                  // Invader 3 Y coordinate
+    wire             invader_3_display,                  // Display bit
+
+    wire [5:0]       invader_4_coord_x,                  // Invader 4 X coordinate
+    wire [5:0]       invader_4_coord_y,                  // Invader 4 Y coordinate
+    wire             invader_4_display,                  // Display bit
+
+    wire [5:0]       shield_coord_x,                     // Shield X coordinate
+    wire [5:0]       shield_coord_y,                     // Shield Y coordinate
+    wire [1:0]       shield_hp,                          // Shield HP (3 to 0)
+    wire             shield_display,                     // Display bit
+
+    wire [5:0]       player_bullet_coord_x,              // Player bullet X coordinate
+    wire [5:0]       player_bullet_coord_y,              // Player bullet Y coordinate
+    wire             player_bullet_display,              // Display bit
+
+    wire [5:0]       invader_bullet_coord_x,             // Invader bullet X coordinate
+    wire [5:0]       invader_bullet_coord_y,             // Invader bullet Y coordinate
+    wire             invader_bullet_display,             // Display bit
+    
+    wire             invader_direction,                  // direction bit for horizontal movement (left is 0)
+    wire             move_down,                          // Tells invader to move down
+    wire             playerbullet_invader_collision_signal;// Signal indicating if an invader has been hit by a player bullet
+    wire             invader_outofbounds_signal_1;       // tells main game fsm when invader hits boundary
+
+
+
+
+
+
+
     // Instantiate Main Game FSM:
     main_game_fsm main_game_fsm(
         .clka, .clkb,                             // Input clocks
