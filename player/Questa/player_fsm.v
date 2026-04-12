@@ -91,7 +91,7 @@ module player_fsm #(
                 state <= next_state;
                 player_coord_x <= X_START;
                 player_coord_y <= Y_START;
-                display <= 0;
+                display <= 1;
                 player_bullet_collision <= 0;
             end
             PLAY: begin
