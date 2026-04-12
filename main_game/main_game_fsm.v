@@ -23,8 +23,11 @@ module main_game_fsm
     input wire          invader_display, // from invader fsm 
     input wire[5:0]     invader_coordinate_x, invader_coordinate_y, // from invader fsm
     input wire          invaderbullet_player_collision_signal, // from player fsm (bullet hits player)
-    input 
-    
+    input wire          playerbullet_invader_collision_signal, // from invader fsm
+    input wire          invaderbullet_display, playerbullet_display, shield_display, // from the respective fsms
+    input wire[1:0]          hp, // from shield fsm
+
+    output wire         player_left_motion, player_right_motion, 
 );
 
    
