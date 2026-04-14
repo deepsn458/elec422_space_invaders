@@ -22,6 +22,7 @@ localparam SHIELD_Y = 10;
 reg in_clka, in_clkb, in_reset;
 reg [5:0] in_invader_bullet_coord_x, in_invader_bullet_coord_y;
 reg in_shield_play;
+reg [5:0] in_player_bullet_coord_x, in_player_bullet_coord_y;
 
 wire out_shield_display, out_playerbullet_shield_collision, out_invaderbullet_shield_collision;
 wire [1:0] out_hp;
@@ -36,6 +37,8 @@ shield_fsm shield_fsm(
     .reset(in_reset),
     .invader_bullet_coord_x(in_invader_bullet_coord_x),
     .invader_bullet_coord_y(in_invader_bullet_coord_y),
+    .player_bullet_coord_x(in_player_bullet_coord_x),
+    .player_bullet_coord_y(in_player_bullet_coord_y),
     .shield_play(in_shield_play),
     .color(out_color),
     .shield_display(out_shield_display),
@@ -57,31 +60,43 @@ begin
             in_reset = 0;
             in_invader_bullet_coord_x = 0;
             in_invader_bullet_coord_y = 0;
+            in_player_bullet_coord_x = 15;
+            in_player_bullet_coord_y = 10;
             in_shield_play = in_shield_play;
         end else if ((HIT_1 > i) && (i >= START)) begin
             in_reset = 0;
             in_invader_bullet_coord_x = 0;
             in_invader_bullet_coord_y = 0;
+            in_player_bullet_coord_x = 15;
+            in_player_bullet_coord_y = 9;
             in_shield_play = 1;
         end else if ((idle_2 > i) && (i >= HIT_1)) begin
             in_reset = 0;
             in_invader_bullet_coord_x = 8;
             in_invader_bullet_coord_y = 10;
+            in_player_bullet_coord_x = 15;
+            in_player_bullet_coord_y = 8;
             in_shield_play = 0;
         end else if ((idle_3 > i) && (i >= HIT_2)) begin
             in_reset = 0;
             in_invader_bullet_coord_x = 12;
             in_invader_bullet_coord_y = 10;
+            in_player_bullet_coord_x = 0;
+            in_player_bullet_coord_y = 0;
             in_shield_play = 0;
         end else if ((idle_4 > i) && (i >= HIT_3)) begin
             in_reset = 0;
             in_invader_bullet_coord_x = 7;
             in_invader_bullet_coord_y = 10;
+            in_player_bullet_coord_x = 0;
+            in_player_bullet_coord_y = 0;
             in_shield_play = 0;
         end else begin
             in_reset = 0;
             in_invader_bullet_coord_x = 0;
             in_invader_bullet_coord_y = 0;
+            in_player_bullet_coord_x = 0;
+            in_player_bullet_coord_y = 0;
             in_shield_play = 0;
         end
         in_clka = 0; in_clkb = 0; #10;
