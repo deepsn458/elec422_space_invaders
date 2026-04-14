@@ -33,6 +33,8 @@ module invader_bullet_fsm
     reg [1:0] temp_state;
     reg [1:0] next_state;
 
+    reg goback;
+
     //State parameters
     parameter INITIAL = 2'b00, FIRING = 2'b01;
 
@@ -46,7 +48,7 @@ module invader_bullet_fsm
             end
         end
         FIRING: begin
-            if ((invaderbullet_player_collision_signal | invaderbullet_shield_collision_signal)|| invader_bullet_coord_y == BOUNDARY_Y) begin
+            if (goback) begin
                 temp_state = INITIAL;
             end else begin
                 temp_state = FIRING;
@@ -77,7 +79,13 @@ module invader_bullet_fsm
             FIRING: begin
                 state <= next_state;
                 invader_bullet_display <= 1'b1;
-                invader_bullet_coord_y <= invader_bullet_coord_y - BULLET_Y_OFFSET;
+                if (invaderbullet_player_collision_signal || invaderbullet_shield_collision_signal || invader_bullet_coord_y == BOUNDARY_Y) begin
+                    invader_bullet_coord_x <= closest_invader_coord_x;
+                    invader_bullet_coord_y <= closest_invader_coord_y;
+                    goback <= 1'b1;
+                end else begin
+                    invader_bullet_coord_y <= invader_bullet_coord_y - BULLET_Y_OFFSET;
+                end
             end
             default: state <= INITIAL;
         endcase
