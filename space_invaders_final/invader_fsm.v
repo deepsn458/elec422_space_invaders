@@ -16,8 +16,8 @@ module invader_fsm
     parameter DEAD_X = 5,                                       // X coordinate to place invader once dead
     parameter DEAD_Y = 5,                                       // Y coordinate to place invader once dead
     parameter X_OFFSET = 1,                                     // Number of pixels to travel sideways upon horizontal movement
-    parameter HORIZ_LEFT_BOUND = 1,
-    parameter HORIZ_RIGHT_BOUND = 30                            // Left and Right bounds
+    parameter HORIZ_LEFT_BOUND = 2,
+    parameter HORIZ_RIGHT_BOUND = 29                            // Left and Right bounds
     )(
 
     input  wire             clka, clkb,                         // Input clocks

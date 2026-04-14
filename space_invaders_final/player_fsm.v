@@ -9,8 +9,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////////// test
 
 module player_fsm #(
-    parameter LEFT_BOUND = 6'd1,
-    parameter RIGHT_BOUND = 6'd30,
+    parameter LEFT_BOUND = 6'd2,
+    parameter RIGHT_BOUND = 6'd29,
     parameter X_START = 6'd16,
     parameter Y_START = 6'd2
     )(
