@@ -1,12 +1,19 @@
 m255
 K4
 z2
+<<<<<<< HEAD
 Z0 !s12c _opt
 Z1 !s99 nomlopt
 R0
 R1
 R0
 R1
+=======
+!s12c _opt1
+Z0 !s99 nomlopt
+!s12c _opt
+R0
+>>>>>>> d3098531d1746d81dee5408b9640cb968b6f836e
 !s11f vlog 2023.2 2023.04, Apr 11 2023
 13
 !s112 1.1
@@ -16,6 +23,7 @@ R1
 cModel Technology
 Z2 d/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/space_invaders_final
 T_opt
+<<<<<<< HEAD
 !s110 1776206485
 VdFgNWmzJAdJ;3[KA4Te<g2
 04 11 4 work top_tb_long fast 0
@@ -25,9 +33,34 @@ R1
 !s124 OEM100
 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
 Z3 tCvgOpt 0
+=======
+!s110 1776205131
+VVgdmF7i]8>gLI2Z_1UO?;2
+Z2 04 11 4 work top_tb_long fast 0
+=1-d094661828ee-69debd4a-de01f-100cc7
+R0
+Z3 !s12b OEM100
+Z4 !s124 OEM100
+Z5 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z6 tCvgOpt 0
+>>>>>>> d3098531d1746d81dee5408b9640cb968b6f836e
 n@_opt
-OL;O;2023.2;77
+Z7 OL;O;2023.2;77
+R1
+T_opt1
+!s110 1776206676
+VPULg9NhmABXNjIa6XZXA33
+R2
+=1-d09466164d60-69dec354-79095-160053
+R0
+R3
+R4
+R5
+R6
+n@_opt1
+R7
 vdatapath
+<<<<<<< HEAD
 Z4 2datapath.v|invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_tb_long.v|top_tb.v|top.v
 Z5 !s110 1776206445
 !i10b 1
@@ -257,3 +290,234 @@ R11
 !i113 0
 R12
 R3
+=======
+Z8 2datapath.v|invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_tb_long.v|top_tb.v|top.v
+Z9 !s110 1776206630
+!i10b 1
+!s100 `0iL2YRoKjoz=1hkVoMGB2
+If:7GWcBUBY;[_Ie`Sg:>A3
+Z10 d/storage-home/d/dn55/elec422_space_invaders/space_invaders_final
+w1775963904
+8datapath.v
+Fdatapath.v
+!i122 1
+L0 11 196
+Z11 VDg1SIo80bB@j0V0VzS_@n1
+Z12 OL;L;2023.2;77
+r1
+!s85 0
+31
+Z13 !s108 1776206629.000000
+Z14 !s107 top.v|top_tb.v|top_tb_long.v|shield_fsm.v|player_fsm.v|player_bullet_fsm.v|main_game_fsm.v|invader_fsm.v|invader_bullet_fsm.v|datapath.v|
+Z15 !s90 datapath.v|invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_tb_long.v|top_tb.v|top.v|
+!i113 0
+Z16 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R6
+vinvader_bullet_fsm
+R8
+R9
+!i10b 1
+!s100 1Zm>GjiFZaN;SfAXR?<LX2
+IFMIZ3Joj8g;N[XGO9==1i0
+R10
+w1776204345
+8invader_bullet_fsm.v
+Finvader_bullet_fsm.v
+!i122 1
+L0 11 75
+R11
+R12
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R16
+R6
+vinvader_fsm
+R8
+R9
+!i10b 1
+!s100 b:Ekk`62156CNKZ0ND;mP0
+I4b6^XAlOM]<FB:_eY4ejD2
+R10
+w1776206528
+8invader_fsm.v
+Finvader_fsm.v
+!i122 1
+L0 11 148
+R11
+R12
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R16
+R6
+vmain_game_fsm
+R8
+R9
+!i10b 1
+!s100 2Z^2d`6^<0KJe3k_TGJnG0
+IIkan;62VRAi4`kM30;;Cf3
+R10
+w1776206539
+8main_game_fsm.v
+Fmain_game_fsm.v
+!i122 1
+L0 12 155
+R11
+R12
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R16
+R6
+vplayer_bullet_fsm
+R8
+R9
+!i10b 1
+!s100 bZ_`Bc1PVabiYL5EIjkmk3
+If86`oKlOYc>lFWeCz0>5X2
+R10
+w1776203340
+8player_bullet_fsm.v
+Fplayer_bullet_fsm.v
+!i122 1
+L0 11 88
+R11
+R12
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R16
+R6
+vplayer_fsm
+R8
+R9
+!i10b 1
+!s100 I5zaZCT1;ll[e]DRF]Q7T0
+Iz@4U5UDMSM2h_[S5[>SBW0
+R10
+w1775964350
+8player_fsm.v
+Fplayer_fsm.v
+!i122 1
+L0 11 117
+R11
+R12
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R16
+R6
+vshield_fsm
+R8
+R9
+!i10b 1
+!s100 nZKh8Tn?34NdQTH^]L0EE0
+ICIR9GBb7nNnBU4aFM]>zK0
+R10
+w1776203066
+8shield_fsm.v
+Fshield_fsm.v
+!i122 1
+L0 10 119
+R11
+R12
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R16
+R6
+vtop
+R8
+R9
+!i10b 1
+!s100 ?E3OjKj]OjS7fBoIemS2<2
+I:lD7eM`]fb]z5e23o0^483
+R10
+w1776202429
+8top.v
+Ftop.v
+!i122 1
+L0 11 276
+R11
+R12
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R16
+R6
+vtop_tb
+R8
+R9
+!i10b 1
+!s100 UTLhl2Z^iB6eOHj5[2eiS3
+Ico@ClHc9a?NQlb;?>F9k>0
+R10
+w1775966937
+8top_tb.v
+Ftop_tb.v
+!i122 1
+L0 1 102
+R11
+R12
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R16
+R6
+vtop_tb_long
+R8
+R9
+!i10b 1
+!s100 UVzM]G2Zn60zV]3]@RkJ?0
+I:ie_BABj3kcQ3V?GiT9I63
+R10
+w1776206088
+8top_tb_long.v
+Ftop_tb_long.v
+!i122 1
+L0 1 147
+R11
+R12
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R16
+R6
+>>>>>>> d3098531d1746d81dee5408b9640cb968b6f836e

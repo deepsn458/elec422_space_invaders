@@ -82,7 +82,7 @@ module player_fsm #(
             state <= INIT;
             player_coord_x <= X_START;
             player_coord_y <= Y_START;
-            invaderbullet_player_collision <= 0;
+            invaderbullet_player_collision_signal <= 0;
             display <= 1;
         end else begin
 
@@ -92,7 +92,6 @@ module player_fsm #(
                 player_coord_x <= X_START;
                 player_coord_y <= Y_START;
                 display <= 1;
-                player_bullet_collision <= 0;
             end
             PLAY: begin
                 state <= next_state;
@@ -105,21 +104,21 @@ module player_fsm #(
                 else begin
                     player_coord_x <= player_coord_x;
                 end
-                invaderbullet_player_collision <= 0;
+                invaderbullet_player_collision_signal <= 0;
             end
             DEAD: begin
                 state <= next_state;
                 display <= 0;
                 player_coord_x <= player_coord_x;
                 player_coord_y <= player_coord_y;
-                invaderbullet_player_collision <= 1;
+                invaderbullet_player_collision_signal <= 1;
             end
 
             default: begin
                 state <= INIT;
                 player_coord_x <= X_START;
                 player_coord_y <= Y_START;
-                invaderbullet_player_collision <= 0;
+                invaderbullet_player_collision_signal <= 0;
                 display <= 1;
             end
         endcase

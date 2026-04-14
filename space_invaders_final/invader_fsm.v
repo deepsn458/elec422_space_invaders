@@ -124,7 +124,7 @@ module invader_fsm
                             end
                         end else begin
                             invader_coord_x <= invader_coord_x - X_OFFSET;
-                            if (invader_coord_x - X_OFFSET  * 2 <= HORIZ_LEFT_BOUND) begin
+                            if (invader_coord_x <= HORIZ_LEFT_BOUND + X_OFFSET * 2) begin
                                 invader_outofbounds_signal <= 1;
                             end
                             else begin
