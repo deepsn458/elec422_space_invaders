@@ -16,8 +16,8 @@ module player_fsm_tb();
         .clka(in_clka), .clkb(in_clkb), .reset(in_reset), .play(in_play),
         .invader_bullet_coord_x(in_invader_bullet_x),
         .invader_bullet_coord_y(in_invader_bullet_y),
-        .player_bullet_collision(out_collision), 
-        .left_motion(in_left), .right_motion(in_right),
+        .invaderbullet_player_collision_signal(out_collision), 
+        .player_left_input(in_left), .player_right_input(in_right),
         .player_coord_x(out_player_x), .player_coord_y(out_player_y),
         .display(out_display), .state(out_state)
     );

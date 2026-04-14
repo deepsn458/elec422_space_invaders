@@ -96,7 +96,7 @@ module main_game_fsm
         end
 
         IN_GAME: begin
-            if (invaders_display == 4'b0 || (~player_display |invader_outofbounds)) begin
+            if (invaders_display == 4'b0 || (~player_display)) begin
             temp_state = INIT;
             end else begin
             temp_state = IN_GAME;

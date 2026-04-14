@@ -13,7 +13,7 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -debugDB -voptargs=""+acc"" top_tb_long 
-# Start time: 17:18:50 on Apr 14,2026
+# Start time: 17:44:35 on Apr 14,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vsim-8611) Generating debug db.
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
@@ -59,6 +59,6 @@ run -all
 # Testing: Left and Right conflict...
 # Testing: Idle Game State (Watching alien movement)...
 # Simulation Complete. Matrix written to top_display_log.txt
-# ** Note: $stop    : top_tb_long.v(139)
+# ** Note: $stop    : top_tb_long.v(144)
 #    Time: 11440 ns  Iteration: 0  Instance: /top_tb_long
-# Break in Module top_tb_long at top_tb_long.v line 139
+# Break in Module top_tb_long at top_tb_long.v line 144

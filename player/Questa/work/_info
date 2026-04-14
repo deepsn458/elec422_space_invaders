@@ -1,21 +1,9 @@
 m255
 K4
 z2
-Z0 !s12c _opt2
+Z0 !s12c _opt
 Z1 !s99 nomlopt
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-R0
-R1
-Z2 !s12c _opt1
+Z2 !s12c _opt2
 R1
 R2
 R1
@@ -25,7 +13,11 @@ R2
 R1
 R2
 R1
-Z3 !s12c _opt
+R2
+R1
+R2
+R1
+Z3 !s12c _opt1
 R1
 R3
 R1
@@ -34,6 +26,16 @@ R1
 R3
 R1
 R3
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
 R1
 !s11f vlog 2023.2 2023.04, Apr 11 2023
 13
@@ -44,46 +46,46 @@ R1
 cModel Technology
 Z4 d/storage-home/e/ely2/ELEC422/hw2/p2/Questa
 T_opt
-!s110 1770939549
-VU2;`RCe[Ho2`P=LB?ZSIh1
-04 13 4 work controller_tb fast 0
-=1-d09466182648-698e649d-3c877-64e92
+!s110 1776206455
+VD0gi_L56:Ed5A6GRji@iI0
+Z5 04 13 4 work player_fsm_tb fast 0
+=1-d09466164d60-69dec277-5e7d3-15ee42
 R1
-Z5 !s12b OEM100
-Z6 !s124 OEM100
-Z7 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
-Z8 tCvgOpt 0
+Z6 !s12b OEM100
+Z7 !s124 OEM100
+Z8 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z9 tCvgOpt 0
 n@_opt
-Z9 OL;O;2023.2;77
-R4
+Z10 OL;O;2023.2;77
 T_opt1
 !s110 1772515259
 VkhiD65V@bW3Ze6oOW?@`h1
 04 20 4 work player_bullet_fsm_tb fast 0
 =1-d094661828ee-69a66fba-c94de-d7cf2
 R1
-R5
 R6
 R7
 R8
-n@_opt1
 R9
+n@_opt1
+R10
 R4
 T_opt2
 !s110 1772575854
 V`^SHi12Jmh6dWCbLSAfGH2
-04 13 4 work player_fsm_tb fast 0
+R5
 =1-d094661828ee-69a75c6e-6c06c-121ab6
 R1
-R5
 R6
 R7
 R8
-n@_opt2
 R9
+n@_opt2
+R10
+R4
 vcontroller
-Z10 2controller.v|testbench.v
-Z11 !s110 1771380772
+Z11 2controller.v|testbench.v
+Z12 !s110 1771380772
 !i10b 1
 !s100 z<1@<9_>lAnG<RM1RGjDA3
 IKEGATR[[:[J]_>f3EcoF]2
@@ -93,129 +95,129 @@ w1771344596
 Fcontroller.v
 !i122 7
 L0 5 197
-Z12 VDg1SIo80bB@j0V0VzS_@n1
-Z13 OL;L;2023.2;77
+Z13 VDg1SIo80bB@j0V0VzS_@n1
+Z14 OL;L;2023.2;77
 r1
 !s85 0
 31
-Z14 !s108 1771380772.000000
-Z15 !s107 testbench.v|controller.v|
-Z16 !s90 controller.v|testbench.v|
+Z15 !s108 1771380772.000000
+Z16 !s107 testbench.v|controller.v|
+Z17 !s90 controller.v|testbench.v|
 !i113 0
-Z17 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R8
+Z18 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R9
 vcontroller_tb
-R10
 R11
+R12
 !i10b 1
 !s100 UJQ_kl4_ZDYYE4UV=hgM<1
 IKi=JoL3FNhoEBYA1Glc>D0
 R4
 w1770936608
-Z18 8testbench.v
-Z19 Ftestbench.v
+Z19 8testbench.v
+Z20 Ftestbench.v
 !i122 7
 L0 1 164
-R12
 R13
+R14
 r1
 !s85 0
 31
-R14
 R15
 R16
-!i113 0
 R17
-R8
+!i113 0
+R18
+R9
 vplayer_bullet_fsm
-Z20 2player_bullet_fsm.v|testbench.v
-Z21 !s110 1772515228
+Z21 2player_bullet_fsm.v|testbench.v
+Z22 !s110 1772515228
 !i10b 1
 !s100 zMPofYooz:OO__4ij3Gk80
 IIc;N;o?5JDmgQKO?CzUJF0
-Z22 d/storage-home/e/ely2/ELEC422/project/fsm/player_bullet/Questa
+Z23 d/storage-home/e/ely2/ELEC422/project/fsm/player_bullet/Questa
 w1772515199
 8player_bullet_fsm.v
 Fplayer_bullet_fsm.v
 !i122 15
 L0 11 86
-R12
 R13
+R14
 r1
 !s85 0
 31
-Z23 !s108 1772515228.000000
-Z24 !s107 testbench.v|player_bullet_fsm.v|
-Z25 !s90 player_bullet_fsm.v|testbench.v|
+Z24 !s108 1772515228.000000
+Z25 !s107 testbench.v|player_bullet_fsm.v|
+Z26 !s90 player_bullet_fsm.v|testbench.v|
 !i113 0
-R17
-R8
+R18
+R9
 vplayer_bullet_fsm_tb
-R20
 R21
+R22
 !i10b 1
 !s100 5;3?^5dU:_mR4RP4JPU>G1
 I=j?SQaWJJDR;Pmmk=WR:n3
-R22
+R23
 w1772513164
-R18
 R19
+R20
 !i122 15
 L0 1 147
-R12
 R13
+R14
 r1
 !s85 0
 31
-R23
 R24
 R25
+R26
 !i113 0
-R17
-R8
+R18
+R9
 vplayer_fsm
-Z26 2player_fsm.v|testbench.v
-Z27 !s110 1772575826
+Z27 2player_fsm.v|testbench.v
+Z28 !s110 1776206435
 !i10b 1
-!s100 ZNXZX[U1E9W^a`PFU@AVV1
-I[noU>8Ch>h<LG^<M1aWz61
-Z28 d/storage-home/e/ely2/ELEC422/project/fsm/player/Questa
-w1772574851
+!s100 I5zaZCT1;ll[e]DRF]Q7T0
+Iz@4U5UDMSM2h_[S5[>SBW0
+Z29 d/storage-home/d/dn55/elec422_space_invaders/player/Questa
+w1776206192
 8player_fsm.v
 Fplayer_fsm.v
-!i122 24
-L0 11 115
-R12
+!i122 28
+L0 11 117
 R13
+R14
 r1
 !s85 0
 31
-Z29 !s108 1772575826.000000
-Z30 !s107 testbench.v|player_fsm.v|
-Z31 !s90 player_fsm.v|testbench.v|
+Z30 !s108 1776206435.000000
+Z31 !s107 testbench.v|player_fsm.v|
+Z32 !s90 player_fsm.v|testbench.v|
 !i113 0
-R17
-R8
-vplayer_fsm_tb
-R26
-R27
-!i10b 1
-!s100 GcTlmd`GQ3lBB9_Yi1MTK0
-IKEKeXoZNmnfSz>`9MR>CZ0
-R28
-w1772575814
 R18
+R9
+vplayer_fsm_tb
+R27
+R28
+!i10b 1
+!s100 I<2Y;oKHV@LTiF@g<i`Pl0
+I53GDWfhk:P6=IL<P@g8a80
+R29
+w1776206424
 R19
-!i122 24
+R20
+!i122 28
 L0 1 80
-R12
 R13
+R14
 r1
 !s85 0
 31
-R29
 R30
 R31
+R32
 !i113 0
-R17
-R8
+R18
+R9
