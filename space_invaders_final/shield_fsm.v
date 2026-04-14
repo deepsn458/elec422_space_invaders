@@ -41,10 +41,12 @@ module shield_fsm
 
     //internal wire to track shield coordinates
     wire invaderbullet_collision_x, invaderbullet_collision_y, 
-         playerbullet_collision_x, playerbullet_collision_y;
-    assign invaderbullet_collision_x = ((invader_bullet_coord_x - shield_coord_x) < SHIELD_RADIUS) || ((shield_coord_x-invader_bullet_coord_x) < SHIELD_RADIUS);
+         playerbullet_collision_x, playerbullet_collision_y, playerbullet_shield_distance;
+    assign invaderbullet_collision_x = (invader_bullet_coord_x <= (shield_coord_x + SHIELD_RADIUS)) && (invader_bullet_coord_x >= (shield_coord_x - SHIELD_RADIUS));
     assign invaderbullet_collision_y = invader_bullet_coord_y == shield_coord_y;
-    assign playerbullet_collision_x = ((player_bullet_coord_x - shield_coord_x) < SHIELD_RADIUS) || ((shield_coord_x-player_bullet_coord_x) < SHIELD_RADIUS);
+    
+
+    assign playerbullet_collision_x = (player_bullet_coord_x <= (shield_coord_x + SHIELD_RADIUS)) && (player_bullet_coord_x >= (shield_coord_x -SHIELD_RADIUS));
     assign playerbullet_collision_y = player_bullet_coord_y == shield_coord_y;
     always @ (*) begin
         case (state)
@@ -85,18 +87,17 @@ module shield_fsm
         case (next_state)
             INITIAL: begin
                 state <= next_state;
-                if (shield_play) begin
-                    shield_display <= 1'b1;
-                    hp <= 2'd3;
-                    shield_coord_x <= START_X;
-                    shield_coord_y <= START_Y;
-                    invaderbullet_shield_collision <= 1'b0;
-                    playerbullet_shield_collision <= 1'b0;
-                end
+                hp <= 2'd3;
+                shield_coord_x <= START_X;
+                shield_coord_y <= START_Y;
+                invaderbullet_shield_collision <= 1'b0;
+                playerbullet_shield_collision <= 1'b0;
+                shield_display <= 1'b0;
         end
 
         ALIVE: begin
             state <= next_state;
+            shield_display <= 1'b1;
             if ((playerbullet_collision_x & playerbullet_collision_y) && hp > 1) begin
                 playerbullet_shield_collision <= 1'b1;
             end else begin

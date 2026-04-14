@@ -9,7 +9,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////// test
 
 module player_bullet_fsm #(
-    parameter Y_OFFSET = 3,
+    parameter Y_OFFSET = 1,
     parameter Y_MAX = 31
     )(
     input  wire             clka, clkb,                         // Input clocks

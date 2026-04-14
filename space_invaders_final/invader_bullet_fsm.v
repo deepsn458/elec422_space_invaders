@@ -10,7 +10,7 @@
 
 module invader_bullet_fsm
 #(
-    parameter BULLET_Y_OFFSET = 2,
+    parameter BULLET_Y_OFFSET = 1,
     parameter BOUNDARY_Y = 0,
     parameter START_X = 5,
     parameter START_Y = 25
@@ -76,19 +76,13 @@ module invader_bullet_fsm
         case (next_state)
             INITIAL: begin
                 state <= next_state;
-                if (invader_fire) begin
-                    invader_bullet_display <= 1'b1;
-                    invader_bullet_coord_x <= closest_invader_coord_x;
-                    invader_bullet_coord_y <= closest_invader_coord_y;
-                end else begin
-                    invader_bullet_display <= 1'b0;
-                    invader_bullet_coord_x <= START_X;
-                    invader_bullet_coord_y <= START_Y;
-                end
+                invader_bullet_display <= 1'b0;
+                invader_bullet_coord_x <= closest_invader_coord_x;
+                invader_bullet_coord_y <= closest_invader_coord_y;
             end
             FIRING: begin
                 state <= next_state;
-
+                invader_bullet_display <= 1'b1;
                 if (invaderbullet_player_collision_signal | invaderbullet_shield_collision_signal) begin
                     invader_bullet_display <= 1'b0;
                 end else if (invader_bullet_coord_y[5] & 1) begin

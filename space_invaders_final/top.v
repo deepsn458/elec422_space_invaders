@@ -74,13 +74,14 @@ module top
 
     wire invaderbullet_player_collision_signal;          // Signals that the player was hit by an invader bullet
     wire invaderbullet_shield_collision_signal;          // Signals that the invader bullet hit the shield
+    wire playerbullet_shield_collision_signal;           // Signal to indicate if the player bullet has collided with a shield
+    
     wire invader_fire;                                   // Signals the invader bullet to be fired 
     wire playerbullet_fire;                              // Signals the player bullet to be fired
     wire [5:0] closest_invader_coord_x;                  // Current X coordinates of closest invader to player
     wire [5:0] closest_invader_coord_y;                  // Current Y coordinates of closest invader to player
 
     wire              player_bullet_collision;            // Signal to indicate if the player bullet has collided with an invader
-    wire              shield_bullet_collision;            // Signal to indicate if the player bullet has collided with a shield
 
     wire  [3:0]       invaders_display = {invader_4_display,invader_3_display,invader_2_display,invader_1_display};
 
@@ -262,7 +263,7 @@ module top
         .player_coord_x,                        // Player bullet X coordinate
         .player_coord_y,                        // Player bullet Y coordinate
         .player_bullet_collision,               // Signal to indicate if the player bullet has collided with an invader
-        .shield_bullet_collision,               // Signal to indicate if the player bullet has collided with a shield
+        .shield_bullet_collision(playerbullet_shield_collision_signal),               // Signal to indicate if the player bullet has collided with a shield
         .display(player_bullet_display),                               // Signal to indicate if the player bullet should be displayed on the screen
         .player_bullet_coord_x,                 // Player bullet X coordinate
         .player_bullet_coord_y                 // Player bullet Y coordinate
