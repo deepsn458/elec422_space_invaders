@@ -40,7 +40,6 @@ shield_fsm shield_fsm(
     .player_bullet_coord_x(in_player_bullet_coord_x),
     .player_bullet_coord_y(in_player_bullet_coord_y),
     .shield_play(in_shield_play),
-    .color(out_color),
     .shield_display(out_shield_display),
     .invaderbullet_shield_collision(out_invaderbullet_shield_collision),
     .playerbullet_shield_collision(out_playerbullet_shield_collision),
