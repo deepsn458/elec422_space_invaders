@@ -146,7 +146,6 @@ module main_game_fsm
                 end
                 //send commands to player and player bullet
                 {playerbullet_fire, player_right_motion, player_left_motion} <= {player_shoot_input, player_right_input, player_left_input};
-                
                 //set invader direction
                 if (invader_outofbounds & ~prev_invader_outofbounds) begin
                     invader_direction <= ~invader_direction;
