@@ -13,41 +13,18 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -debugDB -voptargs=""+acc"" top_tb_long 
-<<<<<<< HEAD
-# Start time: 17:41:24 on Apr 14,2026
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-=======
-# Start time: 17:44:35 on Apr 14,2026
+# Start time: 17:59:33 on Apr 14,2026
+# ** Error: (vsim-7) Failed to open  file "/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/space_invaders_final/work/@_opt1/_deps" in read mode.
+# No such file or directory. (errno = ENOENT)
+# ** Warning: (vsim-56) Problem with optimized design dependency file "/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/space_invaders_final/work/@_opt1/_deps" - file open failed.
+# No such file or directory. (errno = ENOENT)
 # ** Note: (vsim-3812) Design is being optimized...
->>>>>>> d3098531d1746d81dee5408b9640cb968b6f836e
 # ** Note: (vsim-8611) Generating debug db.
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.top_tb_long(fast)
-# Loading work.top(fast)
-# Loading work.main_game_fsm(fast)
-# Loading work.datapath(fast)
-# Loading work.player_fsm(fast)
-# Loading work.shield_fsm(fast)
-# Loading work.invader_fsm(fast)
-# Loading work.invader_fsm(fast__1)
-# Loading work.invader_fsm(fast__2)
-# Loading work.invader_fsm(fast__3)
-# Loading work.player_bullet_fsm(fast)
-# Loading work.invader_bullet_fsm(fast)
-# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
-<<<<<<< HEAD
-=======
-add wave -r /*
-run -all
-# Testing: Left Boundary Hit...
-# Testing: Rapid Fire Pulse...
-# Testing: Strafing Right while shooting...
-# Testing: Right Boundary Hit...
-# Testing: Left and Right conflict...
-# Testing: Idle Game State (Watching alien movement)...
-# Simulation Complete. Matrix written to top_display_log.txt
-# ** Note: $stop    : top_tb_long.v(144)
-#    Time: 11440 ns  Iteration: 0  Instance: /top_tb_long
-# Break in Module top_tb_long at top_tb_long.v line 144
->>>>>>> d3098531d1746d81dee5408b9640cb968b6f836e
+# vopt_stacktrace.vstf written
+# ** Fatal: Unexpected signal: 11.
+# Vopt Compiler exiting
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=2.
+# Error loading design
+# End time: 17:59:35 on Apr 14,2026, Elapsed time: 0:00:02
+# Errors: 2, Warnings: 2
