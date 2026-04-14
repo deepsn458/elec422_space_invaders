@@ -13,7 +13,7 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -debugDB -voptargs=""+acc"" top_tb_long 
-# Start time: 17:59:33 on Apr 14,2026
+# Start time: 18:15:19 on Apr 14,2026
 # ** Error: (vsim-7) Failed to open  file "/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/space_invaders_final/work/@_opt1/_deps" in read mode.
 # No such file or directory. (errno = ENOENT)
 # ** Warning: (vsim-56) Problem with optimized design dependency file "/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/space_invaders_final/work/@_opt1/_deps" - file open failed.
@@ -21,10 +21,4 @@
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vsim-8611) Generating debug db.
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# vopt_stacktrace.vstf written
-# ** Fatal: Unexpected signal: 11.
-# Vopt Compiler exiting
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=2.
-# Error loading design
-# End time: 17:59:35 on Apr 14,2026, Elapsed time: 0:00:02
-# Errors: 2, Warnings: 2
+# Break key hit
