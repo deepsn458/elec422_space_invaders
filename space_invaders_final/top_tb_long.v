@@ -54,7 +54,6 @@ initial begin
     $dumpvars;
     log_file = $fopen("top_display_log.txt", "w");
 
-    // --- ORIGINAL STARTING SEQUENCE ---
     // System Reset
     in_reset = 0;
     in_player_left_input = 0; in_player_right_input = 0;
@@ -94,16 +93,14 @@ initial begin
     in_fire = 0;
     for (i = 0; i<17; i=i+1) cycle;
 
-    // --- NEW EXTENDED TESTING SCENARIOS ---
-
-    // 1. Boundary Test: Hold Left to hit the edge of the screen
+    // Boundary Test: Hold Left to hit the edge of the screen
     $display("Testing: Left Boundary Hit...");
     in_player_left_input = 1;
     in_player_right_input = 0;
     in_fire = 0;
-    for (i = 0; i < 40; i = i + 1) cycle; // Long duration to ensure it hits 0
+    for (i = 0; i < 40; i = i + 1) cycle;
 
-    // 2. Rapid Fire Pulse: Testing if the game handles multiple discrete shots
+    // Rapid Fire Pulse: Testing if the game handles multiple discrete shots
     $display("Testing: Rapid Fire Pulse...");
     in_player_left_input = 0;
     for (i = 0; i < 10; i = i + 1) begin
@@ -111,25 +108,25 @@ initial begin
         in_fire = 0; cycle;
     end
 
-    // 3. Diagonal Movement & Shoot: Moving Right while firing
+    // Diagonal Movement & Shoot: Moving Right while firing
     $display("Testing: Strafing Right while shooting...");
     in_player_right_input = 1;
     in_fire = 1;
     for (i = 0; i < 20; i = i + 1) cycle;
 
-    // 4. Boundary Test: Hold Right to hit the far edge
+    // Boundary Test: Hold Right to hit the far edge
     $display("Testing: Right Boundary Hit...");
     in_fire = 0;
     in_player_right_input = 1;
     for (i = 0; i < 40; i = i + 1) cycle;
 
-    // 5. Input Conflict: Pressing Left and Right simultaneously
+    // Input Conflict: Pressing Left and Right simultaneously
     $display("Testing: Left and Right conflict...");
     in_player_left_input = 1;
     in_player_right_input = 1;
     for (i = 0; i < 5; i = i + 1) cycle;
 
-    // 6. Idle Observation: Let the game run to see alien movement/bullets falling
+    // Idle Observation: Let the game run to see alien movement/bullets falling
     $display("Testing: Idle Game State (Watching alien movement)...");
     in_player_left_input = 0;
     in_player_right_input = 0;
