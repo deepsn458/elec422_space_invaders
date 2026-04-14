@@ -13,7 +13,7 @@ module invader_bullet_fsm
     parameter BULLET_Y_OFFSET = 2,
     parameter BOUNDARY_Y = 0,
     parameter START_X = 5,
-    parameter START_Y = 5
+    parameter START_Y = 25
 )(
     input wire clka,
     input wire clkb,

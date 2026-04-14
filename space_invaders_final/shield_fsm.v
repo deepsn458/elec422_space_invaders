@@ -29,6 +29,7 @@ module shield_fsm
     output reg shield_display,
     output reg invaderbullet_shield_collision,
     output reg playerbullet_shield_collision,
+    output reg [5:0] shield_coord_x, shield_coord_y,
     output reg [1:0] state
 );
 
@@ -39,7 +40,6 @@ module shield_fsm
     parameter INITIAL = 2'b00, ALIVE = 2'b01, NO_HEALTH = 2'b10;
 
     //internal wire to track shield coordinates
-    reg [5:0] shield_coord_x, shield_coord_y;
     wire invaderbullet_collision_x, invaderbullet_collision_y, 
          playerbullet_collision_x, playerbullet_collision_y;
     assign invaderbullet_collision_x = ((invader_bullet_coord_x - shield_coord_x) < SHIELD_RADIUS) || ((shield_coord_x-invader_bullet_coord_x) < SHIELD_RADIUS);

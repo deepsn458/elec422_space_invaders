@@ -41,6 +41,7 @@ module main_game_fsm
     output reg         invader_direction, // to invader fsm
     output reg         playerbullet_fire, // to player bullet
     output reg         invaderbullet_fire, // to invader bullet ( high when invader bullet his the y limit or has collided)
+    output reg         move_down,          // to invader fsm
 
     output reg [1:0] state          // To be combinationally calculated
 );
@@ -147,8 +148,12 @@ module main_game_fsm
                 {playerbullet_fire, player_right_motion, player_left_motion} <= {player_shoot_input, player_right_input, player_left_input};
                 
                 //set invader direction
-                if (invader_outofbounds & ~prev_invader_outofbounds)
+                if (invader_outofbounds & ~prev_invader_outofbounds) begin
                     invader_direction <= ~invader_direction;
+                    move_down <= 1;
+                end else begin
+                    move_down <= 0;
+                end
                 prev_invader_outofbounds <= invader_outofbounds;
 
                 //find closest invader coordinate

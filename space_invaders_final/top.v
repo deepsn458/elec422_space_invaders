@@ -120,6 +120,7 @@ module top
         .reset(internal_reset),
         .invader_direction,
         .playerbullet_fire,
+        .move_down,
         .invaderbullet_fire(invader_fire)
     );
 
@@ -192,7 +193,9 @@ module top
         .hp(shield_hp),
         .shield_display,
         .invaderbullet_shield_collision(invaderbullet_shield_collision_signal),
-        .playerbullet_shield_collision(playerbullet_shield_collision_signal)
+        .playerbullet_shield_collision(playerbullet_shield_collision_signal),
+        .shield_coord_x,
+        .shield_coord_y
     );
 
     // Instantiate 4 Invaders
