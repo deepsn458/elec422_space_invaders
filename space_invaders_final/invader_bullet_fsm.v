@@ -75,6 +75,7 @@ module invader_bullet_fsm
                 invader_bullet_display <= 1'b0;
                 invader_bullet_coord_x <= closest_invader_coord_x;
                 invader_bullet_coord_y <= closest_invader_coord_y;
+                goback <= 1'b0;
             end
             FIRING: begin
                 state <= next_state;
