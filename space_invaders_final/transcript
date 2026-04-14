@@ -1,0 +1,64 @@
+# //  Questa Sim-64
+# //  Version 2023.2 linux_x86_64 Apr 11 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -debugDB -voptargs=""+acc"" top_tb_long 
+# Start time: 17:18:50 on Apr 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-4301) Memory core inferred for signal 'next_display' width=32, depth=32, type=RAM at location datapath.v:60
+# ** Warning: top.v(89): (vopt-2685) [TFMPC] - Too few port connections for 'main_game_fsm'.  Expected 37, found 36.
+# ** Warning: top.v(89): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top.v(170): (vopt-2685) [TFMPC] - Too few port connections for 'player_fsm'.  Expected 13, found 12.
+# ** Warning: top.v(170): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top.v(185): (vopt-2685) [TFMPC] - Too few port connections for 'shield_fsm'.  Expected 15, found 14.
+# ** Warning: top.v(185): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top.v(203): (vopt-2685) [TFMPC] - Too few port connections for 'invader_fsm_1'.  Expected 14, found 13.
+# ** Warning: top.v(203): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top.v(217): (vopt-2685) [TFMPC] - Too few port connections for 'invader_fsm_2'.  Expected 14, found 13.
+# ** Warning: top.v(217): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top.v(231): (vopt-2685) [TFMPC] - Too few port connections for 'invader_fsm_3'.  Expected 14, found 13.
+# ** Warning: top.v(231): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top.v(245): (vopt-2685) [TFMPC] - Too few port connections for 'invader_fsm_4'.  Expected 14, found 13.
+# ** Warning: top.v(245): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top.v(260): (vopt-2685) [TFMPC] - Too few port connections for 'player_bullet_fsm'.  Expected 12, found 11.
+# ** Warning: top.v(260): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top.v(273): (vopt-2685) [TFMPC] - Too few port connections for 'invader_bullet_fsm'.  Expected 12, found 11.
+# ** Warning: top.v(273): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=19.
+# Loading work.top_tb_long(fast)
+# Loading work.top(fast)
+# Loading work.main_game_fsm(fast)
+# Loading work.datapath(fast)
+# Loading work.player_fsm(fast)
+# Loading work.shield_fsm(fast)
+# Loading work.invader_fsm(fast)
+# Loading work.invader_fsm(fast__1)
+# Loading work.invader_fsm(fast__2)
+# Loading work.invader_fsm(fast__3)
+# Loading work.player_bullet_fsm(fast)
+# Loading work.invader_bullet_fsm(fast)
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+add wave -r /*
+run -all
+# Testing: Left Boundary Hit...
+# Testing: Rapid Fire Pulse...
+# Testing: Strafing Right while shooting...
+# Testing: Right Boundary Hit...
+# Testing: Left and Right conflict...
+# Testing: Idle Game State (Watching alien movement)...
+# Simulation Complete. Matrix written to top_display_log.txt
+# ** Note: $stop    : top_tb_long.v(139)
+#    Time: 11440 ns  Iteration: 0  Instance: /top_tb_long
+# Break in Module top_tb_long at top_tb_long.v line 139
