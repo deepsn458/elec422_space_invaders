@@ -9,6 +9,12 @@ R0
 R1
 R0
 R1
+R0
+R1
+R0
+R1
+R0
+R1
 !s11f vlog 2023.2 2023.04, Apr 11 2023
 13
 !s112 1.1
@@ -18,10 +24,10 @@ R1
 cModel Technology
 Z2 d/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/space_invaders_final
 T_opt
-!s110 1776217438
-VaFa5aHIZ1@GL=QKPHQ_D31
+!s110 1776218566
+Ve^]V=_PKZhJL=0W36P?TL0
 04 11 4 work top_tb_long fast 0
-=1-d09466182648-69deed5d-a1468-118e9e
+=1-d09466182648-69def1c5-d91d3-11a998
 R1
 !s12b OEM100
 !s124 OEM100
@@ -31,7 +37,7 @@ n@_opt
 OL;O;2023.2;77
 vdatapath
 Z4 2datapath.v|invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_tb_long.v|top_tb.v|top.v
-Z5 !s110 1776217405
+Z5 !s110 1776218541
 !i10b 1
 !s100 `0iL2YRoKjoz=1hkVoMGB2
 If:7GWcBUBY;[_Ie`Sg:>A3
@@ -39,14 +45,14 @@ R2
 w1775965389
 8datapath.v
 Fdatapath.v
-!i122 3
+!i122 6
 L0 11 196
 Z6 VDg1SIo80bB@j0V0VzS_@n1
 Z7 OL;L;2023.2;77
 r1
 !s85 0
 31
-Z8 !s108 1776217405.000000
+Z8 !s108 1776218541.000000
 Z9 !s107 top.v|top_tb.v|top_tb_long.v|shield_fsm.v|player_fsm.v|player_bullet_fsm.v|main_game_fsm.v|invader_fsm.v|invader_bullet_fsm.v|datapath.v|
 Z10 !s90 datapath.v|invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_tb_long.v|top_tb.v|top.v|
 !i113 0
@@ -56,14 +62,14 @@ vinvader_bullet_fsm
 R4
 R5
 !i10b 1
-!s100 LL1]ZI:i1:NgczZQc77CP1
-IZo695ihheUF5LhOBl:bSN0
+!s100 KZPE5`DhQCilV=k6hf;hL0
+Iz@?FlnHH07jkfz:K4@KUB0
 R2
-w1776217387
+w1776218221
 8invader_bullet_fsm.v
 Finvader_bullet_fsm.v
-!i122 3
-L0 11 80
+!i122 6
+L0 11 83
 R6
 R7
 r1
@@ -85,7 +91,7 @@ R2
 Z12 w1776207739
 8invader_fsm.v
 Finvader_fsm.v
-!i122 3
+!i122 6
 L0 11 148
 R6
 R7
@@ -108,7 +114,7 @@ R2
 w1776207185
 8main_game_fsm.v
 Fmain_game_fsm.v
-!i122 3
+!i122 6
 L0 12 155
 R6
 R7
@@ -131,7 +137,7 @@ R2
 w1776205014
 8player_bullet_fsm.v
 Fplayer_bullet_fsm.v
-!i122 3
+!i122 6
 L0 11 88
 R6
 R7
@@ -154,7 +160,7 @@ R2
 R12
 8player_fsm.v
 Fplayer_fsm.v
-!i122 3
+!i122 6
 L0 11 117
 R6
 R7
@@ -177,7 +183,7 @@ R2
 w1776216813
 8shield_fsm.v
 Fshield_fsm.v
-!i122 3
+!i122 6
 L0 10 119
 R6
 R7
@@ -194,14 +200,14 @@ vtop
 R4
 R5
 !i10b 1
-!s100 XMi^GX9aHlm<9=YGzo>fl3
-InK^>f=f:B60_HNS?=f:2R3
+!s100 BQiP@7gh>^Q8`f4>I^`cW0
+I;V4:L02WZ6b`jWPzWWWh52
 R2
-w1776216084
+w1776217784
 8top.v
 Ftop.v
-!i122 3
-L0 11 276
+!i122 6
+L0 11 278
 R6
 R7
 r1
@@ -223,7 +229,7 @@ R2
 w1775966871
 8top_tb.v
 Ftop_tb.v
-!i122 3
+!i122 6
 L0 1 102
 R6
 R7
@@ -240,13 +246,13 @@ vtop_tb_long
 R4
 R5
 !i10b 1
-!s100 HB2YHT8I3:=TA5cgV3hZf2
-I<TchLN`gCAi`jBCU^0_VO0
+!s100 W]W322>25Tn:RLHjhP>z13
+I27PSP^dRe_jo`X4AD`IPU2
 R2
-w1776216812
+w1776218529
 8top_tb_long.v
 Ftop_tb_long.v
-!i122 3
+!i122 6
 L0 1 147
 R6
 R7

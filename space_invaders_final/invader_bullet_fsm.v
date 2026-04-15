@@ -11,7 +11,7 @@
 module invader_bullet_fsm
 #(
     parameter BULLET_Y_OFFSET = 1,
-    parameter BOUNDARY_Y = 1,
+    parameter BOUNDARY_Y = 0,
     parameter START_X = 5,
     parameter START_Y = 25
 )(
@@ -79,6 +79,9 @@ module invader_bullet_fsm
                 invader_bullet_display <= 1'b1;
                 if (invader_bullet_coord_y <= BOUNDARY_Y) begin
                     state <= INITIAL;
+                    invader_bullet_coord_x <= closest_invader_coord_x;
+                    invader_bullet_coord_y <= closest_invader_coord_y;
+                    invader_bullet_display <= 1'b0;
                 end else begin
                     invader_bullet_coord_y <= invader_bullet_coord_y - BULLET_Y_OFFSET;
                 end

@@ -75,19 +75,19 @@ initial begin
     in_fire = 1;
     for (i = 0; i<2; i=i+1) cycle;
 
-    // Movement: Left
+    // Movement: Right
     in_fire = 1;
-    in_player_left_input = 1;
-    in_player_right_input = 0;
+    in_player_left_input = 0;
+    in_player_right_input = 1;
     for (i = 0; i<10; i=i+1) cycle;
     
     in_fire = 1;
     for (i = 0; i<8; i=i+1) cycle;
 
-    // Movement: Right
+    // Movement: Left
     in_fire = 1;
-    in_player_left_input = 0;
-    in_player_right_input = 1;
+    in_player_left_input = 1;
+    in_player_right_input = 0;
     for (i = 0; i<16; i=i+1) cycle;
 
     in_fire = 1;
