@@ -1,8 +1,8 @@
 NOTHING WORKS.txt:
 
 problems
-- player is not dying when invader bullet hits it. Game does not end
-- Invader at 5x5 when it dies. Need to check alive invaders for invader bullet spawning
-- Player bullet does not get reset after hitting an invader
+- [RESOLVED?] player is not dying when invader bullet hits it. Game does not end
+- [RESOLVED] Invader at 5x5 when it dies. Need to check alive invaders for invader bullet spawning
+- [RESOLVED] Player bullet does not get reset after hitting an invader
 - [RESOLVED] One of the invaders dies immediately
-- Closest invader doesn't fire
+- [RESOLVED] Closest invader doesn't fire

@@ -9,8 +9,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////////// test
 
 module player_fsm #(
-    parameter LEFT_BOUND = 6'd2,
-    parameter RIGHT_BOUND = 6'd29,
+    parameter LEFT_BOUND = 6'd3,
+    parameter RIGHT_BOUND = 6'd28,
     parameter X_START = 6'd16,
     parameter Y_START = 6'd2
     )(
@@ -36,8 +36,8 @@ module player_fsm #(
     wire intersection_x;     // Check if bullet has reached the top of the screen
     wire intersection_y;
     wire intersection;
-    assign intersection_x = ((invader_bullet_coord_x - player_coord_x < 1 && invader_bullet_coord_x >= player_coord_x) || (invader_bullet_coord_x - player_coord_x > -1 && invader_bullet_coord_x <= player_coord_x));
-    assign intersection_y = ((invader_bullet_coord_y - player_coord_y < 1 && invader_bullet_coord_y >= player_coord_y) || (invader_bullet_coord_y - player_coord_y > -1 && invader_bullet_coord_y <= player_coord_y));
+    assign intersection_x = ((invader_bullet_coord_x - player_coord_x <= 1 && invader_bullet_coord_x >= player_coord_x) || (invader_bullet_coord_x - player_coord_x >= -1 && invader_bullet_coord_x <= player_coord_x));
+    assign intersection_y = ((invader_bullet_coord_y - player_coord_y <= 1 && invader_bullet_coord_y >= player_coord_y) || (invader_bullet_coord_y - player_coord_y >= -1 && invader_bullet_coord_y <= player_coord_y));
     assign intersection = intersection_x & intersection_y;
     // Combinational logic to calculate upcoming tempt state
     always @(*) begin

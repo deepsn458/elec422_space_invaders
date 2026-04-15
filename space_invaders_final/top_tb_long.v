@@ -126,17 +126,29 @@ initial begin
 
     // Input Conflict: Pressing Left and Right simultaneously
     $display("Testing: Left and Right conflict...");
-    in_fire = 1;
+    in_fire = 0;
     in_player_left_input = 1;
     in_player_right_input = 1;
     for (i = 0; i < 5; i = i + 1) cycle;
 
     // Idle Observation: Let the game run to see alien movement/bullets falling
     $display("Testing: Idle Game State (Watching alien movement)...");
-    in_fire = 1;
+    in_fire = 0;
     in_player_left_input = 0;
     in_player_right_input = 0;
     for (i = 0; i < 100; i = i + 1) cycle;
+
+    // Move center
+    in_fire = 0;
+    in_player_left_input = 1;
+    in_player_right_input = 0;
+    for (i = 0; i < 16; i = i + 1) cycle;
+
+    // Stay center
+    in_fire = 0;
+    in_player_left_input = 0;
+    in_player_right_input = 0;
+    for (i = 0; i < 300; i = i + 1) cycle;
 
     // Cleanup
     $fclose(log_file);
