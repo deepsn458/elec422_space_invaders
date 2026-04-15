@@ -8831,3 +8831,5 @@ run -all
 # ** Note: $stop    : top_tb_long.v(249)
 #    Time: 3652 us  Iteration: 0  Instance: /top_tb_long
 # Break in Module top_tb_long at top_tb_long.v line 249
+# End time: 16:03:30 on Apr 15,2026, Elapsed time: 0:23:49
+# Errors: 6, Warnings: 4381
