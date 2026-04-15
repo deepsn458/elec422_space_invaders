@@ -10,15 +10,15 @@
 
 module invader_fsm
     #(
-    parameter START_X = 5,                                      // Start X coordinate of this invader
-    parameter START_Y = 5,                                      // Start Y coordinate of this invader
-    parameter Y_OFFSET = 2,                                     // Number of pixels to travel downwards upon vertical movement
-    parameter DEAD_X = 5,                                       // X coordinate to place invader once dead
-    parameter DEAD_Y = 5,                                       // Y coordinate to place invader once dead
-    parameter X_OFFSET = 1,                                     // Number of pixels to travel sideways upon horizontal movement
+    parameter [5:0] START_X = 6'd5,                                      // Start X coordinate of this invader
+    parameter [5:0] START_Y = 6'd5,                                      // Start Y coordinate of this invader
+    parameter [5:0] Y_OFFSET = 6'd2,                                     // Number of pixels to travel downwards upon vertical movement
+    parameter [5:0] DEAD_X = 6'd5,                                       // X coordinate to place invader once dead
+    parameter [5:0] DEAD_Y = 6'd5,                                       // Y coordinate to place invader once dead
+    parameter [5:0] X_OFFSET = 6'd1,                                     // Number of pixels to travel sideways upon horizontal movement
     // change bounds to 4 and 27 to test noshoot tb.
-    parameter HORIZ_LEFT_BOUND = 2,                             // originally 2 and 29
-    parameter HORIZ_RIGHT_BOUND = 29                            // Left and Right bounds
+    parameter [5:0] HORIZ_LEFT_BOUND = 6'd2,                             // originally 2 and 29
+    parameter [5:0] HORIZ_RIGHT_BOUND = 6'd29                            // Left and Right bounds
     )(
 
     input  wire             clka, clkb,                         // Input clocks
@@ -92,7 +92,15 @@ module invader_fsm
 
     // Sequential logic to set outputs
     always @ (negedge clkb) begin : OUTPUT_LOGIC
-
+        if (reset) begin
+            state <= RESET;
+            invader_coord_x <= START_X;
+            invader_coord_y <= START_Y;
+            display <= 1;
+            playerbullet_invader_collision_signal <= 0;
+            move_interval_toggle <= 0;
+            invader_outofbounds_signal <= 0;
+        end else begin
         case(next_state)
             RESET: begin
                     state <= next_state;
@@ -117,7 +125,7 @@ module invader_fsm
                     end else if (move_interval_toggle) begin
                         if (invader_direction) begin
                             invader_coord_x <= invader_coord_x + X_OFFSET;
-                            if (invader_coord_x + X_OFFSET * 2 >= HORIZ_RIGHT_BOUND) begin
+                            if (invader_coord_x + X_OFFSET * 6'd2 >= HORIZ_RIGHT_BOUND) begin
                                 invader_outofbounds_signal <= 1;
                             end
                             else begin
@@ -125,7 +133,7 @@ module invader_fsm
                             end
                         end else begin
                             invader_coord_x <= invader_coord_x - X_OFFSET;
-                            if (invader_coord_x <= HORIZ_LEFT_BOUND + X_OFFSET * 2) begin
+                            if (invader_coord_x <= HORIZ_LEFT_BOUND + X_OFFSET * 6'd2) begin
                                 invader_outofbounds_signal <= 1;
                             end
                             else begin
@@ -155,5 +163,6 @@ module invader_fsm
                     end
                 end
         endcase
+        end
     end
 endmodule

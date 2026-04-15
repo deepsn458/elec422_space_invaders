@@ -42,11 +42,11 @@ module shield_fsm
     //internal wire to track shield coordinates
     wire invaderbullet_collision_x, invaderbullet_collision_y, 
          playerbullet_collision_x, playerbullet_collision_y, playerbullet_shield_distance;
-    assign invaderbullet_collision_x = (invader_bullet_coord_x <= (shield_coord_x + SHIELD_DIAMETER)) && (invader_bullet_coord_x >= (shield_coord_x - SHIELD_DIAMETER));
+    assign invaderbullet_collision_x = (invader_bullet_coord_x <= (shield_coord_x + SHIELD_DIAMETER)) && (invader_bullet_coord_x + SHIELD_DIAMETER >= (shield_coord_x));
     assign invaderbullet_collision_y = invader_bullet_coord_y == shield_coord_y;
     
 
-    assign playerbullet_collision_x = (player_bullet_coord_x <= (shield_coord_x + SHIELD_DIAMETER)) && (player_bullet_coord_x >= (shield_coord_x -SHIELD_DIAMETER));
+    assign playerbullet_collision_x = (player_bullet_coord_x <= (shield_coord_x + SHIELD_DIAMETER)) && (player_bullet_coord_x + SHIELD_DIAMETER >= (shield_coord_x));
     assign playerbullet_collision_y = player_bullet_coord_y == shield_coord_y;
     always @ (*) begin
         case (state)
@@ -84,46 +84,56 @@ module shield_fsm
 
     //sequntial logic to set output
     always @ (negedge clkb) begin
-        case (next_state)
-            INITIAL: begin
-                state <= next_state;
-                hp <= 2'd3;
-                shield_coord_x <= START_X;
-                shield_coord_y <= START_Y;
-                invaderbullet_shield_collision <= 1'b0;
-                playerbullet_shield_collision <= 1'b0;
-                shield_display <= 1'b0;
-        end
-
-        ALIVE: begin
-            state <= next_state;
-            shield_display <= 1'b1;
-            if ((playerbullet_collision_x & playerbullet_collision_y) && hp > 1) begin
-                playerbullet_shield_collision <= 1'b1;
-            end else begin
-                playerbullet_shield_collision <= 1'b0;
-            end
-
-            if ((invaderbullet_collision_x & invaderbullet_collision_y) && hp > 1) begin
-                hp <= hp - 1;
-            
-                invaderbullet_shield_collision <= 1'b1;
-            end else if ((invaderbullet_collision_x & invaderbullet_collision_y) && hp <= 1) begin
-                hp <= hp - 1;
-                
-                shield_display <= 1'b0;
-                invaderbullet_shield_collision <= 1'b1;
-            end else  begin
-                invaderbullet_shield_collision <= 1'b0;
-            end
-        end
-        NO_HEALTH: begin
-            state <= next_state;
+        if (reset) begin
+            state <= INITIAL;
+            hp <= 2'd3;
+            shield_coord_x <= START_X;
+            shield_coord_y <= START_Y;
             invaderbullet_shield_collision <= 1'b0;
             playerbullet_shield_collision <= 1'b0;
+            shield_display <= 1'b0;
+        end else begin
+            case (next_state)
+                INITIAL: begin
+                    state <= next_state;
+                    hp <= 2'd3;
+                    shield_coord_x <= START_X;
+                    shield_coord_y <= START_Y;
+                    invaderbullet_shield_collision <= 1'b0;
+                    playerbullet_shield_collision <= 1'b0;
+                    shield_display <= 1'b0;
+            end
+
+            ALIVE: begin
+                state <= next_state;
+                shield_display <= 1'b1;
+                if ((playerbullet_collision_x & playerbullet_collision_y) && hp > 1) begin
+                    playerbullet_shield_collision <= 1'b1;
+                end else begin
+                    playerbullet_shield_collision <= 1'b0;
+                end
+
+                if ((invaderbullet_collision_x & invaderbullet_collision_y) && hp > 1) begin
+                    hp <= hp - 1;
+                
+                    invaderbullet_shield_collision <= 1'b1;
+                end else if ((invaderbullet_collision_x & invaderbullet_collision_y) && hp <= 1) begin
+                    hp <= hp - 1;
+                    
+                    shield_display <= 1'b0;
+                    invaderbullet_shield_collision <= 1'b1;
+                end else  begin
+                    invaderbullet_shield_collision <= 1'b0;
+                end
+            end
+            NO_HEALTH: begin
+                state <= next_state;
+                invaderbullet_shield_collision <= 1'b0;
+                playerbullet_shield_collision <= 1'b0;
+            end
+            default: state <= INITIAL;
+            endcase
         end
-        default: state <= INITIAL;
-        endcase
     end
 endmodule
 

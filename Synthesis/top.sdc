@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Wed Apr 15 15:34:13 2026
+# Created by write_sdc on Wed Apr 15 16:21:42 2026
 
 ###################################################################
 set sdc_version 2.1
@@ -12,7 +12,7 @@ set_driving_cell -lib_cell INVX1 [get_ports reset]
 set_driving_cell -lib_cell INVX1 [get_ports player_left_input]
 set_driving_cell -lib_cell INVX1 [get_ports player_right_input]
 set_driving_cell -lib_cell INVX1 [get_ports player_shoot_input]
-create_clock [get_ports clka]  -period 1000  -waveform {0 500}
+create_clock [get_ports clka]  -period 20  -waveform {0 10}
 set_input_delay -clock clka  1  [get_ports clkb]
 set_input_delay -clock clka  1  [get_ports reset]
 set_input_delay -clock clka  1  [get_ports player_left_input]

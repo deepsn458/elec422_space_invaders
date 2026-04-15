@@ -10,7 +10,7 @@
 
 module datapath
     #(
-    parameter DISPLAY_SIZE = 31                                 // Display Size (minus 1 due to zero-indexing)
+    parameter [5:0] DISPLAY_SIZE = 6'd31                                 // Display Size (minus 1 due to zero-indexing)
     )(
 
     input  wire             clka, clkb,                         // Input clocks
@@ -60,11 +60,11 @@ module datapath
     reg [DISPLAY_SIZE:0] next_display [DISPLAY_SIZE:0];
 
     // Logic to set temp_display based on locations of entities
-    integer row, col, i;
+    reg [5:0] row, col, i, j;
 
     always @(*) begin
-        for (row = 0; row <= DISPLAY_SIZE; row = row + 1) begin
-            for (col = 0; col <= DISPLAY_SIZE; col = col + 1) begin
+        for (row = 6'd0; row <= DISPLAY_SIZE; row = row + 6'd1) begin
+            for (col = 6'd0; col <= DISPLAY_SIZE; col = col + 6'd1) begin
                 
                 // Clear the background
                 temp_display[row][col] = 1'b0;
@@ -72,9 +72,9 @@ module datapath
                 // Player Display Logic
                 if (player_display) begin
                     if ((row == player_coord_y     && col == player_coord_x)     || // Center
-                        (row == player_coord_y     && col + 1 == player_coord_x) || // Left
-                        (row == player_coord_y     && col == player_coord_x + 1) || // Right
-                        (row == player_coord_y + 1 && col == player_coord_x))       // Above (Y + 1)
+                        (row == player_coord_y     && col + 6'd1 == player_coord_x) || // Left
+                        (row == player_coord_y     && col == player_coord_x + 6'd1) || // Right
+                        (row == player_coord_y + 6'd1 && col == player_coord_x))       // Above (Y + 1)
                     begin
                         temp_display[row][col] = 1'b1;
                     end
@@ -83,11 +83,11 @@ module datapath
                 // Invader 1 Display Logic
                 if (invader_1_display) begin
                     if ((row == invader_1_coord_y     && col == invader_1_coord_x)     || // Center
-                        (row == invader_1_coord_y     && col + 1 == invader_1_coord_x) || // Left
+                        (row == invader_1_coord_y     && col + 6'd1 == invader_1_coord_x) || // Left
                         (row == invader_1_coord_y     && col == invader_1_coord_x + 1) || // Right
                         (row + 1 == invader_1_coord_y && col == invader_1_coord_x)     || // Below (Y - 1)
-                        (row == invader_1_coord_y + 1 && col + 1 == invader_1_coord_x) || // Above-Left
-                        (row == invader_1_coord_y + 1 && col == invader_1_coord_x + 1))   // Above-Right
+                        (row == invader_1_coord_y + 6'd1 && col + 6'd1 == invader_1_coord_x) || // Above-Left
+                        (row == invader_1_coord_y + 6'd1 && col == invader_1_coord_x + 6'd1))   // Above-Right
                     begin
                         temp_display[row][col] = 1'b1;
                     end
@@ -96,10 +96,10 @@ module datapath
                 // Invader 2 Display Logic
                 if (invader_2_display) begin
                     if ((row == invader_2_coord_y     && col == invader_2_coord_x)     || // Center
-                        (row == invader_2_coord_y     && col + 1 == invader_2_coord_x) || // Left
-                        (row == invader_2_coord_y     && col == invader_2_coord_x + 1) || // Right
-                        (row == invader_2_coord_y + 1 && col == invader_2_coord_x)     || // Above (Y + 1)
-                        (row + 1 == invader_2_coord_y && col == invader_2_coord_x))       // Below (Y - 1)
+                        (row == invader_2_coord_y     && col + 6'd1 == invader_2_coord_x) || // Left
+                        (row == invader_2_coord_y     && col == invader_2_coord_x + 6'd1) || // Right
+                        (row == invader_2_coord_y + 6'd1 && col == invader_2_coord_x)     || // Above (Y + 1)
+                        (row + 6'd1 == invader_2_coord_y && col == invader_2_coord_x))       // Below (Y - 1)
                     begin
                         temp_display[row][col] = 1'b1;
                     end
@@ -108,12 +108,12 @@ module datapath
                 // Invader 3 Display Logic
                 if (invader_3_display) begin
                     if ((row == invader_3_coord_y     && col == invader_3_coord_x)     || // Center
-                        (row == invader_3_coord_y     && col + 1 == invader_3_coord_x) || // Left
-                        (row == invader_3_coord_y     && col == invader_3_coord_x + 1) || // Right
-                        (row == invader_3_coord_y + 1 && col == invader_3_coord_x)     || // Above (Y + 1)
-                        (row + 1 == invader_3_coord_y && col == invader_3_coord_x)     || // Below (Y - 1)
-                        (row == invader_3_coord_y + 1 && col + 1 == invader_3_coord_x) || // Above-Left
-                        (row == invader_3_coord_y + 1 && col == invader_3_coord_x + 1))   // Above-Right
+                        (row == invader_3_coord_y     && col + 6'd1 == invader_3_coord_x) || // Left
+                        (row == invader_3_coord_y     && col == invader_3_coord_x + 6'd1) || // Right
+                        (row == invader_3_coord_y + 6'd1 && col == invader_3_coord_x)     || // Above (Y + 1)
+                        (row + 6'd1 == invader_3_coord_y && col == invader_3_coord_x)     || // Below (Y - 1)
+                        (row == invader_3_coord_y + 6'd1 && col + 6'd1 == invader_3_coord_x) || // Above-Left
+                        (row == invader_3_coord_y + 1 && col == invader_3_coord_x + 6'd1))   // Above-Right
                     begin
                         temp_display[row][col] = 1'b1;
                     end
@@ -122,10 +122,10 @@ module datapath
                 // Invader 4 Display Logic
                 if (invader_4_display) begin
                     if ((row == invader_4_coord_y     && col == invader_4_coord_x)     || // Center
-                        (row == invader_4_coord_y + 1 && col + 1 == invader_4_coord_x) || // Above-Left
-                        (row == invader_4_coord_y + 1 && col == invader_4_coord_x + 1) || // Above-Right
-                        (row + 1 == invader_4_coord_y && col + 1 == invader_4_coord_x) || // Below-Left
-                        (row + 1 == invader_4_coord_y && col == invader_4_coord_x + 1))   // Below-Right
+                        (row == invader_4_coord_y + 6'd1 && col + 1 == invader_4_coord_x) || // Above-Left
+                        (row == invader_4_coord_y + 6'd1 && col == invader_4_coord_x + 6'd1) || // Above-Right
+                        (row + 6'd1 == invader_4_coord_y && col + 6'd1 == invader_4_coord_x) || // Below-Left
+                        (row + 6'd1 == invader_4_coord_y && col == invader_4_coord_x + 6'd1))   // Below-Right
                     begin
                         temp_display[row][col] = 1'b1;
                     end
@@ -136,26 +136,26 @@ module datapath
                     
                     // Bottom Layer (row == Y)
                     if (row == shield_coord_y) begin
-                        if (col + 2 == shield_coord_x) temp_display[row][col] = 1'b1; // X - 2
-                        if (col + 1 == shield_coord_x) temp_display[row][col] = 1'b1; // X - 1
+                        if (col + 6'd2 == shield_coord_x) temp_display[row][col] = 1'b1; // X - 2
+                        if (col + 6'd1 == shield_coord_x) temp_display[row][col] = 1'b1; // X - 1
                         if (col == shield_coord_x)     temp_display[row][col] = 1'b1; // X
                         
                         // X + 1 is 0 when HP is 1
-                        if (col == shield_coord_x + 1 && shield_hp != 2'd1) temp_display[row][col] = 1'b1;
-                        if (col == shield_coord_x + 2) temp_display[row][col] = 1'b1; // X + 2
+                        if (col == shield_coord_x + 6'd1 && shield_hp != 2'd1) temp_display[row][col] = 1'b1;
+                        if (col == shield_coord_x + 6'd2) temp_display[row][col] = 1'b1; // X + 2
                     end
                     
                     // Top Layer (row == Y + 1)
-                    else if (row == shield_coord_y + 1) begin
-                        if (col + 2 == shield_coord_x) temp_display[row][col] = 1'b1; // X - 2
+                    else if (row == shield_coord_y + 6'd1) begin
+                        if (col + 6'd2 == shield_coord_x) temp_display[row][col] = 1'b1; // X - 2
                         
                         // X - 1 is 0 when HP is 2 or 1 (only displays when HP == 3)
-                        if (col + 1 == shield_coord_x && shield_hp == 2'd3) temp_display[row][col] = 1'b1; 
+                        if (col + 6'd1 == shield_coord_x && shield_hp == 2'd3) temp_display[row][col] = 1'b1; 
                         
                         // X is 0 when HP is 1
                         if (col == shield_coord_x     && shield_hp != 2'd1) temp_display[row][col] = 1'b1;
-                        if (col == shield_coord_x + 1) temp_display[row][col] = 1'b1; // X + 1
-                        if (col == shield_coord_x + 2) temp_display[row][col] = 1'b1; // X + 2
+                        if (col == shield_coord_x + 6'd1) temp_display[row][col] = 1'b1; // X + 1
+                        if (col == shield_coord_x + 6'd2) temp_display[row][col] = 1'b1; // X + 2
                     end
                 end
 
@@ -179,18 +179,18 @@ module datapath
     // Sequential logic to set next_display <= temp_display or respond to restart signal
     always @ (negedge clka) begin : CLOCKING_POSITIONS
         if (reset) begin
-            for (i = 0; i < (DISPLAY_SIZE + 1); i = i + 1) next_display[i] <= 0;
+            for (i = 6'd0; i < (DISPLAY_SIZE + 6'd1); i = i + 6'd1) next_display[i] <= 0;
         end else begin
-            for (i = 0; i < (DISPLAY_SIZE + 1); i = i + 1) next_display[i] <= temp_display[i];
+            for (i = 6'd0; i < (DISPLAY_SIZE + 6'd1); i = i + 6'd1) next_display[i] <= temp_display[i];
         end
     end
 
     // Sequential logic to set outputs
     always @ (negedge clkb) begin : OUTPUT_LOGIC
         if (reset) begin
-            for (i = 0; i < (DISPLAY_SIZE + 1); i = i + 1) internal_display[i] <= 0;
+            for (j = 6'd0; j < (DISPLAY_SIZE + 6'd1); j = j + 6'd1) internal_display[j] <= 0;
         end else begin
-            for (i = 0; i < (DISPLAY_SIZE + 1); i = i + 1) internal_display[i] <= next_display[i];
+            for (j = 6'd0; j < (DISPLAY_SIZE + 6'd1); j = j + 6'd1) internal_display[j] <= next_display[j];
         end
     end
 

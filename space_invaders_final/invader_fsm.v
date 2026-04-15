@@ -92,7 +92,15 @@ module invader_fsm
 
     // Sequential logic to set outputs
     always @ (negedge clkb) begin : OUTPUT_LOGIC
-
+        if (reset) begin
+            state <= RESET;
+            invader_coord_x <= START_X;
+            invader_coord_y <= START_Y;
+            display <= 1;
+            playerbullet_invader_collision_signal <= 0;
+            move_interval_toggle <= 0;
+            invader_outofbounds_signal <= 0;
+        end else begin
         case(next_state)
             RESET: begin
                     state <= next_state;
@@ -155,5 +163,6 @@ module invader_fsm
                     end
                 end
         endcase
+        end
     end
 endmodule

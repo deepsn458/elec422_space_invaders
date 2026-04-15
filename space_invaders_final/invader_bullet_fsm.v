@@ -67,27 +67,34 @@ module invader_bullet_fsm
 
     //sequential logic to set outputs
     always @ (negedge clkb) begin : OUTPUT_LOGIC
-        case (next_state)
-            INITIAL: begin
-                state <= next_state;
-                invader_bullet_display <= 1'b0;
-                invader_bullet_coord_x <= closest_invader_coord_x;
-                invader_bullet_coord_y <= closest_invader_coord_y;
-            end
-            FIRING: begin
-                state <= next_state;
-                invader_bullet_display <= 1'b1;
-                if (invader_bullet_coord_y <= BOUNDARY_Y) begin
-                    state <= INITIAL;
+        if (reset) begin
+            state <= INITIAL;
+            invader_bullet_display <= 1'b0;
+            invader_bullet_coord_x <= closest_invader_coord_x;
+            invader_bullet_coord_y <= closest_invader_coord_y;
+        end else begin
+            case (next_state)
+                INITIAL: begin
+                    state <= next_state;
+                    invader_bullet_display <= 1'b0;
                     invader_bullet_coord_x <= closest_invader_coord_x;
                     invader_bullet_coord_y <= closest_invader_coord_y;
-                    invader_bullet_display <= 1'b0;
-                end else begin
-                    invader_bullet_coord_y <= invader_bullet_coord_y - BULLET_Y_OFFSET;
                 end
-                
-            end
-            default: state <= INITIAL;
-        endcase
+                FIRING: begin
+                    state <= next_state;
+                    invader_bullet_display <= 1'b1;
+                    if (invader_bullet_coord_y <= BOUNDARY_Y) begin
+                        state <= INITIAL;
+                        invader_bullet_coord_x <= closest_invader_coord_x;
+                        invader_bullet_coord_y <= closest_invader_coord_y;
+                        invader_bullet_display <= 1'b0;
+                    end else begin
+                        invader_bullet_coord_y <= invader_bullet_coord_y - BULLET_Y_OFFSET;
+                    end
+                    
+                end
+                default: state <= INITIAL;
+            endcase
+        end
     end
 endmodule

@@ -1,5 +1,3 @@
-`timescale 1ns/10ps
-
 module top_tb_long ();
 
 reg in_clka, in_clkb, in_reset;

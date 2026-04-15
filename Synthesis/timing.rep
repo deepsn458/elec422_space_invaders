@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : top
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 15:34:18 2026
+Date   : Wed Apr 15 16:21:47 2026
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -25,22 +25,22 @@ Wire Load Model Mode: top
   clock clka (rise edge)                                  0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   input external delay                                    1.00       1.00 r
-  reset (in)                                              0.31       1.31 r
-  U2691/Y (INVX2)                                         0.15       1.46 f
-  U75/Y (AND2X2)                                          0.20       1.66 f
-  main_game_fsm/next_state_reg[0]/D (DFFNEGX1)            0.00       1.66 f
-  data arrival time                                                  1.66
+  reset (in)                                              0.21       1.21 r
+  U2713/Y (INVX2)                                         0.16       1.38 f
+  U77/Y (AND2X2)                                          0.19       1.57 f
+  main_game_fsm/next_state_reg[0]/D (DFFNEGX1)            0.00       1.57 f
+  data arrival time                                                  1.57
 
-  clock clka (fall edge)                                500.00     500.00
-  clock network delay (ideal)                             0.00     500.00
-  main_game_fsm/next_state_reg[0]/CLK (DFFNEGX1)          0.00     500.00 f
-  library setup time                                     -0.37     499.63
-  data required time                                               499.63
+  clock clka (fall edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  main_game_fsm/next_state_reg[0]/CLK (DFFNEGX1)          0.00      10.00 f
+  library setup time                                     -0.37       9.63
+  data required time                                                 9.63
   --------------------------------------------------------------------------
-  data required time                                               499.63
-  data arrival time                                                 -1.66
+  data required time                                                 9.63
+  data arrival time                                                 -1.57
   --------------------------------------------------------------------------
-  slack (MET)                                                      497.97
+  slack (MET)                                                        8.06
 
 
 1

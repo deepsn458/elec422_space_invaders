@@ -76,21 +76,20 @@ module player_bullet_fsm #(
             player_bullet_coord_y <= player_coord_y;
             display <= 0;
         end else begin
-
-        case(next_state)
-            INIT: begin
-                state <= next_state;
-                player_bullet_coord_x <= player_coord_x;
-                player_bullet_coord_y <= player_coord_y;
-                display <= 0;
-            end
-            FIRING: begin
-                state <= next_state;
-                player_bullet_coord_x <= player_bullet_coord_x;
-                player_bullet_coord_y <= player_bullet_coord_y + Y_OFFSET;
-                display <= 1;
-            end
-        endcase
+            case(next_state)
+                INIT: begin
+                    state <= next_state;
+                    player_bullet_coord_x <= player_coord_x;
+                    player_bullet_coord_y <= player_coord_y;
+                    display <= 0;
+                end
+                FIRING: begin
+                    state <= next_state;
+                    player_bullet_coord_x <= player_bullet_coord_x;
+                    player_bullet_coord_y <= player_bullet_coord_y + Y_OFFSET;
+                    display <= 1;
+                end
+            endcase
         end
     end
 
