@@ -184,7 +184,7 @@ module top
     );
 
     // Instantiate Shield FSM:
-    shield_fsm shield_fsm(
+    shield_fsm #( .START_X(15), .START_Y(5)) shield_fsm(
         .clka, .clkb,
         .reset,
         .invader_bullet_coord_x,
