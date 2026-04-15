@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : top
 Version: U-2022.12-SP7
-Date   : Tue Apr 14 23:16:15 2026
+Date   : Wed Apr 15 15:34:18 2026
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -31,16 +31,16 @@ Wire Load Model Mode: top
   main_game_fsm/next_state_reg[0]/D (DFFNEGX1)            0.00       1.66 f
   data arrival time                                                  1.66
 
-  clock clka (fall edge)                                 10.00      10.00
-  clock network delay (ideal)                             0.00      10.00
-  main_game_fsm/next_state_reg[0]/CLK (DFFNEGX1)          0.00      10.00 f
-  library setup time                                     -0.37       9.63
-  data required time                                                 9.63
+  clock clka (fall edge)                                500.00     500.00
+  clock network delay (ideal)                             0.00     500.00
+  main_game_fsm/next_state_reg[0]/CLK (DFFNEGX1)          0.00     500.00 f
+  library setup time                                     -0.37     499.63
+  data required time                                               499.63
   --------------------------------------------------------------------------
-  data required time                                                 9.63
+  data required time                                               499.63
   data arrival time                                                 -1.66
   --------------------------------------------------------------------------
-  slack (MET)                                                        7.97
+  slack (MET)                                                      497.97
 
 
 1

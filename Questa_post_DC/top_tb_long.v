@@ -30,10 +30,10 @@ task log_matrix;
 
 task cycle;
     begin
-        in_clka = 0; in_clkb = 0; #10;
-        in_clka = 1; in_clkb = 0; #10;
-        in_clka = 0; in_clkb = 0; #10;
-        in_clka = 0; in_clkb = 1; #10;
+        in_clka = 0; in_clkb = 0; #1000;
+        in_clka = 1; in_clkb = 0; #1000;
+        in_clka = 0; in_clkb = 0; #1000;
+        in_clka = 0; in_clkb = 1; #1000;
         log_matrix("");
     end
 endtask
