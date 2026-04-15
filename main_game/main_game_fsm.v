@@ -128,22 +128,22 @@ module main_game_fsm
     // Sequential logic to set outputs
     always @ (negedge clkb) begin : FSM_SEQB            // clkb active signals are: Load_Temp, Accumulate
         if (global_reset) begin
-            state <= INIT;
-            player_left_motion <= 0;
-            player_right_motion <= 0;
-            play <= 0;
-            reset <= 1;
-            invader_direction <= DIRECTION_RIGHT;
-            playerbullet_fire <= 0;
-            invaderbullet_fire <= 0;
+                    state <= INIT;
+                    player_left_motion <= 0;
+                    player_right_motion <= 0;
+                    play <= 0;
+                    reset <= 1;
+                    invader_direction <= DIRECTION_RIGHT;
+                    playerbullet_fire <= 0;
+                    invaderbullet_fire <= 0;
         end else begin
         case(next_state)
             INIT: begin
                 state <= next_state;
+                invader_direction <= DIRECTION_RIGHT;
                 play <= 0;
                 reset <= 1;
             end
-
             IN_GAME: begin
                 reset <= 0;
                 // fire the invader bullet again if has collided or has reached the y limit
@@ -165,7 +165,5 @@ module main_game_fsm
             end
         endcase
         end
-    end
-
-
+        end
 endmodule

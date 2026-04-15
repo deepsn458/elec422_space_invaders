@@ -4,7 +4,7 @@ Report : power
         -analysis_effort low
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 16:08:08 2026
+Date   : Wed Apr 15 16:32:39 2026
 ****************************************
 
 
@@ -31,12 +31,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   3.5593 mW   (54%)
-  Net Switching Power  =   2.9743 mW   (46%)
+  Cell Internal Power  =   3.5423 mW   (54%)
+  Net Switching Power  =   2.9658 mW   (46%)
                          ---------
-Total Dynamic Power    =   6.5336 mW  (100%)
+Total Dynamic Power    =   6.5081 mW  (100%)
 
-Cell Leakage Power     =  39.6444 nW
+Cell Leakage Power     =  39.4797 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -46,9 +46,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network  7.4304e-02            0.0000            0.0000        7.4304e-02  (   1.14%)  i
-register       1.4891e-02        8.4580e-03            0.2472        2.3349e-02  (   0.36%)
-sequential         0.1512        1.6027e-03            2.4717            0.1529  (   2.34%)
-combinational      3.3189            2.9643           36.9255            6.2832  (  96.17%)
+register       1.4527e-02        4.1993e-03            0.2472        1.8726e-02  (   0.29%)
+sequential         0.1493        1.5717e-03            2.4717            0.1509  (   2.32%)
+combinational      3.3041            2.9600           36.7609            6.2642  (  96.25%)
 --------------------------------------------------------------------------------------------------
-Total              3.5593 mW         2.9743 mW        39.6444 nW         6.5337 mW
+Total              3.5423 mW         2.9658 mW        39.4797 nW         6.5081 mW
 1

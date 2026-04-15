@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 16:08:03 2026
+Date   : Wed Apr 15 16:32:39 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
@@ -25,39 +25,39 @@ Wire Load Model Mode: top
   clock network delay (ideal)              0.00       0.00
   input external delay                     1.00       1.00 r
   player_coordinate_x[0] (in)              0.36       1.36 r
-  U209/Y (INVX2)                           0.11       1.47 f
-  U205/Y (INVX2)                           0.34       1.81 r
-  U293/Y (INVX2)                           0.42       2.23 f
-  U225/Y (OR2X1)                           0.32       2.55 f
+  U210/Y (INVX2)                           0.11       1.47 f
+  U206/Y (INVX2)                           0.34       1.81 r
+  U294/Y (INVX2)                           0.42       2.23 f
+  U226/Y (OR2X1)                           0.32       2.55 f
   sub_72_2/U2_1/YC (FAX1)                  0.45       3.00 f
   sub_72_2/U2_2/YC (FAX1)                  0.46       3.46 f
   sub_72_2/U2_3/YC (FAX1)                  0.46       3.92 f
   sub_72_2/U2_4/YC (FAX1)                  0.46       4.38 f
   sub_72_2/U2_5/YS (FAX1)                  0.44       4.82 r
-  U101/Y (AOI22X1)                         0.13       4.95 f
-  U100/Y (NAND2X1)                         0.28       5.23 r
-  U386/Y (NOR2X1)                          0.26       5.49 f
-  U277/Y (INVX2)                           0.10       5.59 r
-  U388/Y (OAI21X1)                         0.10       5.69 f
-  U398/Y (OAI22X1)                         0.51       6.20 r
-  U272/Y (INVX2)                           0.38       6.58 f
-  U90/Y (AOI22X1)                          0.23       6.81 r
-  U402/Y (NAND2X1)                         0.15       6.96 f
-  U403/Y (NAND3X1)                         0.18       7.14 r
-  U404/Y (OAI21X1)                         0.16       7.30 f
-  U251/Y (INVX2)                           0.09       7.39 r
-  U409/Y (OAI21X1)                         0.08       7.47 f
-  U410/Y (OAI21X1)                         0.13       7.60 r
-  U411/Y (OAI22X1)                         0.22       7.82 f
-  U192/Y (AND2X2)                          0.61       8.43 f
-  U158/Y (AOI22X1)                         0.18       8.61 r
-  U157/Y (NAND2X1)                         0.10       8.71 f
-  U412/Y (AOI21X1)                         0.12       8.83 r
-  U241/Y (AND2X2)                          0.15       8.98 r
-  U189/Y (AOI21X1)                         0.13       9.11 f
-  U188/Y (NAND3X1)                         0.13       9.23 r
-  U187/Y (OAI21X1)                         0.09       9.32 f
-  U194/Y (AND2X2)                          0.20       9.52 f
+  U102/Y (AOI22X1)                         0.13       4.95 f
+  U101/Y (NAND2X1)                         0.28       5.23 r
+  U385/Y (NOR2X1)                          0.26       5.49 f
+  U278/Y (INVX2)                           0.10       5.59 r
+  U387/Y (OAI21X1)                         0.10       5.69 f
+  U397/Y (OAI22X1)                         0.51       6.20 r
+  U273/Y (INVX2)                           0.38       6.58 f
+  U91/Y (AOI22X1)                          0.23       6.81 r
+  U401/Y (NAND2X1)                         0.15       6.96 f
+  U402/Y (NAND3X1)                         0.18       7.14 r
+  U403/Y (OAI21X1)                         0.16       7.30 f
+  U252/Y (INVX2)                           0.09       7.39 r
+  U408/Y (OAI21X1)                         0.08       7.47 f
+  U409/Y (OAI21X1)                         0.13       7.60 r
+  U410/Y (OAI22X1)                         0.22       7.82 f
+  U193/Y (AND2X2)                          0.61       8.43 f
+  U159/Y (AOI22X1)                         0.18       8.61 r
+  U158/Y (NAND2X1)                         0.10       8.71 f
+  U411/Y (AOI21X1)                         0.12       8.83 r
+  U242/Y (AND2X2)                          0.15       8.98 r
+  U190/Y (AOI21X1)                         0.13       9.11 f
+  U189/Y (NAND3X1)                         0.13       9.23 r
+  U188/Y (OAI21X1)                         0.09       9.32 f
+  U195/Y (AND2X2)                          0.20       9.52 f
   next_state_reg[0]/D (DFFNEGX1)           0.00       9.52 f
   data arrival time                                   9.52
 
