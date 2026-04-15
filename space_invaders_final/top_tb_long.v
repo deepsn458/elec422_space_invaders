@@ -76,7 +76,7 @@ initial begin
     for (i = 0; i<2; i=i+1) cycle;
 
     // Movement: Left
-    in_fire = 0;
+    in_fire = 1;
     in_player_left_input = 1;
     in_player_right_input = 0;
     for (i = 0; i<10; i=i+1) cycle;
@@ -90,19 +90,19 @@ initial begin
     in_player_right_input = 1;
     for (i = 0; i<16; i=i+1) cycle;
 
-    in_fire = 0;
+    in_fire = 1;
     for (i = 0; i<17; i=i+1) cycle;
 
     // Boundary Test: Hold Left to hit the edge of the screen
     $display("Testing: Left Boundary Hit...");
-    in_fire = 0;
+    in_fire = 1;
     in_player_left_input = 1;
     in_player_right_input = 0;
     for (i = 0; i < 40; i = i + 1) cycle;
 
     // Rapid Fire Pulse: Testing if the game handles multiple discrete shots
     $display("Testing: Rapid Fire Pulse...");
-    in_fire = 0;
+    in_fire = 1;
     in_player_left_input = 0;
     in_player_right_input = 0;
     for (i = 0; i < 10; i = i + 1) begin
@@ -119,21 +119,21 @@ initial begin
 
     // Boundary Test: Hold Right to hit the far edge
     $display("Testing: Right Boundary Hit...");
-    in_fire = 0;
+    in_fire = 1;
     in_player_left_input = 0;
     in_player_right_input = 1;
     for (i = 0; i < 40; i = i + 1) cycle;
 
     // Input Conflict: Pressing Left and Right simultaneously
     $display("Testing: Left and Right conflict...");
-    in_fire = 0;
+    in_fire = 1;
     in_player_left_input = 1;
     in_player_right_input = 1;
     for (i = 0; i < 5; i = i + 1) cycle;
 
     // Idle Observation: Let the game run to see alien movement/bullets falling
     $display("Testing: Idle Game State (Watching alien movement)...");
-    in_fire = 0;
+    in_fire = 1;
     in_player_left_input = 0;
     in_player_right_input = 0;
     for (i = 0; i < 100; i = i + 1) cycle;

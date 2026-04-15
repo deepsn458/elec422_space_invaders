@@ -77,10 +77,10 @@ module invader_bullet_fsm
             FIRING: begin
                 state <= next_state;
                 invader_bullet_display <= 1'b1;
-                if (invader_bullet_coord_y >= BOUNDARY_Y) begin
-                    invader_bullet_coord_y <= invader_bullet_coord_y - BULLET_Y_OFFSET;
-                end else begin
+                if (invader_bullet_coord_y <= BOUNDARY_Y) begin
                     state <= INITIAL;
+                end else begin
+                    invader_bullet_coord_y <= invader_bullet_coord_y - BULLET_Y_OFFSET;
                 end
                 
             end

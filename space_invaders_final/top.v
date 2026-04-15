@@ -85,6 +85,8 @@ module top
 
     wire  [3:0]       invaders_display = {invader_4_display,invader_3_display,invader_2_display,invader_1_display};
 
+    wire playerbullet_invader_collision_signal = playerbullet_invader_collision_signal_1 | playerbullet_invader_collision_signal_2 | playerbullet_invader_collision_signal_3 | playerbullet_invader_collision_signal_4;
+
     // Instantiate Main Game FSM:
     main_game_fsm main_game_fsm(
         .clka, .clkb,                             // Input clocks
