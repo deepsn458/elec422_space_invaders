@@ -12,7 +12,7 @@ module invader_fsm
     #(
     parameter START_X = 5,                                      // Start X coordinate of this invader
     parameter START_Y = 5,                                      // Start Y coordinate of this invader
-    parameter Y_OFFSET = 3,                                     // Number of pixels to travel downwards upon vertical movement
+    parameter Y_OFFSET = 2,                                     // Number of pixels to travel downwards upon vertical movement
     parameter DEAD_X = 5,                                       // X coordinate to place invader once dead
     parameter DEAD_Y = 5,                                       // Y coordinate to place invader once dead
     parameter X_OFFSET = 1,                                     // Number of pixels to travel sideways upon horizontal movement
