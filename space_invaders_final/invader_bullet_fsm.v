@@ -79,6 +79,8 @@ module invader_bullet_fsm
                 invader_bullet_display <= 1'b1;
                 if (invader_bullet_coord_y >= BOUNDARY_Y) begin
                     invader_bullet_coord_y <= invader_bullet_coord_y - BULLET_Y_OFFSET;
+                end else begin
+                    state <= INITIAL;
                 end
                 
             end
