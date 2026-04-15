@@ -56,6 +56,23 @@ module main_game_fsm
     reg prev_invader_outofbounds;
 /****************************************************************************/
     
+    // Calculate absolute value differences between player and invaders
+    wire [5:0] diff1 = (player_coordinate_x > invader1_coordinate_x) ? 
+                       (player_coordinate_x - invader1_coordinate_x) : 
+                       (invader1_coordinate_x - player_coordinate_x);
+
+    wire [5:0] diff2 = (player_coordinate_x > invader2_coordinate_x) ? 
+                       (player_coordinate_x - invader2_coordinate_x) : 
+                       (invader2_coordinate_x - player_coordinate_x);
+
+    wire [5:0] diff3 = (player_coordinate_x > invader3_coordinate_x) ? 
+                       (player_coordinate_x - invader3_coordinate_x) : 
+                       (invader3_coordinate_x - player_coordinate_x);
+
+    wire [5:0] diff4 = (player_coordinate_x > invader4_coordinate_x) ? 
+                       (player_coordinate_x - invader4_coordinate_x) : 
+                       (invader4_coordinate_x - player_coordinate_x);
+
     // Compare Invader 1 and Invader 2
     wire [5:0] min_diff_12    = (diff1 < diff2) ? diff1 : diff2;
     wire [5:0] closest_loc_12 = (diff1 < diff2) ? invader1_coordinate_x : invader2_coordinate_x;
