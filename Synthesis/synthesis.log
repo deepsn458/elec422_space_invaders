@@ -29,19 +29,19 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-Current time:       Wed Apr 15 16:16:07 2026
-Hostname:           borax.clear8.rice.edu
+Current time:       Wed Apr 15 17:31:32 2026
+Hostname:           opal.clear8.rice.edu
 CPU Model:          Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
 CPU Details:        Cores = 40 : Sockets = 2 : Cache Size = 25600 KB : Freq = 3.40 GHz
 OS:                 Linux 4.18.0-553.89.1.el8_10.x86_64
-RAM:                125 GB (Free  13 GB)
+RAM:                125 GB (Free  27 GB)
 Swap:                15 GB (Free  15 GB)
-Work Filesystem:    /storage-home/e/ely2 mounted to clearstor.clear.rice.edu:/clear-home/ely2
+Work Filesystem:    /storage-home/d/dn55 mounted to clearstor.clear.rice.edu:/clear-home/dn55
 Tmp Filesystem:     /tmp mounted to /dev/mapper/vg0-tmp
-Work Disk:          5038 GB (Free 804 GB)
+Work Disk:          5038 GB (Free 803 GB)
 Tmp Disk:             5 GB (Free   5 GB)
 
-CPU Load: 12%, Ram Free: 13 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
+CPU Load: 18%, Ram Free: 27 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
 #/**************************************************/
 #/* Compile Script for Synopsys                    */
 #/*                                                */
@@ -98,24 +98,11 @@ set verilogout_show_unconnected_pins "true"
 true
 analyze -f verilog $my_verilog_files
 Running PRESTO HDLC
-Compiling source file ./top.v
-Compiling source file ./datapath.v
-Compiling source file ./main_game_fsm.v
-Warning:  ./main_game_fsm.v:53: Parameter keyword used in local parameter declaration. (VER-329)
-Compiling source file ./player_fsm.v
-Warning:  ./player_fsm.v:33: Parameter keyword used in local parameter declaration. (VER-329)
-Compiling source file ./shield_fsm.v
-Warning:  ./shield_fsm.v:40: Parameter keyword used in local parameter declaration. (VER-329)
-Compiling source file ./player_bullet_fsm.v
-Warning:  ./player_bullet_fsm.v:31: Parameter keyword used in local parameter declaration. (VER-329)
-Compiling source file ./invader_fsm.v
-Warning:  ./invader_fsm.v:42: Parameter keyword used in local parameter declaration. (VER-329)
-Compiling source file ./invader_bullet_fsm.v
-Warning:  ./invader_bullet_fsm.v:37: Parameter keyword used in local parameter declaration. (VER-329)
-Presto compilation completed successfully.
+Error:  Unable to open file `invader_bullet_fsm.v': in search_path {. /clear/apps/synopsys-2023/syn/latest/libraries/syn /clear/apps/synopsys-2023/syn/latest/dw/syn_ver /clear/apps/synopsys-2023/syn/latest/dw/sim_ver /clear/apps/osu/soc/synopsys/lib/ami05}. (VER-41)
+*** Presto compilation terminated with 1 errors. ***
 Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
 Loading db file '/clear/apps/synopsys-2023/syn/latest/libraries/syn/dw_foundation.sldb'
-1
+0
 elaborate $my_toplevel
 Loading db file '/clear/apps/synopsys-2023/syn/latest/libraries/syn/gtech.db'
 Loading db file '/clear/apps/synopsys-2023/syn/latest/libraries/syn/standard.sldb'
@@ -209,7 +196,7 @@ Inferred memory devices in process
 | internal_display_reg | Flip-flop | 1024  |  Y  | N  | N  | N  | N  | N  | N  |
 ================================================================================
 Presto compilation completed successfully. (datapath)
-Module: datapath, Elapsed Time: 00:01:10, CPU Time: 00:01:05, Total Mem: 1.40 GB, Mem: 1.30 GB, Time: Wed Apr 15 16:17:17 2026
+Module: datapath, Elapsed Time: 00:01:18, CPU Time: 00:01:13, Total Mem: 1.40 GB, Mem: 1.30 GB, Time: Wed Apr 15 17:32:50 2026
 Information: Building the design 'player_fsm'. (HDL-193)
 
 Statistics for case statements in always block at line 43 in file
@@ -591,7 +578,7 @@ set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all
 set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
 1
 compile -ungroup_all -map_effort medium
-CPU Load: 12%, Ram Free: 10 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
+CPU Load: 21%, Ram Free: 24 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -795,23 +782,23 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:03:48 7231698.0      0.00       0.0   69301.5                          
-    0:03:48 7231698.0      0.00       0.0   69301.5                          
-    0:03:48 7604586.0      0.00       0.0   65326.2                          
+    0:03:58 7231698.0      0.00       0.0   69301.5                          
+    0:03:58 7231698.0      0.00       0.0   69301.5                          
+    0:03:58 7604586.0      0.00       0.0   65326.2                          
 Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
-    0:03:51 8054478.0      0.00       0.0       0.0                          
-    0:03:51 8054478.0      0.00       0.0       0.0                          
-    0:03:51 8054478.0      0.00       0.0       0.0                          
-    0:03:51 8054478.0      0.00       0.0       0.0                          
-    0:03:51 8054478.0      0.00       0.0       0.0                          
-    0:03:53 7323678.0      0.00       0.0       0.0                          
-    0:03:53 7323678.0      0.00       0.0       0.0                          
-    0:03:53 7323678.0      0.00       0.0       0.0                          
-    0:03:53 7323678.0      0.00       0.0       0.0                          
-    0:03:53 7323678.0      0.00       0.0       0.0                          
-    0:03:53 7323678.0      0.00       0.0       0.0                          
-    0:03:53 7323678.0      0.00       0.0       0.0                          
-    0:03:53 7323678.0      0.00       0.0       0.0                          
+    0:04:01 8054478.0      0.00       0.0       0.0                          
+    0:04:01 8054478.0      0.00       0.0       0.0                          
+    0:04:01 8054478.0      0.00       0.0       0.0                          
+    0:04:01 8054478.0      0.00       0.0       0.0                          
+    0:04:01 8054478.0      0.00       0.0       0.0                          
+    0:04:03 7323678.0      0.00       0.0       0.0                          
+    0:04:03 7323678.0      0.00       0.0       0.0                          
+    0:04:03 7323678.0      0.00       0.0       0.0                          
+    0:04:03 7323678.0      0.00       0.0       0.0                          
+    0:04:03 7323678.0      0.00       0.0       0.0                          
+    0:04:04 7323678.0      0.00       0.0       0.0                          
+    0:04:04 7323678.0      0.00       0.0       0.0                          
+    0:04:04 7323678.0      0.00       0.0       0.0                          
 
 
 
@@ -822,9 +809,9 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:03:53 7323678.0      0.00       0.0       0.0                          
-    0:03:53 7323678.0      0.00       0.0       0.0                          
-    0:03:53 7323678.0      0.00       0.0       0.0                          
+    0:04:04 7323678.0      0.00       0.0       0.0                          
+    0:04:04 7323678.0      0.00       0.0       0.0                          
+    0:04:04 7323678.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -834,34 +821,34 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:03:53 7323678.0      0.00       0.0       0.0                          
-    0:03:53 7323678.0      0.00       0.0       0.0                          
-    0:03:55 7194510.0      0.00       0.0       0.0                          
-    0:03:57 7135614.0      0.00       0.0       0.0                          
-    0:03:58 7098246.0      0.00       0.0       0.0                          
-    0:03:58 7075638.0      0.00       0.0       0.0                          
-    0:03:58 7062894.0      0.00       0.0       0.0                          
-    0:03:59 7052742.0      0.00       0.0       0.0                          
-    0:03:59 7047486.0      0.00       0.0       0.0                          
-    0:03:59 7044174.0      0.00       0.0       0.0                          
-    0:03:59 7042086.0      0.00       0.0       0.0                          
-    0:03:59 7040214.0      0.00       0.0       0.0                          
-    0:03:59 7038558.0      0.00       0.0       0.0                          
-    0:03:59 7036902.0      0.00       0.0       0.0                          
-    0:03:59 7035534.0      0.00       0.0       0.0                          
-    0:03:59 7033806.0      0.00       0.0       0.0                          
-    0:03:59 7032222.0      0.00       0.0       0.0                          
-    0:03:59 7031646.0      0.00       0.0       0.0                          
-    0:03:59 7031358.0      0.00       0.0       0.0                          
-    0:03:59 7031358.0      0.00       0.0       0.0                          
-    0:03:59 7031358.0      0.00       0.0       0.0                          
-    0:03:59 7031214.0      0.00       0.0       0.0                          
-    0:04:00 7031214.0      0.00       0.0       0.0                          
-    0:04:00 7031214.0      0.00       0.0       0.0                          
-    0:04:00 7031214.0      0.00       0.0       0.0                          
-    0:04:00 7031214.0      0.00       0.0       0.0                          
-    0:04:00 7031214.0      0.00       0.0       0.0                          
-    0:04:00 7031214.0      0.00       0.0       0.0                          
+    0:04:04 7323678.0      0.00       0.0       0.0                          
+    0:04:04 7323678.0      0.00       0.0       0.0                          
+    0:04:05 7194510.0      0.00       0.0       0.0                          
+    0:04:07 7135614.0      0.00       0.0       0.0                          
+    0:04:08 7098246.0      0.00       0.0       0.0                          
+    0:04:08 7075638.0      0.00       0.0       0.0                          
+    0:04:09 7062894.0      0.00       0.0       0.0                          
+    0:04:09 7052742.0      0.00       0.0       0.0                          
+    0:04:09 7047486.0      0.00       0.0       0.0                          
+    0:04:09 7044174.0      0.00       0.0       0.0                          
+    0:04:09 7042086.0      0.00       0.0       0.0                          
+    0:04:09 7040214.0      0.00       0.0       0.0                          
+    0:04:09 7038558.0      0.00       0.0       0.0                          
+    0:04:09 7036902.0      0.00       0.0       0.0                          
+    0:04:09 7035534.0      0.00       0.0       0.0                          
+    0:04:10 7033806.0      0.00       0.0       0.0                          
+    0:04:10 7032222.0      0.00       0.0       0.0                          
+    0:04:10 7031646.0      0.00       0.0       0.0                          
+    0:04:10 7031358.0      0.00       0.0       0.0                          
+    0:04:10 7031358.0      0.00       0.0       0.0                          
+    0:04:10 7031358.0      0.00       0.0       0.0                          
+    0:04:10 7031214.0      0.00       0.0       0.0                          
+    0:04:10 7031214.0      0.00       0.0       0.0                          
+    0:04:10 7031214.0      0.00       0.0       0.0                          
+    0:04:10 7031214.0      0.00       0.0       0.0                          
+    0:04:10 7031214.0      0.00       0.0       0.0                          
+    0:04:10 7031214.0      0.00       0.0       0.0                          
+    0:04:10 7031214.0      0.00       0.0       0.0                          
 Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
 
 
@@ -872,7 +859,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
   ---------------------
 Warning: Design 'top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
      Net 'clka': 1039 load(s), 1 driver(s)
-CPU Load: 15%, Ram Free: 10 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
+CPU Load: 14%, Ram Free: 26 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -894,7 +881,7 @@ Unmapped MV Cells
 ----------------------------------------------------------------------------------------------------
 1
 compile -incremental_mapping -map_effort medium
-CPU Load: 15%, Ram Free: 10 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
+CPU Load: 14%, Ram Free: 26 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
 ====================================================================================================
 | Flow Information                                                                                 |
 ----------------------------------------------------------------------------------------------------
@@ -939,8 +926,8 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
     0:00:02 7031214.0      0.00       0.0       0.0                          
-    0:00:02 7031214.0      0.00       0.0       0.0                          
-    0:00:02 7031214.0      0.00       0.0       0.0                          
+    0:00:03 7031214.0      0.00       0.0       0.0                          
+    0:00:03 7031214.0      0.00       0.0       0.0                          
 Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
 
 
@@ -951,7 +938,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
   ---------------------
 Warning: Design 'top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
      Net 'clka': 1039 load(s), 1 driver(s)
-CPU Load: 14%, Ram Free: 10 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
+CPU Load: 14%, Ram Free: 26 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -983,7 +970,7 @@ Report : constraint
         -all_violators
 Design : top
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 16:21:42 2026
+Date   : Wed Apr 15 17:37:25 2026
 ****************************************
 
 This design has no violated constraints.
@@ -992,7 +979,7 @@ This design has no violated constraints.
 set filename [format "%s%s"  $my_toplevel ".vh"]
 top.vh
 write -f verilog -output $filename
-Writing verilog file '/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/Synthesis/top.vh'.
+Writing verilog file '/storage-home/d/dn55/elec422_space_invaders/Synthesis/top.vh'.
 1
 set filename [format "%s%s"  $my_toplevel ".sdc"]
 top.sdc
@@ -1004,7 +991,7 @@ report_cell
 Report : cell
 Design : top
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 16:21:42 2026
+Date   : Wed Apr 15 17:37:25 2026
 ****************************************
 
 Attributes:
@@ -27196,7 +27183,7 @@ report_area
 Report : area
 Design : top
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 16:21:43 2026
+Date   : Wed Apr 15 17:37:27 2026
 ****************************************
 
 Information: Updating design information... (UID-85)
@@ -27232,7 +27219,7 @@ Report : timing
         -max_paths 3
 Design : top
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 16:21:44 2026
+Date   : Wed Apr 15 17:37:28 2026
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -27281,7 +27268,7 @@ Report : power
         -analysis_effort low
 Design : top
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 16:21:47 2026
+Date   : Wed Apr 15 17:37:30 2026
 ****************************************
 
 
@@ -27334,9 +27321,9 @@ redirect cell.rep { report_cell }
 redirect power.rep { report_power }
 quit
 
-Memory usage for this session 3629 Mbytes.
-Memory usage for this session including child processes 3629 Mbytes.
-CPU usage for this session 334 seconds ( 0.09 hours ).
-Elapsed time for this session 350 seconds ( 0.10 hours ).
+Memory usage for this session 3630 Mbytes.
+Memory usage for this session including child processes 3630 Mbytes.
+CPU usage for this session 353 seconds ( 0.10 hours ).
+Elapsed time for this session 372 seconds ( 0.10 hours ).
 
 Thank you...
