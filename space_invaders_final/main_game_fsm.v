@@ -36,7 +36,7 @@ module main_game_fsm
 
 
     output reg         player_left_motion, player_right_motion, // to player fsm
-    output reg[5:0]    closest_invader_coord_x, closest_invader_coord_y, // to invader bullet fsm  
+    output wire [5:0]    closest_invader_coord_x, closest_invader_coord_y, // to invader bullet fsm  
     output reg         play, reset,// global signal
     output reg         invader_direction, // to invader fsm
     output reg         playerbullet_fire, // to player bullet
@@ -131,8 +131,6 @@ module main_game_fsm
             state <= INIT;
             player_left_motion <= 0;
             player_right_motion <= 0;
-            closest_invader_coord_x <= 0;
-            closest_invader_coord_y <= 0;
             play <= 0;
             reset <= 1;
             invader_direction <= DIRECTION_RIGHT;
@@ -150,9 +148,9 @@ module main_game_fsm
                 // fire the invader bullet again if has collided or has reached the y limit
                 state <= next_state;
                 play <= 1;
-                if((invaderbullet_player_collision_signal | invaderbullet_shield_collision_signal) || invaderbullet_coord_y == BOTTOM_BOUND) begin
-                    invaderbullet_fire <= 1;
-                end
+                // if((invaderbullet_player_collision_signal | invaderbullet_shield_collision_signal) || invaderbullet_coord_y == BOTTOM_BOUND) begin
+                invaderbullet_fire <= 1;
+                // end
                 //send commands to player and player bullet
                 {playerbullet_fire, player_right_motion, player_left_motion} <= {player_shoot_input, player_right_input, player_left_input};
                 //set invader direction
