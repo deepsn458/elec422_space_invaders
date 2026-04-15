@@ -148,7 +148,98 @@ initial begin
     in_fire = 0;
     in_player_left_input = 0;
     in_player_right_input = 0;
-    for (i = 0; i < 300; i = i + 1) cycle;
+    for (i = 0; i < 150; i = i + 1) cycle;
+
+    // Start another game
+    in_fire = 1;
+    for (i = 0; i<4; i=i+1) cycle;
+
+    in_fire = 0;
+    for (i = 0; i<2; i=i+1) cycle;
+
+    in_fire = 1;
+    for (i = 0; i<2; i=i+1) cycle;
+
+    // Movement: Left
+    in_fire = 1;
+    in_player_left_input = 1;
+    in_player_right_input = 0;
+    for (i = 0; i<5; i=i+1) cycle;
+    
+    in_fire = 1;
+    for (i = 0; i<8; i=i+1) cycle;
+
+    // Movement: Right
+    in_fire = 1;
+    in_player_left_input = 0;
+    in_player_right_input = 1;
+    for (i = 0; i<12; i=i+1) cycle;
+
+    in_fire = 1;
+    for (i = 0; i<17; i=i+1) cycle;
+
+    // Boundary Test: Hold Left to hit the edge of the screen
+    $display("Testing: Left Boundary Hit...");
+    in_fire = 1;
+    in_player_left_input = 1;
+    in_player_right_input = 0;
+    for (i = 0; i < 40; i = i + 1) cycle;
+
+    // Go back right
+    in_fire = 1;
+    in_player_left_input = 0;
+    in_player_right_input = 1;
+    for (i = 0; i < 20; i = i + 1) cycle;
+
+    // Rapid Fire Pulse: Testing if the game handles multiple discrete shots
+    $display("Testing: Rapid Fire Pulse...");
+    in_fire = 1;
+    in_player_left_input = 0;
+    in_player_right_input = 0;
+    for (i = 0; i < 10; i = i + 1) begin
+        in_fire = 1; cycle;
+        in_fire = 0; cycle;
+    end
+
+    // Diagonal Movement & Shoot: Moving Right while firing
+    $display("Testing: Strafing Right while shooting...");
+    in_fire = 1;
+    in_player_left_input = 0;
+    in_player_right_input = 1;
+    for (i = 0; i < 20; i = i + 1) cycle;
+
+    // Boundary Test: Hold Right to hit the far edge
+    $display("Testing: Right Boundary Hit...");
+    in_fire = 1;
+    in_player_left_input = 0;
+    in_player_right_input = 1;
+    for (i = 0; i < 40; i = i + 1) cycle;
+
+    // Input Conflict: Pressing Left and Right simultaneously
+    $display("Testing: Left and Right conflict...");
+    in_fire = 0;
+    in_player_left_input = 1;
+    in_player_right_input = 1;
+    for (i = 0; i < 5; i = i + 1) cycle;
+
+    // Idle Observation: Let the game run to see alien movement/bullets falling
+    $display("Testing: Idle Game State (Watching alien movement)...");
+    in_fire = 0;
+    in_player_left_input = 0;
+    in_player_right_input = 0;
+    for (i = 0; i < 100; i = i + 1) cycle;
+
+    // Move center
+    in_fire = 0;
+    in_player_left_input = 1;
+    in_player_right_input = 0;
+    for (i = 0; i < 16; i = i + 1) cycle;
+
+    // Stay center
+    in_fire = 0;
+    in_player_left_input = 0;
+    in_player_right_input = 0;
+    for (i = 0; i < 150; i = i + 1) cycle;
 
     // Cleanup
     $fclose(log_file);

@@ -1,7 +1,7 @@
 m255
 K4
 z2
-Z0 !s12c _opt
+Z0 !s12c _opt1
 Z1 !s99 nomlopt
 R0
 R1
@@ -11,19 +11,37 @@ R0
 R1
 R0
 R1
-R0
+Z2 !s12c _opt
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
 R1
-R0
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
 R1
 !s11f vlog 2023.2 2023.04, Apr 11 2023
 13
@@ -32,246 +50,283 @@ R1
 !i10e 25
 !i10f 100
 cModel Technology
-Z2 d/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/space_invaders_final
+Z3 d/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/space_invaders_final
 T_opt
-!s110 1776221917
-V66LnY48oL[XGBm]3D0H311
+!s110 1776223965
+VQ=dIGV>F]e]CkFoF0?iUd1
 04 11 4 work top_tb_long fast 0
-=1-d09466182648-69defedd-27330-11f34a
+=1-d09466182648-69df06dc-ebd78-122299
 R1
-!s12b OEM100
-!s124 OEM100
-o-quiet -auto_acc_if_foreign -work work -debugdb +acc
-Z3 tCvgOpt 0
+Z4 !s12b OEM100
+Z5 !s124 OEM100
+Z6 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z7 tCvgOpt 0
 n@_opt
-OL;O;2023.2;77
+Z8 OL;O;2023.2;77
+R3
+T_opt1
+!s110 1776225281
+Vcb=?U5j`5=gIj_3RIzN[c2
+04 14 4 work top_tb_noshoot fast 0
+=1-d09466182648-69df0c01-10fbc-124605
+R1
+R4
+R5
+R6
+R7
+n@_opt1
+R8
+R3
 vdatapath
-Z4 2datapath.v|invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_tb_long.v|top_tb.v|top.v
-Z5 !s110 1776221880
+Z9 2datapath.v|invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_tb_long.v|top_tb_noshoot.v|top_tb.v|top.v
+Z10 !s110 1776225388
 !i10b 1
 !s100 `0iL2YRoKjoz=1hkVoMGB2
 If:7GWcBUBY;[_Ie`Sg:>A3
-R2
+R3
 w1775965389
 8datapath.v
 Fdatapath.v
-!i122 15
+!i122 28
 L0 11 196
-Z6 VDg1SIo80bB@j0V0VzS_@n1
-Z7 OL;L;2023.2;77
+Z11 VDg1SIo80bB@j0V0VzS_@n1
+Z12 OL;L;2023.2;77
 r1
 !s85 0
 31
-Z8 !s108 1776221880.000000
-Z9 !s107 top.v|top_tb.v|top_tb_long.v|shield_fsm.v|player_fsm.v|player_bullet_fsm.v|main_game_fsm.v|invader_fsm.v|invader_bullet_fsm.v|datapath.v|
-Z10 !s90 datapath.v|invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_tb_long.v|top_tb.v|top.v|
+Z13 !s108 1776225388.000000
+!s107 top.v|top_tb.v|top_tb_noshoot.v|top_tb_long.v|shield_fsm.v|player_fsm.v|player_bullet_fsm.v|main_game_fsm.v|invader_fsm.v|invader_bullet_fsm.v|datapath.v|
+Z14 !s90 datapath.v|invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_tb_long.v|top_tb_noshoot.v|top_tb.v|top.v|
 !i113 0
-Z11 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R3
+Z15 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
 vinvader_bullet_fsm
-R4
-R5
+R9
+R10
 !i10b 1
 !s100 KZPE5`DhQCilV=k6hf;hL0
 Iz@?FlnHH07jkfz:K4@KUB0
-R2
+R3
 w1776218221
 8invader_bullet_fsm.v
 Finvader_bullet_fsm.v
-!i122 15
+!i122 28
 L0 11 83
-R6
-R7
+R11
+R12
 r1
 !s85 0
 31
-R8
+R13
+Z16 !s107 top.v|top_tb.v|top_tb_noshoot.v|top_tb_long.v|shield_fsm.v|player_fsm.v|player_bullet_fsm.v|main_game_fsm.v|invader_fsm.v|invader_bullet_fsm.v|datapath.v|
+R14
+!i113 0
+R15
+R7
+vinvader_fsm
 R9
 R10
-!i113 0
-R11
-R3
-vinvader_fsm
-R4
-R5
 !i10b 1
-!s100 3HgQ>EV:][M@EXzG_UKhS2
-IDJ^>bH`DS?m4:bRlH]Aen0
-R2
-w1776221029
+!s100 fNf[5hEEZoTa5i;L4l[Fn1
+I7Ym;Y315V_4BW]D<h@Ye;2
+R3
+w1776225383
 8invader_fsm.v
 Finvader_fsm.v
-!i122 15
-L0 11 148
-R6
-R7
+!i122 28
+L0 11 149
+R11
+R12
 r1
 !s85 0
 31
-R8
+R13
+R16
+R14
+!i113 0
+R15
+R7
+vmain_game_fsm
 R9
 R10
-!i113 0
-R11
-R3
-vmain_game_fsm
-R4
-R5
 !i10b 1
-!s100 m=OlB:3;gXPzR^mPIf`dd0
-IO[mMN[F>1?YERkZ3PH[b30
-R2
-w1776220530
+!s100 `cJ5DUN`ZLHg]F]hWVND^3
+ILFMcn?ADWNkgQ3O]gHb@Z0
+R3
+w1776222455
 8main_game_fsm.v
 Fmain_game_fsm.v
-!i122 15
-L0 12 159
-R6
-R7
+!i122 28
+L0 12 160
+R11
+R12
 r1
 !s85 0
 31
-R8
+R13
+R16
+R14
+!i113 0
+R15
+R7
+vplayer_bullet_fsm
 R9
 R10
-!i113 0
-R11
-R3
-vplayer_bullet_fsm
-R4
-R5
 !i10b 1
-!s100 bZ_`Bc1PVabiYL5EIjkmk3
-If86`oKlOYc>lFWeCz0>5X2
-R2
-w1776205014
+!s100 62Y;=f^[]n7;EfE]kK>YL3
+IjR4c:imd>m]aznCbn[k::0
+R3
+w1776223908
 8player_bullet_fsm.v
 Fplayer_bullet_fsm.v
-!i122 15
+!i122 28
 L0 11 88
-R6
-R7
+R11
+R12
 r1
 !s85 0
 31
-R8
+R13
+R16
+R14
+!i113 0
+R15
+R7
+vplayer_fsm
 R9
 R10
-!i113 0
-R11
-R3
-vplayer_fsm
-R4
-R5
 !i10b 1
 !s100 ^AU^dQB2GD44UhIVa2QgR0
 I;=d3KEF5Z`D9bV6X5W8]z1
-R2
+R3
 w1776221877
 8player_fsm.v
 Fplayer_fsm.v
-!i122 15
+!i122 28
 L0 11 117
-R6
-R7
+R11
+R12
 r1
 !s85 0
 31
-R8
+R13
+R16
+R14
+!i113 0
+R15
+R7
+vshield_fsm
 R9
 R10
-!i113 0
-R11
-R3
-vshield_fsm
-R4
-R5
 !i10b 1
 !s100 Ln[UlAlC2DBnUA710g2BI0
 IQcDOe?]3b6X9eBHWm6Q@;3
-R2
+R3
 w1776216813
 8shield_fsm.v
 Fshield_fsm.v
-!i122 15
+!i122 28
 L0 10 119
-R6
-R7
+R11
+R12
 r1
 !s85 0
 31
-R8
+R13
+R16
+R14
+!i113 0
+R15
+R7
+vtop
 R9
 R10
-!i113 0
-R11
-R3
-vtop
-R4
-R5
 !i10b 1
-!s100 @[DXP8SaV3>nWg]HJ`SeR3
-IGAkD=B7fa:HFD8SAIaHOk0
-R2
-w1776220502
+!s100 CfiM6<eNXfeV@]ffJ@><j2
+IP2l4FUMSh>]PTmGkVOIH;2
+R3
+w1776224440
 8top.v
 Ftop.v
-!i122 15
+!i122 28
 L0 11 278
-R6
-R7
+R11
+R12
 r1
 !s85 0
 31
-R8
+R13
+R16
+R14
+!i113 0
+R15
+R7
+vtop_tb
 R9
 R10
-!i113 0
-R11
-R3
-vtop_tb
-R4
-R5
 !i10b 1
 !s100 UTLhl2Z^iB6eOHj5[2eiS3
 Ico@ClHc9a?NQlb;?>F9k>0
-R2
+R3
 w1775966871
 8top_tb.v
 Ftop_tb.v
-!i122 15
+!i122 28
 L0 1 102
-R6
-R7
+R11
+R12
 r1
 !s85 0
 31
-R8
+R13
+R16
+R14
+!i113 0
+R15
+R7
+vtop_tb_long
 R9
 R10
-!i113 0
-R11
-R3
-vtop_tb_long
-R4
-R5
 !i10b 1
-!s100 3oJ=<aUDlFeem;F1>AC?d2
-IH?1lF:QR9XBJjeHl9C`Pf3
-R2
-w1776221736
+!s100 zPeGoG<lmHomGD`oTD<Uj3
+IazM=68DZ[iH5Il8emA0_W0
+R3
+w1776223573
 8top_tb_long.v
 Ftop_tb_long.v
-!i122 15
-L0 1 159
-R6
-R7
+!i122 28
+L0 1 250
+R11
+R12
 r1
 !s85 0
 31
-R8
+R13
+R16
+R14
+!i113 0
+R15
+R7
+vtop_tb_noshoot
 R9
 R10
-!i113 0
-R11
+!i10b 1
+!s100 G]dHm7_iSP[]c_GJi:<031
+I=^B7oUi^M_AWZg>=AEVGo0
 R3
+w1776225225
+8top_tb_noshoot.v
+Ftop_tb_noshoot.v
+!i122 28
+L0 1 88
+R11
+R12
+r1
+!s85 0
+31
+R13
+R16
+R14
+!i113 0
+R15
+R7
