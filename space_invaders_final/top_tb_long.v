@@ -36,7 +36,7 @@ task cycle;
     end
 endtask
 
-top U1 (
+top_copy U1 (
     .clka(in_clka),
     .clkb(in_clkb),
     .reset(in_reset),

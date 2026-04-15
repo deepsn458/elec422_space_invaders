@@ -12,14 +12,32 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# vsim -debugDB -voptargs=""+acc"" top_tb_noshoot 
-# Start time: 22:54:40 on Apr 14,2026
+# vsim -debugDB -voptargs=""+acc"" top_tb_long 
+# Start time: 00:30:49 on Apr 15,2026
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Note: (vsim-8611) Generating debug db.
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading work.top_tb_noshoot(fast)
-# Loading work.top(fast)
+# ** Warning: top_copy.v(91): (vopt-2685) [TFMPC] - Too few port connections for 'main_game_fsm'.  Expected 37, found 36.
+# ** Warning: top_copy.v(91): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top_copy.v(172): (vopt-2685) [TFMPC] - Too few port connections for 'player_fsm'.  Expected 13, found 12.
+# ** Warning: top_copy.v(172): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top_copy.v(187): (vopt-2685) [TFMPC] - Too few port connections for 'shield_fsm'.  Expected 15, found 14.
+# ** Warning: top_copy.v(187): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top_copy.v(205): (vopt-2685) [TFMPC] - Too few port connections for 'invader_fsm_1'.  Expected 14, found 13.
+# ** Warning: top_copy.v(205): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top_copy.v(219): (vopt-2685) [TFMPC] - Too few port connections for 'invader_fsm_2'.  Expected 14, found 13.
+# ** Warning: top_copy.v(219): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top_copy.v(233): (vopt-2685) [TFMPC] - Too few port connections for 'invader_fsm_3'.  Expected 14, found 13.
+# ** Warning: top_copy.v(233): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top_copy.v(247): (vopt-2685) [TFMPC] - Too few port connections for 'invader_fsm_4'.  Expected 14, found 13.
+# ** Warning: top_copy.v(247): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top_copy.v(262): (vopt-2685) [TFMPC] - Too few port connections for 'player_bullet_fsm'.  Expected 12, found 11.
+# ** Warning: top_copy.v(262): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Warning: top_copy.v(275): (vopt-2685) [TFMPC] - Too few port connections for 'invader_bullet_fsm'.  Expected 12, found 11.
+# ** Warning: top_copy.v(275): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=19.
+# Loading work.top_tb_long(fast)
+# Loading work.top_copy(fast)
 # Loading work.main_game_fsm(fast)
 # Loading work.datapath(fast)
 # Loading work.player_fsm(fast)
@@ -33,9 +51,21 @@
 # ** Note: (vsim-8900) Creating design debug database vsim.dbg.
 add wave -r /*
 run -all
+# Testing: Left Boundary Hit...
+# Testing: Rapid Fire Pulse...
+# Testing: Strafing Right while shooting...
+# Testing: Right Boundary Hit...
+# Testing: Left and Right conflict...
+# Testing: Idle Game State (Watching alien movement)...
+# Testing: Left Boundary Hit...
+# Testing: Rapid Fire Pulse...
+# Testing: Strafing Right while shooting...
+# Testing: Right Boundary Hit...
+# Testing: Left and Right conflict...
+# Testing: Idle Game State (Watching alien movement)...
 # Simulation Complete. Matrix written to top_display_log.txt
-# ** Note: $stop    : top_tb_noshoot.v(85)
-#    Time: 24120 ns  Iteration: 0  Instance: /top_tb_noshoot
-# Break in Module top_tb_noshoot at top_tb_noshoot.v line 85
-# End time: 23:02:20 on Apr 14,2026, Elapsed time: 0:07:40
-# Errors: 0, Warnings: 1
+# ** Note: $stop    : top_tb_long.v(247)
+#    Time: 36520 ns  Iteration: 0  Instance: /top_tb_long
+# Break in Module top_tb_long at top_tb_long.v line 247
+# End time: 00:32:26 on Apr 15,2026, Elapsed time: 0:01:37
+# Errors: 0, Warnings: 19

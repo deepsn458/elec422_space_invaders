@@ -1,8 +1,18 @@
 m255
 K4
 z2
-Z0 !s12c _opt1
+Z0 !s12c _opt
 Z1 !s99 nomlopt
+Z2 !s12c _opt1
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
 R0
 R1
 R0
@@ -11,37 +21,29 @@ R0
 R1
 R0
 R1
-Z2 !s12c _opt
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
+R0
 R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
-R1
-R2
+R0
 R1
 !s11f vlog 2023.2 2023.04, Apr 11 2023
 13
@@ -52,10 +54,10 @@ R1
 cModel Technology
 Z3 d/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/space_invaders_final
 T_opt
-!s110 1776223965
-VQ=dIGV>F]e]CkFoF0?iUd1
+!s110 1776231051
+V:QT2G8OC9z>2EcDN=CJMN1
 04 11 4 work top_tb_long fast 0
-=1-d09466182648-69df06dc-ebd78-122299
+=1-d09466164d60-69df228a-86da8-19ce9a
 R1
 Z4 !s12b OEM100
 Z5 !s124 OEM100
@@ -63,7 +65,6 @@ Z6 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
 Z7 tCvgOpt 0
 n@_opt
 Z8 OL;O;2023.2;77
-R3
 T_opt1
 !s110 1776225281
 Vcb=?U5j`5=gIj_3RIzN[c2
@@ -78,8 +79,8 @@ n@_opt1
 R8
 R3
 vdatapath
-Z9 2datapath.v|invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_tb_long.v|top_tb_noshoot.v|top_tb.v|top.v
-Z10 !s110 1776225388
+Z9 2datapath.v|invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_copy.v|top_tb_long.v|top_tb_noshoot.v|top_tb.v|top.v
+Z10 !s110 1776230877
 !i10b 1
 !s100 `0iL2YRoKjoz=1hkVoMGB2
 If:7GWcBUBY;[_Ie`Sg:>A3
@@ -87,18 +88,18 @@ R3
 w1775965389
 8datapath.v
 Fdatapath.v
-!i122 28
+!i122 29
 L0 11 196
 Z11 VDg1SIo80bB@j0V0VzS_@n1
 Z12 OL;L;2023.2;77
 r1
 !s85 0
 31
-Z13 !s108 1776225388.000000
-!s107 top.v|top_tb.v|top_tb_noshoot.v|top_tb_long.v|shield_fsm.v|player_fsm.v|player_bullet_fsm.v|main_game_fsm.v|invader_fsm.v|invader_bullet_fsm.v|datapath.v|
-Z14 !s90 datapath.v|invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_tb_long.v|top_tb_noshoot.v|top_tb.v|top.v|
+Z13 !s108 1776230876.000000
+Z14 !s107 top.v|top_tb.v|top_tb_noshoot.v|top_tb_long.v|top_copy.v|shield_fsm.v|player_fsm.v|player_bullet_fsm.v|main_game_fsm.v|invader_fsm.v|invader_bullet_fsm.v|datapath.v|
+Z15 !s90 datapath.v|invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_copy.v|top_tb_long.v|top_tb_noshoot.v|top_tb.v|top.v|
 !i113 0
-Z15 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z16 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R7
 vinvader_bullet_fsm
 R9
@@ -110,7 +111,7 @@ R3
 w1776218221
 8invader_bullet_fsm.v
 Finvader_bullet_fsm.v
-!i122 28
+!i122 29
 L0 11 83
 R11
 R12
@@ -118,10 +119,10 @@ r1
 !s85 0
 31
 R13
-Z16 !s107 top.v|top_tb.v|top_tb_noshoot.v|top_tb_long.v|shield_fsm.v|player_fsm.v|player_bullet_fsm.v|main_game_fsm.v|invader_fsm.v|invader_bullet_fsm.v|datapath.v|
 R14
-!i113 0
 R15
+!i113 0
+R16
 R7
 vinvader_fsm
 R9
@@ -133,7 +134,7 @@ R3
 w1776225383
 8invader_fsm.v
 Finvader_fsm.v
-!i122 28
+!i122 29
 L0 11 149
 R11
 R12
@@ -141,10 +142,10 @@ r1
 !s85 0
 31
 R13
-R16
 R14
-!i113 0
 R15
+!i113 0
+R16
 R7
 vmain_game_fsm
 R9
@@ -156,7 +157,7 @@ R3
 w1776222455
 8main_game_fsm.v
 Fmain_game_fsm.v
-!i122 28
+!i122 29
 L0 12 160
 R11
 R12
@@ -164,10 +165,10 @@ r1
 !s85 0
 31
 R13
-R16
 R14
-!i113 0
 R15
+!i113 0
+R16
 R7
 vplayer_bullet_fsm
 R9
@@ -179,7 +180,7 @@ R3
 w1776223908
 8player_bullet_fsm.v
 Fplayer_bullet_fsm.v
-!i122 28
+!i122 29
 L0 11 88
 R11
 R12
@@ -187,10 +188,10 @@ r1
 !s85 0
 31
 R13
-R16
 R14
-!i113 0
 R15
+!i113 0
+R16
 R7
 vplayer_fsm
 R9
@@ -202,7 +203,7 @@ R3
 w1776221877
 8player_fsm.v
 Fplayer_fsm.v
-!i122 28
+!i122 29
 L0 11 117
 R11
 R12
@@ -210,10 +211,10 @@ r1
 !s85 0
 31
 R13
-R16
 R14
-!i113 0
 R15
+!i113 0
+R16
 R7
 vshield_fsm
 R9
@@ -225,7 +226,7 @@ R3
 w1776216813
 8shield_fsm.v
 Fshield_fsm.v
-!i122 28
+!i122 29
 L0 10 119
 R11
 R12
@@ -233,10 +234,10 @@ r1
 !s85 0
 31
 R13
-R16
 R14
-!i113 0
 R15
+!i113 0
+R16
 R7
 vtop
 R9
@@ -248,18 +249,41 @@ R3
 w1776224440
 8top.v
 Ftop.v
-!i122 28
-L0 11 278
+!i122 29
+Z17 L0 11 278
 R11
 R12
 r1
 !s85 0
 31
 R13
-R16
 R14
-!i113 0
 R15
+!i113 0
+R16
+R7
+vtop_copy
+R9
+R10
+!i10b 1
+!s100 BS`FJjNoVNQAAHH[^6[5Y1
+I8P:EiZhEQ;FlClz<>eKX70
+R3
+w1776230815
+8top_copy.v
+Ftop_copy.v
+!i122 29
+R17
+R11
+R12
+r1
+!s85 0
+31
+R13
+R14
+R15
+!i113 0
+R16
 R7
 vtop_tb
 R9
@@ -271,7 +295,7 @@ R3
 w1775966871
 8top_tb.v
 Ftop_tb.v
-!i122 28
+!i122 29
 L0 1 102
 R11
 R12
@@ -279,22 +303,22 @@ r1
 !s85 0
 31
 R13
-R16
 R14
-!i113 0
 R15
+!i113 0
+R16
 R7
 vtop_tb_long
 R9
 R10
 !i10b 1
-!s100 zPeGoG<lmHomGD`oTD<Uj3
-IazM=68DZ[iH5Il8emA0_W0
+!s100 RdJ<D<j0Y1@]S;l`z:IkC3
+I7Igc9DA[6JUO:^>@]Uk_e2
 R3
-w1776223573
+w1776230849
 8top_tb_long.v
 Ftop_tb_long.v
-!i122 28
+!i122 29
 L0 1 250
 R11
 R12
@@ -302,10 +326,10 @@ r1
 !s85 0
 31
 R13
-R16
 R14
-!i113 0
 R15
+!i113 0
+R16
 R7
 vtop_tb_noshoot
 R9
@@ -317,7 +341,7 @@ R3
 w1776225225
 8top_tb_noshoot.v
 Ftop_tb_noshoot.v
-!i122 28
+!i122 29
 L0 1 88
 R11
 R12
@@ -325,8 +349,8 @@ r1
 !s85 0
 31
 R13
-R16
 R14
-!i113 0
 R15
+!i113 0
+R16
 R7
