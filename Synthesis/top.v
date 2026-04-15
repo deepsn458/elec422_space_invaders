@@ -88,7 +88,8 @@ module top
     output wire [1:0]       invader_state_4,
     output wire [1:0]       player_state,
     output wire [1:0]       playerbullet_state,
-    output wire [1:0]      invaderbullet_state
+    output wire [1:0]       invaderbullet_state,
+    output wire [1:0]       maingame_state,
     );
 
     assign invaders_display = {invader_4_display,invader_3_display,invader_2_display,invader_1_display};
@@ -196,7 +197,8 @@ module top
         .invader_direction(invader_direction),
         .playerbullet_fire(playerbullet_fire),
         .move_down(move_down),
-        .invaderbullet_fire(invader_fire)
+        .invaderbullet_fire(invader_fire),
+        .maingame_state(state)
     );
 
     // Instantiate Datapath:
