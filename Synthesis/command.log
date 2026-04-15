@@ -8756,3 +8756,25 @@ source -echo -verbose /storage-home/e/ely2/ELEC422/project/elec422_space_invader
 #@ set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
 #@ 
 #@ compile -ungroup_all -map_effort medium
+#@ 
+#@ compile -incremental_mapping -map_effort medium
+#@ 
+#@ check_design
+#@ report_constraint -all_violators
+#@ 
+#@ set filename [format "%s%s"  $my_toplevel ".vh"]
+#@ write -f verilog -output $filename
+#@ 
+#@ set filename [format "%s%s"  $my_toplevel ".sdc"]
+#@ write_sdc $filename
+#@ 
+#@ report_cell 
+#@ report_area 
+#@ report_timing -path full -delay max -max_paths 3 -nworst 1
+#@ report_power
+#@ 
+#@ redirect timing.rep { report_timing }
+#@ redirect cell.rep { report_cell }
+#@ redirect power.rep { report_power }
+#@ 
+#@ quit
