@@ -262,7 +262,7 @@ module top
         .reset, .fire(playerbullet_fire),                          // Global control and reset signals
         .player_coord_x,                        // Player bullet X coordinate
         .player_coord_y,                        // Player bullet Y coordinate
-        .player_bullet_collision,               // Signal to indicate if the player bullet has collided with an invader
+        .player_bullet_collision(playerbullet_invader_collision_signal),               // Signal to indicate if the player bullet has collided with an invader
         .shield_bullet_collision(playerbullet_shield_collision_signal),               // Signal to indicate if the player bullet has collided with a shield
         .display(player_bullet_display),                               // Signal to indicate if the player bullet should be displayed on the screen
         .player_bullet_coord_x,                 // Player bullet X coordinate
