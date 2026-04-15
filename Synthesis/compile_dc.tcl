@@ -12,10 +12,10 @@
 #/* Edit this part only of the file.                                     */
 #/* Add all verilog files, separated by spaces after keyword "list"      */
 
-set my_verilog_files [list circuit.v]
+set my_verilog_files [list top.v datapath.v main_game_fsm.v player_fsm.v shield_fsm.v player_bullet_fsm.v invader_fsm.v invader_bullet_fsm.v]
 
 #/* Top-level Module Name update                             */
-set my_toplevel circuit
+set my_toplevel top
 
 #/* The name of the clock pin. If no clock-pin     */
 #/* exists, pick anything                          */
