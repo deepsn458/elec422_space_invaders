@@ -73,16 +73,24 @@ module main_game_fsm
                        (player_coordinate_x - invader4_coordinate_x) : 
                        (invader4_coordinate_x - player_coordinate_x);
 
+    wire [5:0] diff_alive1 =    invaders_display[0] ? diff1 : 6'b111111;
+    wire [5:0] diff_alive2 =    invaders_display[1] ? diff2 : 6'b111111;
+    wire [5:0] diff_alive3 =    invaders_display[2] ? diff3 : 6'b111111;
+    wire [5:0] diff_alive4 =    invaders_display[3] ? diff4 : 6'b111111;
+
     // Compare Invader 1 and Invader 2
-    wire [5:0] min_diff_12    = (diff1 < diff2) ? diff1 : diff2;
-    wire [5:0] closest_loc_12 = (diff1 < diff2) ? invader1_coordinate_x : invader2_coordinate_x;
+    wire [5:0] min_diff_12    = (diff_alive1 < diff_alive2) ? diff_alive1 : diff_alive2;
+    wire [5:0] closest_loc_x_12 = (diff_alive1 < diff_alive2) ? invader1_coordinate_x : invader2_coordinate_x;
+    wire [5:0] closest_loc_y_12 = (diff_alive1 < diff_alive2) ? invader1_coordinate_y : invader2_coordinate_y;
 
     // Compare Invader 3 and Invader 4
-    wire [5:0] min_diff_34    = (diff3 < diff4) ? diff3 : diff4;
-    wire [5:0] closest_loc_34 = (diff3 < diff4) ? invader3_coordinate_x : invader4_coordinate_x;
+    wire [5:0] min_diff_34    = (diff_alive3 < diff_alive4) ? diff_alive3 : diff_alive4;
+    wire [5:0] closest_loc_x_34 = (diff_alive3 < diff_alive4) ? invader3_coordinate_x : invader4_coordinate_x;
+    wire [5:0] closest_loc_y_34 = (diff_alive3 < diff_alive4) ? invader3_coordinate_y : invader4_coordinate_y;
     
     // Compare the winners of the two pairs to get the final coordinate
-    assign closest_invader_coord_x = (min_diff_12 < min_diff_34) ? closest_loc_12 : closest_loc_34;
+    assign closest_invader_coord_x = (min_diff_12 < min_diff_34) ? closest_loc_x_12 : closest_loc_x_34;
+    assign closest_invader_coord_y = (min_diff_12 < min_diff_34) ? closest_loc_y_12 : closest_loc_y_34;
 
     // Combinational logic to calculate upcoming tempt state
     always @(*) begin
