@@ -60,7 +60,7 @@ module datapath
     reg [DISPLAY_SIZE:0] next_display [DISPLAY_SIZE:0];
 
     // Logic to set temp_display based on locations of entities
-    integer row, col, i;
+    integer row, col, i, j;
 
     always @(*) begin
         for (row = 0; row <= DISPLAY_SIZE; row = row + 1) begin
@@ -188,9 +188,9 @@ module datapath
     // Sequential logic to set outputs
     always @ (negedge clkb) begin : OUTPUT_LOGIC
         if (reset) begin
-            for (i = 0; i < (DISPLAY_SIZE + 1); i = i + 1) internal_display[i] <= 0;
+            for (j = 0; j < (DISPLAY_SIZE + 1); j = j + 1) internal_display[j] <= 0;
         end else begin
-            for (i = 0; i < (DISPLAY_SIZE + 1); i = i + 1) internal_display[i] <= next_display[i];
+            for (j = 0; j < (DISPLAY_SIZE + 1); j = j + 1) internal_display[j] <= next_display[j];
         end
     end
 

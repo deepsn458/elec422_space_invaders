@@ -23,7 +23,7 @@ set my_toplevel top
 set my_clock_pin clka
 
 #/* Target frequency in MHz for optimization       */
-set my_clk_freq_MHz 1
+set my_clk_freq_MHz 50
 
 #/* Delay of input signals (Clock-to-Q, Package etc.)  */
 set my_input_delay_ns 1

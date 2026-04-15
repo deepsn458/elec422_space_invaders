@@ -136,6 +136,9 @@ module main_game_fsm
             invader_direction <= DIRECTION_RIGHT;
             playerbullet_fire <= 0;
             invaderbullet_fire <= 0;
+            move_down <= 0;
+            prev_invader_outofbounds <= 0;
+
         end else begin
         case(next_state)
             INIT: begin
