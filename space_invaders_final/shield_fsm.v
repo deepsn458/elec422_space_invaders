@@ -15,7 +15,7 @@ module shield_fsm
     parameter HP_0 = 0,
     parameter START_X = 15,
     parameter START_Y = 10,
-    parameter SHIELD_RADIUS = 5
+    parameter SHIELD_DIAMETER = 2           // This is the diameter NOT INCLUDING CENTRAL PIXEL (aka how many pixels extending out from central pixel)
 ) (
     input wire clka,
     input wire clkb,
@@ -42,11 +42,11 @@ module shield_fsm
     //internal wire to track shield coordinates
     wire invaderbullet_collision_x, invaderbullet_collision_y, 
          playerbullet_collision_x, playerbullet_collision_y, playerbullet_shield_distance;
-    assign invaderbullet_collision_x = (invader_bullet_coord_x <= (shield_coord_x + SHIELD_RADIUS)) && (invader_bullet_coord_x >= (shield_coord_x - SHIELD_RADIUS));
+    assign invaderbullet_collision_x = (invader_bullet_coord_x <= (shield_coord_x + SHIELD_DIAMETER)) && (invader_bullet_coord_x >= (shield_coord_x - SHIELD_DIAMETER));
     assign invaderbullet_collision_y = invader_bullet_coord_y == shield_coord_y;
     
 
-    assign playerbullet_collision_x = (player_bullet_coord_x <= (shield_coord_x + SHIELD_RADIUS)) && (player_bullet_coord_x >= (shield_coord_x -SHIELD_RADIUS));
+    assign playerbullet_collision_x = (player_bullet_coord_x <= (shield_coord_x + SHIELD_DIAMETER)) && (player_bullet_coord_x >= (shield_coord_x -SHIELD_DIAMETER));
     assign playerbullet_collision_y = player_bullet_coord_y == shield_coord_y;
     always @ (*) begin
         case (state)
