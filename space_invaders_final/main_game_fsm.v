@@ -55,34 +55,18 @@ module main_game_fsm
     assign invader_outofbounds = invader_outofbounds_signal_1|invader_outofbounds_signal_2|invader_outofbounds_signal_3|invader_outofbounds_signal_4;
     reg prev_invader_outofbounds;
 /****************************************************************************/
-    task find_closest_invader;
-    reg [5:0] diff [0:3];
-    reg [5:0] min_diff;
-    reg [1:0] min_idx;
-    integer i;
-    begin
-    // Absolute differences
-    diff[0] = (invader1_coordinate_x >= invaderbullet_coord_x) ? (invader1_coordinate_x - invaderbullet_coord_x) : (invaderbullet_coord_x - invader1_coordinate_x);
-    diff[1] = (invader2_coordinate_x >= invaderbullet_coord_x) ? (invader2_coordinate_x - invaderbullet_coord_x) : (invaderbullet_coord_x - invader2_coordinate_x);
-    diff[2] = (invader3_coordinate_x >= invaderbullet_coord_x) ? (invader3_coordinate_x - invaderbullet_coord_x) : (invaderbullet_coord_x - invader3_coordinate_x);
-    diff[3] = (invader4_coordinate_x >= invaderbullet_coord_x) ? (invader4_coordinate_x - invaderbullet_coord_x) : (invaderbullet_coord_x - invader4_coordinate_x);
+    
+    // Compare Invader 1 and Invader 2
+    wire [5:0] min_diff_12    = (diff1 < diff2) ? diff1 : diff2;
+    wire [5:0] closest_loc_12 = (diff1 < diff2) ? invader1_coordinate_x : invader2_coordinate_x;
 
-    min_diff = diff[0];
-    min_idx  = 0;
-    for (i = 1; i < 4; i = i + 1) begin
-        if ((diff[i] < min_diff) && (invaders_display[i] == 1)) begin
-            min_diff = diff[i];
-            min_idx  = i;
-        end
-    end
-    case (min_idx)
-        2'd0: begin closest_invader_coord_x = invader1_coordinate_x; closest_invader_coord_y = invader1_coordinate_y; end
-        2'd1: begin closest_invader_coord_x = invader2_coordinate_x; closest_invader_coord_y = invader2_coordinate_y; end
-        2'd2: begin closest_invader_coord_x = invader3_coordinate_x; closest_invader_coord_y = invader3_coordinate_y; end
-        2'd3: begin closest_invader_coord_x = invader4_coordinate_x; closest_invader_coord_y = invader4_coordinate_y; end
-    endcase
-    end
-    endtask
+    // Compare Invader 3 and Invader 4
+    wire [5:0] min_diff_34    = (diff3 < diff4) ? diff3 : diff4;
+    wire [5:0] closest_loc_34 = (diff3 < diff4) ? invader3_coordinate_x : invader4_coordinate_x;
+    
+    // Compare the winners of the two pairs to get the final coordinate
+    assign closest_invader_coord_x = (min_diff_12 < min_diff_34) ? closest_loc_12 : closest_loc_34;
+
     // Combinational logic to calculate upcoming tempt state
     always @(*) begin
         case(state)
@@ -154,9 +138,6 @@ module main_game_fsm
                     move_down <= 0;
                 end
                 prev_invader_outofbounds <= invader_outofbounds;
-
-                //find closest invader coordinate
-                find_closest_invader();
             end
         endcase
         end
