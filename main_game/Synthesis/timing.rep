@@ -4,17 +4,17 @@ Report : timing
         -path full
         -delay max
         -max_paths 1
-Design : player_fsm
+Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Tue Mar  3 16:14:01 2026
+Date   : Wed Apr 15 16:08:03 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
 Wire Load Model Mode: top
 
-  Startpoint: invader_bullet_coord_x[0]
+  Startpoint: player_coordinate_x[0]
               (input port clocked by clka)
-  Endpoint: next_state_reg[1]
+  Endpoint: next_state_reg[0]
             (falling edge-triggered flip-flop clocked by clka)
   Path Group: clka
   Path Type: max
@@ -23,36 +23,54 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clka (rise edge)                   0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  input external delay                     1.00       1.00 f
-  invader_bullet_coord_x[0] (in)           0.28       1.28 f
-  U84/Y (OR2X1)                            0.33       1.61 f
-  r389/U2_1/YC (FAX1)                      0.45       2.06 f
-  r389/U2_2/YC (FAX1)                      0.46       2.51 f
-  r389/U2_3/YC (FAX1)                      0.45       2.97 f
-  r389/U2_4/YC (FAX1)                      0.45       3.42 f
-  r389/U2_5/YS (FAX1)                      0.48       3.90 f
-  U144/Y (NAND3X1)                         0.20       4.09 r
-  U145/Y (NOR2X1)                          0.13       4.23 f
-  U74/Y (NAND2X1)                          0.11       4.34 r
-  U73/Y (OAI21X1)                          0.09       4.43 f
-  U69/Y (NAND3X1)                          0.15       4.59 r
-  U64/Y (OR2X1)                            0.26       4.84 r
-  U60/Y (NOR2X1)                           0.16       5.00 f
-  U59/Y (AOI22X1)                          0.15       5.15 r
-  U58/Y (NOR2X1)                           0.11       5.27 f
-  next_state_reg[1]/D (DFFNEGX1)           0.00       5.27 f
-  data arrival time                                   5.27
+  input external delay                     1.00       1.00 r
+  player_coordinate_x[0] (in)              0.36       1.36 r
+  U209/Y (INVX2)                           0.11       1.47 f
+  U205/Y (INVX2)                           0.34       1.81 r
+  U293/Y (INVX2)                           0.42       2.23 f
+  U225/Y (OR2X1)                           0.32       2.55 f
+  sub_72_2/U2_1/YC (FAX1)                  0.45       3.00 f
+  sub_72_2/U2_2/YC (FAX1)                  0.46       3.46 f
+  sub_72_2/U2_3/YC (FAX1)                  0.46       3.92 f
+  sub_72_2/U2_4/YC (FAX1)                  0.46       4.38 f
+  sub_72_2/U2_5/YS (FAX1)                  0.44       4.82 r
+  U101/Y (AOI22X1)                         0.13       4.95 f
+  U100/Y (NAND2X1)                         0.28       5.23 r
+  U386/Y (NOR2X1)                          0.26       5.49 f
+  U277/Y (INVX2)                           0.10       5.59 r
+  U388/Y (OAI21X1)                         0.10       5.69 f
+  U398/Y (OAI22X1)                         0.51       6.20 r
+  U272/Y (INVX2)                           0.38       6.58 f
+  U90/Y (AOI22X1)                          0.23       6.81 r
+  U402/Y (NAND2X1)                         0.15       6.96 f
+  U403/Y (NAND3X1)                         0.18       7.14 r
+  U404/Y (OAI21X1)                         0.16       7.30 f
+  U251/Y (INVX2)                           0.09       7.39 r
+  U409/Y (OAI21X1)                         0.08       7.47 f
+  U410/Y (OAI21X1)                         0.13       7.60 r
+  U411/Y (OAI22X1)                         0.22       7.82 f
+  U192/Y (AND2X2)                          0.61       8.43 f
+  U158/Y (AOI22X1)                         0.18       8.61 r
+  U157/Y (NAND2X1)                         0.10       8.71 f
+  U412/Y (AOI21X1)                         0.12       8.83 r
+  U241/Y (AND2X2)                          0.15       8.98 r
+  U189/Y (AOI21X1)                         0.13       9.11 f
+  U188/Y (NAND3X1)                         0.13       9.23 r
+  U187/Y (OAI21X1)                         0.09       9.32 f
+  U194/Y (AND2X2)                          0.20       9.52 f
+  next_state_reg[0]/D (DFFNEGX1)           0.00       9.52 f
+  data arrival time                                   9.52
 
   clock clka (fall edge)                  10.00      10.00
   clock network delay (ideal)              0.00      10.00
-  next_state_reg[1]/CLK (DFFNEGX1)         0.00      10.00 f
+  next_state_reg[0]/CLK (DFFNEGX1)         0.00      10.00 f
   library setup time                      -0.37       9.63
   data required time                                  9.63
   -----------------------------------------------------------
   data required time                                  9.63
-  data arrival time                                  -5.27
+  data arrival time                                  -9.52
   -----------------------------------------------------------
-  slack (MET)                                         4.37
+  slack (MET)                                         0.11
 
 
 1
