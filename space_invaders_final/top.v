@@ -247,8 +247,8 @@ module top
         .reset, .play,                          // Global control and reset signals
         .invader_direction,                     // direction bit for horizontal movement (left is 0)
         .move_down,                             // Tells invader to move down
-        .player_bullet_coord_x(invader_4_coord_x),                 // Player bullet X coordinate
-        .player_bullet_coord_y(invader_4_coord_y),                 // Player bullet Y coordinate
+        .player_bullet_coord_x,                 // Player bullet X coordinate
+        .player_bullet_coord_y,                 // Player bullet Y coordinate
         .display(invader_4_display),                               // Bit indicating if invader is still alive. Can be used as display bit
         .playerbullet_invader_collision_signal(playerbullet_invader_collision_signal_4), // Signal indicating if an invader has been hit by a player bullet
         .invader_coord_x(invader_4_coord_x),                       // Player bullet X coordinate
