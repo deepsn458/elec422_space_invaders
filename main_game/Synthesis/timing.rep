@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 16:32:39 2026
+Date   : Wed Apr 15 17:59:59 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells

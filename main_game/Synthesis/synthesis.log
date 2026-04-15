@@ -29,19 +29,19 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-Current time:       Wed Apr 15 16:32:35 2026
+Current time:       Wed Apr 15 17:59:56 2026
 Hostname:           opal.clear8.rice.edu
 CPU Model:          Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
-CPU Details:        Cores = 40 : Sockets = 2 : Cache Size = 25600 KB : Freq = 3.17 GHz
+CPU Details:        Cores = 40 : Sockets = 2 : Cache Size = 25600 KB : Freq = 3.40 GHz
 OS:                 Linux 4.18.0-553.89.1.el8_10.x86_64
-RAM:                125 GB (Free  26 GB)
+RAM:                125 GB (Free  29 GB)
 Swap:                15 GB (Free  15 GB)
 Work Filesystem:    /storage-home/d/dn55 mounted to clearstor.clear.rice.edu:/clear-home/dn55
 Tmp Filesystem:     /tmp mounted to /dev/mapper/vg0-tmp
-Work Disk:          5038 GB (Free 804 GB)
+Work Disk:          5038 GB (Free 803 GB)
 Tmp Disk:             5 GB (Free   5 GB)
 
-CPU Load: 23%, Ram Free: 26 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
+CPU Load: 13%, Ram Free: 29 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
 #/**************************************************/
 #/* Compile Script for Synopsys                    */
 #/*                                                */
@@ -279,7 +279,7 @@ set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all
 set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
 1
 compile -ungroup_all -map_effort medium
-CPU Load: 23%, Ram Free: 26 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
+CPU Load: 13%, Ram Free: 29 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -422,7 +422,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 23%, Ram Free: 26 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
+CPU Load: 13%, Ram Free: 29 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -444,7 +444,7 @@ Unmapped MV Cells
 ----------------------------------------------------------------------------------------------------
 1
 compile -incremental_mapping -map_effort medium
-CPU Load: 23%, Ram Free: 26 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
+CPU Load: 13%, Ram Free: 29 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
 ====================================================================================================
 | Flow Information                                                                                 |
 ----------------------------------------------------------------------------------------------------
@@ -502,7 +502,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 23%, Ram Free: 26 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
+CPU Load: 13%, Ram Free: 29 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -528,7 +528,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     U-2022.12-SP7
-Date:        Wed Apr 15 16:32:38 2026
+Date:        Wed Apr 15 17:59:58 2026
 ****************************************
 
                    Name                                            Total
@@ -568,7 +568,7 @@ Report : constraint
         -all_violators
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 16:32:38 2026
+Date   : Wed Apr 15 17:59:58 2026
 ****************************************
 
 This design has no violated constraints.
@@ -590,7 +590,7 @@ report_cell
 Report : cell
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 16:32:38 2026
+Date   : Wed Apr 15 17:59:58 2026
 ****************************************
 
 Attributes:
@@ -1053,7 +1053,7 @@ report_area
 Report : area
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 16:32:38 2026
+Date   : Wed Apr 15 17:59:58 2026
 ****************************************
 
 Information: Updating design information... (UID-85)
@@ -1088,7 +1088,7 @@ Report : timing
         -max_paths 3
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 16:32:38 2026
+Date   : Wed Apr 15 17:59:58 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
@@ -1275,7 +1275,7 @@ Report : power
         -analysis_effort low
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 16:32:39 2026
+Date   : Wed Apr 15 17:59:59 2026
 ****************************************
 
 
@@ -1330,7 +1330,7 @@ quit
 
 Memory usage for this session 108 Mbytes.
 Memory usage for this session including child processes 108 Mbytes.
-CPU usage for this session 6 seconds ( 0.00 hours ).
-Elapsed time for this session 13 seconds ( 0.00 hours ).
+CPU usage for this session 5 seconds ( 0.00 hours ).
+Elapsed time for this session 8 seconds ( 0.00 hours ).
 
 Thank you...

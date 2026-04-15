@@ -252,7 +252,8 @@ module top
         .player_right_input(player_right_motion),                    // Player's right input
         .player_coord_x(player_coord_x),                        // Player X coordinate
         .player_coord_y(player_coord_y),                        // Player Y coordinate
-        .display(player_display)                              // Signal to indicate if the player should be displayed on the screen
+        .display(player_display),
+        .state(player_state)                              // Signal to indicate if the player should be displayed on the screen
     );
 
     // Instantiate Shield FSM:
@@ -264,13 +265,13 @@ module top
         .player_bullet_coord_x(player_bullet_coord_x),
         .player_bullet_coord_y(player_bullet_coord_y),
         .shield_play(play),
-
         .hp(shield_hp),
         .shield_display(shield_display),
         .invaderbullet_shield_collision(invaderbullet_shield_collision_signal),
         .playerbullet_shield_collision(playerbullet_shield_collision_signal),
         .shield_coord_x(shield_coord_x),
-        .shield_coord_y(shield_coord_y)
+        .shield_coord_y(shield_coord_y),
+        
     );
 
     // Instantiate 4 Invaders
@@ -285,7 +286,8 @@ module top
         .playerbullet_invader_collision_signal(playerbullet_invader_collision_signal_1), // Signal indicating if an invader has been hit by a player bullet
         .invader_coord_x(invader_1_coord_x),                       // Player bullet X coordinate
         .invader_coord_y(invader_1_coord_y),                       // Player bullet Y coordinate
-        .invader_outofbounds_signal(invader_outofbounds_signal_1)            // tells main game fsm when invader hits boundary
+        .invader_outofbounds_signal(invader_outofbounds_signal_1)  
+        .state(invader_state_1)          // tells main game fsm when invader hits boundary
     );
 
     invader_fsm #( .START_X(6'd12), .START_Y(6'd30)) invader_fsm_2(
@@ -299,7 +301,8 @@ module top
         .playerbullet_invader_collision_signal(playerbullet_invader_collision_signal_2), // Signal indicating if an invader has been hit by a player bullet
         .invader_coord_x(invader_2_coord_x),                       // Player bullet X coordinate
         .invader_coord_y(invader_2_coord_y),                        // Player bullet Y coordinate
-        .invader_outofbounds_signal(invader_outofbounds_signal_2)              // tells main game fsm when invader hits boundary                             // Current state of this invader
+        .invader_outofbounds_signal(invader_outofbounds_signal_2),
+        .state(invader_state_2)               // tells main game fsm when invader hits boundary                             // Current state of this invader
     );
 
     invader_fsm #( .START_X(6'd18), .START_Y(6'd30)) invader_fsm_3(
@@ -313,7 +316,8 @@ module top
         .playerbullet_invader_collision_signal(playerbullet_invader_collision_signal_3), // Signal indicating if an invader has been hit by a player bullet
         .invader_coord_x(invader_3_coord_x),                       // Player bullet X coordinate
         .invader_coord_y(invader_3_coord_y),                       // Player bullet Y coordinate
-        .invader_outofbounds_signal(invader_outofbounds_signal_3)              // tells main game fsm when invader hits boundary
+        .invader_outofbounds_signal(invader_outofbounds_signal_3),
+        .state(invader_state_3)               // tells main game fsm when invader hits boundary
     );
 
     invader_fsm #( .START_X(6'd24), .START_Y(6'd30)) invader_fsm_4(
@@ -327,7 +331,8 @@ module top
         .playerbullet_invader_collision_signal(playerbullet_invader_collision_signal_4), // Signal indicating if an invader has been hit by a player bullet
         .invader_coord_x(invader_4_coord_x),                       // Player bullet X coordinate
         .invader_coord_y(invader_4_coord_y),                       // Player bullet Y coordinate
-        .invader_outofbounds_signal(invader_outofbounds_signal_4)            // tells main game fsm when invader hits boundary
+        .invader_outofbounds_signal(invader_outofbounds_signal_4),
+        .state(invader_state_3)             // tells main game fsm when invader hits boundary
     );
 
     // Instantiate Player Bullet FSM:

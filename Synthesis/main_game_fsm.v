@@ -133,7 +133,7 @@ module main_game_fsm
             player_right_motion <= 0;
             play <= 0;
             reset <= 1;
-            invader_direction <= DIRECTION_RIGHT;
+            invader_direction <= 1;
             playerbullet_fire <= 0;
             invaderbullet_fire <= 0;
             move_down <= 0;
@@ -145,6 +145,8 @@ module main_game_fsm
                 state <= next_state;
                 play <= 0;
                 reset <= 1;
+                invader_direction <= 1;
+                prev_invader_outofbounds <= 0;
             end
 
             IN_GAME: begin

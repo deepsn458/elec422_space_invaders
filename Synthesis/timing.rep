@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : top
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 17:37:31 2026
+Date   : Wed Apr 15 17:50:36 2026
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -26,8 +26,8 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   input external delay                                    1.00       1.00 r
   reset (in)                                              0.21       1.21 r
-  U2713/Y (INVX2)                                         0.16       1.38 f
-  U77/Y (AND2X2)                                          0.19       1.57 f
+  U2664/Y (INVX2)                                         0.16       1.38 f
+  U59/Y (AND2X2)                                          0.19       1.57 f
   main_game_fsm/next_state_reg[0]/D (DFFNEGX1)            0.00       1.57 f
   data arrival time                                                  1.57
 
