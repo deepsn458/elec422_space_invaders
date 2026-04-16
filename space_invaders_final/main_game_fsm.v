@@ -163,11 +163,12 @@ module main_game_fsm
                 //send commands to player and player bullet
                 {playerbullet_fire, player_right_motion, player_left_motion} <= {player_shoot_input, player_right_input, player_left_input};
             end
-
             DIRECTION_CHANGE: begin
+                state <= next_state;
                 invader_direction <= ~invader_direction;
                 move_down <= 1;
             end
+            default: state <= INIT;
         endcase
         end
         end
