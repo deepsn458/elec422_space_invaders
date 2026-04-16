@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : top
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 23:01:57 2026
+Date   : Wed Apr 15 23:28:19 2026
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
