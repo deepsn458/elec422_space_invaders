@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version U-2022.12-SP7 for linux64 -- Oct 10, 2023
-#@ # Date:   Wed Apr 15 23:22:31 2026
+#@ # Date:   Thu Apr 16 00:06:31 2026
 #@ # Run by: dn55@borax.clear8.rice.edu
 #@ 
 
@@ -8756,25 +8756,3 @@ source -echo -verbose /storage-home/d/dn55/elec422_space_invaders/Synthesis/comp
 #@ set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
 #@ 
 #@ compile -ungroup_all -map_effort medium
-#@ 
-#@ compile -incremental_mapping -map_effort medium
-#@ 
-#@ check_design
-#@ report_constraint -all_violators
-#@ 
-#@ set filename [format "%s%s"  $my_toplevel ".vh"]
-#@ write -f verilog -output $filename
-#@ 
-#@ set filename [format "%s%s"  $my_toplevel ".sdc"]
-#@ write_sdc $filename
-#@ 
-#@ report_cell 
-#@ report_area 
-#@ report_timing -path full -delay max -max_paths 3 -nworst 1
-#@ report_power
-#@ 
-#@ redirect timing.rep { report_timing }
-#@ redirect cell.rep { report_cell }
-#@ redirect power.rep { report_power }
-#@ 
-#@ quit
