@@ -1,0 +1,17 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2025 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v25.10-p002_1, built Wed Apr 23 12:43:30 PDT 2025
+Options:	-init innovus.tcl -log innovus.log -overwrite 
+Date:		Thu Apr 16 00:22:02 2026
+Host:		borax.clear8.rice.edu (x86_64 w/Linux 4.18.0-553.89.1.el8_10.x86_64) (10cores*40cpus*Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz 25600KB)
+OS:		Red Hat Enterprise Linux 8.10 (Ootpa)
+
+License:
+		[00:22:02.380721] Configured Lic search path (25.01-s002): 5280@cadence.lic.rice.edu
+
+		invs	Innovus Implementation System	25.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+
+**Info: Common UI will be the default UI for innovus in the next major release. Please use -legacy_ui when invoking innovus if you wish to continue to use legacy UI.
