@@ -165,6 +165,7 @@ module main_game_fsm
                 // end
                 //send commands to player and player bullet
                 {playerbullet_fire, player_right_motion, player_left_motion} <= {player_shoot_input, player_right_input, player_left_input};
+                prev_invader_outofbounds <= invader_outofbounds;
             end
             DIRECTION_CHANGE: begin
                 state <= next_state;
