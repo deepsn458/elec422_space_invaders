@@ -53,6 +53,7 @@ module main_game_fsm
     parameter INIT = 2'b00, IN_GAME = 2'b01, DIRECTION_CHANGE = 2'b10, END_GAME = 2'b11;
     wire invader_outofbounds;
     assign invader_outofbounds = invader_outofbounds_signal_1|invader_outofbounds_signal_2|invader_outofbounds_signal_3|invader_outofbounds_signal_4;
+    reg prev_invader_outofbounds;
 /****************************************************************************/
     
     // Calculate absolute value differences between player and invaders
@@ -106,7 +107,7 @@ module main_game_fsm
         IN_GAME: begin
             if (invaders_display == 4'b0 || (~player_display) || closest_invader_coord_y <= 5) begin
             temp_state = INIT;
-            end else if (invader_outofbounds) begin
+            end else if (invader_outofbounds & ~prev_invader_outofbounds) begin
                 temp_state = DIRECTION_CHANGE;
             end else begin
             temp_state = IN_GAME;
@@ -142,6 +143,7 @@ module main_game_fsm
                     invader_direction <= 1;
                     playerbullet_fire <= 0;
                     invaderbullet_fire <= 0;
+                    prev_invader_outofbounds <= 0;
         end else begin
         case(next_state)
             INIT: begin
@@ -150,6 +152,7 @@ module main_game_fsm
                 play <= 0;
                 move_down <= 0;
                 reset <= 1;
+                prev_invader_outofbounds <= 0;
             end
             IN_GAME: begin
                 reset <= 0;
@@ -167,6 +170,7 @@ module main_game_fsm
                 state <= next_state;
                 invader_direction <= ~invader_direction;
                 move_down <= 1;
+                prev_invader_outofbounds <= invader_outofbounds;
             end
             default: state <= INIT;
         endcase
