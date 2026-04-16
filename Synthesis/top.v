@@ -198,7 +198,7 @@ module top
         .playerbullet_fire(playerbullet_fire),
         .move_down(move_down),
         .invaderbullet_fire(invader_fire),
-        .maingame_state(state)
+        .state(maingame_state)
     );
 
     // Instantiate Datapath:

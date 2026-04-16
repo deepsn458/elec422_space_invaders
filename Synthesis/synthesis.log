@@ -29,7 +29,7 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-Current time:       Wed Apr 15 22:15:59 2026
+Current time:       Wed Apr 15 22:40:33 2026
 Hostname:           opal.clear8.rice.edu
 CPU Model:          Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
 CPU Details:        Cores = 40 : Sockets = 2 : Cache Size = 25600 KB : Freq = 3.40 GHz
@@ -41,7 +41,7 @@ Tmp Filesystem:     /tmp mounted to /dev/mapper/vg0-tmp
 Work Disk:          5038 GB (Free 804 GB)
 Tmp Disk:             5 GB (Free   5 GB)
 
-CPU Load: 12%, Ram Free: 31 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
+CPU Load: 9%, Ram Free: 31 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
 #/**************************************************/
 #/* Compile Script for Synopsys                    */
 #/*                                                */
@@ -62,8 +62,9 @@ top
 #/* The name of the clock pin. If no clock-pin     */
 #/* exists, pick anything                          */
 #/* For two phase clock, just list clka here       */
-set my_clock_pin clka
-clka
+set my_clock_pin clka clkb
+Error: wrong # args: should be "set varName ?newValue?"
+	Use error_info for more info. (CMD-013)
 #/* Target frequency in MHz for optimization       */
 set my_clk_freq_MHz 50
 50
@@ -99,9 +100,6 @@ true
 analyze -f verilog $my_verilog_files
 Running PRESTO HDLC
 Compiling source file ./top.v
-Error:  ./top.v:93: Syntax error at or near token ')'. (VER-294)
-Error:  ./top.v:277: Instantiation shield_fsm has mixed ordered and named port connections (VER-147)
-Error:  ./top.v:292: Syntax error at or near token '.'. (VER-294)
 Compiling source file ./datapath.v
 Compiling source file ./main_game_fsm.v
 Warning:  ./main_game_fsm.v:53: Parameter keyword used in local parameter declaration. (VER-329)
@@ -115,33 +113,447 @@ Compiling source file ./invader_fsm.v
 Warning:  ./invader_fsm.v:42: Parameter keyword used in local parameter declaration. (VER-329)
 Compiling source file ./invader_bullet_fsm.v
 Warning:  ./invader_bullet_fsm.v:37: Parameter keyword used in local parameter declaration. (VER-329)
-*** Presto compilation terminated with 3 errors. ***
+Presto compilation completed successfully.
 Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
 Loading db file '/clear/apps/synopsys-2023/syn/latest/libraries/syn/dw_foundation.sldb'
-0
+1
 elaborate $my_toplevel
 Loading db file '/clear/apps/synopsys-2023/syn/latest/libraries/syn/gtech.db'
 Loading db file '/clear/apps/synopsys-2023/syn/latest/libraries/syn/standard.sldb'
   Loading link library 'osu05_stdcells'
   Loading link library 'gtech'
 Running PRESTO HDLC
-Warning:  File /storage-home/e/ely2/ELEC422/project/elec422_space_invaders/Synthesis/WORK/top-verilog.pvl not found, or does not contain a usable description of top. (ELAB-320)
-Presto compilation completed successfully.
-0
+Presto compilation completed successfully. (top)
+Elaborated 1 design.
+Current design is now 'top'.
+Information: Building the design 'main_game_fsm'. (HDL-193)
+
+Statistics for case statements in always block at line 96 in file
+	'./main_game_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            97            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 129 in file
+	'./main_game_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           143            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine main_game_fsm line 120 in file
+		'./main_game_fsm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   next_state_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine main_game_fsm line 129 in file
+		'./main_game_fsm.v'.
+========================================================================================
+|        Register Name         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+========================================================================================
+|          reset_reg           | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        move_down_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    invader_direction_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    invaderbullet_fire_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    playerbullet_fire_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| prev_invader_outofbounds_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|          state_reg           | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|    player_left_motion_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   player_right_motion_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|           play_reg           | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+========================================================================================
+Presto compilation completed successfully. (main_game_fsm)
+Information: Building the design 'datapath'. (HDL-193)
+Warning:  ./datapath.v:201: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process
+	in routine datapath line 180 in file
+		'./datapath.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  next_display_reg   | Flip-flop | 1024  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine datapath line 189 in file
+		'./datapath.v'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| internal_display_reg | Flip-flop | 1024  |  Y  | N  | N  | N  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully. (datapath)
+Module: datapath, Elapsed Time: 00:01:12, CPU Time: 00:01:04, Total Mem: 1.37 GB, Mem: 1.27 GB, Time: Wed Apr 15 22:41:46 2026
+Information: Building the design 'player_fsm'. (HDL-193)
+
+Statistics for case statements in always block at line 43 in file
+	'./player_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            44            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 80 in file
+	'./player_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            89            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine player_fsm line 71 in file
+		'./player_fsm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   next_state_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine player_fsm line 80 in file
+		'./player_fsm.v'.
+=====================================================================================================
+|               Register Name               |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================================
+|                display_reg                | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|            player_coord_x_reg             | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|                 state_reg                 | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|            player_coord_y_reg             | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| invaderbullet_player_collision_signal_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=====================================================================================================
+Presto compilation completed successfully. (player_fsm)
+Information: Building the design 'shield_fsm' instantiated from design 'top' with
+	the parameters "START_X=6'h0f,START_Y=6'h05". (HDL-193)
+
+Statistics for case statements in always block at line 51 in file
+	'./shield_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            52            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 86 in file
+	'./shield_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            96            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine shield_fsm_0f_05 line 77 in file
+		'./shield_fsm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   next_state_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine shield_fsm_0f_05 line 86 in file
+		'./shield_fsm.v'.
+==============================================================================================
+|           Register Name            |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+==============================================================================================
+|         shield_coord_x_reg         | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|         shield_coord_y_reg         | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| playerbullet_shield_collision_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| invaderbullet_shield_collision_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|         shield_display_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|             state_reg              | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+|               hp_reg               | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+==============================================================================================
+Presto compilation completed successfully. (shield_fsm_0f_05)
+Information: Building the design 'invader_fsm' instantiated from design 'top' with
+	the parameters "START_X=6'h06,START_Y=6'h1e". (HDL-193)
+Warning:  ./invader_fsm.v:128: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./invader_fsm.v:136: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 53 in file
+	'./invader_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            54            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 94 in file
+	'./invader_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           104            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine invader_fsm_06_1e line 81 in file
+		'./invader_fsm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   next_state_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine invader_fsm_06_1e line 94 in file
+		'./invader_fsm.v'.
+=====================================================================================================
+|               Register Name               |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================================
+|                display_reg                | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|            invader_coord_x_reg            | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|            invader_coord_y_reg            | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      invader_outofbounds_signal_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 state_reg                 | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+| playerbullet_invader_collision_signal_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|         move_interval_toggle_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=====================================================================================================
+Presto compilation completed successfully. (invader_fsm_06_1e)
+Information: Building the design 'invader_fsm' instantiated from design 'top' with
+	the parameters "START_X=6'h0c,START_Y=6'h1e". (HDL-193)
+Warning:  ./invader_fsm.v:128: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./invader_fsm.v:136: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 53 in file
+	'./invader_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            54            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 94 in file
+	'./invader_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           104            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine invader_fsm_0c_1e line 81 in file
+		'./invader_fsm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   next_state_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine invader_fsm_0c_1e line 94 in file
+		'./invader_fsm.v'.
+=====================================================================================================
+|               Register Name               |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================================
+|                display_reg                | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|            invader_coord_x_reg            | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|            invader_coord_y_reg            | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      invader_outofbounds_signal_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 state_reg                 | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+| playerbullet_invader_collision_signal_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|         move_interval_toggle_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=====================================================================================================
+Presto compilation completed successfully. (invader_fsm_0c_1e)
+Information: Building the design 'invader_fsm' instantiated from design 'top' with
+	the parameters "START_X=6'h12,START_Y=6'h1e". (HDL-193)
+Warning:  ./invader_fsm.v:128: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./invader_fsm.v:136: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 53 in file
+	'./invader_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            54            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 94 in file
+	'./invader_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           104            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine invader_fsm_12_1e line 81 in file
+		'./invader_fsm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   next_state_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine invader_fsm_12_1e line 94 in file
+		'./invader_fsm.v'.
+=====================================================================================================
+|               Register Name               |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================================
+|                display_reg                | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|            invader_coord_x_reg            | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|            invader_coord_y_reg            | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      invader_outofbounds_signal_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 state_reg                 | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+| playerbullet_invader_collision_signal_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|         move_interval_toggle_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=====================================================================================================
+Presto compilation completed successfully. (invader_fsm_12_1e)
+Information: Building the design 'invader_fsm' instantiated from design 'top' with
+	the parameters "START_X=6'h18,START_Y=6'h1e". (HDL-193)
+Warning:  ./invader_fsm.v:128: signed to unsigned conversion occurs. (VER-318)
+Warning:  ./invader_fsm.v:136: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 53 in file
+	'./invader_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            54            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 94 in file
+	'./invader_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           104            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine invader_fsm_18_1e line 81 in file
+		'./invader_fsm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   next_state_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine invader_fsm_18_1e line 94 in file
+		'./invader_fsm.v'.
+=====================================================================================================
+|               Register Name               |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================================
+|                display_reg                | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|            invader_coord_x_reg            | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|            invader_coord_y_reg            | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|      invader_outofbounds_signal_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|                 state_reg                 | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+| playerbullet_invader_collision_signal_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|         move_interval_toggle_reg          | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+=====================================================================================================
+Presto compilation completed successfully. (invader_fsm_18_1e)
+Information: Building the design 'player_bullet_fsm'. (HDL-193)
+
+Statistics for case statements in always block at line 39 in file
+	'./player_bullet_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            40            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 72 in file
+	'./player_bullet_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            79            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine player_bullet_fsm line 63 in file
+		'./player_bullet_fsm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   next_state_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine player_bullet_fsm line 72 in file
+		'./player_bullet_fsm.v'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+| player_bullet_coord_y_reg | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| player_bullet_coord_x_reg | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|        display_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|         state_reg         | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+=====================================================================================
+Presto compilation completed successfully. (player_bullet_fsm)
+Information: Building the design 'invader_bullet_fsm'. (HDL-193)
+
+Statistics for case statements in always block at line 39 in file
+	'./invader_bullet_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            40            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 69 in file
+	'./invader_bullet_fsm.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            76            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine invader_bullet_fsm line 60 in file
+		'./invader_bullet_fsm.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   next_state_reg    | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine invader_bullet_fsm line 69 in file
+		'./invader_bullet_fsm.v'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+| invader_bullet_coord_x_reg | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| invader_bullet_display_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| invader_bullet_coord_y_reg | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|         state_reg          | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+======================================================================================
+Presto compilation completed successfully. (invader_bullet_fsm)
+1
 current_design $my_toplevel
-Error: Can't find design 'top'. (UID-109)
-Error: Current design is not defined. (UID-4)
+Current design is 'top'.
+{top}
 link
-Error: Current design is not defined. (UID-4)
-0
+
+  Linking design 'top'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  osu05_stdcells (library)    /clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db
+  dw_foundation.sldb (library) /clear/apps/synopsys-2023/syn/latest/libraries/syn/dw_foundation.sldb
+
+1
 uniquify
-Error: Current design is not defined. (UID-4)
-0
+1
 set my_period [expr 1000 / $my_clk_freq_MHz]
 20
 set find_clock [ find port [list $my_clock_pin] ]
-Error: Current design is not defined. (UID-4)
-Error: Can't find port 'clka'. (UID-109)
+Error: can't read "my_clock_pin": no such variable
+	Use error_info for more info. (CMD-013)
 if {  $find_clock != [list] } {
    set clk_name $my_clock_pin
    create_clock -period $my_period $clk_name
@@ -149,68 +561,98 @@ if {  $find_clock != [list] } {
    set clk_name vclk
    create_clock -period $my_period -name $clk_name
 }
-Error: Current design is not defined. (UID-4)
-0
+Error: can't read "find_clock": no such variable
+	Use error_info for more info. (CMD-013)
 set_driving_cell  -lib_cell INVX1  [all_inputs]
-Error: Current design is not defined. (UID-4)
-Error: Value for list 'port_list' must have 1 elements. (CMD-036)
-0
+Warning: Design rule attributes from the driving cell will be set on the port 'clka'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'clkb'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'reset'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_left_input'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_right_input'. (UID-401)
+Warning: Design rule attributes from the driving cell will be set on the port 'player_shoot_input'. (UID-401)
+1
 set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all_inputs] $my_clock_pin]
-Error: Current design is not defined. (UID-4)
-Error: Current design is not defined. (UID-4)
-Error: Can't find clock 'vclk'. (UID-109)
-Error: Value for list '-clock' must have 1 elements. (CMD-036)
-Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
-0
+Error: can't read "clk_name": no such variable
+	Use error_info for more info. (CMD-013)
 set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
-Error: Current design is not defined. (UID-4)
-Error: Current design is not defined. (UID-4)
-Error: Can't find clock 'vclk'. (UID-109)
-Error: Value for list '-clock' must have 1 elements. (CMD-036)
-Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
-0
+Error: can't read "clk_name": no such variable
+	Use error_info for more info. (CMD-013)
 compile -ungroup_all -map_effort medium
-Error: Current design is not defined. (UID-4)
-0
-compile -incremental_mapping -map_effort medium
-Error: Current design is not defined. (UID-4)
-0
-check_design
-Error: Current design is not defined. (UID-4)
-0
-report_constraint -all_violators
-Error: Current design is not defined. (UID-4)
-0
-set filename [format "%s%s"  $my_toplevel ".vh"]
-top.vh
-write -f verilog -output $filename
-Error: No files or designs were specified. (UID-22)
-0
-set filename [format "%s%s"  $my_toplevel ".sdc"]
-top.sdc
-write_sdc $filename
-Error: Current design is not defined. (UID-4)
-0
-report_cell 
-Error: Current design is not defined. (UID-4)
-0
-report_area 
-Error: Current design is not defined. (UID-4)
-0
-report_timing -path full -delay max -max_paths 3 -nworst 1
-Error: Current design is not defined. (UID-4)
-0
-report_power
-Error: Current design is not defined. (UID-4)
-0
-redirect timing.rep { report_timing }
-redirect cell.rep { report_cell }
-redirect power.rep { report_power }
-quit
+CPU Load: 10%, Ram Free: 28 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
 
-Memory usage for this session 88 Mbytes.
-Memory usage for this session including child processes 88 Mbytes.
-CPU usage for this session 4 seconds ( 0.00 hours ).
-Elapsed time for this session 5 seconds ( 0.00 hours ).
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.5 |     *     |
+| Licensed DW Building Blocks        | U-2022.12-DWBB_202212.5 |     *     |
+============================================================================
 
-Thank you...
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 179401                                 |
+| Number of User Hierarchies                              | 10                                     |
+| Sequential Cell Count                                   | 2214                                   |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 1                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 0                                      |
+| Number of Dont Touch Cells                              | 28718                                  |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+
+Information: There are 721 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'invader_bullet_fsm'
+Information: The register 'next_state_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[1]' is a constant and will be removed. (OPT-1206)
+  Processing 'player_bullet_fsm'
+Information: The register 'next_state_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[1]' is a constant and will be removed. (OPT-1206)
+  Processing 'invader_fsm_18_1e'
+  Processing 'invader_fsm_12_1e'
+  Processing 'invader_fsm_0c_1e'
+  Processing 'invader_fsm_06_1e'
+  Processing 'shield_fsm_0f_05'
+Information: The register 'shield_coord_x_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'shield_coord_x_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'shield_coord_x_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'shield_coord_x_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'shield_coord_x_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'shield_coord_x_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'shield_coord_y_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'shield_coord_y_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'shield_coord_y_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'shield_coord_y_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'shield_coord_y_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'shield_coord_y_reg[5]' is a constant and will be removed. (OPT-1206)
+  Processing 'player_fsm'
+Information: The register 'player_coord_y_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'player_coord_y_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'player_coord_y_reg[4]' is a constant and will be removed. (OPT-1206)
+Information: The register 'player_coord_y_reg[3]' is a constant and will be removed. (OPT-1206)
+Information: The register 'player_coord_y_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'player_coord_y_reg[1]' is a constant and will be removed. (OPT-1206)
+  Processing 'datapath'
+
+Information: Ignoring interrupt signal since design is being mapped.
+             One more interrupt will abort optimization without
+             transferring the design... (INT-7)
+
+Information: Aborting optimization without transferring the design... (INT-8)
+
+Information: Process terminated by interrupt. (INT-4)

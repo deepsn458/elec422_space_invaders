@@ -1,2 +1,54 @@
-Error: Current design is not defined. (UID-4)
-0
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : top
+Version: U-2022.12-SP7
+Date   : Wed Apr 15 22:31:27 2026
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =  92.8865 mW   (95%)
+  Net Switching Power  =   5.2680 mW    (5%)
+                         ---------
+Total Dynamic Power    =  98.1545 mW  (100%)
+
+Cell Leakage Power     =   2.0999 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network     77.2011            0.0000            0.0000           77.2011  (  78.65%)  i
+register           0.1221        1.5391e-02          256.8055            0.1379  (   0.14%)
+sequential        14.4287        8.6233e-02          284.4881           14.5152  (  14.79%)
+combinational      1.1342            5.1664        1.5586e+03            6.3021  (   6.42%)
+--------------------------------------------------------------------------------------------------
+Total             92.8861 mW         5.2680 mW     2.0999e+03 nW        98.1564 mW
+1
