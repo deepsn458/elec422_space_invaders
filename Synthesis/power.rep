@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-Error: Current design is not defined. (UID-4)
-0
-=======
  
 ****************************************
 Report : power
         -analysis_effort low
 Design : top
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 22:31:27 2026
+Date   : Wed Apr 15 23:02:04 2026
 ****************************************
 
 
@@ -35,12 +31,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =  92.8865 mW   (95%)
-  Net Switching Power  =   5.2680 mW    (5%)
+  Cell Internal Power  =  92.9712 mW   (95%)
+  Net Switching Power  =   5.2709 mW    (5%)
                          ---------
-Total Dynamic Power    =  98.1545 mW  (100%)
+Total Dynamic Power    =  98.2421 mW  (100%)
 
-Cell Leakage Power     =   2.0999 uW
+Cell Leakage Power     =   2.1008 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -49,11 +45,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network     77.2011            0.0000            0.0000           77.2011  (  78.65%)  i
-register           0.1221        1.5391e-02          256.8055            0.1379  (   0.14%)
-sequential        14.4287        8.6233e-02          284.4881           14.5152  (  14.79%)
-combinational      1.1342            5.1664        1.5586e+03            6.3021  (   6.42%)
+clock_network     77.2754            0.0000            0.0000           77.2754  (  78.66%)  i
+register           0.1238        2.3905e-02          257.0526            0.1481  (   0.15%)
+sequential        14.4279        8.4232e-02          284.4881           14.5124  (  14.77%)
+combinational      1.1437            5.1628        1.5592e+03            6.3080  (   6.42%)
 --------------------------------------------------------------------------------------------------
-Total             92.8861 mW         5.2680 mW     2.0999e+03 nW        98.1564 mW
+Total             92.9708 mW         5.2709 mW     2.1008e+03 nW        98.2440 mW
 1
->>>>>>> 86d68ce7dccd7528a4aa5d33109421f2169c8488

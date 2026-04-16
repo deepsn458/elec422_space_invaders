@@ -29,10 +29,10 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-Current time:       Wed Apr 15 22:43:22 2026
+Current time:       Wed Apr 15 22:54:04 2026
 Hostname:           borax.clear8.rice.edu
 CPU Model:          Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
-CPU Details:        Cores = 40 : Sockets = 2 : Cache Size = 25600 KB : Freq = 3.40 GHz
+CPU Details:        Cores = 40 : Sockets = 2 : Cache Size = 25600 KB : Freq = 2.74 GHz
 OS:                 Linux 4.18.0-553.89.1.el8_10.x86_64
 RAM:                125 GB (Free  16 GB)
 Swap:                15 GB (Free  15 GB)
@@ -41,7 +41,7 @@ Tmp Filesystem:     /tmp mounted to /dev/mapper/vg0-tmp
 Work Disk:          5038 GB (Free 804 GB)
 Tmp Disk:             5 GB (Free   5 GB)
 
-CPU Load: 3%, Ram Free: 16 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
+CPU Load: 5%, Ram Free: 16 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
 #/**************************************************/
 #/* Compile Script for Synopsys                    */
 #/*                                                */
@@ -279,7 +279,7 @@ set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all
 set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
 1
 compile -ungroup_all -map_effort medium
-CPU Load: 3%, Ram Free: 16 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
+CPU Load: 5%, Ram Free: 16 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -352,19 +352,19 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:02  151452.0      0.00       0.0       7.7                          
-    0:00:02  151452.0      0.00       0.0       7.7                          
-    0:00:02  151452.0      0.00       0.0       7.7                          
-    0:00:02  151452.0      0.00       0.0       7.7                          
-    0:00:02  151452.0      0.00       0.0       7.7                          
-    0:00:02  140364.0      0.00       0.0       7.7                          
-    0:00:02  140364.0      0.00       0.0       7.7                          
-    0:00:02  140364.0      0.00       0.0       7.7                          
-    0:00:02  140364.0      0.00       0.0       7.7                          
-    0:00:02  140364.0      0.00       0.0       7.7                          
-    0:00:02  140364.0      0.00       0.0       7.7                          
-    0:00:02  140364.0      0.00       0.0       7.7                          
-    0:00:02  140364.0      0.00       0.0       7.7                          
+    0:00:01  151452.0      0.00       0.0       7.7                          
+    0:00:01  151452.0      0.00       0.0       7.7                          
+    0:00:01  151452.0      0.00       0.0       7.7                          
+    0:00:01  151452.0      0.00       0.0       7.7                          
+    0:00:01  151452.0      0.00       0.0       7.7                          
+    0:00:01  140364.0      0.00       0.0       7.7                          
+    0:00:01  140364.0      0.00       0.0       7.7                          
+    0:00:01  140364.0      0.00       0.0       7.7                          
+    0:00:01  140364.0      0.00       0.0       7.7                          
+    0:00:01  140364.0      0.00       0.0       7.7                          
+    0:00:01  140364.0      0.00       0.0       7.7                          
+    0:00:01  140364.0      0.00       0.0       7.7                          
+    0:00:01  140364.0      0.00       0.0       7.7                          
 
 
 
@@ -375,9 +375,9 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:02  140364.0      0.00       0.0       7.7                          
-    0:00:02  140364.0      0.00       0.0       7.7                          
-    0:00:02  140364.0      0.00       0.0       7.7                          
+    0:00:01  140364.0      0.00       0.0       7.7                          
+    0:00:01  140364.0      0.00       0.0       7.7                          
+    0:00:01  140364.0      0.00       0.0       7.7                          
 
 
   Beginning Design Rule Fixing  (max_capacitance)
@@ -387,8 +387,8 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:02  140364.0      0.00       0.0       7.7                          
-    0:00:02  140652.0      0.00       0.0       0.0                          
+    0:00:01  140364.0      0.00       0.0       7.7                          
+    0:00:01  140652.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -398,20 +398,20 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:02  140652.0      0.00       0.0       0.0                          
-    0:00:02  140652.0      0.00       0.0       0.0                          
-    0:00:02  138924.0      0.00       0.0       0.0                          
-    0:00:02  138276.0      0.00       0.0       0.0                          
-    0:00:02  138204.0      0.00       0.0       0.0                          
-    0:00:02  138204.0      0.00       0.0       0.0                          
-    0:00:02  138204.0      0.00       0.0       0.0                          
-    0:00:02  138204.0      0.00       0.0       0.0                          
-    0:00:02  138204.0      0.00       0.0       0.0                          
-    0:00:02  138204.0      0.00       0.0       0.0                          
-    0:00:02  138204.0      0.00       0.0       0.0                          
-    0:00:02  138204.0      0.00       0.0       0.0                          
-    0:00:02  138204.0      0.00       0.0       0.0                          
-    0:00:02  138204.0      0.00       0.0       0.0                          
+    0:00:01  140652.0      0.00       0.0       0.0                          
+    0:00:01  140652.0      0.00       0.0       0.0                          
+    0:00:01  138924.0      0.00       0.0       0.0                          
+    0:00:01  138276.0      0.00       0.0       0.0                          
+    0:00:01  138204.0      0.00       0.0       0.0                          
+    0:00:01  138204.0      0.00       0.0       0.0                          
+    0:00:01  138204.0      0.00       0.0       0.0                          
+    0:00:01  138204.0      0.00       0.0       0.0                          
+    0:00:01  138204.0      0.00       0.0       0.0                          
+    0:00:01  138204.0      0.00       0.0       0.0                          
+    0:00:01  138204.0      0.00       0.0       0.0                          
+    0:00:01  138204.0      0.00       0.0       0.0                          
+    0:00:01  138204.0      0.00       0.0       0.0                          
+    0:00:01  138204.0      0.00       0.0       0.0                          
 Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
 
 
@@ -526,7 +526,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     U-2022.12-SP7
-Date:        Wed Apr 15 22:43:27 2026
+Date:        Wed Apr 15 22:54:06 2026
 ****************************************
 
                    Name                                            Total
@@ -564,7 +564,7 @@ Report : constraint
         -all_violators
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 22:43:27 2026
+Date   : Wed Apr 15 22:54:06 2026
 ****************************************
 
 This design has no violated constraints.
@@ -585,7 +585,7 @@ report_cell
 Report : cell
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 22:43:27 2026
+Date   : Wed Apr 15 22:54:06 2026
 ****************************************
 
 Attributes:
@@ -1062,7 +1062,7 @@ report_area
 Report : area
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 22:43:27 2026
+Date   : Wed Apr 15 22:54:06 2026
 ****************************************
 
 Information: Updating design information... (UID-85)
@@ -1097,7 +1097,7 @@ Report : timing
         -max_paths 3
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 22:43:27 2026
+Date   : Wed Apr 15 22:54:06 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
@@ -1286,7 +1286,7 @@ Report : power
         -analysis_effort low
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 22:43:28 2026
+Date   : Wed Apr 15 22:54:07 2026
 ****************************************
 
 
@@ -1341,7 +1341,7 @@ quit
 
 Memory usage for this session 108 Mbytes.
 Memory usage for this session including child processes 108 Mbytes.
-CPU usage for this session 6 seconds ( 0.00 hours ).
-Elapsed time for this session 11 seconds ( 0.00 hours ).
+CPU usage for this session 5 seconds ( 0.00 hours ).
+Elapsed time for this session 14 seconds ( 0.00 hours ).
 
 Thank you...

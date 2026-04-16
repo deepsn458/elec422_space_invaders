@@ -125,6 +125,15 @@ for (i = 0; i < 2; i = i + 1) begin
 end
 in_player_left_input = 0;
 
+//test invader out of bounds
+in_invader_outofbounds_signal_1 = 1;
+in_player_left_input = 1;
+in_clka = 0; in_clkb = 0; #10;
+in_clka = 1; in_clkb = 0; #10;
+in_clka = 0; in_clkb = 0; #10;
+in_clka = 0; in_clkb = 1; #10;
+
+
 // cycle 4: Test Win Condition (Invaders all dead)
 in_invaders_display = 4'b0000;
 in_clka = 0; in_clkb = 0; #10;
