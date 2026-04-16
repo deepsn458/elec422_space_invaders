@@ -1,7 +1,12 @@
 #@ # 
 #@ # Running dc_shell Version U-2022.12-SP7 for linux64 -- Oct 10, 2023
+<<<<<<< HEAD
 #@ # Date:   Wed Apr 15 18:22:00 2026
 #@ # Run by: dn55@opal.clear8.rice.edu
+=======
+#@ # Date:   Wed Apr 15 22:40:32 2026
+#@ # Run by: ely2@opal.clear8.rice.edu
+>>>>>>> 86d68ce7dccd7528a4aa5d33109421f2169c8488
 #@ 
 
 source /clear/apps/synopsys-2023/syn/latest/admin/setup/.synopsys_dc.setup
@@ -8674,8 +8679,8 @@ source /clear/apps/synopsys-2023/syn/latest/admin/setup/.synopsys_dc.setup
 #@ 
 #@ # -- End source /clear/apps/synopsys-2023/syn/latest/admin/setup/.synopsys_dc.setup
 
-source -echo -verbose /storage-home/d/dn55/elec422_space_invaders/Synthesis/compile_dc.tcl
-#@ # -- Starting source /storage-home/d/dn55/elec422_space_invaders/Synthesis/compile_dc.tcl
+source -echo -verbose /storage-home/e/ely2/ELEC422/project/elec422_space_invaders/Synthesis/compile_dc.tcl
+#@ # -- Starting source /storage-home/e/ely2/ELEC422/project/elec422_space_invaders/Synthesis/compile_dc.tcl
 
 #@ #/**************************************************/
 #@ #/* Compile Script for Synopsys                    */
@@ -8699,7 +8704,7 @@ source -echo -verbose /storage-home/d/dn55/elec422_space_invaders/Synthesis/comp
 #@ #/* The name of the clock pin. If no clock-pin     */
 #@ #/* exists, pick anything                          */
 #@ #/* For two phase clock, just list clka here       */
-#@ set my_clock_pin clka
+#@ set my_clock_pin clka clkb
 #@ 
 #@ #/* Target frequency in MHz for optimization       */
 #@ set my_clk_freq_MHz 50
@@ -8756,25 +8761,3 @@ source -echo -verbose /storage-home/d/dn55/elec422_space_invaders/Synthesis/comp
 #@ set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
 #@ 
 #@ compile -ungroup_all -map_effort medium
-#@ 
-#@ compile -incremental_mapping -map_effort medium
-#@ 
-#@ check_design
-#@ report_constraint -all_violators
-#@ 
-#@ set filename [format "%s%s"  $my_toplevel ".vh"]
-#@ write -f verilog -output $filename
-#@ 
-#@ set filename [format "%s%s"  $my_toplevel ".sdc"]
-#@ write_sdc $filename
-#@ 
-#@ report_cell 
-#@ report_area 
-#@ report_timing -path full -delay max -max_paths 3 -nworst 1
-#@ report_power
-#@ 
-#@ redirect timing.rep { report_timing }
-#@ redirect cell.rep { report_cell }
-#@ redirect power.rep { report_power }
-#@ 
-#@ quit
