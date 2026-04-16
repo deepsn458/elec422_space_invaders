@@ -1,7 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version U-2022.12-SP7 for linux64 -- Oct 10, 2023
-#@ # Date:   Thu Apr 16 00:06:31 2026
-#@ # Run by: dn55@borax.clear8.rice.edu
+#@ # Date:   Thu Apr 16 13:25:56 2026
+#@ # Run by: jc165@cobalt.clear8.rice.edu
 #@ 
 
 source /clear/apps/synopsys-2023/syn/latest/admin/setup/.synopsys_dc.setup
@@ -8674,8 +8674,8 @@ source /clear/apps/synopsys-2023/syn/latest/admin/setup/.synopsys_dc.setup
 #@ 
 #@ # -- End source /clear/apps/synopsys-2023/syn/latest/admin/setup/.synopsys_dc.setup
 
-source -echo -verbose /storage-home/d/dn55/elec422_space_invaders/Synthesis/compile_dc.tcl
-#@ # -- Starting source /storage-home/d/dn55/elec422_space_invaders/Synthesis/compile_dc.tcl
+source -echo -verbose /storage-home/j/jc165/ELEC_422/Project/elec422_space_invaders/Synthesis/compile_dc.tcl
+#@ # -- Starting source /storage-home/j/jc165/ELEC_422/Project/elec422_space_invaders/Synthesis/compile_dc.tcl
 
 #@ #/**************************************************/
 #@ #/* Compile Script for Synopsys                    */

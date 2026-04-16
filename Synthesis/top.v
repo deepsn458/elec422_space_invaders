@@ -19,83 +19,11 @@ module top
     input  wire             player_right_input,                 // Player's right input
     input  wire             player_shoot_input,                 // Player's firing input
 
-    output wire [1023:0]    display_flat,                        // Display bitstream to python visualiser
-    
-    output wire play,
-    output wire internal_reset, 
-
-    output wire [5:0]       player_coord_x,                     // Player X coordinate
-    output wire [5:0]       player_coord_y,                     // Player Y coordinate
-    output wire             player_display,                     // Display bit
-
-    output wire [5:0]       invader_1_coord_x,                  // Invader 1 X coordinate
-    output wire [5:0]       invader_1_coord_y,                  // Invader 1 Y coordinate
-    output wire             invader_1_display,                  // Display bit
-    output wire             playerbullet_invader_collision_signal_1, // Signal indicating if an invader has been hit by a player bullet
-    output wire             invader_outofbounds_signal_1,       // tells main game fsm when invader 1 will hit a boundary next cycle
-
-    output wire [5:0]       invader_2_coord_x,                 // Invader 2 X coordinate
-    output wire [5:0]       invader_2_coord_y,                  // Invader 2 Y coordinate
-    output wire             invader_2_display,                  // Display bit
-    output wire             playerbullet_invader_collision_signal_2, // Signal indicating if an invader has been hit by a player bullet
-    output wire             invader_outofbounds_signal_2,       // tells main game fsm when invader 1 will hit a boundary next cycle
-
-    output wire [5:0]       invader_3_coord_x,                  // Invader 3 X coordinate
-    output wire [5:0]       invader_3_coord_y,                  // Invader 3 Y coordinate
-    output wire             invader_3_display,                  // Display bit
-    output wire             playerbullet_invader_collision_signal_3, // Signal indicating if an invader has been hit by a player bullet
-    output wire             invader_outofbounds_signal_3,       // tells main game fsm when invader 1 will hit a boundary next cycle
-
-    output wire [5:0]       invader_4_coord_x,                  // Invader 4 X coordinate
-    output wire [5:0]       invader_4_coord_y,                  // Invader 4 Y coordinate
-    output wire             invader_4_display,                  // Display bit
-    output wire             playerbullet_invader_collision_signal_4, // Signal indicating if an invader has been hit by a player bullet
-    output wire             invader_outofbounds_signal_4,       // tells main game fsm when invader 1 will hit a boundary next cycle
-
-    output wire [5:0]       shield_coord_x,                    // Shield X coordinate
-    output wire [5:0]       shield_coord_y,                     // Shield Y coordinate
-    output wire [1:0]       shield_hp,                          // Shield HP (3 to 0)
-    output wire             shield_display,                     // Display bit
-
-    output wire [5:0]       player_bullet_coord_x,              // Player bullet X coordinate
-    output wire [5:0]       player_bullet_coord_y,              // Player bullet Y coordinate
-    output wire             player_bullet_display,              // Display bit
-    output wire             player_left_motion,                 // Player left motion 
-    output wire             player_right_motion,                // Player right motion  
-
-    output wire [5:0]       invader_bullet_coord_x,             // Invader bullet X coordinate
-    output wire [5:0]       invader_bullet_coord_y,             // Invader bullet Y coordinate
-    output wire             invader_bullet_display,             // Display bit
-    
-    output wire             invader_direction,                  // direction bit for horizontal movement (left is 0)
-    output wire             move_down,                          // Tells invader to move down
-
-    output wire invaderbullet_player_collision_signal,          // Signals that the player was hit by an invader bullet
-    output wire invaderbullet_shield_collision_signal,         // Signals that the invader bullet hit the shield
-    output wire playerbullet_shield_collision_signal,           // Signal to indicate if the player bullet has collided with a shield
-    
-    output wire invader_fire,                                   // Signals the invader bullet to be fired 
-    output wire playerbullet_fire,                              // Signals the player bullet to be fired
-    output wire [5:0] closest_invader_coord_x,                // Current X coordinates of closest invader to player
-    output wire [5:0] closest_invader_coord_y,                  // Current Y coordinates of closest invader to player
-    output wire              player_bullet_collision,            // Signal to indicate if the player bullet has collided with an invader
-    output wire  [3:0]      invaders_display,
-    output wire playerbullet_invader_collision_signal,
-
-    output wire [1:0]       invader_state_1,
-    output wire [1:0]       invader_state_2,
-    output wire [1:0]       invader_state_3,
-    output wire [1:0]       invader_state_4,
-    output wire [1:0]       player_state,
-    output wire [1:0]       playerbullet_state,
-    output wire [1:0]       invaderbullet_state,
-    output wire [1:0]       maingame_state
+    output wire [1023:0]    display_flat                        // Display bitstream to python visualiser 
     );
 
-    assign invaders_display = {invader_4_display,invader_3_display,invader_2_display,invader_1_display};
-    assign playerbullet_invader_collision_signal = playerbullet_invader_collision_signal_1 | playerbullet_invader_collision_signal_2 | playerbullet_invader_collision_signal_3 | playerbullet_invader_collision_signal_4;
     // Module Interconnects
-    /*
+
     wire play;
     wire internal_reset; 
 
@@ -159,7 +87,7 @@ module top
     wire  [3:0]       invaders_display = {invader_4_display,invader_3_display,invader_2_display,invader_1_display};
 
     wire playerbullet_invader_collision_signal = playerbullet_invader_collision_signal_1 | playerbullet_invader_collision_signal_2 | playerbullet_invader_collision_signal_3 | playerbullet_invader_collision_signal_4;
-    */
+
     // Instantiate Main Game FSM:
     main_game_fsm main_game_fsm(
         .clka(clka), .clkb(clkb),                             // Input clocks
@@ -198,7 +126,7 @@ module top
         .playerbullet_fire(playerbullet_fire),
         .move_down(move_down),
         .invaderbullet_fire(invader_fire),
-        .state(maingame_state)
+        .state()
     );
 
     // Instantiate Datapath:
@@ -255,7 +183,7 @@ module top
         .player_coord_x(player_coord_x),                        // Player X coordinate
         .player_coord_y(player_coord_y),                        // Player Y coordinate
         .display(player_display),
-        .state(player_state)                              // Signal to indicate if the player should be displayed on the screen
+        .state()                              // Signal to indicate if the player should be displayed on the screen
     );
 
     // Instantiate Shield FSM:
@@ -288,7 +216,7 @@ module top
         .invader_coord_x(invader_1_coord_x),                       // Player bullet X coordinate
         .invader_coord_y(invader_1_coord_y),                       // Player bullet Y coordinate
         .invader_outofbounds_signal(invader_outofbounds_signal_1),  
-        .state(invader_state_1)          // tells main game fsm when invader hits boundary
+        .state()          // tells main game fsm when invader hits boundary
     );
 
     invader_fsm #( .START_X(6'd12), .START_Y(6'd30)) invader_fsm_2(
@@ -303,7 +231,7 @@ module top
         .invader_coord_x(invader_2_coord_x),                       // Player bullet X coordinate
         .invader_coord_y(invader_2_coord_y),                        // Player bullet Y coordinate
         .invader_outofbounds_signal(invader_outofbounds_signal_2),
-        .state(invader_state_2)               // tells main game fsm when invader hits boundary                             // Current state of this invader
+        .state()               // tells main game fsm when invader hits boundary                             // Current state of this invader
     );
 
     invader_fsm #( .START_X(6'd18), .START_Y(6'd30)) invader_fsm_3(
@@ -318,7 +246,7 @@ module top
         .invader_coord_x(invader_3_coord_x),                       // Player bullet X coordinate
         .invader_coord_y(invader_3_coord_y),                       // Player bullet Y coordinate
         .invader_outofbounds_signal(invader_outofbounds_signal_3),
-        .state(invader_state_3)               // tells main game fsm when invader hits boundary
+        .state()               // tells main game fsm when invader hits boundary
     );
 
     invader_fsm #( .START_X(6'd24), .START_Y(6'd30)) invader_fsm_4(
@@ -333,7 +261,7 @@ module top
         .invader_coord_x(invader_4_coord_x),                       // Player bullet X coordinate
         .invader_coord_y(invader_4_coord_y),                       // Player bullet Y coordinate
         .invader_outofbounds_signal(invader_outofbounds_signal_4),
-        .state(invader_state_3)             // tells main game fsm when invader hits boundary
+        .state()             // tells main game fsm when invader hits boundary
     );
 
     // Instantiate Player Bullet FSM:
