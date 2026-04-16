@@ -89,7 +89,7 @@ module top
     output wire [1:0]       player_state,
     output wire [1:0]       playerbullet_state,
     output wire [1:0]       invaderbullet_state,
-    output wire [1:0]       maingame_state,
+    output wire [1:0]       maingame_state
     );
 
     assign invaders_display = {invader_4_display,invader_3_display,invader_2_display,invader_1_display};
@@ -272,8 +272,7 @@ module top
         .invaderbullet_shield_collision(invaderbullet_shield_collision_signal),
         .playerbullet_shield_collision(playerbullet_shield_collision_signal),
         .shield_coord_x(shield_coord_x),
-        .shield_coord_y(shield_coord_y),
-        
+        .shield_coord_y(shield_coord_y)       
     );
 
     // Instantiate 4 Invaders
@@ -288,7 +287,7 @@ module top
         .playerbullet_invader_collision_signal(playerbullet_invader_collision_signal_1), // Signal indicating if an invader has been hit by a player bullet
         .invader_coord_x(invader_1_coord_x),                       // Player bullet X coordinate
         .invader_coord_y(invader_1_coord_y),                       // Player bullet Y coordinate
-        .invader_outofbounds_signal(invader_outofbounds_signal_1)  
+        .invader_outofbounds_signal(invader_outofbounds_signal_1),  
         .state(invader_state_1)          // tells main game fsm when invader hits boundary
     );
 
