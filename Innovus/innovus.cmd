@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Thu Apr 16 00:18:34 2026                
+#  Created on Thu Apr 16 01:39:17 2026                
 #                                                     
 #######################################################
 
@@ -171,3 +171,138 @@ getPlaceMode -ignoreUnproperPowerInit -quiet
 getPlaceMode -quiet -expSkipGP
 setDelayCalMode -engine feDc
 unsetPinConstraint -edge -pin * -cell *
+psp::embedded_egr_init_
+psp::embedded_egr_term_
+psp::embedded_egr_init_
+psp::embedded_egr_term_
+psp::embedded_egr_init_
+psp::embedded_egr_term_
+scanReorder
+getExtractRCMode -relative_c_th -quiet
+getExtractRCMode -coupling_c_th -quiet
+getExtractRCMode -total_c_th -quiet
+getDesignMode -pessimisticMode -quiet
+getExtractRCMode -lefTechFileMap -quiet
+getExtractRCMode -turboReduce -quiet
+getExtractRCMode -coupled -quiet
+setDelayCalMode -engine aae
+all_setup_analysis_views
+getPlaceMode -quiet -tdgpAdjustNetWeightBySlack
+get_ccopt_clock_trees *
+getPlaceMode -exp_insert_guidance_clock_tree -quiet
+getPlaceMode -exp_cluster_based_high_fanout_buffering -quiet
+getPlaceMode -quiet -place_global_exp_heterogeneous_3d_placement
+getPlaceMode -place_global_exp_incr_skp_preserve_mode_v2 -quiet
+getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+getPlaceMode -quiet -place_global_high_effort_density_smoother
+getPlaceMode -quiet -timingEffort
+getPlaceMode -quiet -place_detail_exp_enable_full_fgc_in_pod
+getPlaceMode -quiet -place_detail_refinePlace_v3
+getPlaceMode -quiet -place_detail_refinePlace_v2
+getPlaceMode -quiet -place_detail_refinePlace_v2_pa_fgc_prects_on
+getPlaceMode -place_global_exp_tmp_invoke_fast_placer -quiet
+getPlaceMode -exp_slack_driven -quiet
+all_setup_analysis_views
+getPlaceMode -quiet -cong_repair_commit_clock_net_route_attr
+getPlaceMode -enableDbSaveAreaPadding -quiet
+getPlaceMode -quiet -wireLenOptEffort
+setPlaceMode -reset -improveWithPsp
+getPlaceMode -quiet -debugGlobalPlace
+getPlaceMode -congRepair -quiet
+getPlaceMode -fp -quiet
+getPlaceMode -user -rplaceIncrNPClkGateAwareMode
+getPlaceMode -user -congRepairMaxIter
+getPlaceMode -quiet -congRepairPDClkGateMode4
+setPlaceMode -rplaceIncrNPClkGateAwareMode 4
+getPlaceMode -quiet -expCongRepairPDOneLoop
+setPlaceMode -congRepairMaxIter 1
+getPlaceMode -quickCTS -quiet
+get_proto_model -type_match {flex_module flex_instgroup} -committed -name -tcl
+getPlaceMode -congRepairForceTrialRoute -quiet
+getPlaceMode -user -congRepairForceTrialRoute
+setPlaceMode -congRepairForceTrialRoute true
+::goMC::is_advanced_metrics_collection_running
+congRepair
+::goMC::is_advanced_metrics_collection_running
+::goMC::is_advanced_metrics_collection_running
+::goMC::is_advanced_metrics_collection_running
+setPlaceMode -reset -congRepairForceTrialRoute
+getPlaceMode -quiet -congRepairPDClkGateMode4
+setPlaceMode -reset -rplaceIncrNPClkGateAwareMode
+setPlaceMode -reset -congRepairMaxIter
+getPlaceMode -congRepairCleanupPadding -quiet
+getPlaceMode -quiet -wireLenOptEffort
+all_setup_analysis_views
+getPlaceMode -place_global_exp_incr_skp_preserve_mode_v2 -quiet
+getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+getPlaceMode -quiet -place_global_exp_netlist_balance_flow
+getPlaceMode -quiet -place_global_high_effort_density_smoother
+getPlaceMode -quiet -timingEffort
+getPlaceMode -tdgpDumpStageTiming -quiet
+getPlaceMode -quiet -tdgpAdjustNetWeightBySlack
+getPlaceMode -trimView -quiet
+getOptMode -quiet -viewOptPolishing
+getOptMode -quiet -fastViewOpt
+spInternalUse deleteViewOptManager
+spInternalUse tdgp clearSkpData
+setAnalysisMode -clkSrcPath true -clockPropagation sdcControl
+getPlaceMode -exp_slack_driven -quiet
+setExtractRCMode -engine preRoute
+setPlaceMode -reset -relaxSoftBlockageMode
+setPlaceMode -reset -ignoreScan
+setPlaceMode -reset -repairPlace
+getPlaceMode -quiet -NMPsuppressInfo
+setvar spgSpeedupBuildVSM 0
+getPlaceMode -macroPlaceMode -quiet
+getPlaceMode -place_global_replace_QP -quiet
+getPlaceMode -macroPlaceMode -quiet
+getPlaceMode -exp_slack_driven -quiet
+getPlaceMode -place_global_ignore_spare -quiet
+getPlaceMode -tdgpMemFlow -quiet
+setPlaceMode -reset -resetCombineRFLevel
+getPlaceMode -place_global_exp_skp_unbalanced_net_weight -quiet
+getPlaceMode -place_global_exp_skp_path_based_begin_point -quiet
+getPlaceMode -quiet -place_global_exp_solve_unbalance_path
+setPlaceMode -reset -expHiddenFastMode
+getPlaceMode -tcg2Pass -quiet
+getPlaceMode -quiet -wireLenOptEffort
+getPlaceMode -fp -quiet
+getPlaceMode -fastfp -quiet
+getPlaceMode -doRPlace -quiet
+getPlaceMode -RTCPlaceDesignFlow -quiet
+getPlaceMode -quickCTS -quiet
+set spgFlowInInitialPlace 0
+getPlaceMode -user -maxRouteLayer
+spInternalUse TDGP resetIgnoreNetLoad
+getPlaceMode -place_global_exp_balance_pipeline -quiet
+getDesignMode -quiet -flowEffort
+report_message -end_cmd
+um::create_snapshot -name final -auto min
+um::pop_snapshot_stack
+um::create_snapshot -name place_design
+getPlaceMode -exp_slack_driven -quiet
+sroute -nets {vdd gnd}
+saveDesign top.enc
+addFiller -cell FILL -prefix FILLER -markFixed
+routeDesign -globalDetail
+verifyConnectivity -type all -noAntenna
+setStreamOutMode -snapToMGrid true -supportPathType4 false
+streamOut final.gds -mapFile /clear/apps/osu/soc/cadence/flow/ami05/gds2_encounter.map -libName DesignLib -units 100 -merge /clear/apps/osu/soc/cadence/lib/source/gds2/osu05_stdcells.gds2 -mode ALL
+saveNetlist final.v
+saveDesign top.enc
+win
+fit
+zoomIn
+zoomIn
+zoomIn
+zoomIn
+zoomIn
+selectMarker 1560.7500 1552.0500 1561.6500 1552.9500 2 1 6
+zoomOut
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false -displayByLayer
+zoomBox 2366.8 2379.7 2368.4 2381.15
+zoomBox 1978.0 3027.7 1979.6 3029.3
+zoomOut
+violationBrowserClose
