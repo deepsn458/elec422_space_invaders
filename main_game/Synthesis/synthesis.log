@@ -29,19 +29,19 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-Current time:       Wed Apr 15 17:59:56 2026
-Hostname:           opal.clear8.rice.edu
+Current time:       Wed Apr 15 22:43:22 2026
+Hostname:           borax.clear8.rice.edu
 CPU Model:          Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
 CPU Details:        Cores = 40 : Sockets = 2 : Cache Size = 25600 KB : Freq = 3.40 GHz
 OS:                 Linux 4.18.0-553.89.1.el8_10.x86_64
-RAM:                125 GB (Free  29 GB)
+RAM:                125 GB (Free  16 GB)
 Swap:                15 GB (Free  15 GB)
 Work Filesystem:    /storage-home/d/dn55 mounted to clearstor.clear.rice.edu:/clear-home/dn55
 Tmp Filesystem:     /tmp mounted to /dev/mapper/vg0-tmp
-Work Disk:          5038 GB (Free 803 GB)
+Work Disk:          5038 GB (Free 804 GB)
 Tmp Disk:             5 GB (Free   5 GB)
 
-CPU Load: 13%, Ram Free: 29 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
+CPU Load: 3%, Ram Free: 16 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
 #/**************************************************/
 #/* Compile Script for Synopsys                    */
 #/*                                                */
@@ -110,25 +110,26 @@ Loading db file '/clear/apps/synopsys-2023/syn/latest/libraries/syn/standard.sld
   Loading link library 'osu05_stdcells'
   Loading link library 'gtech'
 Running PRESTO HDLC
+Warning:  ./main_game_fsm.v:141: signed to unsigned assignment occurs. (VER-318)
 
-Statistics for case statements in always block at line 96 in file
+Statistics for case statements in always block at line 95 in file
 	'./main_game_fsm.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            97            |    auto/auto     |
+|            96            |    auto/auto     |
 ===============================================
 
-Statistics for case statements in always block at line 129 in file
+Statistics for case statements in always block at line 134 in file
 	'./main_game_fsm.v'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|           141            |    auto/auto     |
+|           145            |     no/auto      |
 ===============================================
 
 Inferred memory devices in process
-	in routine main_game_fsm line 120 in file
+	in routine main_game_fsm line 125 in file
 		'./main_game_fsm.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -137,22 +138,21 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine main_game_fsm line 129 in file
+	in routine main_game_fsm line 134 in file
 		'./main_game_fsm.v'.
-========================================================================================
-|        Register Name         |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-========================================================================================
-|          reset_reg           | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-|    invaderbullet_fire_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-|    invader_direction_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-|    playerbullet_fire_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-| prev_invader_outofbounds_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-|        move_down_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-|          state_reg           | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
-|    player_left_motion_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-|   player_right_motion_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-|           play_reg           | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
-========================================================================================
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|  invader_direction_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| invaderbullet_fire_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|  playerbullet_fire_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      move_down_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        state_reg        | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+| player_left_motion_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| player_right_motion_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        play_reg         | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|        reset_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===================================================================================
 Presto compilation completed successfully. (main_game_fsm)
 Elaborated 1 design.
 Current design is now 'main_game_fsm'.
@@ -279,7 +279,7 @@ set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all
 set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
 1
 compile -ungroup_all -map_effort medium
-CPU Load: 13%, Ram Free: 29 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
+CPU Load: 3%, Ram Free: 16 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -298,15 +298,15 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 | Design Information                                      | Value                                  |
 ====================================================================================================
 | Number of Scenarios                                     | 0                                      |
-| Leaf Cell Count                                         | 143                                    |
+| Leaf Cell Count                                         | 155                                    |
 | Number of User Hierarchies                              | 0                                      |
-| Sequential Cell Count                                   | 13                                     |
+| Sequential Cell Count                                   | 12                                     |
 | Macro Count                                             | 0                                      |
 | Number of Power Domains                                 | 0                                      |
 | Number of Path Groups                                   | 2                                      |
 | Number of VT Class                                      | 0                                      |
 | Number of Clocks                                        | 1                                      |
-| Number of Dont Touch Cells                              | 55                                     |
+| Number of Dont Touch Cells                              | 67                                     |
 | Number of Dont Touch Nets                               | 0                                      |
 | Number of Size Only Cells                               | 0                                      |
 | Design with UPF Data                                    | false                                  |
@@ -319,8 +319,6 @@ Information: There are 29 potential problems in your design. Please run 'check_d
   Beginning Pass 1 Mapping
   ------------------------
   Processing 'main_game_fsm'
-Information: The register 'next_state_reg[1]' is a constant and will be removed. (OPT-1206)
-Information: The register 'state_reg[1]' is a constant and will be removed. (OPT-1206)
 
   Updating timing information
 Information: Updating design information... (UID-85)
@@ -354,19 +352,19 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01  147888.0      0.00       0.0       7.7                          
-    0:00:01  147888.0      0.00       0.0       7.7                          
-    0:00:01  147888.0      0.00       0.0       7.7                          
-    0:00:01  147888.0      0.00       0.0       7.7                          
-    0:00:01  147888.0      0.00       0.0       7.7                          
-    0:00:01  136800.0      0.00       0.0       7.7                          
-    0:00:01  136800.0      0.00       0.0       7.7                          
-    0:00:01  136800.0      0.00       0.0       7.7                          
-    0:00:01  136800.0      0.00       0.0       7.7                          
-    0:00:01  136800.0      0.00       0.0       7.7                          
-    0:00:01  136800.0      0.00       0.0       7.7                          
-    0:00:01  136800.0      0.00       0.0       7.7                          
-    0:00:01  136800.0      0.00       0.0       7.7                          
+    0:00:02  151452.0      0.00       0.0       7.7                          
+    0:00:02  151452.0      0.00       0.0       7.7                          
+    0:00:02  151452.0      0.00       0.0       7.7                          
+    0:00:02  151452.0      0.00       0.0       7.7                          
+    0:00:02  151452.0      0.00       0.0       7.7                          
+    0:00:02  140364.0      0.00       0.0       7.7                          
+    0:00:02  140364.0      0.00       0.0       7.7                          
+    0:00:02  140364.0      0.00       0.0       7.7                          
+    0:00:02  140364.0      0.00       0.0       7.7                          
+    0:00:02  140364.0      0.00       0.0       7.7                          
+    0:00:02  140364.0      0.00       0.0       7.7                          
+    0:00:02  140364.0      0.00       0.0       7.7                          
+    0:00:02  140364.0      0.00       0.0       7.7                          
 
 
 
@@ -377,9 +375,9 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01  136800.0      0.00       0.0       7.7                          
-    0:00:01  136800.0      0.00       0.0       7.7                          
-    0:00:01  136800.0      0.00       0.0       7.7                          
+    0:00:02  140364.0      0.00       0.0       7.7                          
+    0:00:02  140364.0      0.00       0.0       7.7                          
+    0:00:02  140364.0      0.00       0.0       7.7                          
 
 
   Beginning Design Rule Fixing  (max_capacitance)
@@ -389,8 +387,8 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01  136800.0      0.00       0.0       7.7                          
-    0:00:01  137088.0      0.00       0.0       0.0                          
+    0:00:02  140364.0      0.00       0.0       7.7                          
+    0:00:02  140652.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -400,20 +398,20 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01  137088.0      0.00       0.0       0.0                          
-    0:00:01  137088.0      0.00       0.0       0.0                          
-    0:00:01  135144.0      0.00       0.0       0.0                          
-    0:00:01  134640.0      0.00       0.0       0.0                          
-    0:00:01  134568.0      0.00       0.0       0.0                          
-    0:00:01  134568.0      0.00       0.0       0.0                          
-    0:00:01  134568.0      0.00       0.0       0.0                          
-    0:00:01  134568.0      0.00       0.0       0.0                          
-    0:00:01  134568.0      0.00       0.0       0.0                          
-    0:00:01  134568.0      0.00       0.0       0.0                          
-    0:00:01  134568.0      0.00       0.0       0.0                          
-    0:00:01  134568.0      0.00       0.0       0.0                          
-    0:00:01  134568.0      0.00       0.0       0.0                          
-    0:00:01  134568.0      0.00       0.0       0.0                          
+    0:00:02  140652.0      0.00       0.0       0.0                          
+    0:00:02  140652.0      0.00       0.0       0.0                          
+    0:00:02  138924.0      0.00       0.0       0.0                          
+    0:00:02  138276.0      0.00       0.0       0.0                          
+    0:00:02  138204.0      0.00       0.0       0.0                          
+    0:00:02  138204.0      0.00       0.0       0.0                          
+    0:00:02  138204.0      0.00       0.0       0.0                          
+    0:00:02  138204.0      0.00       0.0       0.0                          
+    0:00:02  138204.0      0.00       0.0       0.0                          
+    0:00:02  138204.0      0.00       0.0       0.0                          
+    0:00:02  138204.0      0.00       0.0       0.0                          
+    0:00:02  138204.0      0.00       0.0       0.0                          
+    0:00:02  138204.0      0.00       0.0       0.0                          
+    0:00:02  138204.0      0.00       0.0       0.0                          
 Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
 
 
@@ -422,7 +420,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 13%, Ram Free: 29 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
+CPU Load: 5%, Ram Free: 16 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -444,7 +442,7 @@ Unmapped MV Cells
 ----------------------------------------------------------------------------------------------------
 1
 compile -incremental_mapping -map_effort medium
-CPU Load: 13%, Ram Free: 29 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
+CPU Load: 5%, Ram Free: 16 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
 ====================================================================================================
 | Flow Information                                                                                 |
 ----------------------------------------------------------------------------------------------------
@@ -453,9 +451,9 @@ CPU Load: 13%, Ram Free: 29 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Di
 | Design Information                                      | Value                                  |
 ====================================================================================================
 | Number of Scenarios                                     | 0                                      |
-| Leaf Cell Count                                         | 389                                    |
+| Leaf Cell Count                                         | 403                                    |
 | Number of User Hierarchies                              | 0                                      |
-| Sequential Cell Count                                   | 11                                     |
+| Sequential Cell Count                                   | 12                                     |
 | Macro Count                                             | 0                                      |
 | Number of Power Domains                                 | 0                                      |
 | Number of Path Groups                                   | 2                                      |
@@ -467,7 +465,7 @@ CPU Load: 13%, Ram Free: 29 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Di
 | Design with UPF Data                                    | false                                  |
 ====================================================================================================
 
-Information: There are 21 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 20 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
@@ -491,9 +489,9 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:01  134568.0      0.00       0.0       0.0                          
-    0:00:01  134568.0      0.00       0.0       0.0                          
-    0:00:01  134568.0      0.00       0.0       0.0                          
+    0:00:00  138204.0      0.00       0.0       0.0                          
+    0:00:00  138204.0      0.00       0.0       0.0                          
+    0:00:00  138204.0      0.00       0.0       0.0                          
 Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
 
 
@@ -502,7 +500,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 13%, Ram Free: 29 GB, Swap Free: 15 GB, Work Disk Free: 803 GB, Tmp Disk Free: 5 GB
+CPU Load: 5%, Ram Free: 16 GB, Swap Free: 15 GB, Work Disk Free: 804 GB, Tmp Disk Free: 5 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -528,14 +526,13 @@ check_design
 ****************************************
 check_design summary:
 Version:     U-2022.12-SP7
-Date:        Wed Apr 15 17:59:58 2026
+Date:        Wed Apr 15 22:43:27 2026
 ****************************************
 
                    Name                                            Total
 --------------------------------------------------------------------------------
-Inputs/Outputs                                                     21
+Inputs/Outputs                                                     20
     Unconnected ports (LINT-28)                                    20
-    Constant outputs (LINT-52)                                      1
 --------------------------------------------------------------------------------
 
 Warning: In design 'main_game_fsm', port 'player_coordinate_y[5]' is not connected to any nets. (LINT-28)
@@ -558,7 +555,6 @@ Warning: In design 'main_game_fsm', port 'invaderbullet_coord_y[1]' is not conne
 Warning: In design 'main_game_fsm', port 'invaderbullet_coord_y[0]' is not connected to any nets. (LINT-28)
 Warning: In design 'main_game_fsm', port 'invaderbullet_player_collision_signal' is not connected to any nets. (LINT-28)
 Warning: In design 'main_game_fsm', port 'invaderbullet_shield_collision_signal' is not connected to any nets. (LINT-28)
-Warning: In design 'main_game_fsm', output port 'state[1]' is connected directly to 'logic 0'. (LINT-52)
 1
 report_constraint -all_violators
 Information: Updating design information... (UID-85)
@@ -568,7 +564,7 @@ Report : constraint
         -all_violators
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 17:59:58 2026
+Date   : Wed Apr 15 22:43:27 2026
 ****************************************
 
 This design has no violated constraints.
@@ -578,7 +574,6 @@ set filename [format "%s%s"  $my_toplevel ".vh"]
 main_game_fsm.vh
 write -f verilog -output $filename
 Writing verilog file '/storage-home/d/dn55/elec422_space_invaders/main_game/Synthesis/main_game_fsm.vh'.
-Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
 1
 set filename [format "%s%s"  $my_toplevel ".sdc"]
 main_game_fsm.sdc
@@ -590,7 +585,7 @@ report_cell
 Report : cell
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 17:59:58 2026
+Date   : Wed Apr 15 22:43:27 2026
 ****************************************
 
 Attributes:
@@ -603,79 +598,94 @@ Attributes:
 
 Cell                      Reference       Library             Area  Attributes
 --------------------------------------------------------------------------------
-U33                       AND2X2          osu05_stdcells  288.000000
-U67                       AOI22X1         osu05_stdcells  360.000000
-U68                       AOI22X1         osu05_stdcells  360.000000
+U60                       AOI21X1         osu05_stdcells  288.000000
+U61                       OAI21X1         osu05_stdcells  207.000000
+U62                       NAND2X1         osu05_stdcells  216.000000
+U63                       AOI22X1         osu05_stdcells  360.000000
+U64                       AOI22X1         osu05_stdcells  360.000000
+U65                       OAI21X1         osu05_stdcells  207.000000
+U66                       NAND2X1         osu05_stdcells  216.000000
+U67                       OAI21X1         osu05_stdcells  207.000000
+U68                       NOR2X1          osu05_stdcells  216.000000
 U69                       OAI21X1         osu05_stdcells  207.000000
 U70                       OAI21X1         osu05_stdcells  207.000000
-U72                       OAI21X1         osu05_stdcells  207.000000
-U77                       NAND2X1         osu05_stdcells  216.000000
-U78                       NOR2X1          osu05_stdcells  216.000000
-U79                       NOR2X1          osu05_stdcells  216.000000
-U81                       AOI21X1         osu05_stdcells  288.000000
-U82                       OAI21X1         osu05_stdcells  207.000000
-U83                       NAND2X1         osu05_stdcells  216.000000
-U84                       NOR2X1          osu05_stdcells  216.000000
-U88                       NAND2X1         osu05_stdcells  216.000000
+U71                       OAI21X1         osu05_stdcells  207.000000
+U72                       XNOR2X1         osu05_stdcells  504.000000
+U73                       OR2X1           osu05_stdcells  288.000000
+U74                       OAI21X1         osu05_stdcells  207.000000
+U75                       OAI22X1         osu05_stdcells  360.000000
+U76                       NOR2X1          osu05_stdcells  216.000000
+U77                       OAI22X1         osu05_stdcells  360.000000
+U78                       NAND2X1         osu05_stdcells  216.000000
+U79                       NAND2X1         osu05_stdcells  216.000000
+U80                       AOI22X1         osu05_stdcells  360.000000
+U81                       AOI22X1         osu05_stdcells  360.000000
+U82                       AOI22X1         osu05_stdcells  360.000000
+U83                       AOI22X1         osu05_stdcells  360.000000
+U84                       AOI22X1         osu05_stdcells  360.000000
+U85                       AOI22X1         osu05_stdcells  360.000000
+U86                       AOI22X1         osu05_stdcells  360.000000
+U87                       AOI22X1         osu05_stdcells  360.000000
+U88                       AOI22X1         osu05_stdcells  360.000000
 U89                       AOI22X1         osu05_stdcells  360.000000
 U90                       AOI22X1         osu05_stdcells  360.000000
 U91                       AOI22X1         osu05_stdcells  360.000000
-U92                       AOI22X1         osu05_stdcells  360.000000
+U92                       NAND2X1         osu05_stdcells  216.000000
 U93                       AOI22X1         osu05_stdcells  360.000000
-U94                       AOI22X1         osu05_stdcells  360.000000
+U94                       NAND2X1         osu05_stdcells  216.000000
 U95                       AOI22X1         osu05_stdcells  360.000000
-U96                       AOI22X1         osu05_stdcells  360.000000
+U96                       NAND2X1         osu05_stdcells  216.000000
 U97                       AOI22X1         osu05_stdcells  360.000000
-U98                       AOI22X1         osu05_stdcells  360.000000
+U98                       NAND2X1         osu05_stdcells  216.000000
 U99                       AOI22X1         osu05_stdcells  360.000000
-U100                      AOI22X1         osu05_stdcells  360.000000
-U101                      NAND2X1         osu05_stdcells  216.000000
-U102                      AOI22X1         osu05_stdcells  360.000000
-U103                      NAND2X1         osu05_stdcells  216.000000
-U104                      AOI22X1         osu05_stdcells  360.000000
-U105                      NAND2X1         osu05_stdcells  216.000000
-U106                      AOI22X1         osu05_stdcells  360.000000
-U107                      NAND2X1         osu05_stdcells  216.000000
-U108                      AOI22X1         osu05_stdcells  360.000000
-U109                      NAND2X1         osu05_stdcells  216.000000
-U110                      AOI22X1         osu05_stdcells  360.000000
-U111                      NAND2X1         osu05_stdcells  216.000000
-U112                      AOI22X1         osu05_stdcells  360.000000
-U113                      NAND2X1         osu05_stdcells  216.000000
-U114                      AOI22X1         osu05_stdcells  360.000000
-U115                      NAND2X1         osu05_stdcells  216.000000
-U116                      AOI22X1         osu05_stdcells  360.000000
-U117                      NAND2X1         osu05_stdcells  216.000000
-U118                      AOI22X1         osu05_stdcells  360.000000
-U119                      NAND2X1         osu05_stdcells  216.000000
-U120                      AOI22X1         osu05_stdcells  360.000000
-U121                      NAND2X1         osu05_stdcells  216.000000
-U122                      AOI22X1         osu05_stdcells  360.000000
-U123                      NAND2X1         osu05_stdcells  216.000000
-U124                      AOI22X1         osu05_stdcells  360.000000
-U125                      NAND2X1         osu05_stdcells  216.000000
-U126                      AOI22X1         osu05_stdcells  360.000000
-U127                      NAND2X1         osu05_stdcells  216.000000
-U128                      AOI22X1         osu05_stdcells  360.000000
-U129                      NAND2X1         osu05_stdcells  216.000000
-U130                      AOI22X1         osu05_stdcells  360.000000
-U131                      NAND2X1         osu05_stdcells  216.000000
-U132                      AOI22X1         osu05_stdcells  360.000000
-U133                      NAND2X1         osu05_stdcells  216.000000
-U134                      AOI22X1         osu05_stdcells  360.000000
-U135                      NAND2X1         osu05_stdcells  216.000000
-U136                      AOI22X1         osu05_stdcells  360.000000
-U137                      NAND2X1         osu05_stdcells  216.000000
-U138                      AOI22X1         osu05_stdcells  360.000000
-U139                      NAND2X1         osu05_stdcells  216.000000
-U140                      AOI22X1         osu05_stdcells  360.000000
-U141                      NAND2X1         osu05_stdcells  216.000000
+U100                      NAND2X1         osu05_stdcells  216.000000
+U101                      AOI22X1         osu05_stdcells  360.000000
+U102                      NAND2X1         osu05_stdcells  216.000000
+U103                      AOI22X1         osu05_stdcells  360.000000
+U104                      NAND2X1         osu05_stdcells  216.000000
+U105                      AOI22X1         osu05_stdcells  360.000000
+U106                      NAND2X1         osu05_stdcells  216.000000
+U107                      AOI22X1         osu05_stdcells  360.000000
+U108                      NAND2X1         osu05_stdcells  216.000000
+U109                      AOI22X1         osu05_stdcells  360.000000
+U110                      NAND2X1         osu05_stdcells  216.000000
+U111                      AOI22X1         osu05_stdcells  360.000000
+U112                      NAND2X1         osu05_stdcells  216.000000
+U113                      AOI22X1         osu05_stdcells  360.000000
+U114                      NAND2X1         osu05_stdcells  216.000000
+U115                      AOI22X1         osu05_stdcells  360.000000
+U116                      NAND2X1         osu05_stdcells  216.000000
+U117                      AOI22X1         osu05_stdcells  360.000000
+U118                      NAND2X1         osu05_stdcells  216.000000
+U119                      AOI22X1         osu05_stdcells  360.000000
+U120                      NAND2X1         osu05_stdcells  216.000000
+U121                      AOI22X1         osu05_stdcells  360.000000
+U122                      NAND2X1         osu05_stdcells  216.000000
+U123                      AOI22X1         osu05_stdcells  360.000000
+U124                      NAND2X1         osu05_stdcells  216.000000
+U125                      AOI22X1         osu05_stdcells  360.000000
+U126                      NAND2X1         osu05_stdcells  216.000000
+U127                      AOI22X1         osu05_stdcells  360.000000
+U128                      NAND2X1         osu05_stdcells  216.000000
+U129                      AOI22X1         osu05_stdcells  360.000000
+U130                      NAND2X1         osu05_stdcells  216.000000
+U131                      AOI22X1         osu05_stdcells  360.000000
+U132                      NAND2X1         osu05_stdcells  216.000000
+U133                      AOI22X1         osu05_stdcells  360.000000
+U134                      NAND2X1         osu05_stdcells  216.000000
+U135                      AOI22X1         osu05_stdcells  360.000000
+U136                      NAND2X1         osu05_stdcells  216.000000
+U137                      AOI22X1         osu05_stdcells  360.000000
+U138                      NAND2X1         osu05_stdcells  216.000000
+U139                      AOI22X1         osu05_stdcells  360.000000
+U140                      NAND2X1         osu05_stdcells  216.000000
+U141                      AOI22X1         osu05_stdcells  360.000000
 U142                      AOI22X1         osu05_stdcells  360.000000
 U143                      NAND2X1         osu05_stdcells  216.000000
 U144                      AOI22X1         osu05_stdcells  360.000000
-U145                      NAND2X1         osu05_stdcells  216.000000
-U146                      AOI22X1         osu05_stdcells  360.000000
-U147                      NAND2X1         osu05_stdcells  216.000000
+U145                      AOI22X1         osu05_stdcells  360.000000
+U146                      NAND2X1         osu05_stdcells  216.000000
+U147                      AOI22X1         osu05_stdcells  360.000000
 U148                      AOI22X1         osu05_stdcells  360.000000
 U149                      NAND2X1         osu05_stdcells  216.000000
 U150                      AOI22X1         osu05_stdcells  360.000000
@@ -704,70 +714,71 @@ U172                      AOI22X1         osu05_stdcells  360.000000
 U173                      NAND2X1         osu05_stdcells  216.000000
 U174                      AOI22X1         osu05_stdcells  360.000000
 U175                      AOI22X1         osu05_stdcells  360.000000
-U176                      NAND2X1         osu05_stdcells  216.000000
-U177                      AOI22X1         osu05_stdcells  360.000000
-U178                      AOI22X1         osu05_stdcells  360.000000
-U179                      NAND2X1         osu05_stdcells  216.000000
-U180                      AOI22X1         osu05_stdcells  360.000000
-U181                      AOI22X1         osu05_stdcells  360.000000
+U178                      NOR2X1          osu05_stdcells  216.000000
+U179                      OAI21X1         osu05_stdcells  207.000000
+U180                      OAI21X1         osu05_stdcells  207.000000
+U181                      NOR2X1          osu05_stdcells  216.000000
 U182                      NAND2X1         osu05_stdcells  216.000000
-U183                      AOI22X1         osu05_stdcells  360.000000
-U184                      AOI22X1         osu05_stdcells  360.000000
-U188                      OAI21X1         osu05_stdcells  207.000000
-U189                      NAND3X1         osu05_stdcells  324.000000
-U190                      AOI21X1         osu05_stdcells  288.000000
-U191                      NOR2X1          osu05_stdcells  216.000000
-U192                      NOR2X1          osu05_stdcells  216.000000
-U193                      AND2X2          osu05_stdcells  288.000000
-U194                      AND2X2          osu05_stdcells  288.000000
-U195                      AND2X2          osu05_stdcells  288.000000
-U196                      AND2X2          osu05_stdcells  288.000000
-U197                      OR2X2           osu05_stdcells  288.000000
-U198                      INVX1           osu05_stdcells  144.000000
-U199                      INVX2           osu05_stdcells  144.000000
-U200                      INVX2           osu05_stdcells  144.000000
+U183                      NOR2X1          osu05_stdcells  216.000000
+U184                      NOR2X1          osu05_stdcells  216.000000
+U185                      NAND3X1         osu05_stdcells  324.000000
+U186                      NOR2X1          osu05_stdcells  216.000000
+U187                      NAND2X1         osu05_stdcells  216.000000
+U188                      AOI21X1         osu05_stdcells  288.000000
+U189                      NOR2X1          osu05_stdcells  216.000000
+U190                      NOR2X1          osu05_stdcells  216.000000
+U191                      AND2X2          osu05_stdcells  288.000000
+U192                      AND2X2          osu05_stdcells  288.000000
+U193                      INVX1           osu05_stdcells  144.000000
+U194                      INVX2           osu05_stdcells  144.000000
+U195                      INVX2           osu05_stdcells  144.000000
+U196                      INVX2           osu05_stdcells  144.000000
+U197                      INVX2           osu05_stdcells  144.000000
+U198                      INVX2           osu05_stdcells  144.000000
+U199                      OR2X1           osu05_stdcells  288.000000
+U200                      OR2X1           osu05_stdcells  288.000000
 U201                      INVX2           osu05_stdcells  144.000000
 U202                      INVX2           osu05_stdcells  144.000000
 U203                      INVX2           osu05_stdcells  144.000000
-U204                      OR2X1           osu05_stdcells  288.000000
-U205                      OR2X1           osu05_stdcells  288.000000
+U204                      INVX2           osu05_stdcells  144.000000
+U205                      INVX2           osu05_stdcells  144.000000
 U206                      INVX2           osu05_stdcells  144.000000
 U207                      INVX2           osu05_stdcells  144.000000
 U208                      INVX2           osu05_stdcells  144.000000
 U209                      INVX2           osu05_stdcells  144.000000
 U210                      INVX2           osu05_stdcells  144.000000
-U211                      INVX2           osu05_stdcells  144.000000
-U212                      INVX2           osu05_stdcells  144.000000
-U213                      INVX2           osu05_stdcells  144.000000
-U214                      INVX2           osu05_stdcells  144.000000
-U215                      INVX2           osu05_stdcells  144.000000
+U211                      BUFX2           osu05_stdcells  216.000000
+U212                      BUFX2           osu05_stdcells  216.000000
+U213                      BUFX2           osu05_stdcells  216.000000
+U214                      BUFX2           osu05_stdcells  216.000000
+U215                      BUFX2           osu05_stdcells  216.000000
 U216                      BUFX2           osu05_stdcells  216.000000
 U217                      BUFX2           osu05_stdcells  216.000000
 U218                      BUFX2           osu05_stdcells  216.000000
-U219                      BUFX2           osu05_stdcells  216.000000
-U220                      BUFX2           osu05_stdcells  216.000000
-U221                      BUFX2           osu05_stdcells  216.000000
-U222                      BUFX2           osu05_stdcells  216.000000
-U223                      BUFX2           osu05_stdcells  216.000000
-U224                      INVX2           osu05_stdcells  144.000000
-U225                      INVX2           osu05_stdcells  144.000000
-U226                      OR2X1           osu05_stdcells  288.000000
-U227                      XNOR2X1         osu05_stdcells  504.000000
-U228                      OR2X1           osu05_stdcells  288.000000
-U229                      XNOR2X1         osu05_stdcells  504.000000
-U230                      OR2X1           osu05_stdcells  288.000000
-U231                      XNOR2X1         osu05_stdcells  504.000000
-U232                      OR2X1           osu05_stdcells  288.000000
-U233                      XNOR2X1         osu05_stdcells  504.000000
-U234                      OR2X1           osu05_stdcells  288.000000
-U235                      XNOR2X1         osu05_stdcells  504.000000
-U236                      OR2X1           osu05_stdcells  288.000000
-U237                      XNOR2X1         osu05_stdcells  504.000000
-U238                      OR2X1           osu05_stdcells  288.000000
-U239                      XNOR2X1         osu05_stdcells  504.000000
-U240                      OR2X1           osu05_stdcells  288.000000
-U241                      XNOR2X1         osu05_stdcells  504.000000
-U242                      AND2X2          osu05_stdcells  288.000000
+U219                      INVX2           osu05_stdcells  144.000000
+U220                      INVX2           osu05_stdcells  144.000000
+U221                      OR2X1           osu05_stdcells  288.000000
+U222                      XNOR2X1         osu05_stdcells  504.000000
+U223                      OR2X1           osu05_stdcells  288.000000
+U224                      XNOR2X1         osu05_stdcells  504.000000
+U225                      OR2X1           osu05_stdcells  288.000000
+U226                      XNOR2X1         osu05_stdcells  504.000000
+U227                      OR2X1           osu05_stdcells  288.000000
+U228                      XNOR2X1         osu05_stdcells  504.000000
+U229                      OR2X1           osu05_stdcells  288.000000
+U230                      XNOR2X1         osu05_stdcells  504.000000
+U231                      OR2X1           osu05_stdcells  288.000000
+U232                      XNOR2X1         osu05_stdcells  504.000000
+U233                      OR2X1           osu05_stdcells  288.000000
+U234                      XNOR2X1         osu05_stdcells  504.000000
+U235                      OR2X1           osu05_stdcells  288.000000
+U236                      XNOR2X1         osu05_stdcells  504.000000
+U237                      AND2X2          osu05_stdcells  288.000000
+U238                      INVX2           osu05_stdcells  144.000000
+U239                      INVX2           osu05_stdcells  144.000000
+U240                      INVX2           osu05_stdcells  144.000000
+U241                      INVX2           osu05_stdcells  144.000000
+U242                      INVX2           osu05_stdcells  144.000000
 U243                      INVX2           osu05_stdcells  144.000000
 U244                      INVX2           osu05_stdcells  144.000000
 U245                      INVX2           osu05_stdcells  144.000000
@@ -938,9 +949,6 @@ U409                      OAI21X1         osu05_stdcells  207.000000
 U410                      OAI22X1         osu05_stdcells  360.000000
 U411                      AOI21X1         osu05_stdcells  288.000000
 U412                      NOR2X1          osu05_stdcells  216.000000
-U413                      NOR2X1          osu05_stdcells  216.000000
-U414                      NAND2X1         osu05_stdcells  216.000000
-U415                      NAND2X1         osu05_stdcells  216.000000
 invader_direction_reg     DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
 invaderbullet_fire_reg    DFFNEGX1        osu05_stdcells  864.000000
@@ -948,6 +956,8 @@ invaderbullet_fire_reg    DFFNEGX1        osu05_stdcells  864.000000
 move_down_reg             DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
 next_state_reg[0]         DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+next_state_reg[1]         DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
 play_reg                  DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
@@ -957,95 +967,94 @@ player_right_motion_reg   DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
 playerbullet_fire_reg     DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
-prev_invader_outofbounds_reg
-                          DFFNEGX1        osu05_stdcells  864.000000
-                                                                    n
 reset_reg                 DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
 state_reg[0]              DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
-sub_60/U2_1               FAX1            osu05_stdcells  1080.000000
+state_reg[1]              DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+sub_59/U2_1               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_60/U2_2               FAX1            osu05_stdcells  1080.000000
+sub_59/U2_2               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_60/U2_3               FAX1            osu05_stdcells  1080.000000
+sub_59/U2_3               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_60/U2_4               FAX1            osu05_stdcells  1080.000000
+sub_59/U2_4               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_60/U2_5               FAX1            osu05_stdcells  1080.000000
+sub_59/U2_5               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_60_2/U2_1             FAX1            osu05_stdcells  1080.000000
+sub_59_2/U2_1             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_60_2/U2_2             FAX1            osu05_stdcells  1080.000000
+sub_59_2/U2_2             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_60_2/U2_3             FAX1            osu05_stdcells  1080.000000
+sub_59_2/U2_3             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_60_2/U2_4             FAX1            osu05_stdcells  1080.000000
+sub_59_2/U2_4             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_60_2/U2_5             FAX1            osu05_stdcells  1080.000000
+sub_59_2/U2_5             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_64/U2_1               FAX1            osu05_stdcells  1080.000000
+sub_63/U2_1               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_64/U2_2               FAX1            osu05_stdcells  1080.000000
+sub_63/U2_2               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_64/U2_3               FAX1            osu05_stdcells  1080.000000
+sub_63/U2_3               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_64/U2_4               FAX1            osu05_stdcells  1080.000000
+sub_63/U2_4               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_64/U2_5               FAX1            osu05_stdcells  1080.000000
+sub_63/U2_5               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_64_2/U2_1             FAX1            osu05_stdcells  1080.000000
+sub_63_2/U2_1             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_64_2/U2_2             FAX1            osu05_stdcells  1080.000000
+sub_63_2/U2_2             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_64_2/U2_3             FAX1            osu05_stdcells  1080.000000
+sub_63_2/U2_3             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_64_2/U2_4             FAX1            osu05_stdcells  1080.000000
+sub_63_2/U2_4             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_64_2/U2_5             FAX1            osu05_stdcells  1080.000000
+sub_63_2/U2_5             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_68/U2_1               FAX1            osu05_stdcells  1080.000000
+sub_67/U2_1               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_68/U2_2               FAX1            osu05_stdcells  1080.000000
+sub_67/U2_2               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_68/U2_3               FAX1            osu05_stdcells  1080.000000
+sub_67/U2_3               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_68/U2_4               FAX1            osu05_stdcells  1080.000000
+sub_67/U2_4               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_68/U2_5               FAX1            osu05_stdcells  1080.000000
+sub_67/U2_5               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_68_2/U2_1             FAX1            osu05_stdcells  1080.000000
+sub_67_2/U2_1             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_68_2/U2_2             FAX1            osu05_stdcells  1080.000000
+sub_67_2/U2_2             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_68_2/U2_3             FAX1            osu05_stdcells  1080.000000
+sub_67_2/U2_3             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_68_2/U2_4             FAX1            osu05_stdcells  1080.000000
+sub_67_2/U2_4             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_68_2/U2_5             FAX1            osu05_stdcells  1080.000000
+sub_67_2/U2_5             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_72/U2_1               FAX1            osu05_stdcells  1080.000000
+sub_71/U2_1               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_72/U2_2               FAX1            osu05_stdcells  1080.000000
+sub_71/U2_2               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_72/U2_3               FAX1            osu05_stdcells  1080.000000
+sub_71/U2_3               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_72/U2_4               FAX1            osu05_stdcells  1080.000000
+sub_71/U2_4               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_72/U2_5               FAX1            osu05_stdcells  1080.000000
+sub_71/U2_5               FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_72_2/U2_1             FAX1            osu05_stdcells  1080.000000
+sub_71_2/U2_1             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_72_2/U2_2             FAX1            osu05_stdcells  1080.000000
+sub_71_2/U2_2             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_72_2/U2_3             FAX1            osu05_stdcells  1080.000000
+sub_71_2/U2_3             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_72_2/U2_4             FAX1            osu05_stdcells  1080.000000
+sub_71_2/U2_4             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
-sub_72_2/U2_5             FAX1            osu05_stdcells  1080.000000
+sub_71_2/U2_5             FAX1            osu05_stdcells  1080.000000
                                                                     mo, r
 --------------------------------------------------------------------------------
-Total 389 cells                                           134568.000000
+Total 403 cells                                           138204.000000
 1
 report_area 
  
@@ -1053,7 +1062,7 @@ report_area
 Report : area
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 17:59:58 2026
+Date   : Wed Apr 15 22:43:27 2026
 ****************************************
 
 Information: Updating design information... (UID-85)
@@ -1062,21 +1071,21 @@ Library(s) Used:
     osu05_stdcells (File: /clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db)
 
 Number of ports:                          111
-Number of nets:                           491
-Number of cells:                          390
-Number of combinational cells:            378
-Number of sequential cells:                11
+Number of nets:                           504
+Number of cells:                          403
+Number of combinational cells:            391
+Number of sequential cells:                12
 Number of macros/black boxes:               0
-Number of buf/inv:                        103
-Number of references:                      16
+Number of buf/inv:                        108
+Number of references:                      15
 
-Combinational area:             125064.000000
-Buf/Inv area:                    15408.000000
-Noncombinational area:            9504.000000
+Combinational area:             127836.000000
+Buf/Inv area:                    16128.000000
+Noncombinational area:           10368.000000
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                134568.000000
+Total cell area:                138204.000000
 Total area:                 undefined
 1
 report_timing -path full -delay max -max_paths 3 -nworst 1
@@ -1088,11 +1097,70 @@ Report : timing
         -max_paths 3
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 17:59:58 2026
+Date   : Wed Apr 15 22:43:27 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
 Wire Load Model Mode: top
+
+  Startpoint: player_coordinate_x[0]
+              (input port clocked by clka)
+  Endpoint: next_state_reg[1]
+            (falling edge-triggered flip-flop clocked by clka)
+  Path Group: clka
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clka (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 f
+  player_coordinate_x[0] (in)              0.45       1.45 f
+  U205/Y (INVX2)                           0.50       1.95 r
+  U201/Y (INVX2)                           0.40       2.36 f
+  U223/Y (OR2X1)                           0.34       2.69 f
+  sub_71/U2_1/YC (FAX1)                    0.45       3.14 f
+  sub_71/U2_2/YC (FAX1)                    0.46       3.60 f
+  sub_71/U2_3/YC (FAX1)                    0.46       4.06 f
+  sub_71/U2_4/YC (FAX1)                    0.46       4.51 f
+  sub_71/U2_5/YS (FAX1)                    0.44       4.96 r
+  U93/Y (AOI22X1)                          0.09       5.05 f
+  U92/Y (NAND2X1)                          0.28       5.32 r
+  U385/Y (NOR2X1)                          0.26       5.59 f
+  U274/Y (INVX2)                           0.10       5.69 r
+  U387/Y (OAI21X1)                         0.10       5.78 f
+  U397/Y (OAI22X1)                         0.51       6.29 r
+  U269/Y (INVX2)                           0.38       6.67 f
+  U82/Y (AOI22X1)                          0.23       6.90 r
+  U401/Y (NAND2X1)                         0.15       7.05 f
+  U402/Y (NAND3X1)                         0.18       7.24 r
+  U403/Y (OAI21X1)                         0.16       7.39 f
+  U248/Y (INVX2)                           0.09       7.48 r
+  U408/Y (OAI21X1)                         0.08       7.56 f
+  U409/Y (OAI21X1)                         0.13       7.69 r
+  U410/Y (OAI22X1)                         0.22       7.91 f
+  U191/Y (AND2X2)                          0.61       8.52 f
+  U150/Y (AOI22X1)                         0.18       8.70 r
+  U149/Y (NAND2X1)                         0.10       8.80 f
+  U411/Y (AOI21X1)                         0.12       8.92 r
+  U237/Y (AND2X2)                          0.15       9.07 r
+  U186/Y (NOR2X1)                          0.16       9.23 f
+  U185/Y (NAND3X1)                         0.20       9.43 r
+  U178/Y (NOR2X1)                          0.13       9.56 f
+  next_state_reg[1]/D (DFFNEGX1)           0.00       9.56 f
+  data arrival time                                   9.56
+
+  clock clka (fall edge)                  10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  next_state_reg[1]/CLK (DFFNEGX1)         0.00      10.00 f
+  library setup time                      -0.37       9.63
+  data required time                                  9.63
+  -----------------------------------------------------------
+  data required time                                  9.63
+  data arrival time                                  -9.56
+  -----------------------------------------------------------
+  slack (MET)                                         0.07
+
 
   Startpoint: player_coordinate_x[0]
               (input port clocked by clka)
@@ -1105,43 +1173,41 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clka (rise edge)                   0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  input external delay                     1.00       1.00 r
-  player_coordinate_x[0] (in)              0.36       1.36 r
-  U210/Y (INVX2)                           0.11       1.47 f
-  U206/Y (INVX2)                           0.34       1.81 r
-  U294/Y (INVX2)                           0.42       2.23 f
-  U226/Y (OR2X1)                           0.32       2.55 f
-  sub_72_2/U2_1/YC (FAX1)                  0.45       3.00 f
-  sub_72_2/U2_2/YC (FAX1)                  0.46       3.46 f
-  sub_72_2/U2_3/YC (FAX1)                  0.46       3.92 f
-  sub_72_2/U2_4/YC (FAX1)                  0.46       4.38 f
-  sub_72_2/U2_5/YS (FAX1)                  0.44       4.82 r
-  U102/Y (AOI22X1)                         0.13       4.95 f
-  U101/Y (NAND2X1)                         0.28       5.23 r
-  U385/Y (NOR2X1)                          0.26       5.49 f
-  U278/Y (INVX2)                           0.10       5.59 r
-  U387/Y (OAI21X1)                         0.10       5.69 f
-  U397/Y (OAI22X1)                         0.51       6.20 r
-  U273/Y (INVX2)                           0.38       6.58 f
-  U91/Y (AOI22X1)                          0.23       6.81 r
-  U401/Y (NAND2X1)                         0.15       6.96 f
-  U402/Y (NAND3X1)                         0.18       7.14 r
-  U403/Y (OAI21X1)                         0.16       7.30 f
-  U252/Y (INVX2)                           0.09       7.39 r
-  U408/Y (OAI21X1)                         0.08       7.47 f
-  U409/Y (OAI21X1)                         0.13       7.60 r
-  U410/Y (OAI22X1)                         0.22       7.82 f
-  U193/Y (AND2X2)                          0.61       8.43 f
-  U159/Y (AOI22X1)                         0.18       8.61 r
-  U158/Y (NAND2X1)                         0.10       8.71 f
-  U411/Y (AOI21X1)                         0.12       8.83 r
-  U242/Y (AND2X2)                          0.15       8.98 r
-  U190/Y (AOI21X1)                         0.13       9.11 f
-  U189/Y (NAND3X1)                         0.13       9.23 r
-  U188/Y (OAI21X1)                         0.09       9.32 f
-  U195/Y (AND2X2)                          0.20       9.52 f
-  next_state_reg[0]/D (DFFNEGX1)           0.00       9.52 f
-  data arrival time                                   9.52
+  input external delay                     1.00       1.00 f
+  player_coordinate_x[0] (in)              0.45       1.45 f
+  U205/Y (INVX2)                           0.50       1.95 r
+  U201/Y (INVX2)                           0.40       2.36 f
+  U223/Y (OR2X1)                           0.34       2.69 f
+  sub_71/U2_1/YC (FAX1)                    0.45       3.14 f
+  sub_71/U2_2/YC (FAX1)                    0.46       3.60 f
+  sub_71/U2_3/YC (FAX1)                    0.46       4.06 f
+  sub_71/U2_4/YC (FAX1)                    0.46       4.51 f
+  sub_71/U2_5/YS (FAX1)                    0.44       4.96 r
+  U93/Y (AOI22X1)                          0.09       5.05 f
+  U92/Y (NAND2X1)                          0.28       5.32 r
+  U385/Y (NOR2X1)                          0.26       5.59 f
+  U274/Y (INVX2)                           0.10       5.69 r
+  U387/Y (OAI21X1)                         0.10       5.78 f
+  U397/Y (OAI22X1)                         0.51       6.29 r
+  U269/Y (INVX2)                           0.38       6.67 f
+  U82/Y (AOI22X1)                          0.23       6.90 r
+  U401/Y (NAND2X1)                         0.15       7.05 f
+  U402/Y (NAND3X1)                         0.18       7.24 r
+  U403/Y (OAI21X1)                         0.16       7.39 f
+  U248/Y (INVX2)                           0.09       7.48 r
+  U408/Y (OAI21X1)                         0.08       7.56 f
+  U409/Y (OAI21X1)                         0.13       7.69 r
+  U410/Y (OAI22X1)                         0.22       7.91 f
+  U191/Y (AND2X2)                          0.61       8.52 f
+  U150/Y (AOI22X1)                         0.18       8.70 r
+  U149/Y (NAND2X1)                         0.10       8.80 f
+  U411/Y (AOI21X1)                         0.12       8.92 r
+  U237/Y (AND2X2)                          0.15       9.07 r
+  U186/Y (NOR2X1)                          0.16       9.23 f
+  U185/Y (NAND3X1)                         0.20       9.43 r
+  U179/Y (OAI21X1)                         0.10       9.53 f
+  next_state_reg[0]/D (DFFNEGX1)           0.00       9.53 f
+  data arrival time                                   9.53
 
   clock clka (fall edge)                  10.00      10.00
   clock network delay (ideal)              0.00      10.00
@@ -1150,9 +1216,9 @@ Wire Load Model Mode: top
   data required time                                  9.63
   -----------------------------------------------------------
   data required time                                  9.63
-  data arrival time                                  -9.52
+  data arrival time                                  -9.53
   -----------------------------------------------------------
-  slack (MET)                                         0.11
+  slack (MET)                                         0.10
 
 
   Startpoint: player_coordinate_x[0]
@@ -1166,37 +1232,36 @@ Wire Load Model Mode: top
   -----------------------------------------------------------
   clock clka (rise edge)                   0.00       0.00
   clock network delay (ideal)              0.00       0.00
-  input external delay                     1.00       1.00 r
-  player_coordinate_x[0] (in)              0.36       1.36 r
-  U210/Y (INVX2)                           0.11       1.47 f
-  U206/Y (INVX2)                           0.34       1.81 r
-  U294/Y (INVX2)                           0.42       2.23 f
-  U226/Y (OR2X1)                           0.32       2.55 f
-  sub_72_2/U2_1/YC (FAX1)                  0.45       3.00 f
-  sub_72_2/U2_2/YC (FAX1)                  0.46       3.46 f
-  sub_72_2/U2_3/YC (FAX1)                  0.46       3.92 f
-  sub_72_2/U2_4/YC (FAX1)                  0.46       4.38 f
-  sub_72_2/U2_5/YS (FAX1)                  0.44       4.82 r
-  U102/Y (AOI22X1)                         0.13       4.95 f
-  U101/Y (NAND2X1)                         0.28       5.23 r
-  U385/Y (NOR2X1)                          0.26       5.49 f
-  U278/Y (INVX2)                           0.10       5.59 r
-  U387/Y (OAI21X1)                         0.10       5.69 f
-  U397/Y (OAI22X1)                         0.51       6.20 r
-  U273/Y (INVX2)                           0.38       6.58 f
-  U91/Y (AOI22X1)                          0.23       6.81 r
-  U401/Y (NAND2X1)                         0.15       6.96 f
-  U402/Y (NAND3X1)                         0.18       7.14 r
-  U403/Y (OAI21X1)                         0.16       7.30 f
-  U252/Y (INVX2)                           0.09       7.39 r
-  U408/Y (OAI21X1)                         0.08       7.47 f
-  U409/Y (OAI21X1)                         0.13       7.60 r
-  U410/Y (OAI22X1)                         0.22       7.82 f
-  U193/Y (AND2X2)                          0.61       8.43 f
-  U162/Y (AOI22X1)                         0.18       8.61 r
-  U161/Y (NAND2X1)                         0.10       8.71 f
-  closest_invader_coord_y[1] (out)         0.00       8.71 f
-  data arrival time                                   8.71
+  input external delay                     1.00       1.00 f
+  player_coordinate_x[0] (in)              0.45       1.45 f
+  U205/Y (INVX2)                           0.50       1.95 r
+  U201/Y (INVX2)                           0.40       2.36 f
+  U223/Y (OR2X1)                           0.34       2.69 f
+  sub_71/U2_1/YC (FAX1)                    0.45       3.14 f
+  sub_71/U2_2/YC (FAX1)                    0.46       3.60 f
+  sub_71/U2_3/YC (FAX1)                    0.46       4.06 f
+  sub_71/U2_4/YC (FAX1)                    0.46       4.51 f
+  sub_71/U2_5/YS (FAX1)                    0.44       4.96 r
+  U93/Y (AOI22X1)                          0.09       5.05 f
+  U92/Y (NAND2X1)                          0.28       5.32 r
+  U385/Y (NOR2X1)                          0.26       5.59 f
+  U274/Y (INVX2)                           0.10       5.69 r
+  U387/Y (OAI21X1)                         0.10       5.78 f
+  U397/Y (OAI22X1)                         0.51       6.29 r
+  U269/Y (INVX2)                           0.38       6.67 f
+  U82/Y (AOI22X1)                          0.23       6.90 r
+  U401/Y (NAND2X1)                         0.15       7.05 f
+  U402/Y (NAND3X1)                         0.18       7.24 r
+  U403/Y (OAI21X1)                         0.16       7.39 f
+  U248/Y (INVX2)                           0.09       7.48 r
+  U408/Y (OAI21X1)                         0.08       7.56 f
+  U409/Y (OAI21X1)                         0.13       7.69 r
+  U410/Y (OAI22X1)                         0.22       7.91 f
+  U191/Y (AND2X2)                          0.61       8.52 f
+  U153/Y (AOI22X1)                         0.18       8.70 r
+  U152/Y (NAND2X1)                         0.10       8.80 f
+  closest_invader_coord_y[1] (out)         0.00       8.80 f
+  data arrival time                                   8.80
 
   clock clka (rise edge)                  20.00      20.00
   clock network delay (ideal)              0.00      20.00
@@ -1204,63 +1269,9 @@ Wire Load Model Mode: top
   data required time                                 19.00
   -----------------------------------------------------------
   data required time                                 19.00
-  data arrival time                                  -8.71
+  data arrival time                                  -8.80
   -----------------------------------------------------------
-  slack (MET)                                        10.29
-
-
-  Startpoint: player_coordinate_x[0]
-              (input port clocked by clka)
-  Endpoint: closest_invader_coord_y[2]
-            (output port clocked by clka)
-  Path Group: clka
-  Path Type: max
-
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock clka (rise edge)                   0.00       0.00
-  clock network delay (ideal)              0.00       0.00
-  input external delay                     1.00       1.00 r
-  player_coordinate_x[0] (in)              0.36       1.36 r
-  U210/Y (INVX2)                           0.11       1.47 f
-  U206/Y (INVX2)                           0.34       1.81 r
-  U294/Y (INVX2)                           0.42       2.23 f
-  U226/Y (OR2X1)                           0.32       2.55 f
-  sub_72_2/U2_1/YC (FAX1)                  0.45       3.00 f
-  sub_72_2/U2_2/YC (FAX1)                  0.46       3.46 f
-  sub_72_2/U2_3/YC (FAX1)                  0.46       3.92 f
-  sub_72_2/U2_4/YC (FAX1)                  0.46       4.38 f
-  sub_72_2/U2_5/YS (FAX1)                  0.44       4.82 r
-  U102/Y (AOI22X1)                         0.13       4.95 f
-  U101/Y (NAND2X1)                         0.28       5.23 r
-  U385/Y (NOR2X1)                          0.26       5.49 f
-  U278/Y (INVX2)                           0.10       5.59 r
-  U387/Y (OAI21X1)                         0.10       5.69 f
-  U397/Y (OAI22X1)                         0.51       6.20 r
-  U273/Y (INVX2)                           0.38       6.58 f
-  U91/Y (AOI22X1)                          0.23       6.81 r
-  U401/Y (NAND2X1)                         0.15       6.96 f
-  U402/Y (NAND3X1)                         0.18       7.14 r
-  U403/Y (OAI21X1)                         0.16       7.30 f
-  U252/Y (INVX2)                           0.09       7.39 r
-  U408/Y (OAI21X1)                         0.08       7.47 f
-  U409/Y (OAI21X1)                         0.13       7.60 r
-  U410/Y (OAI22X1)                         0.22       7.82 f
-  U193/Y (AND2X2)                          0.61       8.43 f
-  U159/Y (AOI22X1)                         0.18       8.61 r
-  U158/Y (NAND2X1)                         0.10       8.71 f
-  closest_invader_coord_y[2] (out)         0.00       8.71 f
-  data arrival time                                   8.71
-
-  clock clka (rise edge)                  20.00      20.00
-  clock network delay (ideal)              0.00      20.00
-  output external delay                   -1.00      19.00
-  data required time                                 19.00
-  -----------------------------------------------------------
-  data required time                                 19.00
-  data arrival time                                  -8.71
-  -----------------------------------------------------------
-  slack (MET)                                        10.29
+  slack (MET)                                        10.20
 
 
 1
@@ -1275,7 +1286,7 @@ Report : power
         -analysis_effort low
 Design : main_game_fsm
 Version: U-2022.12-SP7
-Date   : Wed Apr 15 17:59:59 2026
+Date   : Wed Apr 15 22:43:28 2026
 ****************************************
 
 
@@ -1302,12 +1313,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   3.5423 mW   (54%)
-  Net Switching Power  =   2.9658 mW   (46%)
+  Cell Internal Power  =   3.6086 mW   (55%)
+  Net Switching Power  =   2.9657 mW   (45%)
                          ---------
-Total Dynamic Power    =   6.5081 mW  (100%)
+Total Dynamic Power    =   6.5743 mW  (100%)
 
-Cell Leakage Power     =  39.4797 nW
+Cell Leakage Power     =  40.3891 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -1316,12 +1327,12 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network  7.4304e-02            0.0000            0.0000        7.4304e-02  (   1.14%)  i
-register       1.4527e-02        4.1993e-03            0.2472        1.8726e-02  (   0.29%)
-sequential         0.1493        1.5717e-03            2.4717            0.1509  (   2.32%)
-combinational      3.3041            2.9600           36.7609            6.2642  (  96.25%)
+clock_network      0.1486            0.0000            0.0000            0.1486  (   2.26%)  i
+register       1.6650e-02        1.1713e-02            0.4943        2.8364e-02  (   0.43%)
+sequential         0.1501        2.2277e-03            2.4717            0.1523  (   2.32%)
+combinational      3.2933            2.9517           37.4231            6.2451  (  94.99%)
 --------------------------------------------------------------------------------------------------
-Total              3.5423 mW         2.9658 mW        39.4797 nW         6.5081 mW
+Total              3.6086 mW         2.9657 mW        40.3891 nW         6.5743 mW
 1
 redirect timing.rep { report_timing }
 redirect cell.rep { report_cell }
@@ -1330,7 +1341,7 @@ quit
 
 Memory usage for this session 108 Mbytes.
 Memory usage for this session including child processes 108 Mbytes.
-CPU usage for this session 5 seconds ( 0.00 hours ).
-Elapsed time for this session 8 seconds ( 0.00 hours ).
+CPU usage for this session 6 seconds ( 0.00 hours ).
+Elapsed time for this session 11 seconds ( 0.00 hours ).
 
 Thank you...

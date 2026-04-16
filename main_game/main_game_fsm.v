@@ -50,10 +50,9 @@ module main_game_fsm
     reg [1:0] next_state;           // To be sequentially assigned
 
     // parameter SIZE = 2;
-    parameter INIT = 2'b00, IN_GAME = 2'b01, END_GAME = 2'b10;
+    parameter INIT = 2'b00, IN_GAME = 2'b01, DIRECTION_CHANGE = 2'b10, END_GAME = 2'b11;
     wire invader_outofbounds;
     assign invader_outofbounds = invader_outofbounds_signal_1|invader_outofbounds_signal_2|invader_outofbounds_signal_3|invader_outofbounds_signal_4;
-    reg prev_invader_outofbounds;
 /****************************************************************************/
     
     // Calculate absolute value differences between player and invaders
@@ -107,9 +106,15 @@ module main_game_fsm
         IN_GAME: begin
             if (invaders_display == 4'b0 || (~player_display) || closest_invader_coord_y <= 5) begin
             temp_state = INIT;
+            end else if (invader_outofbounds) begin
+                temp_state = DIRECTION_CHANGE;
             end else begin
             temp_state = IN_GAME;
             end
+        end
+
+        DIRECTION_CHANGE: begin
+            temp_state = IN_GAME;
         end
 
         default: temp_state = INIT;
@@ -140,7 +145,7 @@ module main_game_fsm
         case(next_state)
             INIT: begin
                 state <= next_state;
-                invader_direction <= DIRECTION_RIGHT;
+                invader_direction <= 1;
                 play <= 0;
                 reset <= 1;
             end
@@ -149,19 +154,17 @@ module main_game_fsm
                 // fire the invader bullet again if has collided or has reached the y limit
                 state <= next_state;
                 play <= 1;
+                move_down <= 0;
                 // if((invaderbullet_player_collision_signal | invaderbullet_shield_collision_signal) || invaderbullet_coord_y == BOTTOM_BOUND) begin
                 invaderbullet_fire <= 1;
                 // end
                 //send commands to player and player bullet
                 {playerbullet_fire, player_right_motion, player_left_motion} <= {player_shoot_input, player_right_input, player_left_input};
-                //set invader direction
-                if (invader_outofbounds & ~prev_invader_outofbounds) begin
-                    invader_direction <= ~invader_direction;
-                    move_down <= 1;
-                end else begin
-                    move_down <= 0;
-                end
-                prev_invader_outofbounds <= invader_outofbounds;
+            end
+
+            DIRECTION_CHANGE: begin
+                invader_direction <= ~invader_direction;
+                move_down <= 1;
             end
         endcase
         end
