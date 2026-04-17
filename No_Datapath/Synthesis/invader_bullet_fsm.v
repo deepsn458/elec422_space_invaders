@@ -70,8 +70,8 @@ module invader_bullet_fsm
         if (reset) begin
             state <= INITIAL;
             invader_bullet_display <= 1'b0;
-            invader_bullet_coord_x <= closest_invader_coord_x;
-            invader_bullet_coord_y <= closest_invader_coord_y;
+            invader_bullet_coord_x <= 6'd12;
+            invader_bullet_coord_y <= 6'd30;
         end else begin
             case (next_state)
                 INITIAL: begin

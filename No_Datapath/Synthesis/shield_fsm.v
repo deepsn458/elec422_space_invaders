@@ -13,7 +13,7 @@ module shield_fsm
     parameter HP_2 = 2,
     parameter HP_1 = 1,
     parameter HP_0 = 0,
-    parameter START_X = 15,
+    parameter START_X = 16,
     parameter START_Y = 10,
     parameter SHIELD_DIAMETER = 2           // This is the diameter NOT INCLUDING CENTRAL PIXEL (aka how many pixels extending out from central pixel)
 ) (
@@ -91,7 +91,7 @@ module shield_fsm
             shield_coord_y <= START_Y;
             invaderbullet_shield_collision <= 1'b0;
             playerbullet_shield_collision <= 1'b0;
-            shield_display <= 1'b0;
+            shield_display <= 1'b1;
         end else begin
             case (next_state)
                 INITIAL: begin
@@ -101,7 +101,7 @@ module shield_fsm
                     shield_coord_y <= START_Y;
                     invaderbullet_shield_collision <= 1'b0;
                     playerbullet_shield_collision <= 1'b0;
-                    shield_display <= 1'b0;
+                    shield_display <= 1'b1;
             end
 
             ALIVE: begin

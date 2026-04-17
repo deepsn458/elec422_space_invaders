@@ -72,8 +72,8 @@ module player_bullet_fsm #(
     always @ (negedge clkb) begin : FSM_SEQB            // clkb active signals are: Load_Temp, Accumulate
         if (reset) begin
             state <= INIT;
-            player_bullet_coord_x <= player_coord_x;
-            player_bullet_coord_y <= player_coord_y;
+            player_bullet_coord_x <= 6'd16;         // Start at player start position
+            player_bullet_coord_y <= 6'd2;          // Start at player start position
             display <= 0;
         end else begin
             case(next_state)
