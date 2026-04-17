@@ -34,9 +34,9 @@ invader_1  6 30 1
 invader_2 12 30 1
 invader_3 18 30 1
 invader_4 24 30 1
-shield 15  5 3 0
-player_bullet  x  2 0
-invader_bullet  x  x 0
+shield 15  5 3 1
+player_bullet 16  2 0
+invader_bullet 12 30 0
 END_FRAME
 TIME: 20000000 | TEST:                                 
 player 16  2 1
@@ -44,99 +44,99 @@ invader_1  6 30 1
 invader_2 12 30 1
 invader_3 18 30 1
 invader_4 24 30 1
-shield 15  5 X 1
-player_bullet  x  3 1
-invader_bullet  x  x 1
+shield 15  5 3 1
+player_bullet 16  3 1
+invader_bullet 12 29 1
 END_FRAME
 TIME: 24000000 | TEST:                                 
-player 16  2 x
+player 16  2 1
 invader_1  7 30 1
 invader_2 13 30 1
 invader_3 19 30 1
 invader_4 25 30 1
-shield 15  5 x 1
-player_bullet  x  4 1
-invader_bullet  x  x x
+shield 15  5 3 1
+player_bullet 16  4 1
+invader_bullet 12 28 1
 END_FRAME
 TIME: 28000000 | TEST:                                 
-player 16  2 x
+player 16  2 1
 invader_1  7 30 1
 invader_2 13 30 1
 invader_3 19 30 1
 invader_4 25 30 1
-shield 15  5 x x
-player_bullet  x  5 1
-invader_bullet  x  x x
+shield 15  5 3 1
+player_bullet 16  5 1
+invader_bullet 12 27 1
 END_FRAME
 TIME: 32000000 | TEST:                                 
-player 16  2 x
+player 16  2 1
+invader_1  8 30 1
+invader_2 14 30 1
+invader_3 20 30 1
+invader_4 26 30 1
+shield 15  5 3 1
+player_bullet 16  6 1
+invader_bullet 12 26 1
+END_FRAME
+TIME: 36000000 | TEST:                                 
+player 16  2 1
+invader_1  8 30 1
+invader_2 14 30 1
+invader_3 20 30 1
+invader_4 26 30 1
+shield 15  5 3 1
+player_bullet 16  2 0
+invader_bullet 12 25 1
+END_FRAME
+TIME: 40000000 | TEST:                                 
+player 16  2 1
+invader_1  9 30 1
+invader_2 15 30 1
+invader_3 21 30 1
+invader_4 27 30 1
+shield 15  5 3 1
+player_bullet  X  X x
+invader_bullet 12 24 1
+END_FRAME
+TIME: 44000000 | TEST:                                 
+player 16  2 1
+invader_1  9 30 1
+invader_2 15 30 1
+invader_3 21 30 1
+invader_4 27 30 1
+shield 15  5 3 1
+player_bullet  X  X x
+invader_bullet 12 23 1
+END_FRAME
+TIME: 48000000 | TEST:                                 
+player  X  2 1
+invader_1 10 30 1
+invader_2 16 30 1
+invader_3 22 30 1
+invader_4 28 30 1
+shield 15  5 3 1
+player_bullet  X  X x
+invader_bullet 12 22 1
+END_FRAME
+TIME: 52000000 | TEST:                                 
+player  X  2 1
+invader_1 10 30 1
+invader_2 16 30 1
+invader_3 22 30 1
+invader_4 28 30 1
+shield 15  5 3 1
+player_bullet  X  X x
+invader_bullet 12 21 1
+END_FRAME
+TIME: 56000000 | TEST:                                 
+player  X  2 x
 invader_1  X  X x
 invader_2  X  X x
 invader_3  X  X x
 invader_4  X  X x
-shield 15  5 x x
-player_bullet  x  X x
-invader_bullet  x  x x
-END_FRAME
-TIME: 36000000 | TEST:                                 
-player 16  2 x
-invader_1  X  x x
-invader_2  X  x x
-invader_3  X  x x
-invader_4  X  x x
-shield 15  5 x x
-player_bullet  x  X x
-invader_bullet  x  x x
-END_FRAME
-TIME: 40000000 | TEST:                                 
-player 16  2 x
-invader_1  x  x x
-invader_2  x  x x
-invader_3  x  x x
-invader_4  x  x x
-shield 15  5 x x
-player_bullet  x  X x
-invader_bullet  x  x x
-END_FRAME
-TIME: 44000000 | TEST:                                 
-player 16  2 x
-invader_1  x  x x
-invader_2  x  x x
-invader_3  x  x x
-invader_4  x  x x
-shield 15  5 x x
-player_bullet  x  X x
-invader_bullet  x  x x
-END_FRAME
-TIME: 48000000 | TEST:                                 
-player  X  2 x
-invader_1  x  x x
-invader_2  x  x x
-invader_3  x  x x
-invader_4  x  x x
-shield 15  5 x x
-player_bullet  x  x x
-invader_bullet  x  x x
-END_FRAME
-TIME: 52000000 | TEST:                                 
-player  X  2 x
-invader_1  x  x x
-invader_2  x  x x
-invader_3  x  x x
-invader_4  x  x x
-shield 15  5 x x
-player_bullet  x  x x
-invader_bullet  x  x x
-END_FRAME
-TIME: 56000000 | TEST:                                 
-player  X  2 x
-invader_1  x  x x
-invader_2  x  x x
-invader_3  x  x x
-invader_4  x  x x
-shield 15  5 x x
-player_bullet  x  x x
-invader_bullet  x  x x
+shield 15  5 3 x
+player_bullet  X  x x
+invader_bullet  X  X x
 END_FRAME
 TIME: 60000000 | TEST:                                 
 player  X  2 x
@@ -144,9 +144,9 @@ invader_1  x  x x
 invader_2  x  x x
 invader_3  x  x x
 invader_4  x  x x
-shield 15  5 x x
-player_bullet  x  x x
-invader_bullet  x  x x
+shield 15  5 3 x
+player_bullet  X  x x
+invader_bullet  X  x x
 END_FRAME
 TIME: 64000000 | TEST:                                 
 player  x  2 x
@@ -154,8 +154,8 @@ invader_1  x  x x
 invader_2  x  x x
 invader_3  x  x x
 invader_4  x  x x
-shield 15  5 x x
-player_bullet  x  x x
+shield 15  5 X x
+player_bullet  X  x x
 invader_bullet  x  x x
 END_FRAME
 TIME: 68000000 | TEST:                                 

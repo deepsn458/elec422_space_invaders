@@ -153,6 +153,7 @@ module main_game_fsm
                 move_down <= 0;
                 reset <= 1;
                 prev_invader_outofbounds <= 0;
+                playerbullet_fire <= 0;
             end
             IN_GAME: begin
                 reset <= 0;
