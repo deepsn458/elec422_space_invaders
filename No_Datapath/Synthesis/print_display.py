@@ -107,20 +107,24 @@ def render_log(filename):
             parts = line.split()
             entity = parts[0]
             
-            if entity == "player":
-                draw_player(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
-            elif entity == "invader_1":
-                draw_invader_1(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
-            elif entity == "invader_2":
-                draw_invader_2(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
-            elif entity == "invader_3":
-                draw_invader_3(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
-            elif entity == "invader_4":
-                draw_invader_4(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
-            elif entity == "shield":
-                draw_shield(matrix, int(parts[1]), int(parts[2]), int(parts[3]), int(parts[4]))
-            elif entity == "player_bullet" or entity == "invader_bullet":
-                draw_bullet(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
+            try:
+                if entity == "player":
+                    draw_player(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
+                elif entity == "invader_1":
+                    draw_invader_1(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
+                elif entity == "invader_2":
+                    draw_invader_2(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
+                elif entity == "invader_3":
+                    draw_invader_3(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
+                elif entity == "invader_4":
+                    draw_invader_4(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
+                elif entity == "shield":
+                    draw_shield(matrix, int(parts[1]), int(parts[2]), int(parts[3]), int(parts[4]))
+                elif entity == "player_bullet" or entity == "invader_bullet":
+                    draw_bullet(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
+            except ValueError:
+                # Silently skip drawing this entity if coordinates or state are 'x' or 'z'
+                pass
             
     print("End of log reached.")
 
