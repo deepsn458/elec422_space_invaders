@@ -52,7 +52,10 @@ module top
 
     output wire [5:0]       invader_bullet_coord_x,             // Invader bullet X coordinate
     output wire [5:0]       invader_bullet_coord_y,             // Invader bullet Y coordinate
-    output wire             invader_bullet_display              // Display bit
+    output wire             invader_bullet_display,              // Display bit
+
+    output wire [1:0]       playerbullet_state,                  // Player bullet state
+    output wire [1:0]       main_game_state                      // Main game state
     );
 
     // Module Interconnects
@@ -131,7 +134,7 @@ module top
         .playerbullet_fire(playerbullet_fire),
         .move_down(move_down),
         .invaderbullet_fire(invader_fire),
-        .state()
+        .state(main_game_state)
     );
 
     // Instantiate Player FSM:
@@ -245,7 +248,8 @@ module top
 
         .display(player_bullet_display),                               // Signal to indicate if the player bullet should be displayed on the screen
         .player_bullet_coord_x(player_bullet_coord_x),                 // Player bullet X coordinate
-        .player_bullet_coord_y(player_bullet_coord_y)                 // Player bullet Y coordinate
+        .player_bullet_coord_y(player_bullet_coord_y),                 // Player bullet Y coordinate
+        .state(playerbullet_state)
     );
 
     // Instantiate Invader Bullet FSM:
