@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Thu Apr 16 01:39:17 2026                
+#  Created on Fri Apr 17 13:40:36 2026                
 #                                                     
 #######################################################
 
@@ -292,17 +292,3 @@ streamOut final.gds -mapFile /clear/apps/osu/soc/cadence/flow/ami05/gds2_encount
 saveNetlist final.v
 saveDesign top.enc
 win
-fit
-zoomIn
-zoomIn
-zoomIn
-zoomIn
-zoomIn
-selectMarker 1560.7500 1552.0500 1561.6500 1552.9500 2 1 6
-zoomOut
-setLayerPreference violation -isVisible 1
-violationBrowser -all -no_display_false -displayByLayer
-zoomBox 2366.8 2379.7 2368.4 2381.15
-zoomBox 1978.0 3027.7 1979.6 3029.3
-zoomOut
-violationBrowserClose
