@@ -89,6 +89,7 @@ module player_bullet_fsm #(
                     player_bullet_coord_y <= player_bullet_coord_y + Y_OFFSET;
                     display <= 1;
                 end
+                default: state <= INIT;
             endcase
         end
     end

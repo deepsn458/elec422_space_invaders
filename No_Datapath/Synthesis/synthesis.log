@@ -29,10 +29,10 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-Current time:       Fri Apr 17 17:44:55 2026
+Current time:       Fri Apr 17 17:53:13 2026
 Hostname:           cobalt.clear8.rice.edu
 CPU Model:          Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
-CPU Details:        Cores = 40 : Sockets = 2 : Cache Size = 25600 KB : Freq = 3.40 GHz
+CPU Details:        Cores = 40 : Sockets = 2 : Cache Size = 25600 KB : Freq = 1.20 GHz
 OS:                 Linux 4.18.0-553.89.1.el8_10.x86_64
 RAM:                125 GB (Free   4 GB)
 Swap:                15 GB (Free  15 GB)
@@ -41,7 +41,7 @@ Tmp Filesystem:     /tmp mounted to /dev/mapper/vg0-tmp
 Work Disk:          5038 GB (Free 793 GB)
 Tmp Disk:             5 GB (Free   5 GB)
 
-CPU Load: 2%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 793 GB, Tmp Disk Free: 5 GB
+CPU Load: 3%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 793 GB, Tmp Disk Free: 5 GB
 #/**************************************************/
 #/* Compile Script for Synopsys                    */
 #/*                                                */
@@ -550,7 +550,7 @@ set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all
 set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
 1
 compile -ungroup_all -map_effort medium
-CPU Load: 2%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 793 GB, Tmp Disk Free: 5 GB
+CPU Load: 3%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 793 GB, Tmp Disk Free: 5 GB
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -742,14 +742,14 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
     0:00:04  624924.0      0.00       0.0       0.0                          
     0:00:04  624924.0      0.00       0.0       0.0                          
     0:00:04  624924.0      0.00       0.0       0.0                          
-    0:00:04  598716.0      0.00       0.0       0.0                          
-    0:00:04  598716.0      0.00       0.0       0.0                          
-    0:00:04  598716.0      0.00       0.0       0.0                          
-    0:00:04  598716.0      0.00       0.0       0.0                          
-    0:00:04  598716.0      0.00       0.0       0.0                          
-    0:00:04  598716.0      0.00       0.0       0.0                          
-    0:00:04  598716.0      0.00       0.0       0.0                          
-    0:00:04  598716.0      0.00       0.0       0.0                          
+    0:00:05  598716.0      0.00       0.0       0.0                          
+    0:00:05  598716.0      0.00       0.0       0.0                          
+    0:00:05  598716.0      0.00       0.0       0.0                          
+    0:00:05  598716.0      0.00       0.0       0.0                          
+    0:00:05  598716.0      0.00       0.0       0.0                          
+    0:00:05  598716.0      0.00       0.0       0.0                          
+    0:00:05  598716.0      0.00       0.0       0.0                          
+    0:00:05  598716.0      0.00       0.0       0.0                          
 
 
 
@@ -760,9 +760,9 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:04  598716.0      0.00       0.0       0.0                          
-    0:00:04  598716.0      0.00       0.0       0.0                          
-    0:00:04  598716.0      0.00       0.0       0.0                          
+    0:00:05  598716.0      0.00       0.0       0.0                          
+    0:00:05  598716.0      0.00       0.0       0.0                          
+    0:00:05  598716.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -772,21 +772,21 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:04  598716.0      0.00       0.0       0.0                          
-    0:00:04  598716.0      0.00       0.0       0.0                          
-    0:00:04  591228.0      0.00       0.0       0.0                          
-    0:00:04  586764.0      0.00       0.0       0.0                          
-    0:00:04  584028.0      0.00       0.0       0.0                          
-    0:00:04  582876.0      0.00       0.0       0.0                          
-    0:00:04  582444.0      0.00       0.0       0.0                          
-    0:00:04  582444.0      0.00       0.0       0.0                          
-    0:00:04  582444.0      0.00       0.0       0.0                          
-    0:00:04  582444.0      0.00       0.0       0.0                          
-    0:00:04  582444.0      0.00       0.0       0.0                          
-    0:00:04  582444.0      0.00       0.0       0.0                          
-    0:00:04  582444.0      0.00       0.0       0.0                          
-    0:00:04  582444.0      0.00       0.0       0.0                          
-    0:00:04  582444.0      0.00       0.0       0.0                          
+    0:00:05  598716.0      0.00       0.0       0.0                          
+    0:00:05  598716.0      0.00       0.0       0.0                          
+    0:00:05  591228.0      0.00       0.0       0.0                          
+    0:00:05  586764.0      0.00       0.0       0.0                          
+    0:00:05  584028.0      0.00       0.0       0.0                          
+    0:00:05  582876.0      0.00       0.0       0.0                          
+    0:00:05  582444.0      0.00       0.0       0.0                          
+    0:00:05  582444.0      0.00       0.0       0.0                          
+    0:00:05  582444.0      0.00       0.0       0.0                          
+    0:00:05  582444.0      0.00       0.0       0.0                          
+    0:00:05  582444.0      0.00       0.0       0.0                          
+    0:00:05  582444.0      0.00       0.0       0.0                          
+    0:00:05  582444.0      0.00       0.0       0.0                          
+    0:00:05  582444.0      0.00       0.0       0.0                          
+    0:00:05  582444.0      0.00       0.0       0.0                          
 Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
 
 
@@ -795,7 +795,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 2%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 793 GB, Tmp Disk Free: 5 GB
+CPU Load: 3%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 793 GB, Tmp Disk Free: 5 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -817,7 +817,7 @@ Unmapped MV Cells
 ----------------------------------------------------------------------------------------------------
 1
 compile -incremental_mapping -map_effort medium
-CPU Load: 2%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 793 GB, Tmp Disk Free: 5 GB
+CPU Load: 3%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 793 GB, Tmp Disk Free: 5 GB
 ====================================================================================================
 | Flow Information                                                                                 |
 ----------------------------------------------------------------------------------------------------
@@ -840,7 +840,7 @@ CPU Load: 2%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 793 GB, Tmp Disk
 | Design with UPF Data                                    | false                                  |
 ====================================================================================================
 
-Information: There are 18 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 19 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
@@ -864,9 +864,9 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00  582444.0      0.00       0.0       0.0                          
-    0:00:00  582444.0      0.00       0.0       0.0                          
-    0:00:00  582444.0      0.00       0.0       0.0                          
+    0:00:01  582444.0      0.00       0.0       0.0                          
+    0:00:01  582444.0      0.00       0.0       0.0                          
+    0:00:01  582444.0      0.00       0.0       0.0                          
 Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
 
 
@@ -875,7 +875,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 2%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 793 GB, Tmp Disk Free: 5 GB
+CPU Load: 3%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 793 GB, Tmp Disk Free: 5 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -901,13 +901,13 @@ check_design
 ****************************************
 check_design summary:
 Version:     U-2022.12-SP7
-Date:        Fri Apr 17 17:45:05 2026
+Date:        Fri Apr 17 17:53:20 2026
 ****************************************
 
                    Name                                            Total
 --------------------------------------------------------------------------------
-Inputs/Outputs                                                     18
-    Constant outputs (LINT-52)                                     18
+Inputs/Outputs                                                     19
+    Constant outputs (LINT-52)                                     19
 --------------------------------------------------------------------------------
 
 Warning: In design 'top', output port 'player_coord_y[5]' is connected directly to 'logic 0'. (LINT-52)
@@ -928,6 +928,7 @@ Warning: In design 'top', output port 'shield_coord_y[3]' is connected directly 
 Warning: In design 'top', output port 'shield_coord_y[2]' is connected directly to 'logic 1'. (LINT-52)
 Warning: In design 'top', output port 'shield_coord_y[1]' is connected directly to 'logic 0'. (LINT-52)
 Warning: In design 'top', output port 'shield_coord_y[0]' is connected directly to 'logic 1'. (LINT-52)
+Warning: In design 'top', output port 'playerbullet_state[1]' is connected directly to 'logic 0'. (LINT-52)
 1
 report_constraint -all_violators
 Information: Updating design information... (UID-85)
@@ -937,7 +938,7 @@ Report : constraint
         -all_violators
 Design : top
 Version: U-2022.12-SP7
-Date   : Fri Apr 17 17:45:05 2026
+Date   : Fri Apr 17 17:53:20 2026
 ****************************************
 
 This design has no violated constraints.
@@ -959,7 +960,7 @@ report_cell
 Report : cell
 Design : top
 Version: U-2022.12-SP7
-Date   : Fri Apr 17 17:45:05 2026
+Date   : Fri Apr 17 17:53:20 2026
 ****************************************
 
 Attributes:
@@ -3207,7 +3208,7 @@ report_area
 Report : area
 Design : top
 Version: U-2022.12-SP7
-Date   : Fri Apr 17 17:45:05 2026
+Date   : Fri Apr 17 17:53:20 2026
 ****************************************
 
 Information: Updating design information... (UID-85)
@@ -3215,9 +3216,9 @@ Library(s) Used:
 
     osu05_stdcells (File: /clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db)
 
-Number of ports:                          112
-Number of nets:                          1913
-Number of cells:                         1816
+Number of ports:                          116
+Number of nets:                          1914
+Number of cells:                         1817
 Number of combinational cells:           1654
 Number of sequential cells:               144
 Number of macros/black boxes:               0
@@ -3242,7 +3243,7 @@ Report : timing
         -max_paths 3
 Design : top
 Version: U-2022.12-SP7
-Date   : Fri Apr 17 17:45:05 2026
+Date   : Fri Apr 17 17:53:20 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
@@ -3322,7 +3323,7 @@ Report : power
         -analysis_effort low
 Design : top
 Version: U-2022.12-SP7
-Date   : Fri Apr 17 17:45:05 2026
+Date   : Fri Apr 17 17:53:21 2026
 ****************************************
 
 
@@ -3377,7 +3378,7 @@ quit
 
 Memory usage for this session 123 Mbytes.
 Memory usage for this session including child processes 123 Mbytes.
-CPU usage for this session 9 seconds ( 0.00 hours ).
-Elapsed time for this session 15 seconds ( 0.00 hours ).
+CPU usage for this session 11 seconds ( 0.00 hours ).
+Elapsed time for this session 14 seconds ( 0.00 hours ).
 
 Thank you...
