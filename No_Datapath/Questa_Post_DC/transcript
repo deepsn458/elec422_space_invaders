@@ -13,7 +13,11 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -debugDB -voptargs=""+acc"" top_tb_coords 
+<<<<<<< HEAD
 # Start time: 00:47:01 on Apr 19,2026
+=======
+# Start time: 17:54:39 on Apr 17,2026
+>>>>>>> c6e9644e9a359d64c9ce4b293b84e1cd69bb09bc
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Note: (vsim-8611) Generating debug db.
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
@@ -686,3 +690,8 @@ run -all
 # ** Note: $stop    : top_tb_coords.v(306)
 #    Time: 3652 us  Iteration: 0  Instance: /top_tb_coords
 # Break in Module top_tb_coords at top_tb_coords.v line 306
+<<<<<<< HEAD
+=======
+# End time: 18:07:50 on Apr 17,2026, Elapsed time: 0:13:11
+# Errors: 9, Warnings: 292
+>>>>>>> c6e9644e9a359d64c9ce4b293b84e1cd69bb09bc

@@ -15,6 +15,8 @@ module top ( clka, clkb, reset, player_left_input, player_right_input,
         player_bullet_coord_x, player_bullet_coord_y, player_bullet_display, 
         invader_bullet_coord_x, invader_bullet_coord_y, invader_bullet_display, 
         playerbullet_state, main_game_state );
+        invader_bullet_coord_x, invader_bullet_coord_y, invader_bullet_display, 
+        playerbullet_state, main_game_state );
   output [5:0] player_coord_x;
   output [5:0] player_coord_y;
   output [5:0] invader_1_coord_x;
@@ -32,6 +34,8 @@ module top ( clka, clkb, reset, player_left_input, player_right_input,
   output [5:0] player_bullet_coord_y;
   output [5:0] invader_bullet_coord_x;
   output [5:0] invader_bullet_coord_y;
+  output [1:0] playerbullet_state;
+  output [1:0] main_game_state;
   output [1:0] playerbullet_state;
   output [1:0] main_game_state;
   input clka, clkb, reset, player_left_input, player_right_input,

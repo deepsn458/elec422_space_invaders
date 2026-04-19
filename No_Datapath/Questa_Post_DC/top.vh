@@ -463,6 +463,7 @@ module top ( clka, clkb, reset, player_left_input, player_right_input,
   assign invader_4_coord_x[0] = \invader_fsm_4/N84 ;
   assign invader_4_coord_y[0] = \invader_fsm_4/N70 ;
   assign playerbullet_state[1] = 1'b0;
+  assign playerbullet_state[1] = 1'b0;
 
   NAND2X1 U1 ( .A(n1), .B(n2), .Y(playerbullet_invader_collision_signal) );
   NOR2X1 U2 ( .A(playerbullet_invader_collision_signal_4), .B(
