@@ -1,10 +1,6 @@
 ###################################################################
 
-<<<<<<< HEAD
-# Created by write_sdc on Sun Apr 19 00:40:08 2026
-=======
-# Created by write_sdc on Fri Apr 17 17:53:20 2026
->>>>>>> c6e9644e9a359d64c9ce4b293b84e1cd69bb09bc
+# Created by write_sdc on Sun Apr 19 01:19:38 2026
 
 ###################################################################
 set sdc_version 2.1

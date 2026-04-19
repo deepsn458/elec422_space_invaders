@@ -1,12 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version U-2022.12-SP7 for linux64 -- Oct 10, 2023
-<<<<<<< HEAD
-#@ # Date:   Sun Apr 19 00:39:59 2026
+#@ # Date:   Sun Apr 19 01:19:23 2026
 #@ # Run by: jc165@borax.clear8.rice.edu
-=======
-#@ # Date:   Fri Apr 17 17:53:12 2026
-#@ # Run by: ely2@cobalt.clear8.rice.edu
->>>>>>> c6e9644e9a359d64c9ce4b293b84e1cd69bb09bc
 #@ 
 
 source /clear/apps/synopsys-2023/syn/latest/admin/setup/.synopsys_dc.setup
