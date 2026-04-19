@@ -1,0 +1,691 @@
+# //  Questa Sim-64
+# //  Version 2023.2 linux_x86_64 Apr 11 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -debugDB -voptargs=""+acc"" top_tb_coords 
+# Start time: 01:14:37 on Apr 19,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: top_tb_coords.v(65): (vopt-2685) [TFMPC] - Too few port connections for 'U1'.  Expected 33, found 31.
+# ** Warning: top_tb_coords.v(65): (vopt-2718) [TFMPC] - Missing connection for port 'main_game_state'.
+# ** Warning: top_tb_coords.v(65): (vopt-2718) [TFMPC] - Missing connection for port 'playerbullet_state'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading work.top_tb_coords(fast)
+# Loading work.top(fast)
+# Loading work.NAND2X1(fast)
+# Loading work.NOR2X1(fast)
+# Loading work.AOI21X1(fast)
+# Loading work.NAND3X1(fast)
+# Loading work.OAI21X1(fast)
+# Loading work.AOI22X1(fast)
+# Loading work.OR2X1(fast)
+# Loading work.AND2X2(fast)
+# Loading work.DFFNEGX1(fast)
+# Loading work.LATCH(fast)
+# Loading work.XOR2X1(fast)
+# Loading work.OAI22X1(fast)
+# Loading work.HAX1(fast)
+# Loading work.FAX1(fast)
+# Loading work.XNOR2X1(fast)
+# Loading work.OR2X2(fast)
+# Loading work.INVX2(fast)
+# Loading work.BUFX2(fast)
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/player_right_motion_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/player_right_motion_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/playerbullet_fire_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/playerbullet_fire_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/player_left_motion_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/player_left_motion_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/next_player_left_motion_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/next_player_left_motion_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(573): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/temp_player_left_motion_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(575): Timing check limit can not be negative. Setting negative check constraint (-190 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/temp_player_left_motion_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/next_player_right_motion_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/next_player_right_motion_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(573): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/temp_player_right_motion_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(575): Timing check limit can not be negative. Setting negative check constraint (-190 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/temp_player_right_motion_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/next_playerbullet_fire_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/next_playerbullet_fire_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(573): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/temp_playerbullet_fire_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(575): Timing check limit can not be negative. Setting negative check constraint (-190 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/temp_playerbullet_fire_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/invader_direction_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/invader_direction_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/play_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/play_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/invaderbullet_fire_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/invaderbullet_fire_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/move_down_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/move_down_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/reset_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/reset_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/prev_invader_outofbounds_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/prev_invader_outofbounds_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\main_game_fsm/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/player_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/player_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/player_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/player_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/player_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/player_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/player_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/player_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/player_coord_x_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/player_coord_x_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/player_coord_x_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/player_coord_x_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/invaderbullet_player_collision_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/invaderbullet_player_collision_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_fsm/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/playerbullet_shield_collision_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/playerbullet_shield_collision_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/shield_display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/shield_display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/invaderbullet_shield_collision_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/invaderbullet_shield_collision_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/shield_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/shield_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/shield_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/shield_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/shield_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/shield_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/shield_coord_y_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/shield_coord_y_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/hp_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/hp_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/hp_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\shield_fsm/hp_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_outofbounds_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_outofbounds_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_y_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_y_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_y_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_y_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_y_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_y_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_y_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_y_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_y_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_y_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_y_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_y_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/playerbullet_invader_collision_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/playerbullet_invader_collision_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_x_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_x_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_x_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_x_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/move_interval_toggle_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/move_interval_toggle_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_1/invader_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_outofbounds_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_outofbounds_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_y_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_y_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_y_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_y_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_y_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_y_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_y_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_y_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_y_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_y_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_y_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_y_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/playerbullet_invader_collision_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/playerbullet_invader_collision_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_x_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_x_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_x_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_x_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/move_interval_toggle_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/move_interval_toggle_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_2/invader_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_outofbounds_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_outofbounds_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_y_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_y_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_y_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_y_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_y_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_y_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_y_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_y_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_y_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_y_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_y_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_y_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/playerbullet_invader_collision_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/playerbullet_invader_collision_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_x_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_x_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_x_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_x_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/move_interval_toggle_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/move_interval_toggle_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_3/invader_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_outofbounds_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_outofbounds_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_y_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_y_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_y_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_y_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_y_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_y_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_y_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_y_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_y_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_y_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_y_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_y_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/playerbullet_invader_collision_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/playerbullet_invader_collision_signal_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_x_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_x_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_x_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_x_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/move_interval_toggle_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/move_interval_toggle_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_fsm_4/invader_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_x_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_x_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_x_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_x_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_y_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_y_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_y_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_y_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_y_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_y_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_y_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_y_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_y_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_y_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_y_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\player_bullet_fsm/player_bullet_coord_y_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_x_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_x_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_x_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_x_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_y_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_y_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_y_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_y_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_y_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_y_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_y_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_y_reg[4]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_display_reg  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_y_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_y_reg[5]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_y_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /top_tb_coords/U1/\invader_bullet_fsm/invader_bullet_coord_y_reg[0]  File: osu05_stdcells.v
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+add wave -r /*
+run -all
+# ** Error: $setup( posedge D:4000350 ps, negedge CLK:4000360 ps, 280 ps );
+#    Time: 4000360 ps  Iteration: 1  Process: /top_tb_coords/U1/\main_game_fsm/invader_direction_reg /#Setup# File: osu05_stdcells.v Line: 261
+# ** Error: $setup( negedge D:4000310 ps, negedge CLK:4000360 ps, 380 ps );
+#    Time: 4000360 ps  Iteration: 1  Process: /top_tb_coords/U1/\main_game_fsm/invaderbullet_fire_reg /#Setup# File: osu05_stdcells.v Line: 259
+# ** Error: $setup( negedge D:4000270 ps, negedge CLK:4000360 ps, 380 ps );
+#    Time: 4000360 ps  Iteration: 1  Process: /top_tb_coords/U1/\main_game_fsm/state_reg[1] /#Setup# File: osu05_stdcells.v Line: 259
+# ** Error: $setup( negedge D:4000270 ps, negedge CLK:4000360 ps, 380 ps );
+#    Time: 4000360 ps  Iteration: 1  Process: /top_tb_coords/U1/\main_game_fsm/state_reg[0] /#Setup# File: osu05_stdcells.v Line: 259
+# ** Error: $setup( posedge D:8000120 ps, negedge CLK:8000360 ps, 280 ps );
+#    Time: 8000360 ps  Iteration: 1  Process: /top_tb_coords/U1/\main_game_fsm/invaderbullet_fire_reg /#Setup# File: osu05_stdcells.v Line: 261
+# Testing: Left Boundary Hit...
+# Testing: Rapid Fire Pulse...
+# Testing: Strafing Right while shooting...
+# Testing: Right Boundary Hit...
+# Testing: Left and Right conflict...
+# Testing: Idle Game State (Watching alien movement)...
+# Testing: Left Boundary Hit...
+# Testing: Rapid Fire Pulse...
+# Testing: Strafing Right while shooting...
+# Testing: Right Boundary Hit...
+# Testing: Left and Right conflict...
+# Testing: Idle Game State (Watching alien movement)...
+# Simulation Complete. Matrix written to top_display_log.txt
+# ** Note: $stop    : top_tb_coords.v(306)
+#    Time: 3652 us  Iteration: 0  Instance: /top_tb_coords
+# Break in Module top_tb_coords at top_tb_coords.v line 306
+quit
+# End time: 01:16:40 on Apr 19,2026, Elapsed time: 0:02:03
+# Errors: 5, Warnings: 312
