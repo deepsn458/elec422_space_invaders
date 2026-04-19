@@ -92,9 +92,11 @@ module player_fsm #(
                 player_coord_x <= X_START;
                 player_coord_y <= Y_START;
                 display <= 1;
+                invaderbullet_player_collision_signal <= 0;
             end
             PLAY: begin
                 state <= next_state;
+                player_coord_y <= player_coord_y;
                 display <= 1;
                 if (player_left_input && ~player_right_input && player_coord_x > LEFT_BOUND) begin
                     player_coord_x <= player_coord_x - 1;

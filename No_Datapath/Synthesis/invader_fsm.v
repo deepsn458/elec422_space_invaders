@@ -148,6 +148,7 @@ module invader_fsm
                     
                     invader_coord_x <= DEAD_X;
                     invader_coord_y <= DEAD_Y;
+                    move_interval_toggle <= 0;
 
                     invader_outofbounds_signal <= 0;
 

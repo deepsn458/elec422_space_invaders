@@ -3,6 +3,7 @@
 #//
 #// Written: jc165@rice.edu
 #// Created: 18 Mar 2026
+#// Modified: 16 Apr 2026 (Migrated Datapath matrix generation to Python)
 #//
 #// Purpose: Printing script that reads the verilog tb log file and
 #// prints the matrix into a visualisable display
@@ -14,6 +15,61 @@ def clear_screen():
     # Clears the terminal screen for a clean frame update
     os.system('cls' if os.name == 'nt' else 'clear')
 
+def set_pixel(matrix, x, y):
+    """Sets a pixel in the matrix if it is within bounds."""
+    if 0 <= x < 32 and 0 <= y < 32:
+        matrix[y][x] = 1
+
+def draw_player(matrix, x, y, disp):
+    if not disp: return
+    coords = [(x, y), (x-1, y), (x+1, y), (x, y+1)]
+    for cx, cy in coords:
+        set_pixel(matrix, cx, cy)
+
+def draw_invader_1(matrix, x, y, disp):
+    if not disp: return
+    coords = [(x, y), (x-1, y), (x+1, y), (x, y-1), (x-1, y+1), (x+1, y+1)]
+    for cx, cy in coords:
+        set_pixel(matrix, cx, cy)
+
+def draw_invader_2(matrix, x, y, disp):
+    if not disp: return
+    coords = [(x, y), (x-1, y), (x+1, y), (x, y+1), (x, y-1)]
+    for cx, cy in coords:
+        set_pixel(matrix, cx, cy)
+
+def draw_invader_3(matrix, x, y, disp):
+    if not disp: return
+    coords = [(x, y), (x-1, y), (x+1, y), (x, y+1), (x, y-1), (x-1, y+1), (x+1, y+1)]
+    for cx, cy in coords:
+        set_pixel(matrix, cx, cy)
+
+def draw_invader_4(matrix, x, y, disp):
+    if not disp: return
+    coords = [(x, y), (x-1, y+1), (x+1, y+1), (x-1, y-1), (x+1, y-1)]
+    for cx, cy in coords:
+        set_pixel(matrix, cx, cy)
+
+def draw_shield(matrix, x, y, hp, disp):
+    if not disp or hp == 0: return
+    
+    # Bottom Layer (row == Y)
+    set_pixel(matrix, x-2, y)
+    set_pixel(matrix, x-1, y)
+    set_pixel(matrix, x, y)
+    if hp != 1: set_pixel(matrix, x+1, y)
+    set_pixel(matrix, x+2, y)
+    
+    # Top Layer (row == Y + 1)
+    set_pixel(matrix, x-2, y+1)
+    if hp == 3: set_pixel(matrix, x-1, y+1)
+    if hp != 1: set_pixel(matrix, x, y+1)
+    set_pixel(matrix, x+1, y+1)
+    set_pixel(matrix, x+2, y+1)
+
+def draw_bullet(matrix, x, y, disp):
+    if disp: set_pixel(matrix, x, y)
+
 def render_log(filename):
     try:
         with open(filename, 'r') as f:
@@ -23,36 +79,52 @@ def render_log(filename):
         return
 
     frame_title = ""
+    # matrix[y][x] format, 32x32. Initialize full of 0s
     matrix = []
 
     for line in lines:
         line = line.strip()
         
         if line.startswith("TIME:"):
-            # Start of a new frame
             frame_title = line
-            matrix = []
+            matrix = [[0]*32 for _ in range(32)]
             
         elif line == "END_FRAME":
-            # Frame is complete, time to draw it
             clear_screen()
             print("=" * 66)
             print(frame_title)
             print("=" * 66)
             
-            # Print the matrix with block characters
-            for row in matrix:
-                rendered_row = row.replace('1', '██').replace('0', '  ')
-                print(rendered_row)
+            # Print the matrix from Y=31 down to Y=0 to match screen mapping
+            for row_idx in range(31, -1, -1):
+                row_str = "".join(['██' if matrix[row_idx][c] else '  ' for c in range(32)])
+                print(row_str)
             
             print("=" * 66)
-            
-            # Pause and wait for the user to proceed to the next frame
             input("\nPress [Enter] to see the next frame...")
             
         elif line: 
-            # This is a string of 1s and 0s making up a row
-            matrix.append(line[::-1])
+            parts = line.split()
+            entity = parts[0]
+            
+            try:
+                if entity == "player":
+                    draw_player(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
+                elif entity == "invader_1":
+                    draw_invader_1(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
+                elif entity == "invader_2":
+                    draw_invader_2(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
+                elif entity == "invader_3":
+                    draw_invader_3(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
+                elif entity == "invader_4":
+                    draw_invader_4(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
+                elif entity == "shield":
+                    draw_shield(matrix, int(parts[1]), int(parts[2]), int(parts[3]), int(parts[4]))
+                elif entity == "player_bullet" or entity == "invader_bullet":
+                    draw_bullet(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
+            except ValueError:
+                # Silently skip drawing this entity if coordinates or state are 'x' or 'z'
+                pass
             
     print("End of log reached.")
 

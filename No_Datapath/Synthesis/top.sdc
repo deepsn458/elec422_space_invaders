@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Fri Apr 17 17:45:05 2026
+# Created by write_sdc on Sun Apr 19 00:40:08 2026
 
 ###################################################################
 set sdc_version 2.1
@@ -124,3 +124,7 @@ set_output_delay -clock clka  1  [get_ports {invader_bullet_coord_y[2]}]
 set_output_delay -clock clka  1  [get_ports {invader_bullet_coord_y[1]}]
 set_output_delay -clock clka  1  [get_ports {invader_bullet_coord_y[0]}]
 set_output_delay -clock clka  1  [get_ports invader_bullet_display]
+set_output_delay -clock clka  1  [get_ports {playerbullet_state[1]}]
+set_output_delay -clock clka  1  [get_ports {playerbullet_state[0]}]
+set_output_delay -clock clka  1  [get_ports {main_game_state[1]}]
+set_output_delay -clock clka  1  [get_ports {main_game_state[0]}]

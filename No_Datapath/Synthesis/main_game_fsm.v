@@ -92,33 +92,54 @@ module main_game_fsm
     assign closest_invader_coord_x = (min_diff_12 < min_diff_34) ? closest_loc_x_12 : closest_loc_x_34;
     assign closest_invader_coord_y = (min_diff_12 < min_diff_34) ? closest_loc_y_12 : closest_loc_y_34;
 
+    reg temp_player_left_motion;
+    reg temp_player_right_motion;
+    reg temp_playerbullet_fire;
+
+    reg next_player_left_motion;
+    reg next_player_right_motion;
+    reg next_playerbullet_fire;
+
     // Combinational logic to calculate upcoming tempt state
     always @(*) begin
         case(state)
-        // move to in-game if player presses the fire button
-        INIT: begin
-            if (player_shoot_input) begin
-            temp_state = IN_GAME;
-            end else begin
-            temp_state = INIT;
+            // move to in-game if player presses the fire button
+            INIT: begin
+                temp_player_left_motion = 0;
+                temp_player_right_motion = 0;
+                temp_playerbullet_fire = 0;
+
+                if (player_shoot_input) begin
+                    temp_state = IN_GAME;
+                end else begin
+                    temp_state = INIT;
+                end
             end
-        end
 
-        IN_GAME: begin
-            if (invaders_display == 4'b0 || (~player_display) || closest_invader_coord_y <= 5) begin
-            temp_state = INIT;
-            end else if (invader_outofbounds & ~prev_invader_outofbounds) begin
-                temp_state = DIRECTION_CHANGE;
-            end else begin
-            temp_state = IN_GAME;
+            IN_GAME: begin
+                if (invaders_display == 4'b0 || (~player_display) || closest_invader_coord_y <= 5) begin
+                    temp_state = INIT;
+                    {temp_playerbullet_fire, temp_player_right_motion, temp_player_left_motion} = {1'b0,1'b0,1'b0};
+                end else if (invader_outofbounds & ~prev_invader_outofbounds) begin
+                    temp_state = DIRECTION_CHANGE;
+                    {temp_playerbullet_fire, temp_player_right_motion, temp_player_left_motion} = {player_shoot_input, player_right_input, player_left_input};
+                end else begin
+                    temp_state = IN_GAME;
+                    {temp_playerbullet_fire, temp_player_right_motion, temp_player_left_motion} = {player_shoot_input, player_right_input, player_left_input};
+                end
             end
-        end
 
-        DIRECTION_CHANGE: begin
-            temp_state = IN_GAME;
-        end
+            DIRECTION_CHANGE: begin
+                if (invaders_display == 4'b0 || (~player_display) || closest_invader_coord_y <= 5) begin
+                    temp_state = INIT;
+                    {temp_playerbullet_fire, temp_player_right_motion, temp_player_left_motion} = {1'b0,1'b0,1'b0};
+                end else begin
+                    temp_state = IN_GAME;
+                    {temp_playerbullet_fire, temp_player_right_motion, temp_player_left_motion} = {player_shoot_input, player_right_input, player_left_input};
+                end
+            end
 
-        default: temp_state = INIT;
+            default: temp_state = INIT;
         endcase
     end
 
@@ -126,8 +147,14 @@ module main_game_fsm
     always @ (negedge clka) begin : FSM_SEQA
         if (global_reset) begin
             next_state <= INIT;
+            next_player_left_motion <= 0;
+            next_player_right_motion <= 0;
+            next_playerbullet_fire <= 0;
         end else begin
             next_state <= temp_state;
+            next_player_left_motion <= temp_player_left_motion;
+            next_player_right_motion <= temp_player_right_motion;
+            next_playerbullet_fire <= temp_playerbullet_fire;
         end
     end
 
@@ -145,37 +172,41 @@ module main_game_fsm
                     invaderbullet_fire <= 0;
                     prev_invader_outofbounds <= 0;
         end else begin
-        case(next_state)
-            INIT: begin
-                state <= next_state;
-                invader_direction <= 1;
-                play <= 0;
-                move_down <= 0;
-                reset <= 1;
-                prev_invader_outofbounds <= 0;
-                playerbullet_fire <= 0;
-            end
-            IN_GAME: begin
-                reset <= 0;
-                // fire the invader bullet again if has collided or has reached the y limit
-                state <= next_state;
-                play <= 1;
-                move_down <= 0;
-                // if((invaderbullet_player_collision_signal | invaderbullet_shield_collision_signal) || invaderbullet_coord_y == BOTTOM_BOUND) begin
-                invaderbullet_fire <= 1;
-                // end
-                //send commands to player and player bullet
-                {playerbullet_fire, player_right_motion, player_left_motion} <= {player_shoot_input, player_right_input, player_left_input};
-                prev_invader_outofbounds <= invader_outofbounds;
-            end
-            DIRECTION_CHANGE: begin
-                state <= next_state;
-                invader_direction <= ~invader_direction;
-                move_down <= 1;
-                prev_invader_outofbounds <= invader_outofbounds;
-            end
-            default: state <= INIT;
-        endcase
+            case(next_state)
+                INIT: begin
+                    state <= next_state;
+                    invader_direction <= 1;
+                    play <= 0;
+                    move_down <= 0;
+                    reset <= 1;
+                    {playerbullet_fire, player_right_motion, player_left_motion} <= {1'b0,1'b0,1'b0};
+                    prev_invader_outofbounds <= 0;
+                end
+                IN_GAME: begin
+                    reset <= 0;
+                    // fire the invader bullet again if has collided or has reached the y limit
+                    state <= next_state;
+                    play <= 1;
+                    move_down <= 0;
+                    // if((invaderbullet_player_collision_signal | invaderbullet_shield_collision_signal) || invaderbullet_coord_y == BOTTOM_BOUND) begin
+                    invaderbullet_fire <= 1;
+                    invader_direction <= invader_direction;
+                    // end
+                    //send commands to player and player bullet
+                    {playerbullet_fire, player_right_motion, player_left_motion} <= {next_playerbullet_fire, next_player_right_motion, next_player_left_motion};
+                    prev_invader_outofbounds <= invader_outofbounds;
+                end
+                DIRECTION_CHANGE: begin
+                    state <= next_state;
+                    invader_direction <= ~invader_direction;
+                    move_down <= 1;
+                    {playerbullet_fire, player_right_motion, player_left_motion} <= {next_playerbullet_fire, next_player_right_motion, next_player_left_motion};
+                    prev_invader_outofbounds <= invader_outofbounds;
+                    play <= play;
+                    reset <= 0;
+                end
+                default: state <= INIT;
+            endcase
         end
-        end
+    end
 endmodule
