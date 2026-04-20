@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : U-2022.12-SP7
-// Date      : Mon Apr 20 00:20:09 2026
+// Date      : Mon Apr 20 00:43:28 2026
 /////////////////////////////////////////////////////////////
 
 
@@ -110,7 +110,7 @@ module top ( clka, clkb, reset, player_left_input, player_right_input,
          \player_fsm/state[1] , \shield_fsm/n91 , \shield_fsm/n90 ,
          \shield_fsm/n89 , \shield_fsm/n88 , \shield_fsm/n87 ,
          \shield_fsm/n86 , \shield_fsm/n85 , \shield_fsm/n84 ,
-         \shield_fsm/n83 , \shield_fsm/n80 , \shield_fsm/n79 ,
+         \shield_fsm/n83 , \shield_fsm/n81 , \shield_fsm/n79 ,
          \shield_fsm/n78 , \shield_fsm/n77 , \shield_fsm/n76 ,
          \shield_fsm/n75 , \shield_fsm/n74 , \shield_fsm/n73 ,
          \shield_fsm/n72 , \shield_fsm/n71 , \shield_fsm/n70 ,
@@ -118,7 +118,7 @@ module top ( clka, clkb, reset, player_left_input, player_right_input,
          \shield_fsm/n66 , \shield_fsm/n65 , \shield_fsm/n64 ,
          \shield_fsm/n63 , \shield_fsm/n62 , \shield_fsm/n61 ,
          \shield_fsm/n60 , \shield_fsm/n59 , \shield_fsm/n58 ,
-         \shield_fsm/n56 , \shield_fsm/n54 , \shield_fsm/n53 ,
+         \shield_fsm/n56 , \shield_fsm/n55 , \shield_fsm/n53 ,
          \shield_fsm/n52 , \shield_fsm/n51 , \shield_fsm/n50 ,
          \shield_fsm/n49 , \shield_fsm/n48 , \shield_fsm/N104 ,
          \shield_fsm/N90 , \shield_fsm/N89 , \shield_fsm/N48 ,
@@ -256,7 +256,7 @@ module top ( clka, clkb, reset, player_left_input, player_right_input,
   assign player_coord_y[1] = 1'b0;
   assign player_coord_y[2] = 1'b0;
   assign player_coord_y[3] = 1'b0;
-  assign shield_coord_y[2] = 1'b0;
+  assign shield_coord_y[1] = 1'b0;
   assign shield_coord_y[3] = 1'b0;
   assign shield_coord_x[0] = 1'b1;
   assign shield_coord_x[3] = 1'b0;
@@ -689,10 +689,10 @@ module top ( clka, clkb, reset, player_left_input, player_right_input,
         n199), .Y(\shield_fsm/n77 ) );
   XOR2X1 \shield_fsm/U73  ( .A(n111), .B(invader_bullet_coord_y[0]), .Y(
         \shield_fsm/n79 ) );
-  XOR2X1 \shield_fsm/U72  ( .A(n112), .B(invader_bullet_coord_y[1]), .Y(
-        \shield_fsm/n80 ) );
-  NAND3X1 \shield_fsm/U70  ( .A(\shield_fsm/n79 ), .B(\shield_fsm/n80 ), .C(
-        n201), .Y(\shield_fsm/n78 ) );
+  XOR2X1 \shield_fsm/U71  ( .A(n112), .B(invader_bullet_coord_y[2]), .Y(
+        \shield_fsm/n81 ) );
+  NAND3X1 \shield_fsm/U70  ( .A(\shield_fsm/n79 ), .B(n202), .C(
+        \shield_fsm/n81 ), .Y(\shield_fsm/n78 ) );
   OR2X1 \shield_fsm/U69  ( .A(\shield_fsm/n77 ), .B(\shield_fsm/n78 ), .Y(
         \shield_fsm/n61 ) );
   NOR2X1 \shield_fsm/U68  ( .A(\shield_fsm/n61 ), .B(shield_hp[1]), .Y(
@@ -746,12 +746,12 @@ module top ( clka, clkb, reset, player_left_input, player_right_input,
         \shield_fsm/n62 ), .Y(\shield_fsm/n85 ) );
   NAND3X1 \shield_fsm/U43  ( .A(\shield_fsm/N28 ), .B(n64), .C(
         \shield_fsm/n59 ), .Y(\shield_fsm/n51 ) );
-  XOR2X1 \shield_fsm/U42  ( .A(n112), .B(player_bullet_coord_y[1]), .Y(
-        \shield_fsm/n54 ) );
+  XOR2X1 \shield_fsm/U41  ( .A(n112), .B(player_bullet_coord_y[2]), .Y(
+        \shield_fsm/n55 ) );
   XOR2X1 \shield_fsm/U39  ( .A(shield_coord_y[0]), .B(player_bullet_coord_y[0]), .Y(\shield_fsm/n58 ) );
   NOR2X1 \shield_fsm/U38  ( .A(player_bullet_coord_y[3]), .B(\shield_fsm/n58 ), 
         .Y(\shield_fsm/n56 ) );
-  NAND3X1 \shield_fsm/U37  ( .A(\shield_fsm/n54 ), .B(n188), .C(
+  NAND3X1 \shield_fsm/U37  ( .A(n180), .B(\shield_fsm/n55 ), .C(
         \shield_fsm/n56 ), .Y(\shield_fsm/n52 ) );
   NAND2X1 \shield_fsm/U36  ( .A(playerbullet_shield_collision_signal), .B(
         \shield_fsm/n49 ), .Y(\shield_fsm/n53 ) );
@@ -777,7 +777,7 @@ module top ( clka, clkb, reset, player_left_input, player_right_input,
   DFFNEGX1 \shield_fsm/shield_coord_x_reg[1]  ( .D(\shield_fsm/n86 ), .CLK(n22), .Q(shield_coord_x[1]) );
   DFFNEGX1 \shield_fsm/shield_coord_x_reg[2]  ( .D(\shield_fsm/n87 ), .CLK(n22), .Q(shield_coord_x[2]) );
   DFFNEGX1 \shield_fsm/shield_coord_y_reg[0]  ( .D(\shield_fsm/n88 ), .CLK(n22), .Q(shield_coord_y[0]) );
-  DFFNEGX1 \shield_fsm/shield_coord_y_reg[1]  ( .D(\shield_fsm/n89 ), .CLK(n22), .Q(shield_coord_y[1]) );
+  DFFNEGX1 \shield_fsm/shield_coord_y_reg[2]  ( .D(\shield_fsm/n89 ), .CLK(n22), .Q(shield_coord_y[2]) );
   DFFNEGX1 \shield_fsm/state_reg[1]  ( .D(\shield_fsm/N90 ), .CLK(n21), .Q(
         \shield_fsm/state[1] ) );
   DFFNEGX1 \shield_fsm/next_state_reg[1]  ( .D(\shield_fsm/N48 ), .CLK(clka), 
@@ -1413,7 +1413,7 @@ module top ( clka, clkb, reset, player_left_input, player_right_input,
   INVX2 U114 ( .A(shield_coord_x[1]), .Y(n109) );
   INVX2 U115 ( .A(shield_coord_x[2]), .Y(n110) );
   INVX2 U116 ( .A(shield_coord_y[0]), .Y(n111) );
-  INVX2 U117 ( .A(shield_coord_y[1]), .Y(n112) );
+  INVX2 U117 ( .A(shield_coord_y[2]), .Y(n112) );
   INVX2 U118 ( .A(\shield_fsm/n67 ), .Y(n113) );
   INVX2 U119 ( .A(\shield_fsm/next_state [1]), .Y(n114) );
   INVX2 U120 ( .A(\shield_fsm/state[0] ), .Y(n115) );

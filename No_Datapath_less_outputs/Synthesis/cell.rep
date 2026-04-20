@@ -3,7 +3,7 @@
 Report : cell
 Design : top
 Version: U-2022.12-SP7
-Date   : Mon Apr 20 00:20:09 2026
+Date   : Mon Apr 20 00:43:29 2026
 ****************************************
 
 Attributes:
@@ -998,7 +998,7 @@ shield_fsm/U36            NAND2X1         osu05_stdcells  216.000000
 shield_fsm/U37            NAND3X1         osu05_stdcells  324.000000
 shield_fsm/U38            NOR2X1          osu05_stdcells  216.000000
 shield_fsm/U39            XOR2X1          osu05_stdcells  504.000000
-shield_fsm/U42            XOR2X1          osu05_stdcells  504.000000
+shield_fsm/U41            XOR2X1          osu05_stdcells  504.000000
 shield_fsm/U43            NAND3X1         osu05_stdcells  324.000000
 shield_fsm/U44            OAI21X1         osu05_stdcells  207.000000
 shield_fsm/U45            NAND2X1         osu05_stdcells  216.000000
@@ -1027,7 +1027,7 @@ shield_fsm/U67            NAND2X1         osu05_stdcells  216.000000
 shield_fsm/U68            NOR2X1          osu05_stdcells  216.000000
 shield_fsm/U69            OR2X1           osu05_stdcells  288.000000
 shield_fsm/U70            NAND3X1         osu05_stdcells  324.000000
-shield_fsm/U72            XOR2X1          osu05_stdcells  504.000000
+shield_fsm/U71            XOR2X1          osu05_stdcells  504.000000
 shield_fsm/U73            XOR2X1          osu05_stdcells  504.000000
 shield_fsm/U74            NAND3X1         osu05_stdcells  324.000000
 shield_fsm/U76            AOI21X1         osu05_stdcells  288.000000
@@ -1078,7 +1078,7 @@ shield_fsm/shield_coord_x_reg[2]
 shield_fsm/shield_coord_y_reg[0]
                           DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
-shield_fsm/shield_coord_y_reg[1]
+shield_fsm/shield_coord_y_reg[2]
                           DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
 shield_fsm/shield_display_reg

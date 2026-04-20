@@ -29,19 +29,19 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-Current time:       Mon Apr 20 00:20:04 2026
+Current time:       Mon Apr 20 00:43:23 2026
 Hostname:           borax.clear8.rice.edu
 CPU Model:          Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
-CPU Details:        Cores = 40 : Sockets = 2 : Cache Size = 25600 KB : Freq = 1.20 GHz
+CPU Details:        Cores = 40 : Sockets = 2 : Cache Size = 25600 KB : Freq = 3.40 GHz
 OS:                 Linux 4.18.0-553.89.1.el8_10.x86_64
-RAM:                125 GB (Free   4 GB)
+RAM:                125 GB (Free   7 GB)
 Swap:                15 GB (Free  15 GB)
 Work Filesystem:    /storage-home/d/dn55 mounted to clearstor.clear.rice.edu:/clear-home/dn55
 Tmp Filesystem:     /tmp mounted to /dev/mapper/vg0-tmp
 Work Disk:          5038 GB (Free 784 GB)
 Tmp Disk:             5 GB (Free   5 GB)
 
-CPU Load: 9%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
+CPU Load: 8%, Ram Free: 7 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
 #/**************************************************/
 #/* Compile Script for Synopsys                    */
 #/*                                                */
@@ -224,7 +224,7 @@ Inferred memory devices in process
 =====================================================================================================
 Presto compilation completed successfully. (player_fsm)
 Information: Building the design 'shield_fsm' instantiated from design 'top' with
-	the parameters "START_X=6'h07,START_Y=6'h02". (HDL-193)
+	the parameters "START_X=4'h7,START_Y=4'h4". (HDL-193)
 
 Statistics for case statements in always block at line 51 in file
 	'./shield_fsm.v'
@@ -243,7 +243,7 @@ Statistics for case statements in always block at line 86 in file
 ===============================================
 
 Inferred memory devices in process
-	in routine shield_fsm_07_02 line 77 in file
+	in routine shield_fsm_7_4 line 77 in file
 		'./shield_fsm.v'.
 ===============================================================================
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -252,7 +252,7 @@ Inferred memory devices in process
 ===============================================================================
 
 Inferred memory devices in process
-	in routine shield_fsm_07_02 line 86 in file
+	in routine shield_fsm_7_4 line 86 in file
 		'./shield_fsm.v'.
 ==============================================================================================
 |           Register Name            |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
@@ -265,7 +265,7 @@ Inferred memory devices in process
 |             state_reg              | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
 |               hp_reg               | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
 ==============================================================================================
-Presto compilation completed successfully. (shield_fsm_07_02)
+Presto compilation completed successfully. (shield_fsm_7_4)
 Information: Building the design 'invader_fsm' instantiated from design 'top' with
 	the parameters "START_X=4'h5,START_Y=4'hd". (HDL-193)
 Warning:  ./invader_fsm.v:128: signed to unsigned conversion occurs. (VER-318)
@@ -474,7 +474,7 @@ set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all
 set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
 1
 compile -ungroup_all -map_effort medium
-CPU Load: 9%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
+CPU Load: 8%, Ram Free: 7 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -524,11 +524,11 @@ Information: The register 'next_state_reg[1]' is a constant and will be removed.
 Information: Added key list 'DesignWare' to design 'invader_fsm_9_d'. (DDB-72)
   Processing 'invader_fsm_5_d'
 Information: Added key list 'DesignWare' to design 'invader_fsm_5_d'. (DDB-72)
-  Processing 'shield_fsm_07_02'
-Information: Added key list 'DesignWare' to design 'shield_fsm_07_02'. (DDB-72)
+  Processing 'shield_fsm_7_4'
+Information: Added key list 'DesignWare' to design 'shield_fsm_7_4'. (DDB-72)
 Information: The register 'shield_coord_x_reg[0]' is a constant and will be removed. (OPT-1206)
 Information: The register 'shield_coord_y_reg[3]' is a constant and will be removed. (OPT-1206)
-Information: The register 'shield_coord_y_reg[2]' is a constant and will be removed. (OPT-1206)
+Information: The register 'shield_coord_y_reg[1]' is a constant and will be removed. (OPT-1206)
 Information: The register 'shield_coord_x_reg[3]' is a constant and will be removed. (OPT-1206)
   Processing 'player_fsm'
 Information: Added key list 'DesignWare' to design 'player_fsm'. (DDB-72)
@@ -656,7 +656,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 8%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
+CPU Load: 7%, Ram Free: 7 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -678,7 +678,7 @@ Unmapped MV Cells
 ----------------------------------------------------------------------------------------------------
 1
 compile -incremental_mapping -map_effort medium
-CPU Load: 8%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
+CPU Load: 7%, Ram Free: 7 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
 ====================================================================================================
 | Flow Information                                                                                 |
 ----------------------------------------------------------------------------------------------------
@@ -736,7 +736,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 8%, Ram Free: 4 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
+CPU Load: 7%, Ram Free: 7 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -762,7 +762,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     U-2022.12-SP7
-Date:        Mon Apr 20 00:20:09 2026
+Date:        Mon Apr 20 00:43:28 2026
 ****************************************
 
                    Name                                            Total
@@ -778,7 +778,7 @@ Warning: In design 'top', output port 'player_coord_y[0]' is connected directly 
 Warning: In design 'top', output port 'shield_coord_x[3]' is connected directly to 'logic 0'. (LINT-52)
 Warning: In design 'top', output port 'shield_coord_x[0]' is connected directly to 'logic 1'. (LINT-52)
 Warning: In design 'top', output port 'shield_coord_y[3]' is connected directly to 'logic 0'. (LINT-52)
-Warning: In design 'top', output port 'shield_coord_y[2]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'top', output port 'shield_coord_y[1]' is connected directly to 'logic 0'. (LINT-52)
 1
 report_constraint -all_violators
 Information: Updating design information... (UID-85)
@@ -788,7 +788,7 @@ Report : constraint
         -all_violators
 Design : top
 Version: U-2022.12-SP7
-Date   : Mon Apr 20 00:20:09 2026
+Date   : Mon Apr 20 00:43:28 2026
 ****************************************
 
 This design has no violated constraints.
@@ -810,7 +810,7 @@ report_cell
 Report : cell
 Design : top
 Version: U-2022.12-SP7
-Date   : Mon Apr 20 00:20:09 2026
+Date   : Mon Apr 20 00:43:28 2026
 ****************************************
 
 Attributes:
@@ -1805,7 +1805,7 @@ shield_fsm/U36            NAND2X1         osu05_stdcells  216.000000
 shield_fsm/U37            NAND3X1         osu05_stdcells  324.000000
 shield_fsm/U38            NOR2X1          osu05_stdcells  216.000000
 shield_fsm/U39            XOR2X1          osu05_stdcells  504.000000
-shield_fsm/U42            XOR2X1          osu05_stdcells  504.000000
+shield_fsm/U41            XOR2X1          osu05_stdcells  504.000000
 shield_fsm/U43            NAND3X1         osu05_stdcells  324.000000
 shield_fsm/U44            OAI21X1         osu05_stdcells  207.000000
 shield_fsm/U45            NAND2X1         osu05_stdcells  216.000000
@@ -1834,7 +1834,7 @@ shield_fsm/U67            NAND2X1         osu05_stdcells  216.000000
 shield_fsm/U68            NOR2X1          osu05_stdcells  216.000000
 shield_fsm/U69            OR2X1           osu05_stdcells  288.000000
 shield_fsm/U70            NAND3X1         osu05_stdcells  324.000000
-shield_fsm/U72            XOR2X1          osu05_stdcells  504.000000
+shield_fsm/U71            XOR2X1          osu05_stdcells  504.000000
 shield_fsm/U73            XOR2X1          osu05_stdcells  504.000000
 shield_fsm/U74            NAND3X1         osu05_stdcells  324.000000
 shield_fsm/U76            AOI21X1         osu05_stdcells  288.000000
@@ -1885,7 +1885,7 @@ shield_fsm/shield_coord_x_reg[2]
 shield_fsm/shield_coord_y_reg[0]
                           DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
-shield_fsm/shield_coord_y_reg[1]
+shield_fsm/shield_coord_y_reg[2]
                           DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
 shield_fsm/shield_display_reg
@@ -1904,7 +1904,7 @@ report_area
 Report : area
 Design : top
 Version: U-2022.12-SP7
-Date   : Mon Apr 20 00:20:09 2026
+Date   : Mon Apr 20 00:43:28 2026
 ****************************************
 
 Information: Updating design information... (UID-85)
@@ -1939,7 +1939,7 @@ Report : timing
         -max_paths 3
 Design : top
 Version: U-2022.12-SP7
-Date   : Mon Apr 20 00:20:09 2026
+Date   : Mon Apr 20 00:43:28 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
@@ -2049,7 +2049,7 @@ Report : power
         -analysis_effort low
 Design : top
 Version: U-2022.12-SP7
-Date   : Mon Apr 20 00:20:09 2026
+Date   : Mon Apr 20 00:43:29 2026
 ****************************************
 
 
@@ -2076,10 +2076,10 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   2.4689 mW   (83%)
-  Net Switching Power  = 511.7701 uW   (17%)
+  Cell Internal Power  =   2.4612 mW   (83%)
+  Net Switching Power  = 509.5288 uW   (17%)
                          ---------
-Total Dynamic Power    =   2.9807 mW  (100%)
+Total Dynamic Power    =   2.9708 mW  (100%)
 
 Cell Leakage Power     =  78.3830 nW
 
@@ -2090,21 +2090,21 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      1.1146            0.0000            0.0000            1.1146  (  37.39%)  i
-register       4.0881e-02        1.2809e-02            3.7075        5.3694e-02  (   1.80%)
-sequential         1.0940        4.6491e-02           19.7188            1.1406  (  38.26%)
-combinational      0.2194            0.4525           54.9568            0.6719  (  22.54%)
+clock_network      1.1146            0.0000            0.0000            1.1146  (  37.52%)  i
+register       4.0863e-02        1.2802e-02            3.7075        5.3668e-02  (   1.81%)
+sequential         1.0901        4.5028e-02           19.7188            1.1351  (  38.21%)
+combinational      0.2158            0.4517           54.9568            0.6675  (  22.47%)
 --------------------------------------------------------------------------------------------------
-Total              2.4689 mW         0.5118 mW        78.3830 nW         2.9807 mW
+Total              2.4612 mW         0.5095 mW        78.3830 nW         2.9708 mW
 1
 redirect timing.rep { report_timing }
 redirect cell.rep { report_cell }
 redirect power.rep { report_power }
 quit
 
-Memory usage for this session 115 Mbytes.
-Memory usage for this session including child processes 115 Mbytes.
-CPU usage for this session 8 seconds ( 0.00 hours ).
-Elapsed time for this session 14 seconds ( 0.00 hours ).
+Memory usage for this session 116 Mbytes.
+Memory usage for this session including child processes 116 Mbytes.
+CPU usage for this session 7 seconds ( 0.00 hours ).
+Elapsed time for this session 10 seconds ( 0.00 hours ).
 
 Thank you...

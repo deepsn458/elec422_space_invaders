@@ -9,6 +9,8 @@ R0
 R1
 R0
 R1
+R0
+R1
 !s12c _opt
 R1
 !s11f vlog 2023.2 2023.04, Apr 11 2023
@@ -33,10 +35,10 @@ n@_opt
 Z8 OL;O;2023.2;77
 R2
 T_opt1
-!s110 1776662288
-V3;hAzD@A1z:iPZc9BQ>oG1
+!s110 1776663466
+VHZ0K]C==3h?9zNiN66_nG2
 R3
-=1-d09466182648-69e5b710-23c7c-2e916c
+=1-d09466182648-69e5bbaa-45f5b-2eb9c4
 R1
 R4
 R5
@@ -44,9 +46,10 @@ R6
 R7
 n@_opt1
 R8
+R2
 vinvader_bullet_fsm
 Z9 2invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_tb_coords.v|top.v
-Z10 !s110 1776662265
+Z10 !s110 1776663796
 !i10b 1
 !s100 zIRIDaW_8oKofTP<HiZXg2
 I0JKP4:NCbCa[YUzCboFnY0
@@ -54,30 +57,30 @@ Z11 d/storage-home/d/dn55/elec422_space_invaders/No_Datapath_less_outputs/Synthe
 w1776661246
 8invader_bullet_fsm.v
 Finvader_bullet_fsm.v
-!i122 9
+!i122 15
 L0 11 82
 Z12 VDg1SIo80bB@j0V0VzS_@n1
 Z13 OL;L;2023.2;77
 r1
 !s85 0
 31
-Z14 !s108 1776662265.000000
-Z15 !s107 top.v|top_tb_coords.v|shield_fsm.v|player_fsm.v|player_bullet_fsm.v|main_game_fsm.v|invader_fsm.v|invader_bullet_fsm.v|
-Z16 !s90 invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_tb_coords.v|top.v|
+Z14 !s108 1776663795.000000
+!s107 top.v|top_tb_coords.v|shield_fsm.v|player_fsm.v|player_bullet_fsm.v|main_game_fsm.v|invader_fsm.v|invader_bullet_fsm.v|
+Z15 !s90 invader_bullet_fsm.v|invader_fsm.v|main_game_fsm.v|player_bullet_fsm.v|player_fsm.v|shield_fsm.v|top_tb_coords.v|top.v|
 !i113 0
-Z17 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z16 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R7
 vinvader_fsm
 R9
 R10
 !i10b 1
-!s100 jQejZB>8cCZia88eJKJA72
-I^;KPZnT:zBlhA>dNGNCV83
+!s100 PAgMZAJHb9iD0F5f:aE8c3
+I<>C7I^U:5M=3>^eb930oV3
 R11
-w1776661168
+w1776663724
 8invader_fsm.v
 Finvader_fsm.v
-!i122 9
+!i122 15
 L0 11 159
 R12
 R13
@@ -85,10 +88,10 @@ r1
 !s85 0
 31
 R14
+Z17 !s107 top.v|top_tb_coords.v|shield_fsm.v|player_fsm.v|player_bullet_fsm.v|main_game_fsm.v|invader_fsm.v|invader_bullet_fsm.v|
 R15
-R16
 !i113 0
-R17
+R16
 R7
 vmain_game_fsm
 R9
@@ -100,7 +103,7 @@ R11
 w1776661114
 8main_game_fsm.v
 Fmain_game_fsm.v
-!i122 9
+!i122 15
 L0 12 180
 R12
 R13
@@ -108,10 +111,10 @@ r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R7
 vplayer_bullet_fsm
 R9
@@ -123,7 +126,7 @@ R11
 w1776661210
 8player_bullet_fsm.v
 Fplayer_bullet_fsm.v
-!i122 9
+!i122 15
 L0 11 88
 R12
 R13
@@ -131,10 +134,10 @@ r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R7
 vplayer_fsm
 R9
@@ -143,10 +146,10 @@ R10
 !s100 6f^lnO90S_iR0zHAJ8dPl2
 I^=BI<B36`7H9om4aJKdja0
 R11
-Z18 w1776659189
+w1776659189
 8player_fsm.v
 Fplayer_fsm.v
-!i122 9
+!i122 15
 L0 11 119
 R12
 R13
@@ -154,22 +157,22 @@ r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R7
 vshield_fsm
 R9
 R10
 !i10b 1
-!s100 mUoUI<5hCKh5?nFkgFnLL3
-IRFc9SIJKGNd>EC0BEaa7^2
+!s100 UTam=<1dC@hKiAO]OP=QP2
+IifUfj?PNozLDbNE`<@kZa0
 R11
-R18
+w1776663330
 8shield_fsm.v
 Fshield_fsm.v
-!i122 9
+!i122 15
 L0 10 138
 R12
 R13
@@ -177,35 +180,35 @@ r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R7
 vtop
 R9
 R10
 !i10b 1
-!s100 3z_mRg@26WNX6=[9Oh[b22
-I79H_EMSbFn`a0^1FnmEB33
+!s100 AA^BClKU7n=2dhofCTIJH3
+IQ9N]n@6M1Y9:QVLVAJDg42
 R11
-Z19 w1776662235
+w1776663776
 8top.v
 Ftop.v
-Z20 8top_tb_coords.v
-Z21 Ftop_tb_coords.v
-!i122 9
-L0 11 209
+Z18 8top_tb_coords.v
+Z19 Ftop_tb_coords.v
+!i122 15
+L0 11 208
 R12
 R13
 r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R7
 vtop_tb_coords
 R9
@@ -214,10 +217,10 @@ R10
 !s100 `4PeC:06H=52AEWEAZoLN1
 IW788;B_RJCQo_oIhIJRO41
 R11
+w1776662235
+R18
 R19
-R20
-R21
-!i122 9
+!i122 15
 L0 3 291
 R12
 R13
@@ -225,8 +228,8 @@ r1
 !s85 0
 31
 R14
-R15
-R16
-!i113 0
 R17
+R15
+!i113 0
+R16
 R7

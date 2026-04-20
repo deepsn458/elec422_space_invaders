@@ -4,7 +4,7 @@ Report : power
         -analysis_effort low
 Design : top
 Version: U-2022.12-SP7
-Date   : Mon Apr 20 00:20:10 2026
+Date   : Mon Apr 20 00:43:29 2026
 ****************************************
 
 
@@ -31,10 +31,10 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   2.4689 mW   (83%)
-  Net Switching Power  = 511.7701 uW   (17%)
+  Cell Internal Power  =   2.4612 mW   (83%)
+  Net Switching Power  = 509.5288 uW   (17%)
                          ---------
-Total Dynamic Power    =   2.9807 mW  (100%)
+Total Dynamic Power    =   2.9708 mW  (100%)
 
 Cell Leakage Power     =  78.3830 nW
 
@@ -45,10 +45,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      1.1146            0.0000            0.0000            1.1146  (  37.39%)  i
-register       4.0881e-02        1.2809e-02            3.7075        5.3694e-02  (   1.80%)
-sequential         1.0940        4.6491e-02           19.7188            1.1406  (  38.26%)
-combinational      0.2194            0.4525           54.9568            0.6719  (  22.54%)
+clock_network      1.1146            0.0000            0.0000            1.1146  (  37.52%)  i
+register       4.0863e-02        1.2802e-02            3.7075        5.3668e-02  (   1.81%)
+sequential         1.0901        4.5028e-02           19.7188            1.1351  (  38.21%)
+combinational      0.2158            0.4517           54.9568            0.6675  (  22.47%)
 --------------------------------------------------------------------------------------------------
-Total              2.4689 mW         0.5118 mW        78.3830 nW         2.9807 mW
+Total              2.4612 mW         0.5095 mW        78.3830 nW         2.9708 mW
 1

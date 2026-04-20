@@ -7,29 +7,23 @@ reg in_player_left_input, in_player_right_input;
 reg in_fire;
 
 // New discrete wire connections
-wire [5:0] player_coord_x, player_coord_y;
+wire [3:0] player_coord_x, player_coord_y;
 wire       player_display;
 
-wire [5:0] invader_1_coord_x, invader_1_coord_y;
+wire [3:0] invader_1_coord_x, invader_1_coord_y;
 wire       invader_1_display;
 
-wire [5:0] invader_2_coord_x, invader_2_coord_y;
+wire [3:0] invader_2_coord_x, invader_2_coord_y;
 wire       invader_2_display;
 
-wire [5:0] invader_3_coord_x, invader_3_coord_y;
-wire       invader_3_display;
-
-wire [5:0] invader_4_coord_x, invader_4_coord_y;
-wire       invader_4_display;
-
-wire [5:0] shield_coord_x, shield_coord_y;
+wire [3:0] shield_coord_x, shield_coord_y;
 wire [1:0] shield_hp;
 wire       shield_display;
 
-wire [5:0] player_bullet_coord_x, player_bullet_coord_y;
+wire [3:0] player_bullet_coord_x, player_bullet_coord_y;
 wire       player_bullet_display;
 
-wire [5:0] invader_bullet_coord_x, invader_bullet_coord_y;
+wire [3:0] invader_bullet_coord_x, invader_bullet_coord_y;
 wire       invader_bullet_display;
 
 integer log_file;
@@ -42,8 +36,6 @@ task log_matrix;
         $fdisplay(log_file, "player %d %d %d", player_coord_x, player_coord_y, player_display);
         $fdisplay(log_file, "invader_1 %d %d %d", invader_1_coord_x, invader_1_coord_y, invader_1_display);
         $fdisplay(log_file, "invader_2 %d %d %d", invader_2_coord_x, invader_2_coord_y, invader_2_display);
-        $fdisplay(log_file, "invader_3 %d %d %d", invader_3_coord_x, invader_3_coord_y, invader_3_display);
-        $fdisplay(log_file, "invader_4 %d %d %d", invader_4_coord_x, invader_4_coord_y, invader_4_display);
         $fdisplay(log_file, "shield %d %d %d %d", shield_coord_x, shield_coord_y, shield_hp, shield_display);
         $fdisplay(log_file, "player_bullet %d %d %d", player_bullet_coord_x, player_bullet_coord_y, player_bullet_display);
         $fdisplay(log_file, "invader_bullet %d %d %d", invader_bullet_coord_x, invader_bullet_coord_y, invader_bullet_display);
@@ -81,15 +73,7 @@ top U1 (
     .invader_2_coord_x(invader_2_coord_x),
     .invader_2_coord_y(invader_2_coord_y),
     .invader_2_display(invader_2_display),
-    
-    .invader_3_coord_x(invader_3_coord_x),
-    .invader_3_coord_y(invader_3_coord_y),
-    .invader_3_display(invader_3_display),
-    
-    .invader_4_coord_x(invader_4_coord_x),
-    .invader_4_coord_y(invader_4_coord_y),
-    .invader_4_display(invader_4_display),
-    
+
     .shield_coord_x(shield_coord_x),
     .shield_coord_y(shield_coord_y),
     .shield_hp(shield_hp),
@@ -136,26 +120,26 @@ initial begin
     in_fire = 1;
     in_player_left_input = 0;
     in_player_right_input = 1;
-    for (i = 0; i<10; i=i+1) cycle;
+    for (i = 0; i<6; i=i+1) cycle;
     
     in_fire = 1;
-    for (i = 0; i<8; i=i+1) cycle;
+    for (i = 0; i<4; i=i+1) cycle;
 
     // Movement: Left
     in_fire = 1;
     in_player_left_input = 1;
     in_player_right_input = 0;
-    for (i = 0; i<16; i=i+1) cycle;
+    for (i = 0; i<11; i=i+1) cycle;
 
     in_fire = 1;
-    for (i = 0; i<17; i=i+1) cycle;
+    for (i = 0; i<9; i=i+1) cycle;
 
     // Boundary Test: Hold Left to hit the edge of the screen
     $display("Testing: Left Boundary Hit...");
     in_fire = 1;
     in_player_left_input = 1;
     in_player_right_input = 0;
-    for (i = 0; i < 40; i = i + 1) cycle;
+    for (i = 0; i < 26; i = i + 1) cycle;
 
     // Rapid Fire Pulse: Testing if the game handles multiple discrete shots
     $display("Testing: Rapid Fire Pulse...");
@@ -173,14 +157,14 @@ initial begin
     in_fire = 1;
     in_player_left_input = 0;
     in_player_right_input = 1;
-    for (i = 0; i < 20; i = i + 1) cycle;
+    for (i = 0; i < 11; i = i + 1) cycle;
 
     // Boundary Test: Hold Right to hit the far edge
     $display("Testing: Right Boundary Hit...");
     in_fire = 1;
     in_player_left_input = 0;
     in_player_right_input = 1;
-    for (i = 0; i < 40; i = i + 1) cycle;
+    for (i = 0; i < 19; i = i + 1) cycle;
 
     // Input Conflict: Pressing Left and Right simultaneously
     $display("Testing: Left and Right conflict...");
@@ -241,7 +225,7 @@ initial begin
     in_fire = 1;
     in_player_left_input = 1;
     in_player_right_input = 0;
-    for (i = 0; i < 40; i = i + 1) cycle;
+    for (i = 0; i < 20; i = i + 1) cycle;
 
     // Go back right
     in_fire = 1;
