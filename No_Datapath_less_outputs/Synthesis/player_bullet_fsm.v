@@ -10,17 +10,17 @@
 
 module player_bullet_fsm #(
     parameter Y_OFFSET = 1,
-    parameter Y_MAX = 31
+    parameter Y_MAX = 15
     )(
     input  wire             clka, clkb,                         // Input clocks
     input  wire             reset, fire,                        // Global control and reset signals
-    input  wire [5:0]       player_coord_x,                     // Player bullet X coordinate
-    input  wire [5:0]       player_coord_y,                     // Player bullet Y coordinate
+    input  wire [3:0]       player_coord_x,                     // Player bullet X coordinate
+    input  wire [3:0]       player_coord_y,                     // Player bullet Y coordinate
     input wire              player_bullet_collision,            // Signal to indicate if the player bullet has collided with an invader
     input wire              shield_bullet_collision,            // Signal to indicate if the player bullet has collided with a shield
     output reg              display,                            // Signal to indicate if the player bullet should be displayed on the screen
-    output reg  [5:0]       player_bullet_coord_x,              // Player bullet X coordinate
-    output reg  [5:0]       player_bullet_coord_y,              // Player bullet Y coordinate
+    output reg  [3:0]       player_bullet_coord_x,              // Player bullet X coordinate
+    output reg  [3:0]       player_bullet_coord_y,              // Player bullet Y coordinate
     output reg              state                               // Current state of this player bullet
     );
 
@@ -72,8 +72,8 @@ module player_bullet_fsm #(
     always @ (negedge clkb) begin : FSM_SEQB            // clkb active signals are: Load_Temp, Accumulate
         if (reset) begin
             state <= INIT;
-            player_bullet_coord_x <= 6'd16;         // Start at player start position
-            player_bullet_coord_y <= 6'd2;          // Start at player start position
+            player_bullet_coord_x <= 4'd8;         // Start at player start position
+            player_bullet_coord_y <= 4'd2;          // Start at player start position
             display <= 0;
         end else begin
             case(next_state)

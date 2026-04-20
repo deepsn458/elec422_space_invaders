@@ -13,18 +13,14 @@
 # //  18 U.S.C. Section 1905.
 # //
 # vsim -debugDB -voptargs=""+acc"" top_tb_coords 
-# Start time: 01:17:57 on Apr 19,2026
-# ** Note: (vsim-3812) Design is being optimized...
+# Start time: 00:18:07 on Apr 20,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Note: (vsim-8611) Generating debug db.
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
-# ** Warning: top_tb_coords.v(65): (vopt-2685) [TFMPC] - Too few port connections for 'U1'.  Expected 33, found 31.
-# ** Warning: top_tb_coords.v(65): (vopt-2718) [TFMPC] - Missing connection for port 'main_game_state'.
-# ** Warning: top_tb_coords.v(65): (vopt-2718) [TFMPC] - Missing connection for port 'playerbullet_state'.
-# ** Warning: top.v(158): (vopt-2685) [TFMPC] - Too few port connections for 'shield_fsm'.  Expected 15, found 14.
-# ** Warning: top.v(158): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
-# ** Warning: top.v(256): (vopt-2685) [TFMPC] - Too few port connections for 'invader_bullet_fsm'.  Expected 12, found 11.
-# ** Warning: top.v(256): (vopt-2718) [TFMPC] - Missing connection for port 'state'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=8.
+# ** Warning: top_tb_coords.v(57): (vopt-2685) [TFMPC] - Too few port connections for 'U1'.  Expected 27, found 25.
+# ** Warning: top_tb_coords.v(57): (vopt-2718) [TFMPC] - Missing connection for port 'main_game_state'.
+# ** Warning: top_tb_coords.v(57): (vopt-2718) [TFMPC] - Missing connection for port 'playerbullet_state'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
 # Loading work.top_tb_coords(fast)
 # Loading work.top(fast)
 # Loading work.main_game_fsm(fast)
@@ -32,11 +28,10 @@
 # Loading work.shield_fsm(fast)
 # Loading work.invader_fsm(fast)
 # Loading work.invader_fsm(fast__1)
-# Loading work.invader_fsm(fast__2)
-# Loading work.invader_fsm(fast__3)
 # Loading work.player_bullet_fsm(fast)
 # Loading work.invader_bullet_fsm(fast)
 # ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+add wave -r /*
 add wave -r /*
 run -all
 # Testing: Left Boundary Hit...
@@ -52,9 +47,6 @@ run -all
 # Testing: Left and Right conflict...
 # Testing: Idle Game State (Watching alien movement)...
 # Simulation Complete. Matrix written to top_display_log.txt
-# ** Note: $stop    : top_tb_coords.v(306)
-#    Time: 3652 us  Iteration: 0  Instance: /top_tb_coords
-# Break in Module top_tb_coords at top_tb_coords.v line 306
-quit
-# End time: 01:19:17 on Apr 19,2026, Elapsed time: 0:01:20
-# Errors: 0, Warnings: 8
+# ** Note: $stop    : top_tb_coords.v(290)
+#    Time: 3312 us  Iteration: 0  Instance: /top_tb_coords
+# Break in Module top_tb_coords at top_tb_coords.v line 290

@@ -153,7 +153,7 @@ module top
         .shield_coord_y(shield_coord_y)       
     );
 
-    // Instantiate 4 Invaders
+    // Instantiate 2 Invaders
     invader_fsm #( .START_X(4'd5), .START_Y(4'd13)) invader_fsm_1 (
         .clka(clka), .clkb(clkb),                           // Input clocks
         .reset(internal_reset), .play(play),                          // Global control and reset signals
@@ -194,7 +194,6 @@ module top
         .player_coord_y(player_coord_y),                        // Player bullet Y coordinate
         .player_bullet_collision(playerbullet_invader_collision_signal),               // Signal to indicate if the player bullet has collided with an invader
         .shield_bullet_collision(playerbullet_shield_collision_signal),               // Signal to indicate if the player bullet has collided with a shield
-
         .display(player_bullet_display),                               // Signal to indicate if the player bullet should be displayed on the screen
         .player_bullet_coord_x(player_bullet_coord_x),                 // Player bullet X coordinate
         .player_bullet_coord_y(player_bullet_coord_y),                 // Player bullet Y coordinate

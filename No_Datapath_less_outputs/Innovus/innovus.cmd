@@ -1,7 +1,7 @@
 #######################################################
 #                                                     
 #  Innovus Command Logging File                     
-#  Created on Sun Apr 19 01:22:32 2026                
+#  Created on Sun Apr 19 23:34:59 2026                
 #                                                     
 #######################################################
 
@@ -288,9 +288,62 @@ streamOut final.gds -mapFile /clear/apps/osu/soc/cadence/flow/ami05/gds2_encount
 saveNetlist final.v
 saveDesign top.enc
 win
-win
-fit
+zoomBox 110.41300 183.71000 881.31700 933.31800
+zoomBox 177.70700 279.96500 832.97600 917.13300
+zoomBox 305.29600 410.81500 707.71400 802.11600
+zoomBox 335.75500 442.05100 677.81100 774.65800
+zoomBox 379.11400 518.83300 557.66900 692.45600
+zoomBox 410.54800 558.59900 503.75600 649.23200
+zoomBox 429.64300 582.75600 471.00200 622.97200
+zoomBox 435.52000 590.19000 460.92100 614.88900
+zoomBox 439.81600 593.70900 455.41600 608.87800
+zoomBox 443.08400 596.38600 451.22800 604.30500
+zoomBox 444.87500 598.38500 447.94800 601.37300
+zoomBox 445.52900 598.93000 447.13400 600.49100
+summaryReport -outdir summaryReport
+getMultiCpuUsage -localCpu
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report top.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+zoomBox 441.08700 596.00800 448.01500 602.74500
+zoomBox 431.54000 589.72700 449.91100 607.59100
+zoomBox 415.75900 577.34000 457.16400 617.60100
+zoomBox 389.78500 556.95100 469.10400 634.07900
+zoomBox 340.02500 517.89200 491.97700 665.64600
+zoomBox 274.61500 466.54800 522.04400 707.14200
+zoomBox -416.87800 -76.23800 839.90800 1145.83000
+zoomBox -5608.97900 -4151.75600 3226.59700 4439.74300
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_ndr_spacing auto -check_only default -check_same_via_cell true -exclude_pg_net false -ignore_trial_route false -ignore_cell_blockage false -use_min_spacing_on_block_obs auto -report top.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+zoomBox -4105.34500 -2946.14000 2278.35900 3261.21900
+zoomBox -1694.59500 -1136.67300 1637.73900 2103.60800
+zoomBox -136.46700 0.26400 1120.32300 1222.33600
+zoomBox 357.95500 386.53200 915.60100 928.77300
+zoomBox 467.39000 472.02800 870.28900 863.79700
+zoomBox 546.45600 533.79700 837.55100 816.85100
 setLayerPreference violation -isVisible 1
 violationBrowser -all -no_display_false -displayByLayer
 violationBrowserClose
-win off

@@ -11,8 +11,8 @@
 
 module main_game_fsm
 #(
-    parameter BOTTOM_BOUND = 6'd0,
-    parameter TOP_BOUND    = 6'd31,
+    parameter BOTTOM_BOUND = 4'd0,
+    parameter TOP_BOUND    = 4'd15,
     parameter DIRECTION_RIGHT = 1,
     parameter DIRECTION_LEFT = 0
 )
@@ -24,19 +24,17 @@ module main_game_fsm
     input wire          player_right_input,
     input wire          player_shoot_input,
     input wire          player_display,  // from player fsm
-    input wire[5:0]     player_coordinate_x, player_coordinate_y, // from player fsm
-    input wire[3:0]     invaders_display, // from invader fsm 
-    input wire[5:0]     invader1_coordinate_x, invader1_coordinate_y, // from invader fsm
-    input wire[5:0]     invader2_coordinate_x, invader2_coordinate_y, // from invader fsm
-    input wire[5:0]     invader3_coordinate_x, invader3_coordinate_y, // from invader fsm
-    input wire[5:0]     invader4_coordinate_x, invader4_coordinate_y, // from invader fsm
-    input wire[5:0]     invaderbullet_coord_x, invaderbullet_coord_y,   // from invader bullet fsm
+    input wire[3:0]     player_coordinate_x, player_coordinate_y, // from player fsm
+    input wire[1:0]     invaders_display, // from invader fsm 
+    input wire[3:0]     invader1_coordinate_x, invader1_coordinate_y, // from invader fsm
+    input wire[3:0]     invader2_coordinate_x, invader2_coordinate_y, // from invader fsm
+    input wire[3:0]     invaderbullet_coord_x, invaderbullet_coord_y,   // from invader bullet fsm
     input wire          invaderbullet_player_collision_signal, invaderbullet_shield_collision_signal, // from player and shield fsms (bullet hits player)
-    input wire          invader_outofbounds_signal_1, invader_outofbounds_signal_2, invader_outofbounds_signal_3, invader_outofbounds_signal_4,
+    input wire          invader_outofbounds_signal_1, invader_outofbounds_signal_2,
 
 
     output reg         player_left_motion, player_right_motion, // to player fsm
-    output wire [5:0]    closest_invader_coord_x, closest_invader_coord_y, // to invader bullet fsm  
+    output wire [3:0]    closest_invader_coord_x, closest_invader_coord_y, // to invader bullet fsm  
     output reg         play, reset,// global signal
     output reg         invader_direction, // to invader fsm
     output reg         playerbullet_fire, // to player bullet
@@ -52,45 +50,26 @@ module main_game_fsm
     // parameter SIZE = 2;
     parameter INIT = 2'b00, IN_GAME = 2'b01, DIRECTION_CHANGE = 2'b10, END_GAME = 2'b11;
     wire invader_outofbounds;
-    assign invader_outofbounds = invader_outofbounds_signal_1|invader_outofbounds_signal_2|invader_outofbounds_signal_3|invader_outofbounds_signal_4;
+    assign invader_outofbounds = invader_outofbounds_signal_1|invader_outofbounds_signal_2;
     reg prev_invader_outofbounds;
 /****************************************************************************/
     
     // Calculate absolute value differences between player and invaders
-    wire [5:0] diff1 = (player_coordinate_x > invader1_coordinate_x) ? 
+    wire [3:0] diff1 = (player_coordinate_x > invader1_coordinate_x) ? 
                        (player_coordinate_x - invader1_coordinate_x) : 
                        (invader1_coordinate_x - player_coordinate_x);
 
-    wire [5:0] diff2 = (player_coordinate_x > invader2_coordinate_x) ? 
+    wire [3:0] diff2 = (player_coordinate_x > invader2_coordinate_x) ? 
                        (player_coordinate_x - invader2_coordinate_x) : 
                        (invader2_coordinate_x - player_coordinate_x);
 
-    wire [5:0] diff3 = (player_coordinate_x > invader3_coordinate_x) ? 
-                       (player_coordinate_x - invader3_coordinate_x) : 
-                       (invader3_coordinate_x - player_coordinate_x);
-
-    wire [5:0] diff4 = (player_coordinate_x > invader4_coordinate_x) ? 
-                       (player_coordinate_x - invader4_coordinate_x) : 
-                       (invader4_coordinate_x - player_coordinate_x);
-
-    wire [5:0] diff_alive1 =    invaders_display[0] ? diff1 : 6'b111111;
-    wire [5:0] diff_alive2 =    invaders_display[1] ? diff2 : 6'b111111;
-    wire [5:0] diff_alive3 =    invaders_display[2] ? diff3 : 6'b111111;
-    wire [5:0] diff_alive4 =    invaders_display[3] ? diff4 : 6'b111111;
+    wire [3:0] diff_alive1 =    invaders_display[0] ? diff1 : 4'b1111;
+    wire [3:0] diff_alive2 =    invaders_display[1] ? diff2 : 4'b1111;
 
     // Compare Invader 1 and Invader 2
-    wire [5:0] min_diff_12    = (diff_alive1 < diff_alive2) ? diff_alive1 : diff_alive2;
-    wire [5:0] closest_loc_x_12 = (diff_alive1 < diff_alive2) ? invader1_coordinate_x : invader2_coordinate_x;
-    wire [5:0] closest_loc_y_12 = (diff_alive1 < diff_alive2) ? invader1_coordinate_y : invader2_coordinate_y;
-
-    // Compare Invader 3 and Invader 4
-    wire [5:0] min_diff_34    = (diff_alive3 < diff_alive4) ? diff_alive3 : diff_alive4;
-    wire [5:0] closest_loc_x_34 = (diff_alive3 < diff_alive4) ? invader3_coordinate_x : invader4_coordinate_x;
-    wire [5:0] closest_loc_y_34 = (diff_alive3 < diff_alive4) ? invader3_coordinate_y : invader4_coordinate_y;
-    
-    // Compare the winners of the two pairs to get the final coordinate
-    assign closest_invader_coord_x = (min_diff_12 < min_diff_34) ? closest_loc_x_12 : closest_loc_x_34;
-    assign closest_invader_coord_y = (min_diff_12 < min_diff_34) ? closest_loc_y_12 : closest_loc_y_34;
+    wire [3:0] min_diff_12    = (diff_alive1 < diff_alive2) ? diff_alive1 : diff_alive2;
+    assign closest_invader_coord_x = (diff_alive1 < diff_alive2) ? invader1_coordinate_x : invader2_coordinate_x;
+    assign closest_invader_coord_y = (diff_alive1 < diff_alive2) ? invader1_coordinate_y : invader2_coordinate_y;
 
     reg temp_player_left_motion;
     reg temp_player_right_motion;
@@ -117,7 +96,7 @@ module main_game_fsm
             end
 
             IN_GAME: begin
-                if (invaders_display == 4'b0 || (~player_display) || closest_invader_coord_y <= 5) begin
+                if (invaders_display == 2'b0 || (~player_display) || closest_invader_coord_y <= 5) begin
                     temp_state = INIT;
                     {temp_playerbullet_fire, temp_player_right_motion, temp_player_left_motion} = {1'b0,1'b0,1'b0};
                 end else if (invader_outofbounds & ~prev_invader_outofbounds) begin
@@ -130,7 +109,7 @@ module main_game_fsm
             end
 
             DIRECTION_CHANGE: begin
-                if (invaders_display == 4'b0 || (~player_display) || closest_invader_coord_y <= 5) begin
+                if (invaders_display == 2'b0 || (~player_display) || closest_invader_coord_y <= 5) begin
                     temp_state = INIT;
                     {temp_playerbullet_fire, temp_player_right_motion, temp_player_left_motion} = {1'b0,1'b0,1'b0};
                 end else begin

@@ -18,19 +18,19 @@ module invader_fsm
     parameter X_OFFSET = 1,                                     // Number of pixels to travel sideways upon horizontal movement
     // change bounds to 4 and 27 to test noshoot tb.
     parameter HORIZ_LEFT_BOUND = 2,                             // originally 2 and 29
-    parameter HORIZ_RIGHT_BOUND = 29                            // Left and Right bounds
+    parameter HORIZ_RIGHT_BOUND = 14                            // Left and Right bounds
     )(
 
     input  wire             clka, clkb,                         // Input clocks
     input  wire             reset, play,                        // Global control and reset signals
     input  wire             invader_direction,                  // direction bit for horizontal movement (left is 0)
     input wire move_down,                                       // Tells invader to move down
-    input  wire [5:0]       player_bullet_coord_x,              // Player bullet X coordinate
-    input  wire [5:0]       player_bullet_coord_y,              // Player bullet Y coordinate
+    input  wire [3:0]       player_bullet_coord_x,              // Player bullet X coordinate
+    input  wire [3:0]       player_bullet_coord_y,              // Player bullet Y coordinate
     output reg              display,                              // Bit indicating if invader is still alive. Can be used as display bit
     output reg              playerbullet_invader_collision_signal,     // Signal indicating if an invader has been hit by a player bullet
-    output reg  [5:0]       invader_coord_x,                    // Player bullet X coordinate
-    output reg  [5:0]       invader_coord_y,                    // Player bullet Y coordinate
+    output reg  [3:0]       invader_coord_x,                    // Player bullet X coordinate
+    output reg  [3:0]       invader_coord_y,                    // Player bullet Y coordinate
     output reg              invader_outofbounds_signal,         // tells main game fsm when invader will hit boundary next cycle
     output reg  [1:0]       state                               // Current state of this invader
     );
