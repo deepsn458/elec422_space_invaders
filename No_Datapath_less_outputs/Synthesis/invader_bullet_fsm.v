@@ -12,8 +12,8 @@ module invader_bullet_fsm
 #(
     parameter BULLET_Y_OFFSET = 1,
     parameter BOUNDARY_Y = 0,
-    parameter START_X = 5,
-    parameter START_Y = 14
+    parameter START_X = 9,
+    parameter START_Y = 13
 )(
     input wire clka,
     input wire clkb,
@@ -70,8 +70,8 @@ module invader_bullet_fsm
         if (reset) begin
             state <= INITIAL;
             invader_bullet_display <= 1'b0;
-            invader_bullet_coord_x <= 4'd12;
-            invader_bullet_coord_y <= 4'd14;
+            invader_bullet_coord_x <= 4'd9;
+            invader_bullet_coord_y <= 4'd13;
         end else begin
             case (next_state)
                 INITIAL: begin

@@ -22,7 +22,6 @@ module top
     // Below are previously datapath.v inputs which were flattened into a 1024 bit output.
     // New approach to reduce chip size is to implement the datapath functionality in python.
     output wire [3:0]       player_coord_x,                     // Player X coordinate
-    output wire [3:0]       player_coord_y,                     // Player Y coordinate
     output wire             player_display,                     // Display bit
 
     output wire [3:0]       invader_1_coord_x,                  // Invader 1 X coordinate
@@ -36,7 +35,6 @@ module top
     output wire [3:0]       shield_coord_x,                     // Shield X coordinate
     output wire [3:0]       shield_coord_y,                     // Shield Y coordinate
     output wire [1:0]       shield_hp,                          // Shield HP (3 to 0)
-    output wire             shield_display,                     // Display bit
 
     output wire [3:0]       player_bullet_coord_x,              // Player bullet X coordinate
     output wire [3:0]       player_bullet_coord_y,              // Player bullet Y coordinate
@@ -44,10 +42,7 @@ module top
 
     output wire [3:0]       invader_bullet_coord_x,             // Invader bullet X coordinate
     output wire [3:0]       invader_bullet_coord_y,             // Invader bullet Y coordinate
-    output wire             invader_bullet_display,              // Display bit
-
-    output wire             playerbullet_state,                  // Player bullet state
-    output wire [1:0]       main_game_state                      // Main game state
+    output wire             invader_bullet_display              // Display bit
     );
 
     // Module Interconnects
@@ -82,6 +77,13 @@ module top
     wire  [1:0]      invaders_display = {invader_2_display,invader_1_display};
 
     wire playerbullet_invader_collision_signal = playerbullet_invader_collision_signal_1 | playerbullet_invader_collision_signal_2;
+
+    wire [3:0]       player_coord_y;                     // Player Y coordinate
+
+    wire             shield_display;                     // Display bit
+
+    wire             playerbullet_state;                  // Player bullet state
+    wire [1:0]       main_game_stat;                      // Main game state
 
     // Instantiate Main Game FSM:
     main_game_fsm main_game_fsm(

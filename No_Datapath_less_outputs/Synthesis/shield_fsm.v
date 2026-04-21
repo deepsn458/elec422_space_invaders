@@ -15,7 +15,7 @@ module shield_fsm
     parameter HP_0 = 0,
     parameter START_X = 7,
     parameter START_Y = 5,
-    parameter SHIELD_DIAMETER = 1           // This is the diameter NOT INCLUDING CENTRAL PIXEL (aka how many pixels extending out from central pixel)
+    parameter SHIELD_DIAMETER = 2           // This is the diameter NOT INCLUDING CENTRAL PIXEL (aka how many pixels extending out from central pixel)
 ) (
     input wire clka,
     input wire clkb,
