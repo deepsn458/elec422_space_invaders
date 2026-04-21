@@ -1,14 +1,16 @@
 m255
 K4
 z2
-Z0 !s12c _opt1
-Z1 !s99 nomlopt
+!s12c _opt2
+Z0 !s99 nomlopt
+Z1 !s12c _opt1
 R0
 R1
 R0
 R1
+R0
 !s12c _opt
-R1
+R0
 !s11f vlog 2023.2 2023.04, Apr 11 2023
 13
 !s112 1.1
@@ -22,7 +24,7 @@ T_opt
 Vf44M=akFMjIG2MkT`oa]11
 Z3 04 13 4 work top_tb_coords fast 0
 =1-d09466182648-69e472ce-43f97-272f24
-R1
+R0
 Z4 !s12b OEM100
 Z5 !s124 OEM100
 Z6 o-quiet -auto_acc_if_foreign -work work -debugdb +acc
@@ -35,31 +37,44 @@ T_opt1
 VIV2EIh>mS=]6OA58GCOW50
 R3
 =1-d09466182648-69e5bd4f-7820-2ec4f7
-R1
+R0
 R4
 R5
 R6
 R7
 n@_opt1
 R8
+R2
+T_opt2
+!s110 1776740801
+V_h9OC]A5mJE6PcecFKCXh0
+R3
+=1-d09466164d60-69e6e9ba-d26dd-398c04
+R0
+R4
+R5
+R6
+R7
+n@_opt2
+R8
 vAND2X1
 Z9 2osu05_stdcells.v|top_tb_coords.v|top.vh
-Z10 !s110 1776663861
+Z10 !s110 1776740765
 !i10b 1
 !s100 zeIHT4gS<ZW]zj?QdeB@33
 I`MS`YSkZ9AH6;VNe?[hR42
-Z11 d/storage-home/d/dn55/elec422_space_invaders/No_Datapath_less_outputs/Questa_Post_DC
-Z12 w1776659188
+Z11 d/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/No_Datapath_less_outputs/Questa_Post_DC
+Z12 w1776633682
 Z13 8osu05_stdcells.v
 Z14 Fosu05_stdcells.v
-!i122 4
+!i122 5
 L0 3 22
 Z15 VDg1SIo80bB@j0V0VzS_@n1
 Z16 OL;L;2023.2;77
 r1
 !s85 0
 31
-Z17 !s108 1776663861.000000
+Z17 !s108 1776740764.000000
 Z18 !s107 top.vh|top_tb_coords.v|osu05_stdcells.v|
 Z19 !s90 osu05_stdcells.v|top_tb_coords.v|top.vh|
 !i113 0
@@ -76,7 +91,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 29 22
 R15
 R16
@@ -100,7 +115,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 55 28
 R15
 R16
@@ -124,7 +139,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 87 33
 R15
 R16
@@ -148,7 +163,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 124 18
 R15
 R16
@@ -172,7 +187,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 146 18
 R15
 R16
@@ -196,7 +211,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 168 18
 R15
 R16
@@ -220,7 +235,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 190 18
 R15
 R16
@@ -244,7 +259,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 212 18
 R15
 R16
@@ -268,7 +283,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 234 35
 R15
 R16
@@ -292,7 +307,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 273 34
 R15
 R16
@@ -316,7 +331,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 311 64
 R15
 R16
@@ -340,7 +355,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 379 41
 R15
 R16
@@ -364,7 +379,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 424 30
 R15
 R16
@@ -388,7 +403,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 458 18
 R15
 R16
@@ -412,7 +427,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 480 18
 R15
 R16
@@ -436,7 +451,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 502 18
 R15
 R16
@@ -460,7 +475,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 524 18
 R15
 R16
@@ -484,7 +499,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 546 35
 R15
 R16
@@ -508,7 +523,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 585 27
 R15
 R16
@@ -532,7 +547,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 616 23
 R15
 R16
@@ -556,7 +571,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 643 27
 R15
 R16
@@ -580,7 +595,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 674 23
 R15
 R16
@@ -604,7 +619,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 701 27
 R15
 R16
@@ -628,7 +643,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 732 28
 R15
 R16
@@ -652,7 +667,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 764 33
 R15
 R16
@@ -676,7 +691,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 801 22
 R15
 R16
@@ -700,7 +715,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 827 22
 R15
 R16
@@ -716,7 +731,7 @@ R7
 n@o@r2@x2
 vPADFC
 R9
-Z21 !s110 1776663862
+R10
 !i10b 1
 !s100 2B_J8F0<;7NN;_dbzzXOR1
 IZbb^D^1?<>5U[?9n_bC?91
@@ -724,7 +739,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 1132 2
 R15
 R16
@@ -740,7 +755,7 @@ R7
 n@p@a@d@f@c
 vPADGND
 R9
-R21
+R10
 !i10b 1
 !s100 V1L2mTUflDTJ5jc>i=c?g0
 I_hn>5[g]T6UcmmcE_iZA62
@@ -748,7 +763,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 1135 2
 R15
 R16
@@ -772,7 +787,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 853 18
 R15
 R16
@@ -796,7 +811,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 875 29
 R15
 R16
@@ -812,7 +827,7 @@ R7
 n@p@a@d@i@n@o@u@t
 vPADNC
 R9
-R21
+R10
 !i10b 1
 !s100 BBIS>MCd]?XC;]SmANg:T3
 IC7<VzV5Z^RgnXgN1N1SbA1
@@ -820,7 +835,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 1129 2
 R15
 R16
@@ -844,7 +859,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 908 18
 R15
 R16
@@ -860,7 +875,7 @@ R7
 n@p@a@d@o@u@t
 vPADVDD
 R9
-R21
+R10
 !i10b 1
 !s100 iX7Qca]od?<a02ebQm]zW0
 ICF=UUaz^MLWWg49zNXhTI1
@@ -868,7 +883,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 1138 2
 R15
 R16
@@ -892,7 +907,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 930 25
 R15
 R16
@@ -916,7 +931,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 959 25
 R15
 R16
@@ -932,18 +947,18 @@ R7
 n@t@b@u@f@x2
 vtop
 R9
-R21
+R10
 !i10b 1
-!s100 @fz`0[hRS:IVKH0G5_he`1
-IR5ka[oWKa3]EiR;QM>Sj61
+!s100 ?F7Ci4<Wb<S74OeS?;;Ef1
+If?l:@lX=5F>[lH6c^mF^:2
 R11
-w1776663842
+Z21 w1776740744
 8top.vh
 Ftop.vh
 Z22 8top_tb_coords.v
 Z23 Ftop_tb_coords.v
-!i122 4
-L0 8 1703
+!i122 5
+L0 8 1669
 R15
 R16
 r1
@@ -957,15 +972,15 @@ R20
 R7
 vtop_tb_coords
 R9
-R21
+R10
 !i10b 1
-!s100 `4PeC:06H=52AEWEAZoLN1
-IW788;B_RJCQo_oIhIJRO41
+!s100 od3KCPmXa4F5M[WzhY=Vf0
+I9@ORdW2mIo;Y=TPP@67CJ3
 R11
-w1776662549
+R21
 R22
 R23
-!i122 4
+!i122 5
 L0 3 291
 R15
 R16
@@ -988,7 +1003,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 1039 0
 R15
 R16
@@ -1003,7 +1018,7 @@ R20
 R7
 Uudp_mux2
 R9
-R21
+R10
 !i10b 1
 !s100 9;6LJN5ejD1ad4KNP0>4m2
 IGIRl2J1TWB@^_UFO^Q_mA2
@@ -1011,7 +1026,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 1110 0
 R15
 R16
@@ -1026,7 +1041,7 @@ R20
 R7
 Uudp_rslat
 R9
-R21
+R10
 !i10b 1
 !s100 _8[X9UOB[^MiKgnEPaP;_1
 Ibo<@53BU?lfo1c;9O[<m03
@@ -1034,7 +1049,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 1091 0
 R15
 R16
@@ -1049,7 +1064,7 @@ R20
 R7
 Uudp_tlat
 R9
-R21
+R10
 !i10b 1
 !s100 >[T[00Po@173Kaz>KhQfT1
 I`nALzg@kCA2TTKgE0Hm972
@@ -1057,7 +1072,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 1065 0
 R15
 R16
@@ -1080,7 +1095,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 988 23
 R15
 R16
@@ -1104,7 +1119,7 @@ R11
 R12
 R13
 R14
-!i122 4
+!i122 5
 L0 1015 22
 R15
 R16

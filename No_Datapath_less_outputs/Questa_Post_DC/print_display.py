@@ -20,9 +20,9 @@ def set_pixel(matrix, x, y):
     if 0 <= x < 32 and 0 <= y < 32:
         matrix[y][x] = 1
 
-def draw_player(matrix, x, y, disp):
+def draw_player(matrix, x, disp):
     if not disp: return
-    coords = [(x, y), (x-1, y), (x+1, y), (x, y+1)]
+    coords = [(x, 0), (x-1, 0), (x+1, 0), (x, 0+1)]
     for cx, cy in coords:
         set_pixel(matrix, cx, cy)
 
@@ -50,8 +50,8 @@ def draw_invader_4(matrix, x, y, disp):
     for cx, cy in coords:
         set_pixel(matrix, cx, cy)
 
-def draw_shield(matrix, x, y, hp, disp):
-    if not disp or hp == 0: return
+def draw_shield(matrix, x, y, hp):
+    if hp == 0: return
     
     # Bottom Layer (row == Y)
     set_pixel(matrix, x-2, y)
@@ -109,7 +109,7 @@ def render_log(filename):
             
             try:
                 if entity == "player":
-                    draw_player(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
+                    draw_player(matrix, int(parts[1]), int(parts[2]))
                 elif entity == "invader_1":
                     draw_invader_1(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
                 elif entity == "invader_2":
@@ -119,7 +119,7 @@ def render_log(filename):
                 elif entity == "invader_4":
                     draw_invader_4(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
                 elif entity == "shield":
-                    draw_shield(matrix, int(parts[1]), int(parts[2]), int(parts[3]), int(parts[4]))
+                    draw_shield(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
                 elif entity == "player_bullet" or entity == "invader_bullet":
                     draw_bullet(matrix, int(parts[1]), int(parts[2]), int(parts[3]))
             except ValueError:

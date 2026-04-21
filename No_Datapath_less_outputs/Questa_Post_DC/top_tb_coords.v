@@ -33,10 +33,10 @@ task log_matrix;
     begin
         // Format the log to output coordinate pairs rather than a raw matrix
         $fdisplay(log_file, "TIME: %0t | TEST: %s", $time, test_name);
-        $fdisplay(log_file, "player %d %d %d", player_coord_x, player_coord_y, player_display);
+        $fdisplay(log_file, "player %d %d", player_coord_x, player_display);
         $fdisplay(log_file, "invader_1 %d %d %d", invader_1_coord_x, invader_1_coord_y, invader_1_display);
         $fdisplay(log_file, "invader_2 %d %d %d", invader_2_coord_x, invader_2_coord_y, invader_2_display);
-        $fdisplay(log_file, "shield %d %d %d %d", shield_coord_x, shield_coord_y, shield_hp, shield_display);
+        $fdisplay(log_file, "shield %d %d %d", shield_coord_x, shield_coord_y, shield_hp);
         $fdisplay(log_file, "player_bullet %d %d %d", player_bullet_coord_x, player_bullet_coord_y, player_bullet_display);
         $fdisplay(log_file, "invader_bullet %d %d %d", invader_bullet_coord_x, invader_bullet_coord_y, invader_bullet_display);
         $fdisplay(log_file, "END_FRAME");
@@ -63,7 +63,7 @@ top U1 (
     .player_shoot_input(in_fire),
     
     .player_coord_x(player_coord_x),
-    .player_coord_y(player_coord_y),
+    // .player_coord_y(player_coord_y),
     .player_display(player_display),
     
     .invader_1_coord_x(invader_1_coord_x),
@@ -77,7 +77,7 @@ top U1 (
     .shield_coord_x(shield_coord_x),
     .shield_coord_y(shield_coord_y),
     .shield_hp(shield_hp),
-    .shield_display(shield_display),
+    // .shield_display(shield_display),
     
     .player_bullet_coord_x(player_bullet_coord_x),
     .player_bullet_coord_y(player_bullet_coord_y),
@@ -178,19 +178,19 @@ initial begin
     in_fire = 0;
     in_player_left_input = 0;
     in_player_right_input = 0;
-    for (i = 0; i < 100; i = i + 1) cycle;
+    for (i = 0; i < 30; i = i + 1) cycle;
 
     // Move center
     in_fire = 0;
     in_player_left_input = 1;
     in_player_right_input = 0;
-    for (i = 0; i < 16; i = i + 1) cycle;
+    for (i = 0; i < 8; i = i + 1) cycle;
 
     // Stay center
     in_fire = 0;
     in_player_left_input = 0;
     in_player_right_input = 0;
-    for (i = 0; i < 150; i = i + 1) cycle;
+    for (i = 0; i < 40; i = i + 1) cycle;
 
     // Start another game
     in_fire = 1;
@@ -282,7 +282,7 @@ initial begin
     in_fire = 0;
     in_player_left_input = 0;
     in_player_right_input = 0;
-    for (i = 0; i < 150; i = i + 1) cycle;
+    for (i = 0; i < 40; i = i + 1) cycle;
 
     // Cleanup
     $fclose(log_file);

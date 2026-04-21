@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Mon Apr 20 00:43:28 2026
+# Created by write_sdc on Mon Apr 20 22:02:05 2026
 
 ###################################################################
 set sdc_version 2.1
@@ -22,10 +22,6 @@ set_output_delay -clock clka  1  [get_ports {player_coord_x[3]}]
 set_output_delay -clock clka  1  [get_ports {player_coord_x[2]}]
 set_output_delay -clock clka  1  [get_ports {player_coord_x[1]}]
 set_output_delay -clock clka  1  [get_ports {player_coord_x[0]}]
-set_output_delay -clock clka  1  [get_ports {player_coord_y[3]}]
-set_output_delay -clock clka  1  [get_ports {player_coord_y[2]}]
-set_output_delay -clock clka  1  [get_ports {player_coord_y[1]}]
-set_output_delay -clock clka  1  [get_ports {player_coord_y[0]}]
 set_output_delay -clock clka  1  [get_ports player_display]
 set_output_delay -clock clka  1  [get_ports {invader_1_coord_x[3]}]
 set_output_delay -clock clka  1  [get_ports {invader_1_coord_x[2]}]
@@ -55,7 +51,6 @@ set_output_delay -clock clka  1  [get_ports {shield_coord_y[1]}]
 set_output_delay -clock clka  1  [get_ports {shield_coord_y[0]}]
 set_output_delay -clock clka  1  [get_ports {shield_hp[1]}]
 set_output_delay -clock clka  1  [get_ports {shield_hp[0]}]
-set_output_delay -clock clka  1  [get_ports shield_display]
 set_output_delay -clock clka  1  [get_ports {player_bullet_coord_x[3]}]
 set_output_delay -clock clka  1  [get_ports {player_bullet_coord_x[2]}]
 set_output_delay -clock clka  1  [get_ports {player_bullet_coord_x[1]}]
@@ -74,6 +69,3 @@ set_output_delay -clock clka  1  [get_ports {invader_bullet_coord_y[2]}]
 set_output_delay -clock clka  1  [get_ports {invader_bullet_coord_y[1]}]
 set_output_delay -clock clka  1  [get_ports {invader_bullet_coord_y[0]}]
 set_output_delay -clock clka  1  [get_ports invader_bullet_display]
-set_output_delay -clock clka  1  [get_ports playerbullet_state]
-set_output_delay -clock clka  1  [get_ports {main_game_state[1]}]
-set_output_delay -clock clka  1  [get_ports {main_game_state[0]}]

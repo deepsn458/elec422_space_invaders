@@ -29,19 +29,19 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 Initializing...
-Current time:       Mon Apr 20 00:43:23 2026
-Hostname:           borax.clear8.rice.edu
+Current time:       Mon Apr 20 22:01:57 2026
+Hostname:           cobalt.clear8.rice.edu
 CPU Model:          Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
 CPU Details:        Cores = 40 : Sockets = 2 : Cache Size = 25600 KB : Freq = 3.40 GHz
 OS:                 Linux 4.18.0-553.89.1.el8_10.x86_64
 RAM:                125 GB (Free   7 GB)
 Swap:                15 GB (Free  15 GB)
-Work Filesystem:    /storage-home/d/dn55 mounted to clearstor.clear.rice.edu:/clear-home/dn55
+Work Filesystem:    /storage-home/e/ely2 mounted to clearstor.clear.rice.edu:/clear-home/ely2
 Tmp Filesystem:     /tmp mounted to /dev/mapper/vg0-tmp
-Work Disk:          5038 GB (Free 784 GB)
+Work Disk:          5038 GB (Free 780 GB)
 Tmp Disk:             5 GB (Free   5 GB)
 
-CPU Load: 8%, Ram Free: 7 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
+CPU Load: 4%, Ram Free: 7 GB, Swap Free: 15 GB, Work Disk Free: 780 GB, Tmp Disk Free: 5 GB
 #/**************************************************/
 #/* Compile Script for Synopsys                    */
 #/*                                                */
@@ -474,7 +474,7 @@ set_input_delay $my_input_delay_ns -clock $clk_name [remove_from_collection [all
 set_output_delay $my_output_delay_ns -clock $clk_name [all_outputs]
 1
 compile -ungroup_all -map_effort medium
-CPU Load: 8%, Ram Free: 7 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
+CPU Load: 4%, Ram Free: 6 GB, Swap Free: 15 GB, Work Disk Free: 780 GB, Tmp Disk Free: 5 GB
 Information: Checking out the license 'DesignWare'. (SEC-104)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
@@ -507,7 +507,7 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 | Design with UPF Data                                    | false                                  |
 ====================================================================================================
 
-Information: There are 33 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 37 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
@@ -554,6 +554,7 @@ Information: Ungrouping hierarchy invader_bullet_fsm. (OPT-772)
 
   Beginning Implementation Selection
   ----------------------------------
+Information: The register 'shield_fsm/shield_display_reg' will be removed. (OPT-1207)
   Processing 'DW01_inc_width5_DW01_inc_1'
   Processing 'DW01_dec_width5_DW01_dec_3'
   Mapping 'DW_cmp'
@@ -574,20 +575,20 @@ Information: Ungrouping hierarchy invader_bullet_fsm. (OPT-772)
   Mapping 'DW_cmp'
   Processing 'DW01_add_width5_DW01_add_1'
   Mapping 'DW_cmp'
+  Processing 'DW01_add_width5_DW01_add_2'
+  Mapping 'DW_cmp'
+  Processing 'DW01_add_width5_DW01_add_3'
+  Mapping 'DW_cmp'
+  Mapping 'DW_cmp'
+  Processing 'DW01_add_width5_DW01_add_4'
+  Mapping 'DW_cmp'
   Processing 'DW01_inc_width5_DW01_inc_5'
   Mapping 'DW_cmp'
   Processing 'DW01_inc_width5_DW01_inc_6'
   Mapping 'DW_cmp'
-  Mapping 'DW_cmp'
   Processing 'DW01_inc_width5_DW01_inc_7'
   Mapping 'DW_cmp'
   Processing 'DW01_inc_width5_DW01_inc_8'
-  Mapping 'DW_cmp'
-  Processing 'DW01_inc_width5_DW01_inc_9'
-  Mapping 'DW_cmp'
-  Processing 'DW01_inc_width5_DW01_inc_10'
-  Mapping 'DW_cmp'
-  Processing 'DW01_inc_width5_DW01_inc_11'
 Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please refer to the replacement command 'set power_enable_datapath_gating true' instead. (INFO-118)
 
   Beginning Mapping Optimizations  (Medium effort)
@@ -598,19 +599,19 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:03  282951.0      0.00       0.0       0.0                          
-    0:00:03  282951.0      0.00       0.0       0.0                          
-    0:00:03  282951.0      0.00       0.0       0.0                          
-    0:00:03  282951.0      0.00       0.0       0.0                          
-    0:00:03  282951.0      0.00       0.0       0.0                          
-    0:00:03  275391.0      0.00       0.0       0.0                          
-    0:00:03  275391.0      0.00       0.0       0.0                          
-    0:00:03  275391.0      0.00       0.0       0.0                          
-    0:00:03  275391.0      0.00       0.0       0.0                          
-    0:00:03  275391.0      0.00       0.0       0.0                          
-    0:00:03  275391.0      0.00       0.0       0.0                          
-    0:00:03  275391.0      0.00       0.0       0.0                          
-    0:00:03  275391.0      0.00       0.0       0.0                          
+    0:00:03  279441.0      0.00       0.0       0.0                          
+    0:00:03  279441.0      0.00       0.0       0.0                          
+    0:00:03  279441.0      0.00       0.0       0.0                          
+    0:00:03  279441.0      0.00       0.0       0.0                          
+    0:00:03  279441.0      0.00       0.0       0.0                          
+    0:00:04  271233.0      0.00       0.0       0.0                          
+    0:00:04  271233.0      0.00       0.0       0.0                          
+    0:00:04  271233.0      0.00       0.0       0.0                          
+    0:00:04  271233.0      0.00       0.0       0.0                          
+    0:00:04  271233.0      0.00       0.0       0.0                          
+    0:00:04  271233.0      0.00       0.0       0.0                          
+    0:00:04  271233.0      0.00       0.0       0.0                          
+    0:00:04  271233.0      0.00       0.0       0.0                          
 
 
 
@@ -621,9 +622,9 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:03  275391.0      0.00       0.0       0.0                          
-    0:00:03  275391.0      0.00       0.0       0.0                          
-    0:00:03  275391.0      0.00       0.0       0.0                          
+    0:00:04  271233.0      0.00       0.0       0.0                          
+    0:00:04  271233.0      0.00       0.0       0.0                          
+    0:00:04  271233.0      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -633,21 +634,21 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:03  275391.0      0.00       0.0       0.0                          
-    0:00:03  275391.0      0.00       0.0       0.0                          
-    0:00:03  273159.0      0.00       0.0       0.0                          
-    0:00:03  271863.0      0.00       0.0       0.0                          
-    0:00:03  270711.0      0.00       0.0       0.0                          
-    0:00:03  270279.0      0.00       0.0       0.0                          
-    0:00:03  269847.0      0.00       0.0       0.0                          
-    0:00:03  269847.0      0.00       0.0       0.0                          
-    0:00:03  269847.0      0.00       0.0       0.0                          
-    0:00:03  269847.0      0.00       0.0       0.0                          
-    0:00:03  269847.0      0.00       0.0       0.0                          
-    0:00:03  269847.0      0.00       0.0       0.0                          
-    0:00:03  269847.0      0.00       0.0       0.0                          
-    0:00:03  269847.0      0.00       0.0       0.0                          
-    0:00:03  269847.0      0.00       0.0       0.0                          
+    0:00:04  271233.0      0.00       0.0       0.0                          
+    0:00:04  271233.0      0.00       0.0       0.0                          
+    0:00:04  268569.0      0.00       0.0       0.0                          
+    0:00:04  267129.0      0.00       0.0       0.0                          
+    0:00:04  265833.0      0.00       0.0       0.0                          
+    0:00:04  265401.0      0.00       0.0       0.0                          
+    0:00:04  264969.0      0.00       0.0       0.0                          
+    0:00:04  264969.0      0.00       0.0       0.0                          
+    0:00:04  264969.0      0.00       0.0       0.0                          
+    0:00:04  264969.0      0.00       0.0       0.0                          
+    0:00:04  264969.0      0.00       0.0       0.0                          
+    0:00:04  264969.0      0.00       0.0       0.0                          
+    0:00:04  264969.0      0.00       0.0       0.0                          
+    0:00:04  264969.0      0.00       0.0       0.0                          
+    0:00:04  264969.0      0.00       0.0       0.0                          
 Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
 
 
@@ -656,7 +657,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 7%, Ram Free: 7 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
+CPU Load: 4%, Ram Free: 6 GB, Swap Free: 15 GB, Work Disk Free: 780 GB, Tmp Disk Free: 5 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -678,7 +679,7 @@ Unmapped MV Cells
 ----------------------------------------------------------------------------------------------------
 1
 compile -incremental_mapping -map_effort medium
-CPU Load: 7%, Ram Free: 7 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
+CPU Load: 4%, Ram Free: 6 GB, Swap Free: 15 GB, Work Disk Free: 780 GB, Tmp Disk Free: 5 GB
 ====================================================================================================
 | Flow Information                                                                                 |
 ----------------------------------------------------------------------------------------------------
@@ -687,9 +688,9 @@ CPU Load: 7%, Ram Free: 7 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk
 | Design Information                                      | Value                                  |
 ====================================================================================================
 | Number of Scenarios                                     | 0                                      |
-| Leaf Cell Count                                         | 854                                    |
+| Leaf Cell Count                                         | 840                                    |
 | Number of User Hierarchies                              | 0                                      |
-| Sequential Cell Count                                   | 96                                     |
+| Sequential Cell Count                                   | 95                                     |
 | Macro Count                                             | 0                                      |
 | Number of Power Domains                                 | 0                                      |
 | Number of Path Groups                                   | 2                                      |
@@ -701,7 +702,7 @@ CPU Load: 7%, Ram Free: 7 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk
 | Design with UPF Data                                    | false                                  |
 ====================================================================================================
 
-Information: There are 8 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 
@@ -725,9 +726,9 @@ Information: Command 'do_operand_isolation' is obsolete and is being ignored.  P
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:00  269847.0      0.00       0.0       0.0                          
-    0:00:00  269847.0      0.00       0.0       0.0                          
-    0:00:00  269847.0      0.00       0.0       0.0                          
+    0:00:00  264969.0      0.00       0.0       0.0                          
+    0:00:00  264969.0      0.00       0.0       0.0                          
+    0:00:00  264969.0      0.00       0.0       0.0                          
 Loading db file '/clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db'
 
 
@@ -736,7 +737,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 
   Optimization Complete
   ---------------------
-CPU Load: 7%, Ram Free: 7 GB, Swap Free: 15 GB, Work Disk Free: 784 GB, Tmp Disk Free: 5 GB
+CPU Load: 4%, Ram Free: 6 GB, Swap Free: 15 GB, Work Disk Free: 780 GB, Tmp Disk Free: 5 GB
 Information: Total number of MV cells in the design.
 ----------------------------------------------------------------------------------------------------
  MV Cells                                           Total Number                                   
@@ -762,19 +763,15 @@ check_design
 ****************************************
 check_design summary:
 Version:     U-2022.12-SP7
-Date:        Mon Apr 20 00:43:28 2026
+Date:        Mon Apr 20 22:02:05 2026
 ****************************************
 
                    Name                                            Total
 --------------------------------------------------------------------------------
-Inputs/Outputs                                                      8
-    Constant outputs (LINT-52)                                      8
+Inputs/Outputs                                                      4
+    Constant outputs (LINT-52)                                      4
 --------------------------------------------------------------------------------
 
-Warning: In design 'top', output port 'player_coord_y[3]' is connected directly to 'logic 0'. (LINT-52)
-Warning: In design 'top', output port 'player_coord_y[2]' is connected directly to 'logic 0'. (LINT-52)
-Warning: In design 'top', output port 'player_coord_y[1]' is connected directly to 'logic 0'. (LINT-52)
-Warning: In design 'top', output port 'player_coord_y[0]' is connected directly to 'logic 0'. (LINT-52)
 Warning: In design 'top', output port 'shield_coord_x[3]' is connected directly to 'logic 0'. (LINT-52)
 Warning: In design 'top', output port 'shield_coord_x[0]' is connected directly to 'logic 1'. (LINT-52)
 Warning: In design 'top', output port 'shield_coord_y[3]' is connected directly to 'logic 0'. (LINT-52)
@@ -788,7 +785,7 @@ Report : constraint
         -all_violators
 Design : top
 Version: U-2022.12-SP7
-Date   : Mon Apr 20 00:43:28 2026
+Date   : Mon Apr 20 22:02:05 2026
 ****************************************
 
 This design has no violated constraints.
@@ -797,7 +794,7 @@ This design has no violated constraints.
 set filename [format "%s%s"  $my_toplevel ".vh"]
 top.vh
 write -f verilog -output $filename
-Writing verilog file '/storage-home/d/dn55/elec422_space_invaders/No_Datapath_less_outputs/Synthesis/top.vh'.
+Writing verilog file '/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/No_Datapath_less_outputs/Synthesis/top.vh'.
 Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
 1
 set filename [format "%s%s"  $my_toplevel ".sdc"]
@@ -810,7 +807,7 @@ report_cell
 Report : cell
 Design : top
 Version: U-2022.12-SP7
-Date   : Mon Apr 20 00:43:28 2026
+Date   : Mon Apr 20 22:02:05 2026
 ****************************************
 
 Attributes:
@@ -827,16 +824,16 @@ U1                        OR2X1           osu05_stdcells  288.000000
 U2                        AND2X2          osu05_stdcells  288.000000
 U3                        AND2X2          osu05_stdcells  288.000000
 U4                        AND2X2          osu05_stdcells  288.000000
-U5                        INVX2           osu05_stdcells  144.000000
-U6                        BUFX2           osu05_stdcells  216.000000
-U7                        BUFX2           osu05_stdcells  216.000000
-U8                        BUFX2           osu05_stdcells  216.000000
+U5                        AND2X2          osu05_stdcells  288.000000
+U6                        AND2X2          osu05_stdcells  288.000000
+U7                        AND2X2          osu05_stdcells  288.000000
+U8                        AND2X2          osu05_stdcells  288.000000
 U9                        BUFX2           osu05_stdcells  216.000000
 U10                       BUFX2           osu05_stdcells  216.000000
 U11                       BUFX2           osu05_stdcells  216.000000
-U12                       INVX2           osu05_stdcells  144.000000
-U13                       INVX2           osu05_stdcells  144.000000
-U14                       INVX2           osu05_stdcells  144.000000
+U12                       BUFX2           osu05_stdcells  216.000000
+U13                       BUFX2           osu05_stdcells  216.000000
+U14                       BUFX2           osu05_stdcells  216.000000
 U15                       INVX2           osu05_stdcells  144.000000
 U16                       INVX2           osu05_stdcells  144.000000
 U17                       INVX2           osu05_stdcells  144.000000
@@ -844,26 +841,26 @@ U18                       INVX2           osu05_stdcells  144.000000
 U19                       INVX2           osu05_stdcells  144.000000
 U20                       INVX2           osu05_stdcells  144.000000
 U21                       INVX2           osu05_stdcells  144.000000
-U22                       BUFX2           osu05_stdcells  216.000000
-U23                       BUFX2           osu05_stdcells  216.000000
-U24                       XOR2X1          osu05_stdcells  504.000000
-U25                       XOR2X1          osu05_stdcells  504.000000
-U26                       NAND2X1         osu05_stdcells  216.000000
-U27                       XOR2X1          osu05_stdcells  504.000000
-U28                       XOR2X1          osu05_stdcells  504.000000
-U29                       NAND2X1         osu05_stdcells  216.000000
-U30                       INVX2           osu05_stdcells  144.000000
-U31                       INVX2           osu05_stdcells  144.000000
-U32                       INVX2           osu05_stdcells  144.000000
-U33                       INVX2           osu05_stdcells  144.000000
-U34                       INVX2           osu05_stdcells  144.000000
-U35                       INVX2           osu05_stdcells  144.000000
-U36                       INVX2           osu05_stdcells  144.000000
+U22                       INVX2           osu05_stdcells  144.000000
+U23                       INVX2           osu05_stdcells  144.000000
+U24                       INVX2           osu05_stdcells  144.000000
+U25                       INVX2           osu05_stdcells  144.000000
+U26                       INVX2           osu05_stdcells  144.000000
+U27                       BUFX2           osu05_stdcells  216.000000
+U28                       BUFX2           osu05_stdcells  216.000000
+U29                       XOR2X1          osu05_stdcells  504.000000
+U30                       XOR2X1          osu05_stdcells  504.000000
+U31                       NAND2X1         osu05_stdcells  216.000000
+U32                       XOR2X1          osu05_stdcells  504.000000
+U33                       XOR2X1          osu05_stdcells  504.000000
+U34                       NAND2X1         osu05_stdcells  216.000000
+U35                       XOR2X1          osu05_stdcells  504.000000
+U36                       NAND2X1         osu05_stdcells  216.000000
 U37                       INVX2           osu05_stdcells  144.000000
-U38                       INVX2           osu05_stdcells  144.000000
-U39                       INVX2           osu05_stdcells  144.000000
-U40                       INVX2           osu05_stdcells  144.000000
-U41                       INVX2           osu05_stdcells  144.000000
+U38                       XOR2X1          osu05_stdcells  504.000000
+U39                       XOR2X1          osu05_stdcells  504.000000
+U40                       XOR2X1          osu05_stdcells  504.000000
+U41                       XOR2X1          osu05_stdcells  504.000000
 U42                       INVX2           osu05_stdcells  144.000000
 U43                       INVX2           osu05_stdcells  144.000000
 U44                       INVX2           osu05_stdcells  144.000000
@@ -1031,148 +1028,148 @@ U205                      INVX2           osu05_stdcells  144.000000
 U206                      INVX2           osu05_stdcells  144.000000
 U207                      INVX2           osu05_stdcells  144.000000
 U208                      INVX2           osu05_stdcells  144.000000
-U209                      NOR2X1          osu05_stdcells  216.000000
-U210                      OR2X1           osu05_stdcells  288.000000
-U211                      NOR2X1          osu05_stdcells  216.000000
-U212                      AOI22X1         osu05_stdcells  360.000000
-U213                      AOI21X1         osu05_stdcells  288.000000
-U214                      NAND2X1         osu05_stdcells  216.000000
-U215                      NAND3X1         osu05_stdcells  324.000000
-U216                      OAI21X1         osu05_stdcells  207.000000
-U217                      OAI21X1         osu05_stdcells  207.000000
+U209                      INVX2           osu05_stdcells  144.000000
+U210                      INVX2           osu05_stdcells  144.000000
+U211                      INVX2           osu05_stdcells  144.000000
+U212                      INVX2           osu05_stdcells  144.000000
+U213                      INVX2           osu05_stdcells  144.000000
+U214                      INVX2           osu05_stdcells  144.000000
+U215                      NOR2X1          osu05_stdcells  216.000000
+U216                      OR2X1           osu05_stdcells  288.000000
+U217                      NOR2X1          osu05_stdcells  216.000000
 U218                      AOI22X1         osu05_stdcells  360.000000
-U219                      OR2X1           osu05_stdcells  288.000000
-U220                      AOI22X1         osu05_stdcells  360.000000
-U221                      AOI21X1         osu05_stdcells  288.000000
-U222                      NAND2X1         osu05_stdcells  216.000000
-U223                      NAND3X1         osu05_stdcells  324.000000
-U224                      OAI21X1         osu05_stdcells  207.000000
-U225                      OAI21X1         osu05_stdcells  207.000000
+U219                      AOI21X1         osu05_stdcells  288.000000
+U220                      NAND2X1         osu05_stdcells  216.000000
+U221                      NAND3X1         osu05_stdcells  324.000000
+U222                      OAI21X1         osu05_stdcells  207.000000
+U223                      OAI21X1         osu05_stdcells  207.000000
+U224                      AOI22X1         osu05_stdcells  360.000000
+U225                      OR2X1           osu05_stdcells  288.000000
 U226                      AOI22X1         osu05_stdcells  360.000000
-U227                      OR2X1           osu05_stdcells  288.000000
-U228                      AOI22X1         osu05_stdcells  360.000000
-U229                      OAI21X1         osu05_stdcells  207.000000
-U230                      AOI22X1         osu05_stdcells  360.000000
-U231                      NOR2X1          osu05_stdcells  216.000000
-U232                      NAND2X1         osu05_stdcells  216.000000
-U233                      NAND2X1         osu05_stdcells  216.000000
-U234                      NAND3X1         osu05_stdcells  324.000000
+U227                      AOI21X1         osu05_stdcells  288.000000
+U228                      NAND2X1         osu05_stdcells  216.000000
+U229                      NAND3X1         osu05_stdcells  324.000000
+U230                      OAI21X1         osu05_stdcells  207.000000
+U231                      OAI21X1         osu05_stdcells  207.000000
+U232                      AOI22X1         osu05_stdcells  360.000000
+U233                      OR2X1           osu05_stdcells  288.000000
+U234                      AOI22X1         osu05_stdcells  360.000000
 U235                      OAI21X1         osu05_stdcells  207.000000
-U236                      OAI21X1         osu05_stdcells  207.000000
-U237                      OAI21X1         osu05_stdcells  207.000000
-U238                      NOR2X1          osu05_stdcells  216.000000
-U239                      OAI21X1         osu05_stdcells  207.000000
-U240                      OAI21X1         osu05_stdcells  207.000000
-U241                      AOI22X1         osu05_stdcells  360.000000
+U236                      AOI22X1         osu05_stdcells  360.000000
+U237                      NOR2X1          osu05_stdcells  216.000000
+U238                      NAND2X1         osu05_stdcells  216.000000
+U239                      AOI21X1         osu05_stdcells  288.000000
+U240                      AOI22X1         osu05_stdcells  360.000000
+U241                      OAI21X1         osu05_stdcells  207.000000
 U242                      OAI21X1         osu05_stdcells  207.000000
 U243                      AOI22X1         osu05_stdcells  360.000000
-U244                      NOR2X1          osu05_stdcells  216.000000
-U245                      NAND2X1         osu05_stdcells  216.000000
-U246                      NAND2X1         osu05_stdcells  216.000000
-U247                      NAND3X1         osu05_stdcells  324.000000
-U248                      OAI21X1         osu05_stdcells  207.000000
-U249                      OAI21X1         osu05_stdcells  207.000000
+U244                      OAI21X1         osu05_stdcells  207.000000
+U245                      AOI22X1         osu05_stdcells  360.000000
+U246                      NOR2X1          osu05_stdcells  216.000000
+U247                      NAND2X1         osu05_stdcells  216.000000
+U248                      AOI21X1         osu05_stdcells  288.000000
+U249                      AOI22X1         osu05_stdcells  360.000000
 U250                      OAI21X1         osu05_stdcells  207.000000
-U251                      NOR2X1          osu05_stdcells  216.000000
-U252                      OAI21X1         osu05_stdcells  207.000000
-U253                      OAI21X1         osu05_stdcells  207.000000
-U254                      NAND3X1         osu05_stdcells  324.000000
-U255                      NAND2X1         osu05_stdcells  216.000000
-U256                      NAND2X1         osu05_stdcells  216.000000
-U257                      NAND3X1         osu05_stdcells  324.000000
-U258                      OAI21X1         osu05_stdcells  207.000000
+U251                      OAI21X1         osu05_stdcells  207.000000
+U252                      NAND3X1         osu05_stdcells  324.000000
+U253                      NAND2X1         osu05_stdcells  216.000000
+U254                      NAND2X1         osu05_stdcells  216.000000
+U255                      NAND3X1         osu05_stdcells  324.000000
+U256                      OAI21X1         osu05_stdcells  207.000000
+U257                      OAI21X1         osu05_stdcells  207.000000
+U258                      OAI22X1         osu05_stdcells  360.000000
 U259                      OAI21X1         osu05_stdcells  207.000000
-U260                      OAI22X1         osu05_stdcells  360.000000
-U261                      OAI21X1         osu05_stdcells  207.000000
-U262                      OAI21X1         osu05_stdcells  207.000000
+U260                      OAI21X1         osu05_stdcells  207.000000
+U261                      AOI21X1         osu05_stdcells  288.000000
+U262                      NOR2X1          osu05_stdcells  216.000000
 U263                      AOI21X1         osu05_stdcells  288.000000
-U264                      NOR2X1          osu05_stdcells  216.000000
-U265                      AOI21X1         osu05_stdcells  288.000000
-U266                      NAND2X1         osu05_stdcells  216.000000
-U267                      OAI21X1         osu05_stdcells  207.000000
-U268                      NOR2X1          osu05_stdcells  216.000000
+U264                      NAND2X1         osu05_stdcells  216.000000
+U265                      OAI21X1         osu05_stdcells  207.000000
+U266                      NOR2X1          osu05_stdcells  216.000000
+U267                      AOI21X1         osu05_stdcells  288.000000
+U268                      AOI22X1         osu05_stdcells  360.000000
 U269                      AOI21X1         osu05_stdcells  288.000000
-U270                      AOI22X1         osu05_stdcells  360.000000
-U271                      AOI21X1         osu05_stdcells  288.000000
-U272                      NAND2X1         osu05_stdcells  216.000000
-U273                      NAND3X1         osu05_stdcells  324.000000
-U274                      OAI21X1         osu05_stdcells  207.000000
-U275                      OAI21X1         osu05_stdcells  207.000000
-U276                      AOI22X1         osu05_stdcells  360.000000
-U277                      OR2X1           osu05_stdcells  288.000000
-U278                      NAND2X1         osu05_stdcells  216.000000
-U279                      NAND3X1         osu05_stdcells  324.000000
-U280                      OAI21X1         osu05_stdcells  207.000000
+U270                      NAND2X1         osu05_stdcells  216.000000
+U271                      NAND3X1         osu05_stdcells  324.000000
+U272                      OAI21X1         osu05_stdcells  207.000000
+U273                      OAI21X1         osu05_stdcells  207.000000
+U274                      AOI22X1         osu05_stdcells  360.000000
+U275                      OR2X1           osu05_stdcells  288.000000
+U276                      NAND2X1         osu05_stdcells  216.000000
+U277                      NAND3X1         osu05_stdcells  324.000000
+U278                      OAI21X1         osu05_stdcells  207.000000
+U279                      OAI21X1         osu05_stdcells  207.000000
+U280                      OAI22X1         osu05_stdcells  360.000000
 U281                      OAI21X1         osu05_stdcells  207.000000
-U282                      OAI22X1         osu05_stdcells  360.000000
-U283                      OAI21X1         osu05_stdcells  207.000000
-U284                      OAI21X1         osu05_stdcells  207.000000
+U282                      OAI21X1         osu05_stdcells  207.000000
+U283                      AOI21X1         osu05_stdcells  288.000000
+U284                      AOI22X1         osu05_stdcells  360.000000
 U285                      AOI21X1         osu05_stdcells  288.000000
-U286                      AOI22X1         osu05_stdcells  360.000000
-U287                      AOI21X1         osu05_stdcells  288.000000
-U288                      NAND2X1         osu05_stdcells  216.000000
-U289                      NAND3X1         osu05_stdcells  324.000000
-U290                      OAI21X1         osu05_stdcells  207.000000
-U291                      OAI21X1         osu05_stdcells  207.000000
-U292                      AOI22X1         osu05_stdcells  360.000000
-U293                      OR2X1           osu05_stdcells  288.000000
-U294                      NOR2X1          osu05_stdcells  216.000000
-U295                      AOI21X1         osu05_stdcells  288.000000
-U296                      NAND2X1         osu05_stdcells  216.000000
-U297                      OAI21X1         osu05_stdcells  207.000000
-U298                      NOR2X1          osu05_stdcells  216.000000
-U299                      AOI21X1         osu05_stdcells  288.000000
-U300                      NAND3X1         osu05_stdcells  324.000000
-U301                      NAND2X1         osu05_stdcells  216.000000
-U302                      NAND2X1         osu05_stdcells  216.000000
-U303                      NAND3X1         osu05_stdcells  324.000000
-U304                      OAI21X1         osu05_stdcells  207.000000
+U286                      NAND2X1         osu05_stdcells  216.000000
+U287                      NAND3X1         osu05_stdcells  324.000000
+U288                      OAI21X1         osu05_stdcells  207.000000
+U289                      OAI21X1         osu05_stdcells  207.000000
+U290                      AOI22X1         osu05_stdcells  360.000000
+U291                      OR2X1           osu05_stdcells  288.000000
+U292                      NOR2X1          osu05_stdcells  216.000000
+U293                      AOI21X1         osu05_stdcells  288.000000
+U294                      NAND2X1         osu05_stdcells  216.000000
+U295                      OAI21X1         osu05_stdcells  207.000000
+U296                      NOR2X1          osu05_stdcells  216.000000
+U297                      AOI21X1         osu05_stdcells  288.000000
+U298                      NAND3X1         osu05_stdcells  324.000000
+U299                      NAND2X1         osu05_stdcells  216.000000
+U300                      NAND2X1         osu05_stdcells  216.000000
+U301                      NAND3X1         osu05_stdcells  324.000000
+U302                      OAI21X1         osu05_stdcells  207.000000
+U303                      OAI21X1         osu05_stdcells  207.000000
+U304                      OAI22X1         osu05_stdcells  360.000000
 U305                      OAI21X1         osu05_stdcells  207.000000
-U306                      OAI22X1         osu05_stdcells  360.000000
-U307                      OAI21X1         osu05_stdcells  207.000000
-U308                      OAI21X1         osu05_stdcells  207.000000
+U306                      OAI21X1         osu05_stdcells  207.000000
+U307                      AOI21X1         osu05_stdcells  288.000000
+U308                      NOR2X1          osu05_stdcells  216.000000
 U309                      AOI21X1         osu05_stdcells  288.000000
-U310                      NOR2X1          osu05_stdcells  216.000000
-U311                      AOI21X1         osu05_stdcells  288.000000
-U312                      NAND2X1         osu05_stdcells  216.000000
-U313                      OAI21X1         osu05_stdcells  207.000000
-U314                      NOR2X1          osu05_stdcells  216.000000
+U310                      NAND2X1         osu05_stdcells  216.000000
+U311                      OAI21X1         osu05_stdcells  207.000000
+U312                      NOR2X1          osu05_stdcells  216.000000
+U313                      AOI21X1         osu05_stdcells  288.000000
+U314                      AOI22X1         osu05_stdcells  360.000000
 U315                      AOI21X1         osu05_stdcells  288.000000
-U316                      AOI22X1         osu05_stdcells  360.000000
-U317                      AOI21X1         osu05_stdcells  288.000000
-U318                      NAND2X1         osu05_stdcells  216.000000
-U319                      NAND3X1         osu05_stdcells  324.000000
-U320                      OAI21X1         osu05_stdcells  207.000000
-U321                      OAI21X1         osu05_stdcells  207.000000
-U322                      AOI22X1         osu05_stdcells  360.000000
-U323                      OR2X1           osu05_stdcells  288.000000
-U324                      NAND2X1         osu05_stdcells  216.000000
-U325                      NAND3X1         osu05_stdcells  324.000000
-U326                      OAI21X1         osu05_stdcells  207.000000
+U316                      NAND2X1         osu05_stdcells  216.000000
+U317                      NAND3X1         osu05_stdcells  324.000000
+U318                      OAI21X1         osu05_stdcells  207.000000
+U319                      OAI21X1         osu05_stdcells  207.000000
+U320                      AOI22X1         osu05_stdcells  360.000000
+U321                      OR2X1           osu05_stdcells  288.000000
+U322                      NAND2X1         osu05_stdcells  216.000000
+U323                      NAND3X1         osu05_stdcells  324.000000
+U324                      OAI21X1         osu05_stdcells  207.000000
+U325                      OAI21X1         osu05_stdcells  207.000000
+U326                      OAI22X1         osu05_stdcells  360.000000
 U327                      OAI21X1         osu05_stdcells  207.000000
-U328                      OAI22X1         osu05_stdcells  360.000000
-U329                      OAI21X1         osu05_stdcells  207.000000
-U330                      OAI21X1         osu05_stdcells  207.000000
+U328                      OAI21X1         osu05_stdcells  207.000000
+U329                      AOI21X1         osu05_stdcells  288.000000
+U330                      AOI22X1         osu05_stdcells  360.000000
 U331                      AOI21X1         osu05_stdcells  288.000000
-U332                      AOI22X1         osu05_stdcells  360.000000
-U333                      AOI21X1         osu05_stdcells  288.000000
-U334                      NAND2X1         osu05_stdcells  216.000000
-U335                      NAND3X1         osu05_stdcells  324.000000
-U336                      OAI21X1         osu05_stdcells  207.000000
-U337                      OAI21X1         osu05_stdcells  207.000000
-U338                      AOI22X1         osu05_stdcells  360.000000
-U339                      OR2X1           osu05_stdcells  288.000000
-U340                      NOR2X1          osu05_stdcells  216.000000
-U341                      AOI21X1         osu05_stdcells  288.000000
-U342                      NAND2X1         osu05_stdcells  216.000000
-U343                      OAI21X1         osu05_stdcells  207.000000
+U332                      NAND2X1         osu05_stdcells  216.000000
+U333                      NAND3X1         osu05_stdcells  324.000000
+U334                      OAI21X1         osu05_stdcells  207.000000
+U335                      OAI21X1         osu05_stdcells  207.000000
+U336                      AOI22X1         osu05_stdcells  360.000000
+U337                      OR2X1           osu05_stdcells  288.000000
+U338                      NOR2X1          osu05_stdcells  216.000000
+U339                      AOI21X1         osu05_stdcells  288.000000
+U340                      NAND2X1         osu05_stdcells  216.000000
+U341                      OAI21X1         osu05_stdcells  207.000000
+U342                      NOR2X1          osu05_stdcells  216.000000
+U343                      AOI21X1         osu05_stdcells  288.000000
 U344                      NOR2X1          osu05_stdcells  216.000000
-U345                      AOI21X1         osu05_stdcells  288.000000
+U345                      NAND2X1         osu05_stdcells  216.000000
 U346                      NOR2X1          osu05_stdcells  216.000000
-U347                      NAND2X1         osu05_stdcells  216.000000
+U347                      NOR2X1          osu05_stdcells  216.000000
 U348                      NOR2X1          osu05_stdcells  216.000000
-U349                      NOR2X1          osu05_stdcells  216.000000
-U350                      NOR2X1          osu05_stdcells  216.000000
+U349                      NAND2X1         osu05_stdcells  216.000000
+U350                      AOI21X1         osu05_stdcells  288.000000
 U351                      NOR2X1          osu05_stdcells  216.000000
 U352                      NAND2X1         osu05_stdcells  216.000000
 U353                      NAND2X1         osu05_stdcells  216.000000
@@ -1183,27 +1180,22 @@ U357                      NAND2X1         osu05_stdcells  216.000000
 U358                      NAND2X1         osu05_stdcells  216.000000
 U359                      NAND2X1         osu05_stdcells  216.000000
 U360                      NAND2X1         osu05_stdcells  216.000000
-U361                      NAND2X1         osu05_stdcells  216.000000
-U362                      OAI21X1         osu05_stdcells  207.000000
-U363                      NAND2X1         osu05_stdcells  216.000000
 invader_bullet_fsm/U21    AOI21X1         osu05_stdcells  288.000000
 invader_bullet_fsm/U23    AOI22X1         osu05_stdcells  360.000000
-invader_bullet_fsm/U25    NAND2X1         osu05_stdcells  216.000000
 invader_bullet_fsm/U26    OAI21X1         osu05_stdcells  207.000000
-invader_bullet_fsm/U27    AOI21X1         osu05_stdcells  288.000000
-invader_bullet_fsm/U28    OAI21X1         osu05_stdcells  207.000000
-invader_bullet_fsm/U30    AOI21X1         osu05_stdcells  288.000000
-invader_bullet_fsm/U31    NAND2X1         osu05_stdcells  216.000000
-invader_bullet_fsm/U32    NAND3X1         osu05_stdcells  324.000000
+invader_bullet_fsm/U28    NOR2X1          osu05_stdcells  216.000000
+invader_bullet_fsm/U29    OAI21X1         osu05_stdcells  207.000000
+invader_bullet_fsm/U31    AOI22X1         osu05_stdcells  360.000000
+invader_bullet_fsm/U32    OAI21X1         osu05_stdcells  207.000000
+invader_bullet_fsm/U33    NAND3X1         osu05_stdcells  324.000000
 invader_bullet_fsm/U34    OAI21X1         osu05_stdcells  207.000000
 invader_bullet_fsm/U35    NAND3X1         osu05_stdcells  324.000000
 invader_bullet_fsm/U36    OAI21X1         osu05_stdcells  207.000000
 invader_bullet_fsm/U37    OAI21X1         osu05_stdcells  207.000000
 invader_bullet_fsm/U38    OAI21X1         osu05_stdcells  207.000000
 invader_bullet_fsm/U39    OAI21X1         osu05_stdcells  207.000000
-invader_bullet_fsm/U40    OAI21X1         osu05_stdcells  207.000000
-invader_bullet_fsm/U41    NAND3X1         osu05_stdcells  324.000000
-invader_bullet_fsm/U46    AOI22X1         osu05_stdcells  360.000000
+invader_bullet_fsm/U45    OAI21X1         osu05_stdcells  207.000000
+invader_bullet_fsm/U46    AOI21X1         osu05_stdcells  288.000000
 invader_bullet_fsm/U47    NOR2X1          osu05_stdcells  216.000000
 invader_bullet_fsm/U49    NOR2X1          osu05_stdcells  216.000000
 invader_bullet_fsm/U51    AOI22X1         osu05_stdcells  360.000000
@@ -1211,6 +1203,7 @@ invader_bullet_fsm/U52    NOR2X1          osu05_stdcells  216.000000
 invader_bullet_fsm/U53    NOR2X1          osu05_stdcells  216.000000
 invader_bullet_fsm/U54    NOR2X1          osu05_stdcells  216.000000
 invader_bullet_fsm/U55    NAND3X1         osu05_stdcells  324.000000
+invader_bullet_fsm/U56    XNOR2X1         osu05_stdcells  504.000000
 invader_bullet_fsm/invader_bullet_coord_x_reg[0]
                           DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
@@ -1798,8 +1791,6 @@ player_fsm/state_reg[1]   DFFNEGX1        osu05_stdcells  864.000000
 shield_fsm/U11            AND2X2          osu05_stdcells  288.000000
 shield_fsm/U16            AND2X2          osu05_stdcells  288.000000
 shield_fsm/U18            AND2X2          osu05_stdcells  288.000000
-shield_fsm/U33            NAND2X1         osu05_stdcells  216.000000
-shield_fsm/U34            AOI22X1         osu05_stdcells  360.000000
 shield_fsm/U35            OAI21X1         osu05_stdcells  207.000000
 shield_fsm/U36            NAND2X1         osu05_stdcells  216.000000
 shield_fsm/U37            NAND3X1         osu05_stdcells  324.000000
@@ -1840,24 +1831,6 @@ shield_fsm/U74            NAND3X1         osu05_stdcells  324.000000
 shield_fsm/U76            AOI21X1         osu05_stdcells  288.000000
 shield_fsm/U77            OAI21X1         osu05_stdcells  207.000000
 shield_fsm/U78            NAND2X1         osu05_stdcells  216.000000
-shield_fsm/add_45_2/U1_1_1
-                          HAX1            osu05_stdcells  720.000000
-                                                                    mo, r
-shield_fsm/add_45_2/U1_1_2
-                          HAX1            osu05_stdcells  720.000000
-                                                                    mo, r
-shield_fsm/add_45_2/U1_1_3
-                          HAX1            osu05_stdcells  720.000000
-                                                                    mo, r
-shield_fsm/add_49_2/U1_1_1
-                          HAX1            osu05_stdcells  720.000000
-                                                                    mo, r
-shield_fsm/add_49_2/U1_1_2
-                          HAX1            osu05_stdcells  720.000000
-                                                                    mo, r
-shield_fsm/add_49_2/U1_1_3
-                          HAX1            osu05_stdcells  720.000000
-                                                                    mo, r
 shield_fsm/hp_reg[0]      DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
 shield_fsm/hp_reg[1]      DFFNEGX1        osu05_stdcells  864.000000
@@ -1874,8 +1847,6 @@ shield_fsm/next_state_reg[1]
 shield_fsm/playerbullet_shield_collision_reg
                           DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
-shield_fsm/r409/U1_1_2    HAX1            osu05_stdcells  720.000000
-                                                                    mo, r
 shield_fsm/shield_coord_x_reg[1]
                           DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
@@ -1888,15 +1859,12 @@ shield_fsm/shield_coord_y_reg[0]
 shield_fsm/shield_coord_y_reg[2]
                           DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
-shield_fsm/shield_display_reg
-                          DFFNEGX1        osu05_stdcells  864.000000
-                                                                    n
 shield_fsm/state_reg[0]   DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
 shield_fsm/state_reg[1]   DFFNEGX1        osu05_stdcells  864.000000
                                                                     n
 --------------------------------------------------------------------------------
-Total 854 cells                                           269847.000000
+Total 840 cells                                           264969.000000
 1
 report_area 
  
@@ -1904,7 +1872,7 @@ report_area
 Report : area
 Design : top
 Version: U-2022.12-SP7
-Date   : Mon Apr 20 00:43:28 2026
+Date   : Mon Apr 20 22:02:05 2026
 ****************************************
 
 Information: Updating design information... (UID-85)
@@ -1912,22 +1880,22 @@ Library(s) Used:
 
     osu05_stdcells (File: /clear/apps/osu/soc/synopsys/lib/ami05/osu05_stdcells.db)
 
-Number of ports:                           65
-Number of nets:                           893
-Number of cells:                          862
-Number of combinational cells:            758
-Number of sequential cells:                96
+Number of ports:                           57
+Number of nets:                           868
+Number of cells:                          844
+Number of combinational cells:            745
+Number of sequential cells:                95
 Number of macros/black boxes:               0
-Number of buf/inv:                        198
+Number of buf/inv:                        194
 Number of references:                      16
 
-Combinational area:             189495.000000
-Buf/Inv area:                    29088.000000
-Noncombinational area:           80352.000000
+Combinational area:             185481.000000
+Buf/Inv area:                    28512.000000
+Noncombinational area:           79488.000000
 Macro/Black Box area:                0.000000
 Net Interconnect area:      undefined  (No wire load specified)
 
-Total cell area:                269847.000000
+Total cell area:                264969.000000
 Total area:                 undefined
 1
 report_timing -path full -delay max -max_paths 3 -nworst 1
@@ -1939,7 +1907,7 @@ Report : timing
         -max_paths 3
 Design : top
 Version: U-2022.12-SP7
-Date   : Mon Apr 20 00:43:28 2026
+Date   : Mon Apr 20 22:02:05 2026
 ****************************************
 
 Operating Conditions: typical   Library: osu05_stdcells
@@ -1957,7 +1925,7 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   input external delay                                    1.00       1.00 r
   reset (in)                                              0.22       1.22 r
-  U37/Y (INVX2)                                           0.28       1.50 f
+  U49/Y (INVX2)                                           0.28       1.50 f
   main_game_fsm/U81/Y (NAND2X1)                           0.16       1.66 r
   main_game_fsm/U80/Y (NOR2X1)                            0.11       1.77 f
   main_game_fsm/next_state_reg[1]/D (DFFNEGX1)            0.00       1.77 f
@@ -1987,7 +1955,7 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   input external delay                                    1.00       1.00 r
   reset (in)                                              0.22       1.22 r
-  U37/Y (INVX2)                                           0.28       1.50 f
+  U49/Y (INVX2)                                           0.28       1.50 f
   main_game_fsm/U5/Y (AND2X2)                             0.26       1.75 f
   main_game_fsm/next_player_left_motion_reg/D (DFFNEGX1)
                                                           0.00       1.75 f
@@ -2018,7 +1986,7 @@ Wire Load Model Mode: top
   clock network delay (ideal)                             0.00       0.00
   input external delay                                    1.00       1.00 r
   reset (in)                                              0.22       1.22 r
-  U37/Y (INVX2)                                           0.28       1.50 f
+  U49/Y (INVX2)                                           0.28       1.50 f
   main_game_fsm/U4/Y (AND2X2)                             0.26       1.75 f
   main_game_fsm/next_player_right_motion_reg/D (DFFNEGX1)
                                                           0.00       1.75 f
@@ -2049,7 +2017,7 @@ Report : power
         -analysis_effort low
 Design : top
 Version: U-2022.12-SP7
-Date   : Mon Apr 20 00:43:29 2026
+Date   : Mon Apr 20 22:02:05 2026
 ****************************************
 
 
@@ -2076,12 +2044,12 @@ Attributes
 i - Including register clock pin internal power
 
 
-  Cell Internal Power  =   2.4612 mW   (83%)
-  Net Switching Power  = 509.5288 uW   (17%)
+  Cell Internal Power  =   2.4338 mW   (83%)
+  Net Switching Power  = 504.7963 uW   (17%)
                          ---------
-Total Dynamic Power    =   2.9708 mW  (100%)
+Total Dynamic Power    =   2.9386 mW  (100%)
 
-Cell Leakage Power     =  78.3830 nW
+Cell Leakage Power     =  76.9354 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -2090,21 +2058,21 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      1.1146            0.0000            0.0000            1.1146  (  37.52%)  i
-register       4.0863e-02        1.2802e-02            3.7075        5.3668e-02  (   1.81%)
-sequential         1.0901        4.5028e-02           19.7188            1.1351  (  38.21%)
-combinational      0.2158            0.4517           54.9568            0.6675  (  22.47%)
+clock_network      1.1146            0.0000            0.0000            1.1146  (  37.93%)  i
+register       4.0864e-02        1.2948e-02            3.7075        5.3815e-02  (   1.83%)
+sequential         1.0647        4.8014e-02           19.4716            1.1127  (  37.86%)
+combinational      0.2137            0.4438           53.7563            0.6576  (  22.38%)
 --------------------------------------------------------------------------------------------------
-Total              2.4612 mW         0.5095 mW        78.3830 nW         2.9708 mW
+Total              2.4338 mW         0.5048 mW        76.9354 nW         2.9387 mW
 1
 redirect timing.rep { report_timing }
 redirect cell.rep { report_cell }
 redirect power.rep { report_power }
 quit
 
-Memory usage for this session 116 Mbytes.
-Memory usage for this session including child processes 116 Mbytes.
-CPU usage for this session 7 seconds ( 0.00 hours ).
-Elapsed time for this session 10 seconds ( 0.00 hours ).
+Memory usage for this session 115 Mbytes.
+Memory usage for this session including child processes 115 Mbytes.
+CPU usage for this session 8 seconds ( 0.00 hours ).
+Elapsed time for this session 17 seconds ( 0.00 hours ).
 
 Thank you...

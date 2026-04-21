@@ -83,7 +83,7 @@ module top
     wire             shield_display;                     // Display bit
 
     wire             playerbullet_state;                  // Player bullet state
-    wire [1:0]       main_game_stat;                      // Main game state
+    wire [1:0]       main_game_state;                      // Main game state
 
     // Instantiate Main Game FSM:
     main_game_fsm main_game_fsm(
