@@ -1,26 +1,26 @@
 TIME: 4000000 | TEST:                                 
-player  x x
+player  7 1
 invader_1  x  x x
 invader_2  x  x x
-shield  X  X x
+shield  x  x x
 player_bullet  x  x x
 invader_bullet  x  x x
 END_FRAME
 TIME: 8000000 | TEST:                                 
-player  x x
+player  7 1
 invader_1  x  x x
 invader_2  x  x x
-shield  X  X x
-player_bullet  x  x x
-invader_bullet  x  x x
+shield  7  4 3
+player_bullet  7  0 0
+invader_bullet  x  x 0
 END_FRAME
 TIME: 12000000 | TEST:                                 
-player  x x
-invader_1  x  x x
-invader_2  x  x x
-shield  X  X x
-player_bullet  x  x x
-invader_bullet  x  x x
+player  7 1
+invader_1  5 13 1
+invader_2  9 13 1
+shield  7  4 3
+player_bullet  8  2 0
+invader_bullet  9 13 0
 END_FRAME
 TIME: 16000000 | TEST:                                 
 player  7 1
