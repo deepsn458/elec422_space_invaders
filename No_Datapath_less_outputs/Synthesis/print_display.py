@@ -17,7 +17,7 @@ def clear_screen():
 
 def set_pixel(matrix, x, y):
     """Sets a pixel in the matrix if it is within bounds."""
-    if 0 <= x < 32 and 0 <= y < 32:
+    if 0 <= x < 16 and 0 <= y < 16:
         matrix[y][x] = 1
 
 def draw_player(matrix, x, disp):
@@ -87,20 +87,20 @@ def render_log(filename):
         
         if line.startswith("TIME:"):
             frame_title = line
-            matrix = [[0]*32 for _ in range(32)]
+            matrix = [[0]*16 for _ in range(16)]
             
         elif line == "END_FRAME":
             clear_screen()
-            print("=" * 66)
+            print("=" * 33)
             print(frame_title)
-            print("=" * 66)
+            print("=" * 33)
             
             # Print the matrix from Y=31 down to Y=0 to match screen mapping
-            for row_idx in range(31, -1, -1):
-                row_str = "".join(['██' if matrix[row_idx][c] else '  ' for c in range(32)])
+            for row_idx in range(15, -1, -1):
+                row_str = "".join(['██' if matrix[row_idx][c] else '  ' for c in range(16)])
                 print(row_str)
             
-            print("=" * 66)
+            print("=" * 33)
             input("\nPress [Enter] to see the next frame...")
             
         elif line: 

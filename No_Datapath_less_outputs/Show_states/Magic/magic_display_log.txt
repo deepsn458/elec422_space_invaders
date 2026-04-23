@@ -1,0 +1,355 @@
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXXX inv2_x=XXXX 
+| inv1_y=XXXX inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 40.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXXX inv2_x=XXXX 
+| inv1_y=XXXX inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 80.000ns; there are 4 pending events
+| ib_y=XXXX ib_x=XXXX pb_y=0XXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=0X11 invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 240.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=0X11 invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 320.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=0X11 invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 400.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 640.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 800.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 1240.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 1600.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 2640.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 2680.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 2720.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 2760.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 2800.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 2840.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 2880.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 2920.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 2960.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 3000.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 3040.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 3080.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 3120.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 3160.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 3200.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 3240.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 3280.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 3320.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 3360.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 3400.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 3440.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 3880.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 4640.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 4840.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 6040.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 6360.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 7960.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 8120.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 8200.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 8280.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 8480.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 8800.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 9280.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 9960.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 10760.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 11560.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 11600.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 11640.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 11680.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 11720.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 11760.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 11800.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 11840.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 11880.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 11920.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 11960.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 12000.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 12040.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 12080.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 12120.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 12160.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 12200.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 12240.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 12280.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 12320.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 12360.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 13160.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 14760.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 14960.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 18960.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 19600.000ns
+| ib_y=XXXX ib_x=XXXX pb_y=XXXX pb_x=XXXX shield_hp=XX inv2_y=XXX1 inv2_x=XXXX 
+| inv1_y=XXX1 inv1_x=XXXX player_x=XXXX invader_bullet_display=X 
+| player_bullet_display=X invader_2_display=X invader_1_display=X 
+| player_display=X 
+| time = 21200.000ns
