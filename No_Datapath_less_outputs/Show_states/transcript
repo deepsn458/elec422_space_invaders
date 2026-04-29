@@ -54,3 +54,5 @@ run -all
 # ** Note: $stop    : top_tb_coords.v(290)
 #    Time: 2120 us  Iteration: 0  Instance: /top_tb_coords
 # Break in Module top_tb_coords at top_tb_coords.v line 290
+# End time: 21:42:00 on Apr 22,2026, Elapsed time: 0:24:59
+# Errors: 0, Warnings: 9
