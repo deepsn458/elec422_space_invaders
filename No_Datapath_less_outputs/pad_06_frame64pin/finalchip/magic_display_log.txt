@@ -1,0 +1,570 @@
+| (command line,1): PadFrame64_0/p_s_x: No such node or vector
+| (command line,1): PadFrame64_0/p_s_y: No such node or vector
+| PadFrame64_0/p_ib_y=XXXX PadFrame64_0/p_ib_x=XXXX PadFrame64_0/p_pb_y=XXXX 
+| PadFrame64_0/p_pb_x=XXXX PadFrame64_0/p_s_hp=XX PadFrame64_0/p_inv2_y=XXXX 
+| PadFrame64_0/p_inv2_x=XXXX PadFrame64_0/p_inv1_y=XXXX 
+| PadFrame64_0/p_inv1_x=XXXX PadFrame64_0/p_player_x=XXXX 
+| PadFrame64_0/p_invader_bullet_display=X PadFrame64_0/p_player_bullet_display=X 
+| PadFrame64_0/p_invader_2_display=X PadFrame64_0/p_invader_1_display=X 
+| PadFrame64_0/p_player_display=X 
+| time = 40.000ns
+| PadFrame64_0/p_ib_y=XXXX PadFrame64_0/p_ib_x=XXXX PadFrame64_0/p_pb_y=XXXX 
+| PadFrame64_0/p_pb_x=XXXX PadFrame64_0/p_s_hp=XX PadFrame64_0/p_inv2_y=XXXX 
+| PadFrame64_0/p_inv2_x=XXXX PadFrame64_0/p_inv1_y=XXXX 
+| PadFrame64_0/p_inv1_x=XXXX PadFrame64_0/p_player_x=XXXX 
+| PadFrame64_0/p_invader_bullet_display=X PadFrame64_0/p_player_bullet_display=X 
+| PadFrame64_0/p_invader_2_display=X PadFrame64_0/p_invader_1_display=X 
+| PadFrame64_0/p_player_display=X 
+| time = 80.000ns
+| PadFrame64_0/p_ib_y=1010 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0010 
+| PadFrame64_0/p_pb_x=0111 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1010 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0110 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 240.000ns
+| PadFrame64_0/p_ib_y=1000 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0100 
+| PadFrame64_0/p_pb_x=0111 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1011 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0111 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 320.000ns
+| PadFrame64_0/p_ib_y=0110 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0000 
+| PadFrame64_0/p_pb_x=0111 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1100 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=1000 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 400.000ns
+| PadFrame64_0/p_ib_y=1001 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0000 
+| PadFrame64_0/p_pb_x=1011 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1100 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=1000 PadFrame64_0/p_player_x=1100 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 640.000ns
+| PadFrame64_0/p_ib_y=0101 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0100 
+| PadFrame64_0/p_pb_x=1011 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1010 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0110 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 800.000ns
+| PadFrame64_0/p_ib_y=0011 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=1111 
+| PadFrame64_0/p_pb_x=1011 PadFrame64_0/p_s_hp=00 PadFrame64_0/p_inv2_y=1001 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1001 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0011 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 1240.000ns
+| PadFrame64_0/p_ib_y=0001 PadFrame64_0/p_ib_x=0101 PadFrame64_0/p_pb_y=1000 
+| PadFrame64_0/p_pb_x=0011 PadFrame64_0/p_s_hp=00 PadFrame64_0/p_inv2_y=1001 
+| PadFrame64_0/p_inv2_x=1101 PadFrame64_0/p_inv1_y=1001 
+| PadFrame64_0/p_inv1_x=1001 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 1600.000ns
+| PadFrame64_0/p_ib_y=0100 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0010 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1101 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=1001 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 2640.000ns
+| PadFrame64_0/p_ib_y=0011 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0011 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1101 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=1001 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 2680.000ns
+| PadFrame64_0/p_ib_y=1011 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0100 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1101 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=1001 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 2720.000ns
+| PadFrame64_0/p_ib_y=1010 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0101 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1100 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=1000 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 2760.000ns
+| PadFrame64_0/p_ib_y=1001 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0110 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1100 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=1000 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 2800.000ns
+| PadFrame64_0/p_ib_y=1000 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0111 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1011 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0111 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 2840.000ns
+| PadFrame64_0/p_ib_y=0111 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=1000 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1011 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0111 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 2880.000ns
+| PadFrame64_0/p_ib_y=0110 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=1001 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1010 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0110 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 2920.000ns
+| PadFrame64_0/p_ib_y=0101 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=1010 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1010 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0110 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 2960.000ns
+| PadFrame64_0/p_ib_y=0100 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=1011 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 3000.000ns
+| PadFrame64_0/p_ib_y=0011 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=1100 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=01 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 3040.000ns
+| PadFrame64_0/p_ib_y=1011 PadFrame64_0/p_ib_x=0101 PadFrame64_0/p_pb_y=1101 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=01 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1000 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0100 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 3080.000ns
+| PadFrame64_0/p_ib_y=1010 PadFrame64_0/p_ib_x=0101 PadFrame64_0/p_pb_y=1110 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=01 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1000 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0100 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 3120.000ns
+| PadFrame64_0/p_ib_y=1001 PadFrame64_0/p_ib_x=0101 PadFrame64_0/p_pb_y=1111 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=01 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=0111 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0011 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 3160.000ns
+| PadFrame64_0/p_ib_y=1000 PadFrame64_0/p_ib_x=0101 PadFrame64_0/p_pb_y=0000 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=01 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=0111 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0011 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 3200.000ns
+| PadFrame64_0/p_ib_y=0111 PadFrame64_0/p_ib_x=0101 PadFrame64_0/p_pb_y=0000 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=01 PadFrame64_0/p_inv2_y=1001 
+| PadFrame64_0/p_inv2_x=0111 PadFrame64_0/p_inv1_y=1001 
+| PadFrame64_0/p_inv1_x=0011 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 3240.000ns
+| PadFrame64_0/p_ib_y=0110 PadFrame64_0/p_ib_x=0101 PadFrame64_0/p_pb_y=0001 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=01 PadFrame64_0/p_inv2_y=1001 
+| PadFrame64_0/p_inv2_x=0111 PadFrame64_0/p_inv1_y=1001 
+| PadFrame64_0/p_inv1_x=0011 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 3280.000ns
+| PadFrame64_0/p_ib_y=0101 PadFrame64_0/p_ib_x=0101 PadFrame64_0/p_pb_y=0010 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=01 PadFrame64_0/p_inv2_y=1001 
+| PadFrame64_0/p_inv2_x=1000 PadFrame64_0/p_inv1_y=1001 
+| PadFrame64_0/p_inv1_x=0100 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 3320.000ns
+| PadFrame64_0/p_ib_y=0100 PadFrame64_0/p_ib_x=0101 PadFrame64_0/p_pb_y=0011 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=01 PadFrame64_0/p_inv2_y=1001 
+| PadFrame64_0/p_inv2_x=1000 PadFrame64_0/p_inv1_y=1001 
+| PadFrame64_0/p_inv1_x=0100 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 3360.000ns
+| PadFrame64_0/p_ib_y=0011 PadFrame64_0/p_ib_x=0101 PadFrame64_0/p_pb_y=0100 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=00 PadFrame64_0/p_inv2_y=1001 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1001 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 3400.000ns
+| PadFrame64_0/p_ib_y=1001 PadFrame64_0/p_ib_x=0101 PadFrame64_0/p_pb_y=0101 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=00 PadFrame64_0/p_inv2_y=1001 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1001 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 3440.000ns
+| PadFrame64_0/p_ib_y=0110 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0000 
+| PadFrame64_0/p_pb_x=1011 PadFrame64_0/p_s_hp=00 PadFrame64_0/p_inv2_y=0111 
+| PadFrame64_0/p_inv2_x=1100 PadFrame64_0/p_inv1_y=0111 
+| PadFrame64_0/p_inv1_x=1000 PadFrame64_0/p_player_x=1100 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 3880.000ns
+| PadFrame64_0/p_ib_y=1000 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0100 
+| PadFrame64_0/p_pb_x=0111 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1011 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0111 PadFrame64_0/p_player_x=1011 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 4640.000ns
+| PadFrame64_0/p_ib_y=0011 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0000 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1101 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=1001 PadFrame64_0/p_player_x=1100 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 4840.000ns
+| PadFrame64_0/p_ib_y=1101 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0010 
+| PadFrame64_0/p_pb_x=1000 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 6040.000ns
+| PadFrame64_0/p_ib_y=1101 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0010 
+| PadFrame64_0/p_pb_x=1000 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 6360.000ns
+| PadFrame64_0/p_ib_y=1101 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0010 
+| PadFrame64_0/p_pb_x=1000 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 7960.000ns
+| PadFrame64_0/p_ib_y=1010 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0010 
+| PadFrame64_0/p_pb_x=0111 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1010 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0110 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 8120.000ns
+| PadFrame64_0/p_ib_y=1000 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0100 
+| PadFrame64_0/p_pb_x=0111 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1011 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0111 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 8200.000ns
+| PadFrame64_0/p_ib_y=0110 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0000 
+| PadFrame64_0/p_pb_x=0111 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1100 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=1000 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 8280.000ns
+| PadFrame64_0/p_ib_y=1010 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0101 
+| PadFrame64_0/p_pb_x=0111 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1100 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=1000 PadFrame64_0/p_player_x=0011 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 8480.000ns
+| PadFrame64_0/p_ib_y=1011 PadFrame64_0/p_ib_x=0101 PadFrame64_0/p_pb_y=0111 
+| PadFrame64_0/p_pb_x=0011 PadFrame64_0/p_s_hp=01 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1000 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0100 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 8800.000ns
+| PadFrame64_0/p_ib_y=0110 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0111 
+| PadFrame64_0/p_pb_x=0101 PadFrame64_0/p_s_hp=00 PadFrame64_0/p_inv2_y=1001 
+| PadFrame64_0/p_inv2_x=1011 PadFrame64_0/p_inv1_y=0101 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=0 
+| PadFrame64_0/p_player_display=1 
+| time = 9280.000ns
+| PadFrame64_0/p_ib_y=1100 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0000 
+| PadFrame64_0/p_pb_x=0111 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 9960.000ns
+| PadFrame64_0/p_ib_y=1010 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0001 
+| PadFrame64_0/p_pb_x=0010 PadFrame64_0/p_s_hp=01 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1000 PadFrame64_0/p_inv1_y=0101 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0010 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=0 
+| PadFrame64_0/p_player_display=1 
+| time = 10760.000ns
+| PadFrame64_0/p_ib_y=0101 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0001 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1101 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=1001 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 11560.000ns
+| PadFrame64_0/p_ib_y=0100 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0010 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1101 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=1001 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 11600.000ns
+| PadFrame64_0/p_ib_y=0011 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0011 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1101 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=1001 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 11640.000ns
+| PadFrame64_0/p_ib_y=1011 PadFrame64_0/p_ib_x=1101 PadFrame64_0/p_pb_y=0100 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1101 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=1001 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 11680.000ns
+| PadFrame64_0/p_ib_y=1010 PadFrame64_0/p_ib_x=1101 PadFrame64_0/p_pb_y=0101 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1100 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=1000 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 11720.000ns
+| PadFrame64_0/p_ib_y=1001 PadFrame64_0/p_ib_x=1101 PadFrame64_0/p_pb_y=0110 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1100 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=1000 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 11760.000ns
+| PadFrame64_0/p_ib_y=1000 PadFrame64_0/p_ib_x=1101 PadFrame64_0/p_pb_y=0111 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1011 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0111 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 11800.000ns
+| PadFrame64_0/p_ib_y=0111 PadFrame64_0/p_ib_x=1101 PadFrame64_0/p_pb_y=1000 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1011 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0111 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 11840.000ns
+| PadFrame64_0/p_ib_y=0110 PadFrame64_0/p_ib_x=1101 PadFrame64_0/p_pb_y=1001 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1010 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0110 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 11880.000ns
+| PadFrame64_0/p_ib_y=0101 PadFrame64_0/p_ib_x=1101 PadFrame64_0/p_pb_y=1010 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1010 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0110 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 11920.000ns
+| PadFrame64_0/p_ib_y=0100 PadFrame64_0/p_ib_x=1101 PadFrame64_0/p_pb_y=1011 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 11960.000ns
+| PadFrame64_0/p_ib_y=0011 PadFrame64_0/p_ib_x=1101 PadFrame64_0/p_pb_y=1100 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 12000.000ns
+| PadFrame64_0/p_ib_y=0010 PadFrame64_0/p_ib_x=1101 PadFrame64_0/p_pb_y=1101 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1000 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0100 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 12040.000ns
+| PadFrame64_0/p_ib_y=0001 PadFrame64_0/p_ib_x=1101 PadFrame64_0/p_pb_y=1110 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1000 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0100 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 12080.000ns
+| PadFrame64_0/p_ib_y=0000 PadFrame64_0/p_ib_x=1101 PadFrame64_0/p_pb_y=1111 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=0111 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0011 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=0 
+| time = 12120.000ns
+| PadFrame64_0/p_ib_y=1011 PadFrame64_0/p_ib_x=0111 PadFrame64_0/p_pb_y=0000 
+| PadFrame64_0/p_pb_x=1101 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=0111 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0011 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=0 
+| time = 12160.000ns
+| PadFrame64_0/p_ib_y=1101 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0010 
+| PadFrame64_0/p_pb_x=1000 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 12200.000ns
+| PadFrame64_0/p_ib_y=1101 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0010 
+| PadFrame64_0/p_pb_x=1000 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 12240.000ns
+| PadFrame64_0/p_ib_y=1100 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0000 
+| PadFrame64_0/p_pb_x=0111 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 12280.000ns
+| PadFrame64_0/p_ib_y=1011 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0000 
+| PadFrame64_0/p_pb_x=0111 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1010 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0110 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 12320.000ns
+| PadFrame64_0/p_ib_y=1010 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0001 
+| PadFrame64_0/p_pb_x=0111 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1010 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0110 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 12360.000ns
+| PadFrame64_0/p_ib_y=1011 PadFrame64_0/p_ib_x=0011 PadFrame64_0/p_pb_y=0011 
+| PadFrame64_0/p_pb_x=1101 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=0101 
+| PadFrame64_0/p_inv2_x=0101 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0011 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=0 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=0 
+| time = 13160.000ns
+| PadFrame64_0/p_ib_y=0111 PadFrame64_0/p_ib_x=1101 PadFrame64_0/p_pb_y=1000 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1011 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0111 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 14760.000ns
+| PadFrame64_0/p_ib_y=0010 PadFrame64_0/p_ib_x=1101 PadFrame64_0/p_pb_y=1101 
+| PadFrame64_0/p_pb_x=1100 PadFrame64_0/p_s_hp=10 PadFrame64_0/p_inv2_y=1011 
+| PadFrame64_0/p_inv2_x=1000 PadFrame64_0/p_inv1_y=1011 
+| PadFrame64_0/p_inv1_x=0100 PadFrame64_0/p_player_x=1101 
+| PadFrame64_0/p_invader_bullet_display=1 PadFrame64_0/p_player_bullet_display=1 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 14960.000ns
+| PadFrame64_0/p_ib_y=1101 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0010 
+| PadFrame64_0/p_pb_x=1000 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 18960.000ns
+| PadFrame64_0/p_ib_y=1101 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0010 
+| PadFrame64_0/p_pb_x=1000 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 19600.000ns
+| PadFrame64_0/p_ib_y=1101 PadFrame64_0/p_ib_x=1001 PadFrame64_0/p_pb_y=0010 
+| PadFrame64_0/p_pb_x=1000 PadFrame64_0/p_s_hp=11 PadFrame64_0/p_inv2_y=1101 
+| PadFrame64_0/p_inv2_x=1001 PadFrame64_0/p_inv1_y=1101 
+| PadFrame64_0/p_inv1_x=0101 PadFrame64_0/p_player_x=0111 
+| PadFrame64_0/p_invader_bullet_display=0 PadFrame64_0/p_player_bullet_display=0 
+| PadFrame64_0/p_invader_2_display=1 PadFrame64_0/p_invader_1_display=1 
+| PadFrame64_0/p_player_display=1 
+| time = 21200.000ns

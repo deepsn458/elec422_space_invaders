@@ -1,5 +1,15 @@
 | (command line,1): p_s_x: No such node or vector
 | (command line,1): p_s_y: No such node or vector
+| p_ib_y=XXXX p_ib_x=XXXX p_pb_y=XXXX p_pb_x=XXXX p_s_hp=XX p_inv2_y=XXXX 
+| p_inv2_x=XXXX p_inv1_y=XXXX p_inv1_x=XXXX p_player_x=XXXX 
+| p_invader_bullet_display=X p_player_bullet_display=X p_invader_2_display=X 
+| p_invader_1_display=X p_player_display=X 
+| time = 40.000ns
+| p_ib_y=XXXX p_ib_x=XXXX p_pb_y=XXXX p_pb_x=XXXX p_s_hp=XX p_inv2_y=XXXX 
+| p_inv2_x=XXXX p_inv1_y=XXXX p_inv1_x=XXXX p_player_x=XXXX 
+| p_invader_bullet_display=X p_player_bullet_display=X p_invader_2_display=X 
+| p_invader_1_display=X p_player_display=X 
+| time = 80.000ns
 | p_ib_y=1010 p_ib_x=1001 p_pb_y=0010 p_pb_x=0111 p_s_hp=11 p_inv2_y=1101 
 | p_inv2_x=1010 p_inv1_y=1101 p_inv1_x=0110 p_player_x=0111 
 | p_invader_bullet_display=1 p_player_bullet_display=1 p_invader_2_display=1 
