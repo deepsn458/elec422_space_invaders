@@ -1,0 +1,45 @@
+| (command line,1): p_s_x: No such node or vector
+| (command line,1): p_s_y: No such node or vector
+| (command line,1): p_pb_x: No such node or vector
+| There are too many transistors in parallel (> 30)
+| Simulation results may be inaccurate, to fix this you may have to
+| increase this limit in 'conn_list.c'.
+| Note: This condition often occurs when Vdd or Gnd are not connected
+|       to all cells.  Check the vicinity of the following 2 nodes:
+|       top_0/gnd
+|       top_0/OAI21X1_112/a_2_6#
+| p_ib_y=XXXX p_ib_x=XXXX p_pb_y=XXXX p_s_hp=XX p_inv2_y=XXXX p_inv2_x=XXXX 
+| p_inv1_y=XXXX p_inv1_x=XXXX p_player_x=XXXX p_invader_bullet_display=X 
+| p_player_bullet_display=X p_invader_2_display=X p_invader_1_display=X 
+| p_player_display=X 
+| time = 40.000ns
+| p_ib_y=XXXX p_ib_x=XXXX p_pb_y=XXXX p_s_hp=XX p_inv2_y=XXXX p_inv2_x=XXXX 
+| p_inv1_y=XXXX p_inv1_x=XXXX p_player_x=XXXX p_invader_bullet_display=X 
+| p_player_bullet_display=X p_invader_2_display=X p_invader_1_display=X 
+| p_player_display=X 
+| time = 80.000ns
+| p_ib_y=XXXX p_ib_x=XXXX p_pb_y=XXXX p_s_hp=XX p_inv2_y=XXXX p_inv2_x=XXXX 
+| p_inv1_y=XXXX p_inv1_x=XXXX p_player_x=XXXX p_invader_bullet_display=X 
+| p_player_bullet_display=X p_invader_2_display=X p_invader_1_display=X 
+| p_player_display=X 
+| time = 240.000ns
+| p_ib_y=XXXX p_ib_x=XXXX p_pb_y=XXXX p_s_hp=XX p_inv2_y=XXXX p_inv2_x=XXXX 
+| p_inv1_y=XXXX p_inv1_x=XXXX p_player_x=XXXX p_invader_bullet_display=X 
+| p_player_bullet_display=X p_invader_2_display=X p_invader_1_display=X 
+| p_player_display=X 
+| time = 320.000ns
+| p_ib_y=XXXX p_ib_x=XXXX p_pb_y=XXXX p_s_hp=XX p_inv2_y=XXXX p_inv2_x=XXXX 
+| p_inv1_y=XXXX p_inv1_x=XXXX p_player_x=XXXX p_invader_bullet_display=X 
+| p_player_bullet_display=X p_invader_2_display=X p_invader_1_display=X 
+| p_player_display=X 
+| time = 400.000ns
+| p_ib_y=XXXX p_ib_x=XXXX p_pb_y=XXXX p_s_hp=XX p_inv2_y=XXXX p_inv2_x=XXXX 
+| p_inv1_y=XXXX p_inv1_x=XXXX p_player_x=XXXX p_invader_bullet_display=X 
+| p_player_bullet_display=X p_invader_2_display=X p_invader_1_display=X 
+| p_player_display=X 
+| time = 640.000ns
+| p_ib_y=XXXX p_ib_x=XXXX p_pb_y=XXXX p_s_hp=XX p_inv2_y=XXXX p_inv2_x=XXXX 
+| p_inv1_y=XXXX p_inv1_x=XXXX p_player_x=XXXX p_invader_bullet_display=X 
+| p_player_bullet_display=X p_invader_2_display=X p_invader_1_display=X 
+| p_player_display=X 
+| time = 800.000ns
