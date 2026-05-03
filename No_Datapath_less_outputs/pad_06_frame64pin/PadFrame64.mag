@@ -1,6 +1,6 @@
 magic
 tech scmos
-timestamp 1777781675
+timestamp 1777781903
 << metal1 >>
 rect -1076 4090 -1015 4135
 rect -776 4092 -710 4133
@@ -164,6 +164,8 @@ rect 3111 -1388 3115 -1376
 rect -1365 -2123 -1337 -2092
 rect -1069 -2132 -1029 -2093
 rect -774 -2129 -732 -2096
+rect 117 -2133 176 -2094
+rect 422 -2131 477 -2093
 rect 740 -2104 754 -2096
 rect 1044 -2097 1060 -2086
 rect 1346 -2096 1358 -2085
@@ -1117,4 +1119,6 @@ rlabel metal1 4008 3252 4008 3252 1 p_player_bullet_coord_x[2]
 rlabel metal1 4008 550 4008 550 1 p_invader_bullet_coord_x[2]
 rlabel metal1 4012 251 4012 251 1 p_invader_bullet_coord_x[1]
 rlabel metal1 3153 4111 3153 4111 1 p_shield_coord_x[1]
+rlabel metal1 449 -2114 449 -2114 1 p_player_left_input
+rlabel metal1 144 -2118 144 -2118 1 p_player_right_input
 << end >>
