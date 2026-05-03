@@ -1,0 +1,620 @@
+TIME: 240.000ns | TEST:
+player  7 1
+invader_1  6 13 1
+invader_2  10 13 1
+shield  7  4 3
+player_bullet  7  2 1
+invader_bullet  9  10 1
+END_FRAME
+
+TIME: 320.000ns | TEST:
+player  7 1
+invader_1  7 13 1
+invader_2  11 13 1
+shield  7  4 3
+player_bullet  7  4 1
+invader_bullet  9  8 1
+END_FRAME
+
+TIME: 400.000ns | TEST:
+player  7 1
+invader_1  8 13 1
+invader_2  12 13 1
+shield  7  4 3
+player_bullet  7  0 0
+invader_bullet  9  6 1
+END_FRAME
+
+TIME: 640.000ns | TEST:
+player  12 1
+invader_1  8 11 1
+invader_2  12 11 1
+shield  7  4 2
+player_bullet  11  0 0
+invader_bullet  9  9 1
+END_FRAME
+
+TIME: 800.000ns | TEST:
+player  13 1
+invader_1  6 11 1
+invader_2  10 11 1
+shield  7  4 2
+player_bullet  11  4 1
+invader_bullet  9  5 1
+END_FRAME
+
+TIME: 1240.000ns | TEST:
+player  3 1
+invader_1  5 9 1
+invader_2  9 9 1
+shield  7  4 0
+player_bullet  11  15 1
+invader_bullet  9  3 1
+END_FRAME
+
+TIME: 1600.000ns | TEST:
+player  2 1
+invader_1  9 9 1
+invader_2  13 9 1
+shield  7  4 0
+player_bullet  3  8 1
+invader_bullet  5  1 1
+END_FRAME
+
+TIME: 2640.000ns | TEST:
+player  2 1
+invader_1  9 13 1
+invader_2  13 13 1
+shield  7  4 3
+player_bullet  2  2 1
+invader_bullet  9  4 1
+END_FRAME
+
+TIME: 2680.000ns | TEST:
+player  2 1
+invader_1  9 11 1
+invader_2  13 11 1
+shield  7  4 2
+player_bullet  2  3 1
+invader_bullet  9  3 1
+END_FRAME
+
+TIME: 2720.000ns | TEST:
+player  2 1
+invader_1  9 11 1
+invader_2  13 11 1
+shield  7  4 2
+player_bullet  2  4 1
+invader_bullet  9  11 0
+END_FRAME
+
+TIME: 2760.000ns | TEST:
+player  2 1
+invader_1  8 11 1
+invader_2  12 11 1
+shield  7  4 2
+player_bullet  2  5 1
+invader_bullet  9  10 1
+END_FRAME
+
+TIME: 2800.000ns | TEST:
+player  2 1
+invader_1  8 11 1
+invader_2  12 11 1
+shield  7  4 2
+player_bullet  2  6 1
+invader_bullet  9  9 1
+END_FRAME
+
+TIME: 2840.000ns | TEST:
+player  2 1
+invader_1  7 11 1
+invader_2  11 11 1
+shield  7  4 2
+player_bullet  2  7 1
+invader_bullet  9  8 1
+END_FRAME
+
+TIME: 2880.000ns | TEST:
+player  2 1
+invader_1  7 11 1
+invader_2  11 11 1
+shield  7  4 2
+player_bullet  2  8 1
+invader_bullet  9  7 1
+END_FRAME
+
+TIME: 2920.000ns | TEST:
+player  2 1
+invader_1  6 11 1
+invader_2  10 11 1
+shield  7  4 2
+player_bullet  2  9 1
+invader_bullet  9  6 1
+END_FRAME
+
+TIME: 2960.000ns | TEST:
+player  2 1
+invader_1  6 11 1
+invader_2  10 11 1
+shield  7  4 2
+player_bullet  2  10 1
+invader_bullet  9  5 1
+END_FRAME
+
+TIME: 3000.000ns | TEST:
+player  2 1
+invader_1  5 11 1
+invader_2  9 11 1
+shield  7  4 2
+player_bullet  2  11 1
+invader_bullet  9  4 1
+END_FRAME
+
+TIME: 3040.000ns | TEST:
+player  2 1
+invader_1  5 11 1
+invader_2  9 11 1
+shield  7  4 1
+player_bullet  2  12 1
+invader_bullet  9  3 1
+END_FRAME
+
+TIME: 3080.000ns | TEST:
+player  2 1
+invader_1  4 11 1
+invader_2  8 11 1
+shield  7  4 1
+player_bullet  2  13 1
+invader_bullet  5  11 0
+END_FRAME
+
+TIME: 3120.000ns | TEST:
+player  2 1
+invader_1  4 11 1
+invader_2  8 11 1
+shield  7  4 1
+player_bullet  2  14 1
+invader_bullet  5  10 1
+END_FRAME
+
+TIME: 3160.000ns | TEST:
+player  2 1
+invader_1  3 11 1
+invader_2  7 11 1
+shield  7  4 1
+player_bullet  2  15 1
+invader_bullet  5  9 1
+END_FRAME
+
+TIME: 3200.000ns | TEST:
+player  2 1
+invader_1  3 11 1
+invader_2  7 11 1
+shield  7  4 1
+player_bullet  2  0 0
+invader_bullet  5  8 1
+END_FRAME
+
+TIME: 3240.000ns | TEST:
+player  2 1
+invader_1  3 9 1
+invader_2  7 9 1
+shield  7  4 1
+player_bullet  2  0 0
+invader_bullet  5  7 1
+END_FRAME
+
+TIME: 3280.000ns | TEST:
+player  2 1
+invader_1  3 9 1
+invader_2  7 9 1
+shield  7  4 1
+player_bullet  2  1 1
+invader_bullet  5  6 1
+END_FRAME
+
+TIME: 3320.000ns | TEST:
+player  2 1
+invader_1  4 9 1
+invader_2  8 9 1
+shield  7  4 1
+player_bullet  2  2 1
+invader_bullet  5  5 1
+END_FRAME
+
+TIME: 3360.000ns | TEST:
+player  2 1
+invader_1  4 9 1
+invader_2  8 9 1
+shield  7  4 1
+player_bullet  2  3 1
+invader_bullet  5  4 1
+END_FRAME
+
+TIME: 3400.000ns | TEST:
+player  2 1
+invader_1  5 9 1
+invader_2  9 9 1
+shield  7  4 0
+player_bullet  2  4 1
+invader_bullet  5  3 1
+END_FRAME
+
+TIME: 3440.000ns | TEST:
+player  2 1
+invader_1  5 9 1
+invader_2  9 9 1
+shield  7  4 0
+player_bullet  2  5 1
+invader_bullet  5  9 0
+END_FRAME
+
+TIME: 3880.000ns | TEST:
+player  12 1
+invader_1  8 7 1
+invader_2  12 7 1
+shield  7  4 0
+player_bullet  11  0 0
+invader_bullet  9  6 1
+END_FRAME
+
+TIME: 4640.000ns | TEST:
+player  11 1
+invader_1  7 13 1
+invader_2  11 13 1
+shield  7  4 3
+player_bullet  7  4 1
+invader_bullet  9  8 1
+END_FRAME
+
+TIME: 4840.000ns | TEST:
+player  12 1
+invader_1  9 11 1
+invader_2  13 11 1
+shield  7  4 2
+player_bullet  12  0 0
+invader_bullet  9  3 1
+END_FRAME
+
+TIME: 6040.000ns | TEST:
+player  7 1
+invader_1  5 13 1
+invader_2  9 13 1
+shield  7  4 3
+player_bullet  8  2 0
+invader_bullet  9  13 0
+END_FRAME
+
+TIME: 6360.000ns | TEST:
+player  7 1
+invader_1  5 13 1
+invader_2  9 13 1
+shield  7  4 3
+player_bullet  8  2 0
+invader_bullet  9  13 0
+END_FRAME
+
+TIME: 7960.000ns | TEST:
+player  7 1
+invader_1  5 13 1
+invader_2  9 13 1
+shield  7  4 3
+player_bullet  8  2 0
+invader_bullet  9  13 0
+END_FRAME
+
+TIME: 8120.000ns | TEST:
+player  7 1
+invader_1  6 13 1
+invader_2  10 13 1
+shield  7  4 3
+player_bullet  7  2 1
+invader_bullet  9  10 1
+END_FRAME
+
+TIME: 8200.000ns | TEST:
+player  7 1
+invader_1  7 13 1
+invader_2  11 13 1
+shield  7  4 3
+player_bullet  7  4 1
+invader_bullet  9  8 1
+END_FRAME
+
+TIME: 8280.000ns | TEST:
+player  7 1
+invader_1  8 13 1
+invader_2  12 13 1
+shield  7  4 3
+player_bullet  7  0 0
+invader_bullet  9  6 1
+END_FRAME
+
+TIME: 8480.000ns | TEST:
+player  3 1
+invader_1  8 11 1
+invader_2  12 11 1
+shield  7  4 2
+player_bullet  7  5 1
+invader_bullet  9  10 1
+END_FRAME
+
+TIME: 8800.000ns | TEST:
+player  2 1
+invader_1  4 11 1
+invader_2  8 11 1
+shield  7  4 1
+player_bullet  3  7 1
+invader_bullet  5  11 0
+END_FRAME
+
+TIME: 9280.000ns | TEST:
+player  13 1
+invader_1  5 5 0
+invader_2  11 9 1
+shield  7  4 0
+player_bullet  5  7 1
+invader_bullet  9  6 1
+END_FRAME
+
+TIME: 9960.000ns | TEST:
+player  7 1
+invader_1  5 13 1
+invader_2  9 13 1
+shield  7  4 3
+player_bullet  7  0 0
+invader_bullet  9  12 1
+END_FRAME
+
+TIME: 10760.000ns | TEST:
+player  2 1
+invader_1  5 5 0
+invader_2  8 11 1
+shield  7  4 1
+player_bullet  2  1 1
+invader_bullet  9  10 1
+END_FRAME
+
+TIME: 11560.000ns | TEST:
+player  13 1
+invader_1  9 13 1
+invader_2  13 13 1
+shield  7  4 3
+player_bullet  12  1 1
+invader_bullet  9  5 1
+END_FRAME
+
+TIME: 11600.000ns | TEST:
+player  13 1
+invader_1  9 13 1
+invader_2  13 13 1
+shield  7  4 3
+player_bullet  12  2 1
+invader_bullet  9  4 1
+END_FRAME
+
+TIME: 11640.000ns | TEST:
+player  13 1
+invader_1  9 11 1
+invader_2  13 11 1
+shield  7  4 2
+player_bullet  12  3 1
+invader_bullet  9  3 1
+END_FRAME
+
+TIME: 11680.000ns | TEST:
+player  13 1
+invader_1  9 11 1
+invader_2  13 11 1
+shield  7  4 2
+player_bullet  12  4 1
+invader_bullet  13  11 0
+END_FRAME
+
+TIME: 11720.000ns | TEST:
+player  13 1
+invader_1  8 11 1
+invader_2  12 11 1
+shield  7  4 2
+player_bullet  12  5 1
+invader_bullet  13  10 1
+END_FRAME
+
+TIME: 11760.000ns | TEST:
+player  13 1
+invader_1  8 11 1
+invader_2  12 11 1
+shield  7  4 2
+player_bullet  12  6 1
+invader_bullet  13  9 1
+END_FRAME
+
+TIME: 11800.000ns | TEST:
+player  13 1
+invader_1  7 11 1
+invader_2  11 11 1
+shield  7  4 2
+player_bullet  12  7 1
+invader_bullet  13  8 1
+END_FRAME
+
+TIME: 11840.000ns | TEST:
+player  13 1
+invader_1  7 11 1
+invader_2  11 11 1
+shield  7  4 2
+player_bullet  12  8 1
+invader_bullet  13  7 1
+END_FRAME
+
+TIME: 11880.000ns | TEST:
+player  13 1
+invader_1  6 11 1
+invader_2  10 11 1
+shield  7  4 2
+player_bullet  12  9 1
+invader_bullet  13  6 1
+END_FRAME
+
+TIME: 11920.000ns | TEST:
+player  13 1
+invader_1  6 11 1
+invader_2  10 11 1
+shield  7  4 2
+player_bullet  12  10 1
+invader_bullet  13  5 1
+END_FRAME
+
+TIME: 11960.000ns | TEST:
+player  13 1
+invader_1  5 11 1
+invader_2  9 11 1
+shield  7  4 2
+player_bullet  12  11 1
+invader_bullet  13  4 1
+END_FRAME
+
+TIME: 12000.000ns | TEST:
+player  13 1
+invader_1  5 11 1
+invader_2  9 11 1
+shield  7  4 2
+player_bullet  12  12 1
+invader_bullet  13  3 1
+END_FRAME
+
+TIME: 12040.000ns | TEST:
+player  13 1
+invader_1  4 11 1
+invader_2  8 11 1
+shield  7  4 2
+player_bullet  12  13 1
+invader_bullet  13  2 1
+END_FRAME
+
+TIME: 12080.000ns | TEST:
+player  13 1
+invader_1  4 11 1
+invader_2  8 11 1
+shield  7  4 2
+player_bullet  12  14 1
+invader_bullet  13  1 1
+END_FRAME
+
+TIME: 12120.000ns | TEST:
+player  13 0
+invader_1  3 11 1
+invader_2  7 11 1
+shield  7  4 2
+player_bullet  12  15 1
+invader_bullet  13  0 1
+END_FRAME
+
+TIME: 12160.000ns | TEST:
+player  13 0
+invader_1  3 11 1
+invader_2  7 11 1
+shield  7  4 2
+player_bullet  13  0 0
+invader_bullet  7  11 0
+END_FRAME
+
+TIME: 12200.000ns | TEST:
+player  7 1
+invader_1  5 13 1
+invader_2  9 13 1
+shield  7  4 3
+player_bullet  8  2 0
+invader_bullet  9  13 0
+END_FRAME
+
+TIME: 12240.000ns | TEST:
+player  7 1
+invader_1  5 13 1
+invader_2  9 13 1
+shield  7  4 3
+player_bullet  8  2 0
+invader_bullet  9  13 0
+END_FRAME
+
+TIME: 12280.000ns | TEST:
+player  7 1
+invader_1  5 13 1
+invader_2  9 13 1
+shield  7  4 3
+player_bullet  7  0 0
+invader_bullet  9  12 1
+END_FRAME
+
+TIME: 12320.000ns | TEST:
+player  7 1
+invader_1  6 13 1
+invader_2  10 13 1
+shield  7  4 3
+player_bullet  7  0 0
+invader_bullet  9  11 1
+END_FRAME
+
+TIME: 12360.000ns | TEST:
+player  7 1
+invader_1  6 13 1
+invader_2  10 13 1
+shield  7  4 3
+player_bullet  7  1 1
+invader_bullet  9  10 1
+END_FRAME
+
+TIME: 13160.000ns | TEST:
+player  13 0
+invader_1  3 11 1
+invader_2  5 5 0
+shield  7  4 2
+player_bullet  13  3 1
+invader_bullet  3  11 0
+END_FRAME
+
+TIME: 14760.000ns | TEST:
+player  13 1
+invader_1  7 11 1
+invader_2  11 11 1
+shield  7  4 2
+player_bullet  12  8 1
+invader_bullet  13  7 1
+END_FRAME
+
+TIME: 14960.000ns | TEST:
+player  13 1
+invader_1  4 11 1
+invader_2  8 11 1
+shield  7  4 2
+player_bullet  12  13 1
+invader_bullet  13  2 1
+END_FRAME
+
+TIME: 18960.000ns | TEST:
+player  7 1
+invader_1  5 13 1
+invader_2  9 13 1
+shield  7  4 3
+player_bullet  8  2 0
+invader_bullet  9  13 0
+END_FRAME
+
+TIME: 19600.000ns | TEST:
+player  7 1
+invader_1  5 13 1
+invader_2  9 13 1
+shield  7  4 3
+player_bullet  8  2 0
+invader_bullet  9  13 0
+END_FRAME
+
+TIME: 21200.000ns | TEST:
+player  7 1
+invader_1  5 13 1
+invader_2  9 13 1
+shield  7  4 3
+player_bullet  8  2 0
+invader_bullet  9  13 0
+END_FRAME
