@@ -1,0 +1,110 @@
+# //  Questa Sim-64
+# //  Version 2023.2 linux_x86_64 Apr 11 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -debugDB -voptargs=""+acc"" player_fsm_tb 
+# Start time: 10:22:28 on May 04,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.player_fsm_tb(fast)
+# Loading work.player_fsm(fast)
+# Loading work.DFFNEGX1(fast)
+# Loading work.AND2X2(fast)
+# Loading work.OAI21X1(fast)
+# Loading work.NAND2X1(fast)
+# Loading work.NOR2X1(fast)
+# Loading work.AOI22X1(fast)
+# Loading work.OR2X1(fast)
+# Loading work.NAND3X1(fast)
+# Loading work.AOI21X1(fast)
+# Loading work.XNOR2X1(fast)
+# Loading work.HAX1(fast)
+# Loading work.INVX1(fast)
+# Loading work.INVX2(fast)
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/invaderbullet_player_collision_signal_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/invaderbullet_player_collision_signal_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\player_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\player_coord_x_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\player_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\player_coord_x_reg[2]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\player_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\player_coord_x_reg[3]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\player_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/\player_coord_x_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/display_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /player_fsm_tb/U1/display_reg File: osu05_stdcells.v
+# ** Note: (vsim-8716) Reusing existing debug database vsim.dbg.
+add wave -r /*
+run -all
+# Time:0 | State:xx | X: x | Y: 0 | Collision:x | Disp:x
+# Time:3000 | State:00 | X: X | Y: 0 | Collision:0 | Disp:x
+# Time:3000 | State:00 | X: 7 | Y: 0 | Collision:0 | Disp:1
+# Time:9000 | State:01 | X: 7 | Y: 0 | Collision:0 | Disp:1
+# Time:12000 | State:01 | X: 0 | Y: 0 | Collision:0 | Disp:1
+# Time:12000 | State:01 | X: 8 | Y: 0 | Collision:0 | Disp:1
+# Time:15000 | State:01 | X: 9 | Y: 0 | Collision:0 | Disp:1
+# Time:18000 | State:01 | X: 8 | Y: 0 | Collision:0 | Disp:1
+# Time:18000 | State:01 | X:10 | Y: 0 | Collision:0 | Disp:1
+# Time:21000 | State:01 | X:11 | Y: 0 | Collision:0 | Disp:1
+# Time:24000 | State:01 | X: 8 | Y: 0 | Collision:0 | Disp:1
+# Time:24000 | State:01 | X:12 | Y: 0 | Collision:0 | Disp:1
+# Time:27000 | State:01 | X:13 | Y: 0 | Collision:0 | Disp:1
+# Time:42000 | State:01 | X:12 | Y: 0 | Collision:0 | Disp:1
+# Time:45000 | State:01 | X: 8 | Y: 0 | Collision:0 | Disp:1
+# Time:45000 | State:01 | X:11 | Y: 0 | Collision:0 | Disp:1
+# Time:48000 | State:01 | X:10 | Y: 0 | Collision:0 | Disp:1
+# Time:51000 | State:01 | X: 8 | Y: 0 | Collision:0 | Disp:1
+# Time:51000 | State:01 | X: 9 | Y: 0 | Collision:0 | Disp:1
+# Time:54000 | State:01 | X: 8 | Y: 0 | Collision:0 | Disp:1
+# Time:57000 | State:01 | X: 0 | Y: 0 | Collision:0 | Disp:1
+# Time:57000 | State:01 | X: 7 | Y: 0 | Collision:0 | Disp:1
+# Time:60000 | State:01 | X: 6 | Y: 0 | Collision:0 | Disp:1
+# Time:63000 | State:01 | X: 4 | Y: 0 | Collision:0 | Disp:1
+# Time:63000 | State:01 | X: 5 | Y: 0 | Collision:0 | Disp:1
+# Time:66000 | State:01 | X: 4 | Y: 0 | Collision:0 | Disp:1
+# Time:69000 | State:01 | X: 0 | Y: 0 | Collision:0 | Disp:1
+# Time:69000 | State:01 | X: 3 | Y: 0 | Collision:0 | Disp:1
+# Time:72000 | State:01 | X: 2 | Y: 0 | Collision:0 | Disp:1
+# Time:99000 | State:00 | X: 2 | Y: 0 | Collision:0 | Disp:0
+# Time:99000 | State:10 | X: 2 | Y: 0 | Collision:1 | Disp:0
+# Simulation finished. Check VCD for waveform.
+# ** Note: $stop    : player_fsm_tb.v(95)
+#    Time: 1020 ns  Iteration: 0  Instance: /player_fsm_tb
+# Break in Module player_fsm_tb at player_fsm_tb.v line 95

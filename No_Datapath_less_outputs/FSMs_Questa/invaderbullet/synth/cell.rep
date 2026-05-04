@@ -1,0 +1,96 @@
+ 
+****************************************
+Report : cell
+Design : invader_bullet_fsm
+Version: U-2022.12-SP7
+Date   : Thu Apr 30 01:18:41 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U8                        INVX2           osu05_stdcells  144.000000
+U9                        INVX2           osu05_stdcells  144.000000
+U10                       INVX2           osu05_stdcells  144.000000
+U11                       INVX2           osu05_stdcells  144.000000
+U12                       INVX2           osu05_stdcells  144.000000
+U13                       INVX2           osu05_stdcells  144.000000
+U14                       INVX2           osu05_stdcells  144.000000
+U15                       INVX2           osu05_stdcells  144.000000
+U17                       INVX2           osu05_stdcells  144.000000
+U18                       INVX2           osu05_stdcells  144.000000
+U19                       INVX2           osu05_stdcells  144.000000
+U21                       AOI21X1         osu05_stdcells  288.000000
+U23                       AOI22X1         osu05_stdcells  360.000000
+U26                       OAI21X1         osu05_stdcells  207.000000
+U28                       NOR2X1          osu05_stdcells  216.000000
+U29                       OAI21X1         osu05_stdcells  207.000000
+U31                       AOI22X1         osu05_stdcells  360.000000
+U32                       OAI21X1         osu05_stdcells  207.000000
+U33                       NAND3X1         osu05_stdcells  324.000000
+U34                       OAI21X1         osu05_stdcells  207.000000
+U35                       NAND3X1         osu05_stdcells  324.000000
+U36                       OAI21X1         osu05_stdcells  207.000000
+U37                       OAI21X1         osu05_stdcells  207.000000
+U38                       OAI21X1         osu05_stdcells  207.000000
+U39                       OAI21X1         osu05_stdcells  207.000000
+U45                       OAI21X1         osu05_stdcells  207.000000
+U46                       AOI21X1         osu05_stdcells  288.000000
+U47                       NOR2X1          osu05_stdcells  216.000000
+U49                       NOR2X1          osu05_stdcells  216.000000
+U51                       AOI22X1         osu05_stdcells  360.000000
+U52                       NOR2X1          osu05_stdcells  216.000000
+U53                       NOR2X1          osu05_stdcells  216.000000
+U54                       NOR2X1          osu05_stdcells  216.000000
+U55                       NAND3X1         osu05_stdcells  324.000000
+U56                       XNOR2X1         osu05_stdcells  504.000000
+U57                       INVX1           osu05_stdcells  144.000000
+U58                       INVX2           osu05_stdcells  144.000000
+U59                       NOR2X1          osu05_stdcells  216.000000
+U60                       NOR2X1          osu05_stdcells  216.000000
+U61                       NAND2X1         osu05_stdcells  216.000000
+U62                       AOI21X1         osu05_stdcells  288.000000
+U63                       INVX2           osu05_stdcells  144.000000
+U64                       NOR2X1          osu05_stdcells  216.000000
+U65                       NAND2X1         osu05_stdcells  216.000000
+U66                       NAND2X1         osu05_stdcells  216.000000
+invader_bullet_coord_x_reg[0]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+invader_bullet_coord_x_reg[1]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+invader_bullet_coord_x_reg[2]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+invader_bullet_coord_x_reg[3]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+invader_bullet_coord_y_reg[0]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+invader_bullet_coord_y_reg[1]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+invader_bullet_coord_y_reg[2]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+invader_bullet_coord_y_reg[3]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+invader_bullet_display_reg
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+next_state_reg[0]         DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+state_reg[0]              DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+--------------------------------------------------------------------------------
+Total 56 cells                                            19395.000000
+1

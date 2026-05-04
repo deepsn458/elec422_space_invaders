@@ -1,0 +1,73 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.2 2023.04, Apr 11 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/No_Datapath_less_outputs/FSMs_Questa/player/presynth
+T_opt
+!s110 1777900514
+VWQ6=znNf8^42HLcbnV9Ll3
+04 13 4 work player_fsm_tb fast 0
+=1-d09466182648-69f89be2-65cbd-8bd5a
+R0
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.2;77
+vplayer_fsm
+Z3 2player_fsm_tb.v|player_fsm.v
+Z4 !s110 1777900490
+!i10b 1
+!s100 O53_?>1Sckcad9_M]89S>1
+I`?A29WcH2Fd=@^?zP[LSc1
+R1
+Z5 w1777900480
+8player_fsm.v
+Fplayer_fsm.v
+Z6 8player_fsm_tb.v
+Z7 Fplayer_fsm_tb.v
+!i122 0
+L0 11 119
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2023.2;77
+r1
+!s85 0
+31
+Z10 !s108 1777900490.000000
+Z11 !s107 player_fsm.v|player_fsm_tb.v|
+Z12 !s90 player_fsm_tb.v|player_fsm.v|
+!i113 0
+Z13 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vplayer_fsm_tb
+R3
+R4
+!i10b 1
+!s100 e@X_dNQC<kT]W;h2UY=gg3
+IYBYS`2Vz0gO?UWaY2FGX41
+R1
+R5
+R6
+R7
+!i122 0
+L0 9 100
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R2

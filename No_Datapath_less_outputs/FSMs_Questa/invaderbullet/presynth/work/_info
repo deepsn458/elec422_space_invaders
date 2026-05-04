@@ -1,0 +1,73 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.2 2023.04, Apr 11 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/No_Datapath_less_outputs/FSMs_Questa/invaderbullet/presynth
+T_opt
+!s110 1777527455
+VczjROjGJzUKLhhcR1mXjH0
+04 21 4 work invader_bullet_fsm_tb fast 0
+=1-d09466182648-69f2ea9f-775b2-29dece
+R0
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.2;77
+vinvader_bullet_fsm
+Z3 2invader_bullet_fsm_tb.v|invader_bullet_fsm.v
+Z4 !s110 1777527414
+!i10b 1
+!s100 _C1=1RgI;7NO?mFoh_=@21
+I7h82Ln5SSe^7:?SEHaUdU0
+R1
+Z5 w1777527360
+8invader_bullet_fsm.v
+Finvader_bullet_fsm.v
+Z6 8invader_bullet_fsm_tb.v
+Z7 Finvader_bullet_fsm_tb.v
+!i122 0
+L0 11 82
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2023.2;77
+r1
+!s85 0
+31
+Z10 !s108 1777527412.000000
+Z11 !s107 invader_bullet_fsm.v|invader_bullet_fsm_tb.v|
+Z12 !s90 invader_bullet_fsm_tb.v|invader_bullet_fsm.v|
+!i113 0
+Z13 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vinvader_bullet_fsm_tb
+R3
+R4
+!i10b 1
+!s100 a10bhC`=2h`Lg6dUdLj?61
+IdLz?CdUEELaScRFfc9l4T2
+R1
+R5
+R6
+R7
+!i122 0
+L0 7 96
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R2
