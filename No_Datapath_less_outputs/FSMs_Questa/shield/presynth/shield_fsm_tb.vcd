@@ -1,0 +1,77 @@
+$date
+	Mon May  4 10:44:06 2026
+$end
+$version
+	QuestaSim Version 2023.2
+$end
+$timescale
+	1ns
+$end
+
+$scope module shield_fsm_tb $end
+$var parameter 32 ! START_X $end
+$var parameter 32 " START_Y $end
+$var reg 1 # in_clka $end
+$var reg 1 $ in_clkb $end
+$var reg 1 % in_reset $end
+$var reg 4 & in_invader_bullet_coord_x [3:0] $end
+$var reg 4 ' in_invader_bullet_coord_y [3:0] $end
+$var reg 4 ( in_player_bullet_coord_x [3:0] $end
+$var reg 4 ) in_player_bullet_coord_y [3:0] $end
+$var reg 1 * in_shield_play $end
+$var wire 1 + out_hp [1] $end
+$var wire 1 , out_hp [0] $end
+$var wire 1 - out_shield_display $end
+$var wire 1 . out_invaderbullet_shield_collision $end
+$var wire 1 / out_playerbullet_shield_collision $end
+$var wire 1 0 out_state [1] $end
+$var wire 1 1 out_state [0] $end
+
+$scope task cycle $end
+$upscope $end
+
+$scope module DUT $end
+$var parameter 32 2 HP_3 $end
+$var parameter 32 3 HP_2 $end
+$var parameter 32 4 HP_1 $end
+$var parameter 32 5 HP_0 $end
+$var parameter 32 6 START_X $end
+$var parameter 32 7 START_Y $end
+$var parameter 32 8 SHIELD_DIAMETER $end
+$var parameter 2 9 INITIAL $end
+$var parameter 2 : ALIVE $end
+$var parameter 2 ; NO_HEALTH $end
+$var wire 1 < clka $end
+$var wire 1 = clkb $end
+$var wire 1 > reset $end
+$var wire 1 ? invader_bullet_coord_x [3] $end
+$var wire 1 @ invader_bullet_coord_x [2] $end
+$var wire 1 A invader_bullet_coord_x [1] $end
+$var wire 1 B invader_bullet_coord_x [0] $end
+$var wire 1 C invader_bullet_coord_y [3] $end
+$var wire 1 D invader_bullet_coord_y [2] $end
+$var wire 1 E invader_bullet_coord_y [1] $end
+$var wire 1 F invader_bullet_coord_y [0] $end
+$var wire 1 G player_bullet_coord_x [3] $end
+$var wire 1 H player_bullet_coord_x [2] $end
+$var wire 1 I player_bullet_coord_x [1] $end
+$var wire 1 J player_bullet_coord_x [0] $end
+$var wire 1 K player_bullet_coord_y [3] $end
+$var wire 1 L player_bullet_coord_y [2] $end
+$var wire 1 M player_bullet_coord_y [1] $end
+$var wire 1 N player_bullet_coord_y [0] $end
+$var wire 1 O shield_play $end
+$var reg 2 P hp [1:0] $end
+$var reg 1 Q shield_display $end
+$var reg 1 R invaderbullet_shield_collision $end
+$var reg 1 S playerbullet_shield_collision $end
+$var reg 4 T shield_coord_x [3:0] $end
+$var reg 4 U shield_coord_y [3:0] $end
+$var reg 2 V state [1:0] $end
+$var reg 2 W temp_state [1:0] $end
+$var reg 2 X next_state [1:0] $end
+$var wire 1 Y invaderbullet_collision_x $end
+$var wire 1 Z invaderbullet_collision_y $end
+$var wire 1 [ playerbullet_collision_x $end
+$var wire 1 \ playerbullet_collision_y $end
+$var wire 1 ] playerbullet_shield_distance $end

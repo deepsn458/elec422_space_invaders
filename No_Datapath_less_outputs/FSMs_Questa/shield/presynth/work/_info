@@ -1,0 +1,71 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2023.2 2023.04, Apr 11 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/No_Datapath_less_outputs/FSMs_Questa/shield/presynth
+T_opt
+!s110 1777909381
+VIZ@Pm3XbCOY?>J:h7VKYP0
+04 13 4 work shield_fsm_tb fast 0
+=1-d09466182648-69f8be84-b6a6d-91e07
+R0
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.2;77
+vshield_fsm
+Z3 2shield_fsm_tb.v|shield_fsm.v
+Z4 !s110 1777909288
+!i10b 1
+!s100 2oA:FE3j3S@0N<eH:i8WS0
+I^M<keZ]_n0:iS6[fOfPX?2
+R1
+w1777428983
+8shield_fsm.v
+Fshield_fsm.v
+!i122 0
+L0 10 138
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2023.2;77
+r1
+!s85 0
+31
+Z7 !s108 1777909288.000000
+Z8 !s107 shield_fsm.v|shield_fsm_tb.v|
+Z9 !s90 shield_fsm_tb.v|shield_fsm.v|
+!i113 0
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vshield_fsm_tb
+R3
+R4
+!i10b 1
+!s100 OoV[BAmRYSmhfW74Gm7>K1
+I1ilkz^fC>J<59NM@]C9IE3
+R1
+w1777909251
+8shield_fsm_tb.v
+Fshield_fsm_tb.v
+!i122 0
+L0 8 109
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R2

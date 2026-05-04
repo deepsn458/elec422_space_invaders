@@ -1,0 +1,145 @@
+# //  Questa Sim-64
+# //  Version 2023.2 linux_x86_64 Apr 11 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -debugDB -voptargs=""+acc"" main_game_fsm_tb 
+# Start time: 11:28:58 on May 04,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.main_game_fsm_tb(fast)
+# Loading work.main_game_fsm(fast)
+# Loading work.DFFNEGX1(fast)
+# Loading work.LATCH(fast)
+# Loading work.AND2X2(fast)
+# Loading work.INVX2(fast)
+# Loading work.OAI21X1(fast)
+# Loading work.AOI22X1(fast)
+# Loading work.AOI21X1(fast)
+# Loading work.NAND2X1(fast)
+# Loading work.OR2X1(fast)
+# Loading work.NAND3X1(fast)
+# Loading work.NOR2X1(fast)
+# Loading work.OAI22X1(fast)
+# Loading work.XOR2X1(fast)
+# Loading work.XNOR2X1(fast)
+# Loading work.INVX1(fast)
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/\state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/\state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/\next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/\next_state_reg[0]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/prev_invader_outofbounds_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/prev_invader_outofbounds_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/\next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/\next_state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/reset_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/reset_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/move_down_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/move_down_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/\state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/\state_reg[1]  File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/invaderbullet_fire_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/invaderbullet_fire_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/play_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/play_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/invader_direction_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/invader_direction_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(573): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/temp_playerbullet_fire_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(575): Timing check limit can not be negative. Setting negative check constraint (-190 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/temp_playerbullet_fire_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/next_playerbullet_fire_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/next_playerbullet_fire_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(573): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/temp_player_right_motion_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(575): Timing check limit can not be negative. Setting negative check constraint (-190 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/temp_player_right_motion_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/next_player_right_motion_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/next_player_right_motion_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(573): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/temp_player_left_motion_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(575): Timing check limit can not be negative. Setting negative check constraint (-190 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/temp_player_left_motion_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/next_player_left_motion_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/next_player_left_motion_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/player_left_motion_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/player_left_motion_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/playerbullet_fire_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/playerbullet_fire_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(260): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/player_right_motion_reg File: osu05_stdcells.v
+# ** Warning: (vsim-3448) osu05_stdcells.v(262): Timing check limit can not be negative. Setting negative check constraint (-90 ps) to zero.
+#    Time: 0 ps  Iteration: 0  Instance: /main_game_fsm_tb/DUT/player_right_motion_reg File: osu05_stdcells.v
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+add wave -r /*
+run -all
+# T:0 | State:xx | Play:x | MoveDn:x | Dir:x | OutOfBounds:0 | Prev:x
+# ** Error: $setup( posedge D:40120 ps, negedge CLK:40160 ps, 280 ps );
+#    Time: 40160 ps  Iteration: 1  Process: /main_game_fsm_tb/DUT/invaderbullet_fire_reg/#Setup# File: osu05_stdcells.v Line: 261
+# T:4000 | State:00 | Play:0 | MoveDn:0 | Dir:x | OutOfBounds:0 | Prev:0
+# T:4000 | State:00 | Play:0 | MoveDn:0 | Dir:1 | OutOfBounds:0 | Prev:0
+# T:12000 | State:01 | Play:1 | MoveDn:0 | Dir:1 | OutOfBounds:0 | Prev:0
+# Attempting to enter DIRECTION_CHANGE...
+# T:17000 | State:01 | Play:1 | MoveDn:0 | Dir:1 | OutOfBounds:1 | Prev:0
+# T:20000 | State:00 | Play:1 | MoveDn:0 | Dir:0 | OutOfBounds:1 | Prev:0
+# T:20000 | State:10 | Play:1 | MoveDn:1 | Dir:0 | OutOfBounds:1 | Prev:1
+# T:24000 | State:00 | Play:1 | MoveDn:0 | Dir:0 | OutOfBounds:1 | Prev:1
+# T:24000 | State:01 | Play:1 | MoveDn:0 | Dir:0 | OutOfBounds:1 | Prev:1
+# FAIL: State is 01
+# T:32000 | State:01 | Play:1 | MoveDn:0 | Dir:0 | OutOfBounds:0 | Prev:1
+# T:36000 | State:01 | Play:1 | MoveDn:0 | Dir:0 | OutOfBounds:0 | Prev:0
+# T:41000 | State:01 | Play:1 | MoveDn:0 | Dir:0 | OutOfBounds:1 | Prev:0
+# T:44000 | State:00 | Play:1 | MoveDn:0 | Dir:0 | OutOfBounds:1 | Prev:0
+# T:44000 | State:10 | Play:1 | MoveDn:1 | Dir:1 | OutOfBounds:1 | Prev:1
+# T:48000 | State:00 | Play:1 | MoveDn:0 | Dir:1 | OutOfBounds:1 | Prev:1
+# T:48000 | State:01 | Play:1 | MoveDn:0 | Dir:1 | OutOfBounds:1 | Prev:1
+# T:52000 | State:01 | Play:1 | MoveDn:0 | Dir:1 | OutOfBounds:0 | Prev:1
+# T:56000 | State:01 | Play:1 | MoveDn:0 | Dir:1 | OutOfBounds:0 | Prev:0
+# ** Error: $setup( negedge D:600110 ps, negedge CLK:600160 ps, 380 ps );
+#    Time: 600160 ps  Iteration: 1  Process: /main_game_fsm_tb/DUT/invaderbullet_fire_reg/#Setup# File: osu05_stdcells.v Line: 259
+# T:60000 | State:00 | Play:0 | MoveDn:0 | Dir:1 | OutOfBounds:0 | Prev:0
+# Testing complete.
+# ** Note: $stop    : main_game_fsm_tb.v(125)
+#    Time: 640 ns  Iteration: 0  Instance: /main_game_fsm_tb
+# Break in Module main_game_fsm_tb at main_game_fsm_tb.v line 125

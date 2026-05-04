@@ -1,0 +1,65 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : main_game_fsm
+Version: U-2022.12-SP7
+Date   : Mon May  4 11:25:23 2026
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: player_coordinate_x[2]
+              (input port clocked by clka)
+  Endpoint: next_state_reg[1]
+            (falling edge-triggered flip-flop clocked by clka)
+  Path Group: clka
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clka (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     1.00       1.00 f
+  player_coordinate_x[2] (in)              0.46       1.46 f
+  U135/Y (NAND2X1)                         0.44       1.90 r
+  U131/Y (OAI21X1)                         0.31       2.20 f
+  U130/Y (OAI21X1)                         0.17       2.37 r
+  U129/Y (NAND2X1)                         0.08       2.45 f
+  U128/Y (OAI21X1)                         0.25       2.70 r
+  U36/Y (INVX2)                            0.21       2.91 f
+  U104/Y (AOI22X1)                         0.15       3.06 r
+  U103/Y (NAND2X1)                         0.14       3.19 f
+  U35/Y (INVX2)                            0.10       3.29 r
+  U99/Y (OAI22X1)                          0.12       3.42 f
+  U98/Y (OAI21X1)                          0.12       3.53 r
+  U97/Y (OAI21X1)                          0.09       3.62 f
+  U96/Y (OAI21X1)                          0.11       3.73 r
+  U95/Y (OAI21X1)                          0.09       3.82 f
+  U94/Y (OAI21X1)                          0.61       4.43 r
+  U168/Y (INVX2)                           0.43       4.86 f
+  U93/Y (AOI22X1)                          0.24       5.10 r
+  U90/Y (OAI21X1)                          0.12       5.22 f
+  U89/Y (NAND3X1)                          0.18       5.40 r
+  U26/Y (INVX2)                            0.10       5.50 f
+  U88/Y (NAND3X1)                          0.18       5.69 r
+  U80/Y (NOR2X1)                           0.18       5.86 f
+  next_state_reg[1]/D (DFFNEGX1)           0.00       5.86 f
+  data arrival time                                   5.86
+
+  clock clka (fall edge)                  10.00      10.00
+  clock network delay (ideal)              0.00      10.00
+  next_state_reg[1]/CLK (DFFNEGX1)         0.00      10.00 f
+  library setup time                      -0.37       9.63
+  data required time                                  9.63
+  -----------------------------------------------------------
+  data required time                                  9.63
+  data arrival time                                  -5.86
+  -----------------------------------------------------------
+  slack (MET)                                         3.77
+
+
+1

@@ -13,6 +13,18 @@ R0
 R1
 R0
 R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
 !s11f vlog 2023.2 2023.04, Apr 11 2023
 13
 !s112 1.1
@@ -22,10 +34,10 @@ R1
 cModel Technology
 Z2 d/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/No_Datapath_less_outputs/FSMs_Questa/maingame/presynth
 T_opt
-!s110 1777579120
-VV[<K5JC4Jg:VL?lK?H;R_3
+!s110 1777911703
+VkHO_C6?7DcIZ^::QgVG0z0
 04 16 4 work main_game_fsm_tb fast 0
-=1-d09466164d60-69f3b46f-d3299-3a1ded
+=1-d09466182648-69f8c797-60834-94025
 R1
 !s12b OEM100
 !s124 OEM100
@@ -35,24 +47,24 @@ n@_opt
 OL;O;2023.2;77
 vmain_game_fsm
 Z4 2main_game_fsm_tb.v|main_game_fsm.v
-Z5 !s110 1777579098
+Z5 !s110 1777911680
 !i10b 1
-!s100 W<K5h;7lDGB`jT<^kV?Zl3
-I?`49KlUkS7AQ_UaE09C9`3
+!s100 ek6D5Ye`^X3SKY=WMFbl32
+ITbO28I>HP9oOHeQQ@nPoX3
 R2
-Z6 w1777579075
+Z6 w1777911663
 8main_game_fsm.v
 Fmain_game_fsm.v
 Z7 8main_game_fsm_tb.v
 Z8 Fmain_game_fsm_tb.v
-!i122 5
+!i122 11
 L0 12 180
 Z9 VDg1SIo80bB@j0V0VzS_@n1
 Z10 OL;L;2023.2;77
 r1
 !s85 0
 31
-Z11 !s108 1777579098.000000
+Z11 !s108 1777911680.000000
 Z12 !s107 main_game_fsm.v|main_game_fsm_tb.v|
 Z13 !s90 main_game_fsm_tb.v|main_game_fsm.v|
 !i113 0
@@ -85,14 +97,14 @@ vmain_game_fsm_tb
 R4
 R5
 !i10b 1
-!s100 a1R^SALzIO:SJ;gST_bbL0
-ImKh1abMVUCSO56:jB1eV41
+!s100 T9WPRaa?`1lfXDQzH9dl40
+IkVJI[4ALN9@S:Z0A8iA;=2
 R2
 R6
 R7
 R8
-!i122 5
-L0 3 131
+!i122 11
+L0 9 127
 R9
 R10
 r1
