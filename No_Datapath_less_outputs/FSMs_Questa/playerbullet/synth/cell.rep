@@ -1,0 +1,96 @@
+ 
+****************************************
+Report : cell
+Design : player_bullet_fsm
+Version: U-2022.12-SP7
+Date   : Mon May  4 10:35:20 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U7                        AND2X2          osu05_stdcells  288.000000
+U9                        INVX2           osu05_stdcells  144.000000
+U10                       INVX2           osu05_stdcells  144.000000
+U11                       INVX2           osu05_stdcells  144.000000
+U12                       INVX2           osu05_stdcells  144.000000
+U13                       INVX2           osu05_stdcells  144.000000
+U15                       INVX2           osu05_stdcells  144.000000
+U16                       INVX2           osu05_stdcells  144.000000
+U17                       INVX2           osu05_stdcells  144.000000
+U18                       INVX2           osu05_stdcells  144.000000
+U19                       INVX2           osu05_stdcells  144.000000
+U20                       INVX2           osu05_stdcells  144.000000
+U21                       INVX2           osu05_stdcells  144.000000
+U22                       INVX2           osu05_stdcells  144.000000
+U23                       OAI21X1         osu05_stdcells  207.000000
+U24                       AOI22X1         osu05_stdcells  360.000000
+U25                       NOR2X1          osu05_stdcells  216.000000
+U29                       AOI22X1         osu05_stdcells  360.000000
+U30                       OAI21X1         osu05_stdcells  207.000000
+U32                       NOR2X1          osu05_stdcells  216.000000
+U33                       NOR2X1          osu05_stdcells  216.000000
+U36                       NOR2X1          osu05_stdcells  216.000000
+U37                       AOI21X1         osu05_stdcells  288.000000
+U38                       OAI21X1         osu05_stdcells  207.000000
+U39                       NAND2X1         osu05_stdcells  216.000000
+U41                       AOI22X1         osu05_stdcells  360.000000
+U42                       AOI22X1         osu05_stdcells  360.000000
+U43                       AOI22X1         osu05_stdcells  360.000000
+U44                       NOR2X1          osu05_stdcells  216.000000
+U45                       OAI21X1         osu05_stdcells  207.000000
+U46                       OAI21X1         osu05_stdcells  207.000000
+U50                       AOI22X1         osu05_stdcells  360.000000
+U52                       NAND2X1         osu05_stdcells  216.000000
+U53                       NOR2X1          osu05_stdcells  216.000000
+U54                       AOI22X1         osu05_stdcells  360.000000
+U55                       NOR2X1          osu05_stdcells  216.000000
+U56                       OAI21X1         osu05_stdcells  207.000000
+U57                       NAND3X1         osu05_stdcells  324.000000
+U58                       INVX1           osu05_stdcells  144.000000
+U59                       INVX2           osu05_stdcells  144.000000
+U60                       INVX2           osu05_stdcells  144.000000
+U61                       NAND2X1         osu05_stdcells  216.000000
+U62                       NOR2X1          osu05_stdcells  216.000000
+U63                       NAND2X1         osu05_stdcells  216.000000
+U64                       NAND2X1         osu05_stdcells  216.000000
+U65                       NAND2X1         osu05_stdcells  216.000000
+display_reg               DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+next_state_reg[0]         DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_x_reg[0]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_x_reg[1]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_x_reg[2]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_x_reg[3]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_y_reg[0]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_y_reg[1]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_y_reg[2]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+player_bullet_coord_y_reg[3]
+                          DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+state_reg                 DFFNEGX1        osu05_stdcells  864.000000
+                                                                    n
+--------------------------------------------------------------------------------
+Total 57 cells                                            19494.000000
+1

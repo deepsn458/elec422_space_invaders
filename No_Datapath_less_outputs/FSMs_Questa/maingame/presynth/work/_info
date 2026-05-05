@@ -1,0 +1,118 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2023.2 2023.04, Apr 11 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/storage-home/e/ely2/ELEC422/project/elec422_space_invaders/No_Datapath_less_outputs/FSMs_Questa/maingame/presynth
+T_opt
+!s110 1777911703
+VkHO_C6?7DcIZ^::QgVG0z0
+04 16 4 work main_game_fsm_tb fast 0
+=1-d09466182648-69f8c797-60834-94025
+R1
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work -debugdb +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.2;77
+vmain_game_fsm
+Z4 2main_game_fsm_tb.v|main_game_fsm.v
+Z5 !s110 1777911680
+!i10b 1
+!s100 ek6D5Ye`^X3SKY=WMFbl32
+ITbO28I>HP9oOHeQQ@nPoX3
+R2
+Z6 w1777911663
+8main_game_fsm.v
+Fmain_game_fsm.v
+Z7 8main_game_fsm_tb.v
+Z8 Fmain_game_fsm_tb.v
+!i122 11
+L0 12 180
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+Z10 OL;L;2023.2;77
+r1
+!s85 0
+31
+Z11 !s108 1777911680.000000
+Z12 !s107 main_game_fsm.v|main_game_fsm_tb.v|
+Z13 !s90 main_game_fsm_tb.v|main_game_fsm.v|
+!i113 0
+Z14 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vmain_game_fsm_robust_tb
+R4
+!s110 1777548960
+!i10b 1
+!s100 CIa^z;cdF_o@jf5VHgo0=1
+I55?^IEkC9X[N=j0lg5]?Z0
+R2
+w1777548897
+R7
+R8
+!i122 1
+L0 8 114
+R9
+R10
+r1
+!s85 0
+31
+!s108 1777548960.000000
+R12
+R13
+!i113 0
+R14
+R3
+vmain_game_fsm_tb
+R4
+R5
+!i10b 1
+!s100 T9WPRaa?`1lfXDQzH9dl40
+IkVJI[4ALN9@S:Z0A8iA;=2
+R2
+R6
+R7
+R8
+!i122 11
+L0 9 127
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R3
