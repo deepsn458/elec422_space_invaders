@@ -1,22 +1,13 @@
-///////////////////////////////////////////
-// player_bullet_fsm_tb.v
-//
-// Purpose: Robust Testbench for player_bullet_fsm
-////////////////////////////////////////////////////////////////////////////////////////////////
-
 module player_bullet_fsm_tb();
 
-    // Inputs to the module
     reg in_clka, in_clkb, in_reset, in_fire;
     reg [3:0] in_player_coord_x, in_player_coord_y;
     reg in_player_bullet_collision, in_shield_bullet_collision;
 
-    // Outputs from the module
     wire out_display;
     wire [3:0] out_player_bullet_coord_x, out_player_bullet_coord_y;
     wire [1:0] out_state;
 
-    // Instantiate the player_bullet_fsm
     player_bullet_fsm U1 (
         .clka (in_clka),
         .clkb (in_clkb),
@@ -34,13 +25,12 @@ module player_bullet_fsm_tb();
 
     integer i;
 
-    // Task to handle the specific dual-clock timing used in your logic
     task cycle;
         begin
             in_clka = 0; in_clkb = 0; #10;
-            in_clka = 1; in_clkb = 0; #10; // next_state logic
+            in_clka = 1; in_clkb = 0; #10;
             in_clka = 0; in_clkb = 0; #10;
-            in_clka = 0; in_clkb = 1; #10; // output and state update
+            in_clka = 0; in_clkb = 1; #10;
         end
     endtask
 
@@ -61,34 +51,34 @@ module player_bullet_fsm_tb();
         in_reset = 0;
         cycle();
 
-        // --- SCENARIO 1: Fire and hit Invader ---
+        // fire and hit invader
         in_fire = 1;
-        cycle(); // Transitions to FIRING
+        cycle();
         in_fire = 0;
         
-        repeat (3) cycle(); // Bullet travels
+        repeat (3) cycle();
         
-        in_player_bullet_collision = 1; // Collision trigger
+        in_player_bullet_collision = 1;
         cycle(); // Should transition back to INIT
         in_player_bullet_collision = 0;
         cycle(); // Stay in INIT
 
-        // --- SCENARIO 2: Fire and hit Shield ---
-        in_player_coord_x = 4'd12; // New position
+        // fire and hit shield
+        in_player_coord_x = 4'd12;
         in_fire = 1;
         cycle();
         in_fire = 0;
         
         repeat (2) cycle();
         
-        in_shield_bullet_collision = 1; // Collision trigger
+        in_shield_bullet_collision = 1;
         cycle(); // Should transition back to INIT
         in_shield_bullet_collision = 0;
         cycle();
 
-        // --- SCENARIO 3: Fire and hit Top Boundary (Y_MAX=15) ---
+        // fire and hit top boundary
         in_player_coord_x = 4'd2;
-        in_player_coord_y = 4'd10; // Start higher to reach boundary faster
+        in_player_coord_y = 4'd10;
         in_fire = 1;
         cycle();
         in_fire = 0;
@@ -98,7 +88,7 @@ module player_bullet_fsm_tb();
             cycle();
         end
 
-        // --- SCENARIO 4: Test Reset mid-flight ---
+        // reset
         in_fire = 1;
         cycle();
         in_fire = 0;

@@ -1,9 +1,3 @@
-///////////////////////////////////////////
-// main_game_fsm_tb.v
-//
-// Optimized for State Transition Coverage
-////////////////////////////////////////////////////////////////////////////////////////////////
-
 `timescale 1ns/100ps
 
 module main_game_fsm_tb();
@@ -54,7 +48,7 @@ module main_game_fsm_tb();
     endtask
 
     initial begin
-        // --- 1. RESET AND SETUP ---
+        // Reset
         in_global_reset = 1;
         in_player_display = 1; in_invaders_display = 2'b11;
         in_player_coordinate_x = 4'd7; in_player_coordinate_y = 4'd2;
@@ -66,7 +60,7 @@ module main_game_fsm_tb();
         in_global_reset = 0;
         cycle(); 
 
-        // --- 2. ENTER IN_GAME ---
+        // start game
         in_player_shoot_input = 1;
         cycle();
         in_player_shoot_input = 0;
@@ -75,9 +69,7 @@ module main_game_fsm_tb();
         in_invader_outofbounds_signal_1 = 0;
         cycle(); 
 
-        // --- 3. THE DIRECTION CHANGE TRIGGER ---
-        // We set signal=1. On clka, (1 & ~0) is true, so temp_state = DIRECTION_CHANGE.
-        // On clkb, state becomes DIRECTION_CHANGE and prev_invader_outofbounds becomes 1.
+        // direction change
         $display("Attempting to enter DIRECTION_CHANGE...");
         in_clka = 0; in_clkb = 0; #10;
         in_invader_outofbounds_signal_1 = 1;
@@ -92,14 +84,13 @@ module main_game_fsm_tb();
         else 
             $display("FAIL: State is %b", out_state);
 
-        // --- 4. EXIT DIRECTION CHANGE ---
-        // It stays in DIRECTION_CHANGE for 1 cycle then goes back to IN_GAME
+        // exit direction change
         cycle(); 
-        in_invader_outofbounds_signal_1 = 0; // Release boundary
+        in_invader_outofbounds_signal_1 = 0;
         cycle();
         cycle();
 
-        // --- 5. RE-ENTER DIRECTION CHANGE (Boundary 2) ---
+        // direction change
         in_clka = 0; in_clkb = 0; #10;
         in_invader_outofbounds_signal_2 = 1;
         in_clka = 1; in_clkb = 0; #10;
@@ -111,12 +102,11 @@ module main_game_fsm_tb();
         in_invader_outofbounds_signal_2 = 0;
         cycle();
 
-        // --- 6. CLEANUP & RESET SEQUENCES ---
-        // Win Case
+        // win case
         in_invaders_display = 2'b00;
         cycle(); 
         
-        // Final Reset Sequence to show we can return to INIT anytime
+        // reset again
         in_global_reset = 1;
         cycle();
         in_global_reset = 0;

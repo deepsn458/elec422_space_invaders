@@ -1,7 +1,3 @@
-//-----------------------------------------------------
-//// Design Name : Testbench for invader_bullet fsm
-//// File Name   : invader_bullet_fsm_tb.v
-////-----------------------------------------------------
 `timescale 1ns/100ps
 
 module invader_bullet_fsm_tb();
@@ -29,7 +25,6 @@ wire [1:0] out_state;
 
 integer i;
 
-// Create an invader bullet fsm instance
 invader_bullet_fsm DUT (
     .clka(in_clka),
     .clkb(in_clkb),
@@ -57,7 +52,6 @@ begin
     in_closest_invader_coord_y = 4'd0;
 
     for (i = 0; i < 20; i = i + 1) begin
-        // --- Input Stimulus Logic ---
         if (i == RESET_1 || i == RESET_2) begin
             in_reset = 1;
         end else begin
@@ -77,8 +71,7 @@ begin
             end
         end
 
-        // --- Clocking Sequence ---
-        // clka (State transition) followed by clkb (Output update)
+        // Clocking Sequence
         in_clka = 0; in_clkb = 0; #10;
         in_clka = 1; in_clkb = 0; #10;
         in_clka = 0; in_clkb = 0; #10;
@@ -92,7 +85,6 @@ begin
     $stop;
 end
 
-// Monitor for easy debugging
 initial begin
     $monitor("Time: %t | State: %b | Fire: %b | Display: %b | X: %d | Y: %d", 
              $time, out_state, in_invader_fire, out_invader_bullet_display, 

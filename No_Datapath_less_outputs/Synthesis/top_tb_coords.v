@@ -45,15 +45,14 @@ endtask
 
 task cycle;
     begin
-        in_clka = 0; in_clkb = 0; #1000;
-        in_clka = 1; in_clkb = 0; #1000;
-        in_clka = 0; in_clkb = 0; #1000;
-        in_clka = 0; in_clkb = 1; #1000;
+        in_clka = 0; in_clkb = 0; #10;
+        in_clka = 1; in_clkb = 0; #10;
+        in_clka = 0; in_clkb = 0; #10;
+        in_clka = 0; in_clkb = 1; #10;
         log_matrix("");
     end
 endtask
 
-// Instantiate top using explicitly mapped ports
 top U1 (
     .clka(in_clka),
     .clkb(in_clkb),
